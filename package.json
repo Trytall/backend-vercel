@@ -10,7 +10,9 @@
     "astro": "astro",
     "api": "node api/server.js",
     "dev:full": "concurrently \"npm run dev\" \"npm run api\"",
-    "health": "node health-check.js"
+    "health": "node health-check.js",
+    "deploy": "powershell -ExecutionPolicy Bypass -File deploy-vercel.ps1",
+    "test-prod": "powershell -ExecutionPolicy Bypass -File test-production.ps1"
   },
   "dependencies": {
     "astro": "^5.12.8",

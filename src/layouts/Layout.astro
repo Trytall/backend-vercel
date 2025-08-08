@@ -1,0 +1,112 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const { 
+  title, 
+  description = "Aprende un oficio con Escuelas IADE. Ofrecemos cursos técnicos en modalidad online y presencial. ¡Inscríbete hoy!", 
+  image = "/images/logo.png",
+  canonical 
+} = Astro.props;
+
+const canonicalURL = canonical ? new URL(canonical, Astro.site) : Astro.url;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon Configuration -->
+    <link rel="icon" type="image/svg+xml" href="/favicon-simple.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicon-simple.svg" />
+    
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.url)} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Escuelas IADE" />
+    <meta property="og:locale" content="es_AR" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(image, Astro.url)} />
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Escuelas IADE" />
+    <meta name="keywords" content="cursos, oficios, formación técnica, online, presencial, IADE, Argentina" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Escuelas IADE",
+        "description": "Institución educativa especializada en formación técnica y cursos de oficios",
+        "url": "https://escuelasiade.com",
+        "logo": "https://escuelasiade.com/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "AR",
+          "addressRegion": "Buenos Aires"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+54-011-2164-1442",
+          "contactType": "customer service"
+        }
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/logo.png" as="image">
+    <link rel="preload" href="/images/logoiade.png" as="image">
+  </head>
+  <body class="font-montserrat bg-light-bg text-dark-text bg-[url('/images/pattern.svg')] bg-repeat bg-top bg-[length:120px_120px]">
+    <slot />
+    
+    <!-- Smooth scroll behavior -->
+    <script>
+      // Smooth scroll for anchor links
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('a[href^="#"]');
+        links.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html> 

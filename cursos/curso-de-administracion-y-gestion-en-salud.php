@@ -1,0 +1,74 @@
+<?php
+// Datos del curso
+$curso_titulo = "CURSO DE ADMINISTRACIÓN Y GESTIÓN EN SALUD";
+$curso_descripcion = "Formación integral en gestión administrativa del sector salud. Aprende a manejar sistemas de salud, documentación médica y gestión de pacientes. Este curso te prepara para trabajar en hospitales, clínicas, consultorios médicos y centros de salud, desarrollando habilidades en administración sanitaria, gestión de recursos y atención al paciente.";
+$curso_duracion = "6 meses";
+$curso_modalidad = "Online y Presencial";
+$curso_sedes = "Morón, Laferrere, Lomas de Zamora, Avellaneda";
+$curso_imagen = "../images/curso-administracion-salud.jpg";
+
+$curso_temario = [
+    [
+        'titulo' => 'Módulo 1: Fundamentos del Curso',
+        'temas' => [
+            'Introducción al área de especialización',
+            'Conceptos básicos y terminología',
+            'Herramientas y equipos necesarios',
+            'Normativas de seguridad',
+            'Preparación del entorno de trabajo'
+        ]
+    ],
+    [
+        'titulo' => 'Módulo 2: Técnicas Básicas',
+        'temas' => [
+            'Procedimientos fundamentales',
+            'Manejo de herramientas especializadas',
+            'Técnicas de diagnóstico',
+            'Métodos de reparación básicos',
+            'Control de calidad inicial'
+        ]
+    ],
+    [
+        'titulo' => 'Módulo 3: Técnicas Avanzadas',
+        'temas' => [
+            'Procedimientos complejos',
+            'Diagnóstico avanzado',
+            'Reparaciones especializadas',
+            'Optimización de procesos',
+            'Resolución de problemas complejos'
+        ]
+    ],
+    [
+        'titulo' => 'Módulo 4: Tecnología Moderna',
+        'temas' => [
+            'Equipos y herramientas modernas',
+            'Software especializado',
+            'Tecnologías emergentes',
+            'Automatización de procesos',
+            'Mantenimiento predictivo'
+        ]
+    ],
+    [
+        'titulo' => 'Módulo 5: Gestión y Administración',
+        'temas' => [
+            'Gestión de inventarios',
+            'Control de costos',
+            'Atención al cliente',
+            'Documentación técnica',
+            'Planificación de mantenimiento'
+        ]
+    ],
+    [
+        'titulo' => 'Módulo 6: Práctica Profesional',
+        'temas' => [
+            'Prácticas en empresas del sector',
+            'Desarrollo de proyectos reales',
+            'Preparación para el mercado laboral',
+            'Networking profesional',
+            'Certificación final del curso'
+        ]
+    ]
+];
+
+include '../templates/curso_template.php';
+?>

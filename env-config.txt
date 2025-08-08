@@ -1,0 +1,19 @@
+# MercadoPago Configuration (Test Environment)
+MERCADOPAGO_ACCESS_TOKEN=TEST-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+MERCADOPAGO_PUBLIC_KEY=TEST-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# WhatsApp Business API Configuration
+WHATSAPP_API_TOKEN=your_whatsapp_api_token_here
+WHATSAPP_PHONE_ID=your_whatsapp_phone_id_here
+WHATSAPP_BUSINESS_ACCOUNT_ID=your_whatsapp_business_account_id_here
+
+# Webhook Configuration
+WEBHOOK_URL=http://localhost:3000/api/webhook
+WEBHOOK_SECRET=your_webhook_secret_here
+
+# Server Configuration
+PORT=3000
+NODE_ENV=development
+
+# Database Configuration (opcional para almacenar datos)
+DATABASE_URL=your_database_url_here 

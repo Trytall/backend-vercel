@@ -1,0 +1,126 @@
+---
+// FAQ component with accordion functionality
+---
+
+<section id="faq" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+        Preguntas frecuentes
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      <!-- FAQ Items will be populated by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqData = [
+      {
+        question: "¿Qué modalidades de estudio ofrecen?",
+        answer: "Ofrecemos dos modalidades: Online (100% virtual) y Presencial (en nuestras sedes). La modalidad online te permite estudiar desde cualquier lugar con acceso a internet, mientras que la presencial incluye clases prácticas en nuestros talleres equipados."
+      },
+      {
+        question: "¿Cuánto duran los cursos?",
+        answer: "La duración varía según el curso, pero en general van desde 3 hasta 12 meses. Todos nuestros cursos están diseñados para ser intensivos y prácticos, permitiéndote aprender rápidamente y comenzar a trabajar en el oficio elegido."
+      },
+      {
+        question: "¿Los certificados son oficiales?",
+        answer: "Sí, todos nuestros certificados son oficiales y reconocidos. Al finalizar el curso recibirás un certificado de Escuelas IADE que acredita tu formación técnica en el oficio estudiado."
+      },
+      {
+        question: "¿Necesito conocimientos previos?",
+        answer: "No, nuestros cursos están diseñados para principiantes. Comenzamos desde lo básico y avanzamos progresivamente. Solo necesitas ganas de aprender y compromiso con el estudio."
+      },
+      {
+        question: "¿Qué materiales necesito para estudiar online?",
+        answer: "Para la modalidad online solo necesitas una computadora o dispositivo móvil con conexión a internet. Todo el material de estudio está incluido en la plataforma virtual."
+      },
+      {
+        question: "¿Ofrecen financiamiento?",
+        answer: "Sí, contamos con diferentes opciones de pago y financiamiento. Puedes pagar en cuotas sin interés o consultar por descuentos por pago contado. Nuestros asesores te ayudarán a encontrar la mejor opción."
+      },
+      {
+        question: "¿Puedo acceder al contenido después de terminar el curso?",
+        answer: "Sí, tendrás acceso permanente al contenido del curso. Puedes conservar el material siempre en tu perfil y nunca perderás el acceso, para que puedas repasar cuando lo necesites."
+      },
+      {
+        question: "¿Hay salida laboral después de los cursos?",
+        answer: "Absolutamente. Todos nuestros cursos están diseñados pensando en la inserción laboral. Muchos de nuestros egresados trabajan por cuenta propia o en empresas del sector. Además, te brindamos orientación laboral."
+      },
+      {
+        question: "¿Qué pasa si no puedo continuar el curso?",
+        answer: "Entendemos que pueden surgir imprevistos. Contamos con políticas flexibles que te permiten pausar y retomar el curso cuando sea posible. Consulta con nuestros asesores para más detalles."
+      },
+      {
+        question: "¿Los profesores tienen experiencia en el campo?",
+        answer: "Sí, todos nuestros profesores son profesionales activos en sus respectivos campos. Esto garantiza que recibas formación actualizada y práctica, basada en la realidad del mercado laboral."
+      }
+    ];
+
+    function renderFAQ() {
+      const container = document.querySelector('#faq .space-y-4');
+      
+      container.innerHTML = faqData.map((item, index) => `
+        <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+          <button 
+            class="faq-question w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 flex items-center justify-between"
+            data-index="${index}"
+            aria-expanded="false"
+          >
+            <span class="font-semibold text-gray-800">${item.question}</span>
+            <svg class="w-5 h-5 text-gray-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer hidden px-6 py-4 bg-white">
+            <p class="text-gray-700 leading-relaxed">${item.answer}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Add click handlers
+      const questions = container.querySelectorAll('.faq-question');
+      questions.forEach(question => {
+        question.addEventListener('click', function() {
+          const index = this.getAttribute('data-index');
+          const answer = this.nextElementSibling;
+          const icon = this.querySelector('svg');
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+          // Close all other items
+          questions.forEach(q => {
+            if (q !== this) {
+              q.setAttribute('aria-expanded', 'false');
+              q.nextElementSibling.classList.add('hidden');
+              q.querySelector('svg').classList.remove('rotate-180');
+              q.classList.remove('bg-primary', 'text-white');
+              q.classList.add('bg-gray-50');
+            }
+          });
+
+          // Toggle current item
+          if (isExpanded) {
+            this.setAttribute('aria-expanded', 'false');
+            answer.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+            this.classList.remove('bg-primary', 'text-white');
+            this.classList.add('bg-gray-50');
+          } else {
+            this.setAttribute('aria-expanded', 'true');
+            answer.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+            this.classList.add('bg-primary', 'text-white');
+            this.classList.remove('bg-gray-50');
+          }
+        });
+      });
+    }
+
+    // Initialize
+    renderFAQ();
+  });
+</script> 

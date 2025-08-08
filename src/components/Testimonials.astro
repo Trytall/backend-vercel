@@ -1,0 +1,149 @@
+---
+// Testimonials component with auto-carousel
+---
+
+<section id="testimonios" class="py-16 lg:py-20 bg-light-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+        Lo que dicen nuestros estudiantes
+      </h2>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Testimonials Carousel -->
+      <div class="overflow-hidden">
+        <div id="testimonialsCarousel" class="flex transition-transform duration-500 ease-in-out">
+          <!-- Testimonials will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="flex justify-center mt-8 space-x-2">
+        <!-- Dots will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const testimonials = [
+      {
+        name: "María González",
+        course: "Administración y Gestión en Salud",
+        text: "Excelente curso, aprendí muchísimo y ahora trabajo en un hospital. Los profesores son muy profesionales y el material es muy completo.",
+        rating: 5
+      },
+      {
+        name: "Carlos Rodríguez",
+        course: "Refrigeración y Aire Acondicionado",
+        text: "El curso superó mis expectativas. Ya tengo mi propio taller y trabajo por mi cuenta. Muy recomendable para aprender un oficio.",
+        rating: 5
+      },
+      {
+        name: "Ana Martínez",
+        course: "Estética y Masaje Corporal",
+        text: "Gracias a IADE pude cambiar mi vida profesional. El curso es muy práctico y ahora tengo mi propio spa. ¡Increíble experiencia!",
+        rating: 5
+      },
+      {
+        name: "Luis Fernández",
+        course: "Electricidad y Electrónica Automotriz",
+        text: "El mejor curso que hice. Los profesores son expertos en el tema y el contenido es muy actualizado. Ya trabajo en un taller importante.",
+        rating: 5
+      },
+      {
+        name: "Sofía López",
+        course: "Diseño y Confección de Indumentaria",
+        text: "Aprendí todo lo necesario para emprender mi propio negocio. El curso es muy completo y los profesores son excelentes.",
+        rating: 5
+      },
+      {
+        name: "Roberto Silva",
+        course: "Mecánica de Motos",
+        text: "Excelente formación técnica. Ahora tengo mi propio taller de motos y trabajo independiente. Muy agradecido con IADE.",
+        rating: 5
+      },
+      {
+        name: "Patricia Morales",
+        course: "Auxiliar de Farmacia",
+        text: "El curso me dio todas las herramientas para trabajar en farmacias. Muy profesional y completo. Lo recomiendo totalmente.",
+        rating: 5
+      },
+      {
+        name: "Diego Herrera",
+        course: "Instalaciones Sanitarias y de Gas",
+        text: "Gracias a IADE pude aprender un oficio bien remunerado. El curso es muy práctico y los profesores son excelentes.",
+        rating: 5
+      }
+    ];
+
+    let currentTestimonial = 0;
+    const totalTestimonials = testimonials.length;
+
+    function renderTestimonials() {
+      const carousel = document.getElementById('testimonialsCarousel');
+      const dotsContainer = document.querySelector('#testimonios .flex.justify-center');
+
+      // Render testimonials
+      carousel.innerHTML = testimonials.map((testimonial, index) => `
+        <div class="w-full flex-shrink-0 px-4">
+          <div class="bg-white rounded-2xl shadow-xl p-8 text-center">
+            <div class="flex justify-center mb-4">
+              ${Array.from({ length: testimonial.rating }, () => '⭐').join('')}
+            </div>
+            <blockquote class="text-lg text-gray-700 mb-6 italic">
+              "${testimonial.text}"
+            </blockquote>
+            <div class="border-t border-gray-200 pt-4">
+              <p class="font-semibold text-gray-800">${testimonial.name}</p>
+              <p class="text-sm text-primary">${testimonial.course}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Render dots
+      dotsContainer.innerHTML = testimonials.map((_, index) => `
+        <button 
+          class="w-3 h-3 rounded-full transition-colors duration-200 ${index === 0 ? 'bg-primary' : 'bg-gray-300'}"
+          data-index="${index}"
+          aria-label="Ir al testimonio ${index + 1}"
+        ></button>
+      `).join('');
+
+      // Add click handlers to dots
+      const dots = dotsContainer.querySelectorAll('button');
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToTestimonial(index));
+      });
+    }
+
+    function goToTestimonial(index) {
+      currentTestimonial = index;
+      const carousel = document.getElementById('testimonialsCarousel');
+      const dots = document.querySelectorAll('#testimonios .flex.justify-center button');
+      
+      // Update carousel position
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      
+      // Update dots
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('bg-primary', dotIndex === index);
+        dot.classList.toggle('bg-gray-300', dotIndex !== index);
+      });
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+      goToTestimonial(currentTestimonial);
+    }
+
+    // Auto-advance testimonials
+    setInterval(nextTestimonial, 5000);
+
+    // Initialize
+    renderTestimonials();
+  });
+</script> 

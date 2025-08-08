@@ -1,0 +1,250 @@
+---
+// Header component with navigation
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0" aria-label="Escuelas IADE">
+        <img 
+          src="/images/logo.png" 
+          alt="Escuelas IADE" 
+          class="h-10 lg:h-12 w-auto"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8" role="navigation">
+        <a 
+          href="/cursos" 
+          class="text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Cursos
+        </a>
+        <a 
+          href="#modalidades" 
+          class="text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Modalidades
+        </a>
+        <a 
+          href="/conocenos" 
+          class="text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Conocenos
+        </a>
+        <a 
+          href="#faq" 
+          class="text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          FAQ
+        </a>
+      </nav>
+
+      <!-- Contact Info & CTA -->
+      <div class="hidden lg:flex items-center space-x-4">
+        <a 
+          href="tel:+5401121641442" 
+          class="text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+          aria-label="Llámanos"
+        >
+          +54 011 2164-1442
+        </a>
+        <a 
+          href="https://www.escuelasiadearg.com/iade_campus_exp/login.php" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="campus-btn bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden group"
+        >
+          <span class="relative z-10">Campus</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </a>
+        <a 
+          href="#lead-form" 
+          class="inscribete-btn bg-primary text-white px-6 py-2 rounded-lg font-bold hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:-translate-y-1 relative overflow-hidden group"
+        >
+          <span class="relative z-10">Inscríbete</span>
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button 
+        id="mobile-menu-button"
+        class="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 transition-colors duration-200"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="lg:hidden hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+        <a 
+          href="/cursos" 
+          class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Cursos
+        </a>
+        <a 
+          href="#modalidades" 
+          class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Modalidades
+        </a>
+        <a 
+          href="/conocenos" 
+          class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          Conocenos
+        </a>
+        <a 
+          href="#faq" 
+          class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+        >
+          FAQ
+        </a>
+        <div class="border-t border-gray-200 pt-2 mt-2">
+          <a 
+            href="tel:+5401121641442" 
+            class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-colors duration-200"
+          >
+            +54 011 2164-1442
+          </a>
+          <a 
+            href="https://www.escuelasiadearg.com/iade_campus_exp/login.php" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block px-3 py-2 text-gray-700 hover:text-primary font-semibold transition-all duration-300 transform hover:scale-105"
+          >
+            Campus
+          </a>
+          <a 
+            href="#lead-form" 
+            class="block px-3 py-2 bg-primary text-white rounded-lg font-semibold text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+          >
+            Inscríbete
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  /* Custom animations for header buttons */
+  .campus-btn, .inscribete-btn {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .campus-btn::before, .inscribete-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  .campus-btn:hover::before, .inscribete-btn:hover::before {
+    left: 100%;
+  }
+
+
+
+  /* Bounce effect on click */
+  .campus-btn:active, .inscribete-btn:active {
+    transform: scale(0.95) translateY(0);
+  }
+
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButtonSvg = mobileMenuButton.querySelector('svg');
+
+    mobileMenuButton.addEventListener('click', function() {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle menu visibility
+      mobileMenu.classList.toggle('hidden');
+      
+      // Update button state
+      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+      
+      // Update button icon
+      if (isExpanded) {
+        // Show hamburger icon
+        mobileMenuButtonSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      } else {
+        // Show X icon
+        mobileMenuButtonSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButtonSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      });
+    });
+
+    // Add click animation to buttons
+    const buttons = document.querySelectorAll('.campus-btn, .inscribete-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Create ripple effect
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+          ripple.remove();
+        }, 600);
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Ripple effect */
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+  }
+
+  @keyframes ripple-animation {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+</style> 

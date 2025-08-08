@@ -1,0 +1,59 @@
+{
+  "title": "CURSO DE MANICURÍA Y PEDICURÍA",
+  "slug": "curso-de-manicuria-y-pedicuria",
+  "description": "Formación especializada en técnicas de manicuría y pedicuría profesional. Aprende técnicas de esmaltado, nail art, tratamientos para uñas y cuidado de manos y pies. Este curso te prepara para trabajar en salones de belleza, spas y como profesional independiente, desarrollando habilidades en técnicas de manicuría, pedicuría y atención al cliente.",
+  "duration": "3 meses",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "/images/curso-manicuria.jpg",
+  "syllabus": [
+    {
+      "title": "MÓDULO 1: Fundamentos de Manicuría y Pedicuría",
+      "topics": [
+        "Anatomía de manos y pies",
+        "Estructura de uñas",
+        "Herramientas y equipamiento",
+        "Normativas de higiene y seguridad",
+        "Preparación del área de trabajo",
+        "Técnicas de desinfección",
+        "Productos básicos y su uso"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: Técnicas de Manicuría",
+      "topics": [
+        "Técnicas de limpieza y preparación",
+        "Corte y limado de uñas",
+        "Tratamiento de cutículas",
+        "Técnicas de esmaltado",
+        "Aplicación de base y top coat",
+        "Técnicas de secado",
+        "Tratamientos hidratantes"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: Técnicas de Pedicuría",
+      "topics": [
+        "Técnicas de limpieza de pies",
+        "Tratamiento de callosidades",
+        "Corte y limado de uñas de pies",
+        "Masajes relajantes",
+        "Tratamientos exfoliantes",
+        "Aplicación de esmaltes en pies",
+        "Cuidado post-tratamiento"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: Técnicas Avanzadas y Nail Art",
+      "topics": [
+        "Técnicas de nail art básico",
+        "Uso de pinceles especializados",
+        "Diseños con stickers y transfer",
+        "Técnicas de degradado",
+        "Aplicación de strass y decoraciones",
+        "Tendencias actuales en nail art",
+        "Gestión de clientes y marketing"
+      ]
+    }
+  ]
+} 

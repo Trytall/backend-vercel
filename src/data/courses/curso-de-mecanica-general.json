@@ -1,0 +1,71 @@
+{
+  "title": "CURSO DE MECÁNICA GENERAL",
+  "slug": "curso-de-mecanica-general",
+  "description": "Fundamentos de mecánica automotriz general. Reparación de motores y sistemas de transmisión. Formación integral para talleres mecánicos.",
+  "duration": "8 meses",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "https://images.unsplash.com/photo-1563720223185-11003d516935?w=500&auto=format&fit=crop&q=60",
+  "syllabus": [
+    {
+      "title": "Módulo 1: Fundamentos del Curso",
+      "topics": [
+        "Introducción al área de especialización",
+        "Conceptos básicos y terminología",
+        "Herramientas y equipos necesarios",
+        "Normativas de seguridad",
+        "Preparación del entorno de trabajo"
+      ]
+    },
+    {
+      "title": "Módulo 2: Técnicas Básicas",
+      "topics": [
+        "Procedimientos fundamentales",
+        "Manejo de herramientas especializadas",
+        "Técnicas de diagnóstico",
+        "Métodos de reparación básicos",
+        "Control de calidad inicial"
+      ]
+    },
+    {
+      "title": "Módulo 3: Técnicas Avanzadas",
+      "topics": [
+        "Procedimientos complejos",
+        "Diagnóstico avanzado",
+        "Reparaciones especializadas",
+        "Optimización de procesos",
+        "Resolución de problemas complejos"
+      ]
+    },
+    {
+      "title": "Módulo 4: Tecnología Moderna",
+      "topics": [
+        "Equipos y herramientas modernas",
+        "Software especializado",
+        "Tecnologías emergentes",
+        "Automatización de procesos",
+        "Mantenimiento predictivo"
+      ]
+    },
+    {
+      "title": "Módulo 5: Gestión y Administración",
+      "topics": [
+        "Gestión de inventarios",
+        "Control de costos",
+        "Atención al cliente",
+        "Documentación técnica",
+        "Planificación de mantenimiento"
+      ]
+    },
+    {
+      "title": "Módulo 6: Práctica Profesional",
+      "topics": [
+        "Prácticas en empresas del sector",
+        "Desarrollo de proyectos reales",
+        "Preparación para el mercado laboral",
+        "Networking profesional",
+        "Certificación final del curso"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "title": "CURSO DE BARBERÍA",
+  "slug": "curso-de-barberia",
+  "description": "Formación completa en técnicas de barbería moderna y tradicional. Aprende cortes de cabello, barba, técnicas de afeitado y estilos masculinos. Este curso te prepara para trabajar en barberías, salones de belleza y como barbero independiente, desarrollando habilidades en técnicas de corte, diseño de barba y atención al cliente masculino.",
+  "duration": "4 meses",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "/images/curso-barberia.jpg",
+  "syllabus": [
+    {
+      "title": "MÓDULO 1: Fundamentos de la Barbería",
+      "topics": [
+        "Historia y evolución de la barbería",
+        "Herramientas básicas del barbero",
+        "Técnicas de desinfección y sanitización",
+        "Anatomía del cabello y barba",
+        "Tipos de cabello y características",
+        "Preparación del área de trabajo",
+        "Normativas de higiene y seguridad"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: Técnicas de Corte Básicas",
+      "topics": [
+        "Técnicas de corte con tijeras",
+        "Uso de máquinas de corte",
+        "Cortes clásicos masculinos",
+        "Técnicas de degradado",
+        "Cortes modernos y tendencias",
+        "Ajuste de cuello y patillas",
+        "Técnicas de texturizado"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: Barba y Bigote",
+      "topics": [
+        "Técnicas de diseño de barba",
+        "Estilos de barba populares",
+        "Técnicas de afeitado tradicional",
+        "Uso de navaja y herramientas",
+        "Tratamientos para barba",
+        "Productos para barba y bigote",
+        "Mantenimiento y cuidado"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: Técnicas Avanzadas",
+      "topics": [
+        "Cortes creativos y artísticos",
+        "Técnicas de coloración masculina",
+        "Tratamientos capilares",
+        "Técnicas de peinado masculino",
+        "Tendencias actuales en barbería",
+        "Técnicas de marketing personal",
+        "Gestión de clientes"
+      ]
+    }
+  ]
+} 

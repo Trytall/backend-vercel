@@ -1,0 +1,254 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import courses from '../../data/courses.js';
+
+export function getStaticPaths() {
+  return courses.map(c => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const course = courses.find(c => c.slug === slug);
+if (!course) throw new Error('Curso no encontrado');
+---
+
+<Layout title={`Inscripción | ${course.title}`} description={`Elegí cómo inscribirte al ${course.title}. Pago directo o asesor personalizado.`}>
+  <Header />
+
+  <!-- Hero / Title -->
+  <section class="pt-12 pb-8 bg-light-bg text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-4">¡Elegí cómo querés inscribirte!</h1>
+    <p class="text-gray-700 max-w-2xl mx-auto">Tenés dos opciones para comenzar tu curso {course.modality?.toLowerCase() ?? 'online'}</p>
+  </section>
+
+  <!-- Options -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+      <!-- MercadoPago Option -->
+      <div class="border border-primary rounded-xl p-8 shadow-lg flex flex-col">
+        <div class="text-4xl mb-4 text-center">💳</div>
+        <h2 class="text-xl font-semibold mb-2 text-center">Pago con MercadoPago</h2>
+        <p class="text-primary font-bold text-lg mb-6 text-center">Desde $150.000</p>
+        <p class="text-gray-600 mb-6">Inscribite ahora mismo y accedé inmediatamente a tu curso. Pago seguro con MercadoPago.</p>
+
+        <!-- Payment Plans -->
+        <div class="space-y-4 mb-6">
+          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btnContado">
+            <span>Pago al contado</span>
+            <span>$150.000</span>
+          </button>
+          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn3Cuotas">
+            <span>3 cuotas</span>
+            <span>$240.000</span>
+          </button>
+          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn6Cuotas">
+            <span>6 cuotas</span>
+            <span>$300.000</span>
+          </button>
+        </div>
+
+        <ul class="text-sm text-gray-600 space-y-1 mt-auto">
+          <li>✅ Acceso inmediato al curso</li>
+          <li>✅ Acceso permanente al material</li>
+          <li>✅ Certificado oficial incluido</li>
+          <li>✅ Pago seguro con Mercado Pago</li>
+          <li>✅ Sin comisiones adicionales</li>
+        </ul>
+      </div>
+
+      <!-- Asesor Option -->
+      <div class="border border-primary rounded-xl p-8 shadow-lg flex flex-col">
+        <div class="text-4xl mb-4 text-center">👨‍💼</div>
+        <h2 class="text-xl font-semibold mb-2 text-center">Contacto con Asesor</h2>
+        <p class="text-primary font-bold text-lg mb-6 text-center">Consultar</p>
+        <p class="text-gray-600 mb-6">Un asesor te contactará inmediatamente para resolver todas tus dudas y ayudarte en la inscripción.</p>
+
+        <ul class="text-sm text-gray-600 space-y-1 mb-6">
+          <li>✅ Atención personalizada</li>
+          <li>✅ Resolución de dudas</li>
+          <li>✅ Planes de pago flexibles</li>
+          <li>✅ Acceso permanente incluido</li>
+          <li>✅ Asesoramiento completo</li>
+        </ul>
+        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg w-full mt-auto" id="contactarAsesorBtn">Contactar Asesor 👨‍💼</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Box -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow p-6">
+      <h3 class="text-lg font-semibold text-center mb-6">Resumen de tu inscripción</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-gray-700 mb-3">Datos Personales</h4>
+          <div id="resumenDatos" class="text-sm text-gray-600 space-y-2"></div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-gray-700 mb-3">Cursos Seleccionados</h4>
+          <div id="resumenCursos" class="text-sm text-gray-600"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    // Helpers ----------------------------------------------------------
+    function params() {
+      return Object.fromEntries(new URLSearchParams(location.search));
+    }
+
+    // Rellena el cuadro resumen con los datos de query-string (si existen)
+    const data = params();
+    const resumenDatos = document.getElementById('resumenDatos');
+    const resumenCursos = document.getElementById('resumenCursos');
+    
+    if (resumenDatos) {
+      const datosHTML = `
+        <div><strong>Nombre:</strong> ${data.nombre || 'No especificado'}</div>
+        <div><strong>DNI:</strong> ${data.dni || 'No especificado'}</div>
+        <div><strong>Email:</strong> ${data.email || 'No especificado'}</div>
+        <div><strong>Teléfono:</strong> ${data.telefono || 'No especificado'}</div>
+        <div><strong>Provincia:</strong> ${data.provincia || 'No especificado'}</div>
+        <div><strong>Localidad:</strong> ${data.localidad || 'No especificado'}</div>
+        <div><strong>Modalidad:</strong> ${data.modalidad || 'Online'}</div>
+      `;
+      resumenDatos.innerHTML = datosHTML;
+    }
+    
+    if (resumenCursos) {
+      const cursos = data.cursos || course.title;
+      const cursosHTML = `<div class="bg-primary/10 text-primary px-3 py-2 rounded">${cursos}</div>`;
+      resumenCursos.innerHTML = cursosHTML;
+    }
+
+    // MercadoPago Integration -------------------------------------------
+    async function pagar(plan) {
+      console.log('Función pagar llamada con plan:', plan);
+      
+      const nombre = data.nombre || '';
+      const dni = data.dni || '';
+      const email = data.email || '';
+      const telefono = data.telefono || '';
+      const provincia = data.provincia || '';
+      const localidad = data.localidad || '';
+      const modalidad = data.modalidad || 'Online';
+      const cursos = data.cursos || course.title;
+      
+      // Determinar monto según el plan
+      let amount;
+      let description;
+      switch(plan) {
+        case 'contado':
+          amount = 150000;
+          description = 'Pago al contado';
+          break;
+        case '3cuotas':
+          amount = 240000;
+          description = '3 cuotas';
+          break;
+        case '6cuotas':
+          amount = 300000;
+          description = '6 cuotas';
+          break;
+        default:
+          amount = 150000;
+          description = 'Pago al contado';
+      }
+      
+      try {
+        console.log('Iniciando proceso de pago...');
+        
+        // Mostrar loading
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => btn.disabled = true);
+        
+        // Crear preferencia de MercadoPago
+        const paymentData = {
+          nombre,
+          dni,
+          email,
+          telefono,
+          provincia,
+          localidad,
+          modalidad,
+          cursos: cursos.split(',').map(c => c.trim()),
+          totalAmount: amount,
+          plan: description
+        };
+        
+        console.log('Datos de pago:', paymentData);
+        
+        const response = await fetch(`${import.meta.env.DEV ? 'http://localhost:3000' : 'https://tu-backend.vercel.app'}/api/create-preference`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(paymentData)
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Redirigir a MercadoPago
+          const initPoint = result.initPoint;
+          
+          window.location.href = initPoint;
+        } else {
+          throw new Error(result.error || 'Error creating payment');
+        }
+        
+      } catch (error) {
+        console.error('Payment error:', error);
+        alert('Error al procesar el pago. Por favor, intenta nuevamente.');
+        
+        // Restaurar botones
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => btn.disabled = false);
+      }
+    }
+    
+    // Función para contactar asesor
+    function contactarAsesor() {
+      const nombre = data.nombre || '';
+      const dni = data.dni || '';
+      const email = data.email || '';
+      const telefono = data.telefono || '';
+      const provincia = data.provincia || '';
+      const localidad = data.localidad || '';
+      const modalidad = data.modalidad || 'Online';
+      const cursos = data.cursos || course.title;
+      
+      const mensaje = `Hola IADE, soy ${nombre} (DNI: ${dni}). 
+Quiero información sobre los siguientes cursos: ${cursos}.
+Modalidad: ${modalidad}
+Email: ${email}
+Teléfono: ${telefono}
+Provincia: ${provincia}
+Localidad: ${localidad}`;
+      
+      const url = `https://wa.me/5491130112419?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, '_blank');
+    }
+    
+    // Agregar event listeners para los botones de pago
+    document.getElementById('btnContado')?.addEventListener('click', () => pagar('contado'));
+    document.getElementById('btn3Cuotas')?.addEventListener('click', () => pagar('3cuotas'));
+    document.getElementById('btn6Cuotas')?.addEventListener('click', () => pagar('6cuotas'));
+    
+    // Agregar event listener para el botón de asesor
+    const btn = document.getElementById('contactarAsesorBtn');
+    if (btn) {
+      btn.onclick = function(e) {
+        e.preventDefault();
+        contactarAsesor();
+      };
+    }
+  </script>
+</Layout>
+

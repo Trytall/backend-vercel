@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/vercel.js"
+    }
+  ],
+  "functions": {
+    "api/vercel.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
+} 

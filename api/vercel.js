@@ -97,9 +97,48 @@ app.get('/', (req, res) => {
     version: '1.0.0',
     endpoints: {
       health: '/api/health',
+      debug: '/api/debug',
       createPreference: '/api/create-preference',
       sendFormNotification: '/api/send-form-notification',
       webhook: '/api/webhook'
+    }
+  });
+});
+
+// Debug endpoint - muestra todas las variables de entorno (sin valores sensibles)
+app.get('/debug', (req, res) => {
+  const envVars = {
+    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN 
+      ? `${process.env.MERCADOPAGO_ACCESS_TOKEN.substring(0, 10)}...` 
+      : 'NOT SET',
+    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
+    SMTP_PORT: process.env.SMTP_PORT || 'NOT SET',
+    SMTP_USER: process.env.SMTP_USER || 'NOT SET',
+    SMTP_PASS: process.env.SMTP_PASS ? 'SET (hidden)' : 'NOT SET',
+    EMAIL_FROM: process.env.EMAIL_FROM || 'NOT SET',
+    EMAIL_NOTIFICACIONES: process.env.EMAIL_NOTIFICACIONES || 'NOT SET',
+    WEBHOOK_URL: process.env.WEBHOOK_URL || 'NOT SET',
+    NODE_ENV: process.env.NODE_ENV || 'NOT SET',
+    // Verificar todas las variables relacionadas
+    allEnvKeys: Object.keys(process.env).filter(key => 
+      key.includes('MERCADOPAGO') || 
+      key.includes('SMTP') || 
+      key.includes('EMAIL') ||
+      key === 'NODE_ENV' ||
+      key === 'WEBHOOK_URL'
+    )
+  };
+  
+  console.log('🔍 Debug - Variables de entorno:', envVars);
+  
+  res.json({
+    status: 'Debug Info',
+    timestamp: new Date().toISOString(),
+    environment: envVars,
+    checks: {
+      hasMercadoPago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
+      hasSMTP: !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS),
+      hasEmail: !!(process.env.EMAIL_FROM && process.env.EMAIL_NOTIFICACIONES)
     }
   });
 });

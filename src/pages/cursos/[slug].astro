@@ -1,0 +1,235 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import WhatsAppButton from '../../components/WhatsAppButton.astro';
+import cursos from '../../data/cursos.js';
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  return cursos.map(curso => ({
+    params: { slug: curso.slug }
+  }));
+}
+
+const { slug } = Astro.params;
+const curso = cursos.find(c => c.slug === slug);
+
+if (!curso) {
+  throw new Error('Curso no encontrado');
+}
+
+// Try to load detailed course data
+let cursoDetallado = null;
+try {
+  const courseDataPath = path.join(process.cwd(), 'src', 'data', 'courses', `${slug}.json`);
+  if (fs.existsSync(courseDataPath)) {
+    const courseData = fs.readFileSync(courseDataPath, 'utf-8');
+    cursoDetallado = JSON.parse(courseData);
+  }
+} catch (error) {
+  console.warn(`No se pudo cargar datos detallados para ${slug}:`, error.message);
+}
+---
+
+<Layout 
+  title={`${curso.titulo} - Escuelas IADE`}
+  description={curso.descripcion}
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="pt-24 pb-12 bg-light-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <!-- Course Info -->
+        <div>
+          <h1 class="text-3xl lg:text-4xl font-bold text-primary mb-4">
+            {curso.titulo}
+          </h1>
+          <p class="text-lg text-gray-700 mb-6">
+            {curso.descripcion}
+          </p>
+          
+          <!-- Course Details -->
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Duración</div>
+              <div class="font-semibold text-primary">{curso.duracion}</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Modalidad</div>
+              <div class="font-semibold text-primary">{curso.modalidad}</div>
+            </div>
+            {curso.modalidad !== "Online" && (
+              <div class="bg-white p-4 rounded-lg shadow-sm col-span-2">
+                <div class="text-sm text-gray-600 mb-1">Sedes</div>
+                <div class="font-semibold text-primary">Morón, Lomas de Zamora, Avellaneda</div>
+              </div>
+            )}
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a 
+              href={`/?curso=${slug}`}
+              class="bg-primary text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-primary/90 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              ¡Inscribirme ahora!
+            </a>
+            <a 
+              href={`https://wa.me/5491130112419?text=Hola, me interesa el ${curso.titulo}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold text-center hover:bg-green-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Course Image -->
+        <div class="flex justify-center lg:justify-end">
+          <img 
+            src={curso.imagen} 
+            alt={curso.titulo}
+            class="max-w-sm lg:max-w-md rounded-lg shadow-lg"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Syllabus Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-primary mb-8">
+        Temario del Curso
+      </h2>
+      
+      {cursoDetallado && cursoDetallado.syllabus ? (
+        <div class="space-y-4">
+          {cursoDetallado.syllabus.map((modulo, index) => (
+            <div class="bg-gray-50 rounded-lg overflow-hidden">
+              <button 
+                class="w-full p-6 text-left bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 flex justify-between items-center modulo-button"
+                data-modulo-index={index}
+              >
+                <span>{modulo.title}</span>
+                <span class="text-2xl transform transition-transform duration-200" id={`arrow-${index}`}>▼</span>
+              </button>
+              <div class="hidden p-6 bg-white" id={`modulo-${index}`}>
+                <div class="space-y-3">
+                  {modulo.topics.map((topic, topicIndex) => (
+                    <div class="flex items-start space-x-3">
+                      <span class="text-primary font-bold text-sm mt-1">•</span>
+                      <span class="text-gray-700">{topic}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 gap-6">
+          {curso.temario.map((tema, index) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="flex items-start space-x-3">
+                <span class="text-primary font-bold text-lg">{index + 1}</span>
+                <span class="text-gray-700 font-medium">{tema}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center text-primary mb-8">
+        ¿Por qué elegir este curso?
+      </h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="text-4xl mb-4">🎓</div>
+          <h3 class="text-lg font-semibold mb-2">Certificado Oficial</h3>
+          <p class="text-gray-600">Obtén tu certificado avalado por Escuelas IADE</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="text-4xl mb-4">💻</div>
+          <h3 class="text-lg font-semibold mb-2">Modalidad Flexible</h3>
+          <p class="text-gray-600">Online y presencial según tu disponibilidad</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+          <div class="text-4xl mb-4">🚀</div>
+          <h3 class="text-lg font-semibold mb-2">Acceso Inmediato</h3>
+          <p class="text-gray-600">Comienza tu formación cuando quieras</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-12 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        ¿Listo para comenzar?
+      </h2>
+      <p class="text-white/90 mb-8 text-lg">
+        No pierdas la oportunidad de convertirte en un profesional del sector
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={`/?curso=${slug}`}
+          class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          ¡Inscribirme ahora!
+        </a>
+        <a 
+          href={`https://wa.me/5491130112419?text=Hola, me interesa el ${curso.titulo}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-green-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-600 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+<script>
+  function toggleModulo(index) {
+    const modulo = document.getElementById(`modulo-${index}`);
+    const arrow = document.getElementById(`arrow-${index}`);
+    
+    if (modulo.classList.contains('hidden')) {
+      modulo.classList.remove('hidden');
+      arrow.style.transform = 'rotate(180deg)';
+    } else {
+      modulo.classList.add('hidden');
+      arrow.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  // Agregar event listeners cuando el DOM esté listo
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.modulo-button');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        const index = this.getAttribute('data-modulo-index');
+        toggleModulo(index);
+      });
+    });
+  });
+</script>

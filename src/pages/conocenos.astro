@@ -1,0 +1,357 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout 
+  title="Conocenos - Escuelas IADE"
+  description="Descubre todo sobre Escuelas IADE, nuestra historia, metodología y compromiso con tu formación profesional"
+>
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="pt-24 pb-12 bg-light-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold text-primary mb-6">
+          Conocenos
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Descubre todo sobre Escuelas IADE, nuestra historia, metodología y compromiso con tu formación profesional
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Menu -->
+  <section class="py-8 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button class="menu-btn bg-primary text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200" data-section="nosotros">
+          Nosotros
+        </button>
+        <button class="menu-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200" data-section="objetivos">
+          Nuestros Objetivos
+        </button>
+
+        <button class="menu-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200" data-section="metodologia">
+          Metodología de Estudio
+        </button>
+        <button class="menu-btn bg-gray-200 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-all duration-200" data-section="certificaciones">
+          Certificaciones
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Nosotros Section -->
+      <div id="nosotros" class="content-section">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-primary mb-4">¿Qué es Escuelas IADE?</h3>
+              <p class="text-gray-700 mb-4">
+                Escuelas IADE es un Instituto Técnico de Enseñanza no oficial, que te propone un aprendizaje de una 
+                actividad técnica y práctica que te permitirá desempeñarte <strong>Rápidamente y Profesionalmente</strong> 
+                tanto en situaciones laborales dentro de las empresas como en forma independiente.
+              </p>
+              <p class="text-gray-700 mb-4">
+                Los Certificados de finalización de los Cursos son avalados por nuestros más de <strong>60 años de experiencia</strong> 
+                en Capacitación Técnica, lanzando al mercado laboral miles de técnicos altamente capacitados con las 
+                habilidades necesarias para desarrollarse satisfactoriamente.
+              </p>
+              <p class="text-gray-700 mb-6">
+                Nuestro objetivo es brindar la posibilidad del crecimiento personal mediante la capacitación y desarrollo 
+                de <strong>Habilidades Técnicas Individuales</strong> en el Lugar y en el Tiempo que disponga el interesado 
+                y lograr así una posible y rápida salida laboral que mejore su calidad de vida.
+              </p>
+              <div class="grid grid-cols-2 gap-4 mt-6">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-primary">+60</div>
+                  <div class="text-sm text-gray-600">Años de experiencia</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-primary">+25</div>
+                  <div class="text-sm text-gray-600">Cursos disponibles</div>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <img src="/images/logoiade.png" alt="Escuelas IADE" class="max-w-sm h-auto" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nuestros Objetivos Section -->
+      <div id="objetivos" class="content-section hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-primary mb-6">Nuestros Objetivos</h3>
+          <div class="space-y-6">
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-4xl mb-4">🎯</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Misión</h4>
+                <p class="text-gray-600 text-sm">
+                  Formar profesionales técnicos competentes y preparados para el mercado laboral, 
+                  brindando educación de calidad y herramientas prácticas para el éxito.
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl mb-4">👁️</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Visión</h4>
+                <p class="text-gray-600 text-sm">
+                  Ser la institución líder en formación técnica, reconocida por la excelencia 
+                  educativa y la alta empleabilidad de nuestros egresados.
+                </p>
+              </div>
+              <div class="text-center">
+                <div class="text-4xl mb-4">💎</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Valores</h4>
+                <p class="text-gray-600 text-sm">
+                  Excelencia, compromiso, innovación, responsabilidad social y 
+                  mejora continua en todos nuestros procesos educativos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Metodología Section -->
+      <div id="metodologia" class="content-section hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-primary mb-6">Metodología de Estudio</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-4">Enfoque Práctico</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>70% práctica, 30% teoría</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Talleres equipados con tecnología actual</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Proyectos reales del mercado</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Simulaciones de situaciones laborales</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-800 mb-4">Modalidades Flexibles</h4>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Presencial con horarios flexibles</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Online con clases en vivo</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Material digital disponible 24/7</span>
+                </li>
+                <li class="flex items-start space-x-2">
+                  <span class="text-primary mt-1">•</span>
+                  <span>Seguimiento personalizado</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificaciones Section -->
+      <div id="certificaciones" class="content-section hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h3 class="text-2xl font-bold text-primary mb-6">Certificaciones</h3>
+          <div class="space-y-8">
+            
+            <!-- Invenio -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">Invenio</h4>
+              <p class="text-gray-600 mb-4">
+                Podemos decir que Invenio es una institución de enseñanza, sin embargo, el proceso es un proceso de aprendizaje, 
+                en donde es el estudiante el que viene a Invenio a investigar, a desarrollar, a aprender, a sacar de él mismo 
+                lo mejor para los demás. Invenio es una comunidad donde descubrimos y compartimos lo mejor de nosotros, 
+                para nuestras familias, nuestras comunidades, empresas y para nuestra sociedad.
+              </p>
+            </div>
+
+            <!-- CRDigital -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">CRDigital</h4>
+              <p class="text-gray-600 mb-4">
+                Nuestros esfuerzos apuntan también al sueño de modernizar el país. Porque un atraso en ello genera diversos 
+                obstáculos que afectan a todos los sectores, como menos empleo, innecesaria burocracia, inseguridad y corrupción. 
+                Rezagarse en los procesos de industrialización suele generar dificultades. Por ello, ayudamos en carreras, 
+                empresas e instituciones. Tenemos proyectos con municipalidades, emprendimientos, multinacionales, etc.
+              </p>
+            </div>
+
+            <!-- ISO 9000 -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">ISO 9000</h4>
+              <p class="text-gray-600 mb-4">
+                ISO 9000 es un conjunto de Control de calidad y gestión de calidad, establecidas por la Organización 
+                Internacional de Normalización (ISO). Se pueden aplicar en cualquier tipo de organización o actividad 
+                orientada a la producción de bienes o servicios. Las normas recogen tanto el contenido mínimo como las 
+                guías y herramientas específicas de implantación como los métodos de auditoría. ISO 9000 específica la 
+                manera en que una organización opera sus estándares de calidad, tiempos de entrega y niveles de servicio. 
+                Existen más de 20 elementos en los estándares de esta ISO que se relacionan con la manera en que los 
+                sistemas operan.
+              </p>
+            </div>
+
+            <!-- ISO 9002 -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">ISO 9002</h4>
+              <p class="text-gray-600 mb-4">
+                El Ministerio de Educación (ME) es un organismo público dependiente del Poder Ejecutivo Nacional (PEN) 
+                de Argentina. Es el encargado de garantizar una educación integral, permanente y de calidad para todos 
+                los habitantes del país. Es el que fija la política educativa y controla su cumplimiento. El Gobierno 
+                y la Administración del Sistema Educativo Nacional es una responsabilidad concurrente y concertada del 
+                poder ejecutivo a través del ME y de los Poderes Ejecutivos de las Provincias y del Gobierno de la 
+                Ciudad Autónoma de Buenos Aires. El Estado Nacional fija la política educativa y controla su cumplimiento 
+                con la finalidad de consolidar la unidad nacional, respetando las particularidades provinciales y locales 
+                y es el que garantiza el financiamiento del Sistema Educativo Nacional.
+              </p>
+            </div>
+
+            <!-- Cámara Argentina de Refrigeración -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">Cámara Argentina de Refrigeración</h4>
+              <p class="text-gray-600 mb-4">
+                Entidad la cual avala a Escuelas IADE para que sus egresados puedan aplicar a la Matrícula de 
+                Refrigeración y Aire Acondicionado. Certificaciones otorgadas por la Cámara Argentina de Refrigeración 
+                para avalar lo aprendido en los cursos de escuelas IADE.
+              </p>
+            </div>
+
+            <!-- Junta Latinoamericana -->
+            <div class="border-l-4 border-primary pl-6">
+              <h4 class="font-semibold text-gray-800 mb-3 text-lg">Junta Latinoamericana e Iberoamericana de Educación Superior y Acreditación</h4>
+              <p class="text-gray-600 mb-4">
+                <strong>'RUACH HAKODESH'</strong> - Es una Corporación organizada y establecida bajo las leyes del Estado 
+                de la Florida, con el Número de Autorización: N . 9000007258, y autorizada por la Sección 15.16 de los 
+                Estatutos de la Florida, y Autenticada por el Código: 190716173134- 000331165670#1. El Artículo III, 
+                dice: "El propósito específico por el cual esta Corporación se organizó es: La Educación Superior y Acreditación".
+              </p>
+            </div>
+
+            <!-- Beneficios Adicionales -->
+            <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+              <h4 class="font-semibold text-gray-800 mb-4">Beneficios de Nuestras Certificaciones</h4>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h5 class="font-semibold text-gray-800 mb-3">Certificados Oficiales</h5>
+                  <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Certificado de finalización de curso</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Avalado por Escuelas IADE</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Reconocido por empresas del sector</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Válido para presentar en empleos</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 class="font-semibold text-gray-800 mb-3">Beneficios Adicionales</h5>
+                  <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Bolsa de trabajo exclusiva</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Asesoramiento laboral</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Acceso a eventos y networking</span>
+                    </li>
+                    <li class="flex items-start space-x-2">
+                      <span class="text-primary mt-1">•</span>
+                      <span>Actualizaciones de contenido</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtns = document.querySelectorAll('.menu-btn');
+    const contentSections = document.querySelectorAll('.content-section');
+
+    function showSection(sectionId) {
+      // Hide all sections
+      contentSections.forEach(section => {
+        section.classList.add('hidden');
+      });
+
+      // Show selected section
+      const selectedSection = document.getElementById(sectionId);
+      if (selectedSection) {
+        selectedSection.classList.remove('hidden');
+      }
+
+      // Update button styles
+      menuBtns.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+      });
+
+      // Highlight active button
+      const activeBtn = document.querySelector(`[data-section="${sectionId}"]`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-gray-200', 'text-gray-700');
+        activeBtn.classList.add('bg-primary', 'text-white');
+      }
+    }
+
+    // Add click handlers to menu buttons
+    menuBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const sectionId = this.getAttribute('data-section');
+        showSection(sectionId);
+      });
+    });
+
+    // Show first section by default
+    showSection('nosotros');
+  });
+</script> 

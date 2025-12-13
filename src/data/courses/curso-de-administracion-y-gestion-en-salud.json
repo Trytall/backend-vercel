@@ -1,0 +1,91 @@
+{
+  "title": "CURSO DE ADMINISTRACIÓN Y GESTIÓN EN SALUD",
+  "slug": "curso-de-administracion-y-gestion-en-salud",
+  "description": "Formación integral en gestión administrativa del sector salud. Aprende a manejar sistemas de salud, documentación médica y gestión de pacientes. Este curso te prepara para trabajar en hospitales, clínicas, consultorios médicos y centros de salud, desarrollando habilidades en administración sanitaria, gestión de recursos y atención al paciente.",
+  "duration": "2 meses",
+  "modality": "Online",
+  "campuses": "Online",
+  "image": "/images/curso-administracion-salud.jpg",
+  "syllabus": [
+    {
+      "title": "MÓDULO 1: Administración y Tipos de Administración",
+      "topics": [
+        "Unidad 1: Fundamentos de la Administración",
+        "Roles del administrador",
+        "Evolución de la administración",
+        "Pensamiento sistémico",
+        "Enfoque de contingencia",
+        "Administración por objetivos (APO)",
+        "Enfoque moderno de calidad: procesos y resultados",
+        "Desafíos actuales en la administración de servicios de salud",
+        "Unidad 2: Tipologías y Funciones Administrativas",
+        "Tipos de administración",
+        "Objetivos de la administración en salud",
+        "Unidades de gestión administrativa",
+        "Funciones administrativas por áreas específicas"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: Gestión de Ingresos, Gastos y Autogestión",
+      "topics": [
+        "Unidad 1: Educación Financiera para la Gestión Sanitaria",
+        "Identificación de ingresos y gastos",
+        "Priorización de gastos",
+        "Ahorro como gasto obligatorio",
+        "Seguimiento y control del presupuesto",
+        "Revisión y ajustes presupuestarios",
+        "Unidad 2: Modelos de Hospitales Autogestionados",
+        "Primera generación: caridad y aislamiento",
+        "Segunda generación: servicios de diagnóstico y tratamiento",
+        "Tercera generación: promoción, prevención y rehabilitación",
+        "Recursos humanos en hospitales autogestionados"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: Legislación, Gestión y Documentación Clínica",
+      "topics": [
+        "Unidad 1: Historia Clínica – Aspectos Legales y Operativos",
+        "Definición y origen de la historia clínica",
+        "Legislación vigente",
+        "Características esenciales",
+        "Pilares fundamentales",
+        "Partes estructurales",
+        "Funciones de la historia clínica",
+        "Unidad 2: Gestión Clínica",
+        "Antecedentes de la gestión clínica",
+        "Características de la gestión en clínicas",
+        "Clasificación de procesos",
+        "Niveles de procesos administrativos y asistenciales"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: Gestión de Recursos Humanos y Contratos Laborales",
+      "topics": [
+        "Unidad 1: Administración del Capital Humano",
+        "Planificación del personal",
+        "Procesos de selección y evaluación",
+        "Capacitación y desarrollo",
+        "Gestión y estructura del área de RR.HH.",
+        "Remuneración y promociones",
+        "Prevención de conflictos",
+        "Herramientas clave para una gestión eficiente",
+        "Unidad 2: Contratos Laborales en Salud",
+        "Tipos de contratos: individuales, grupales, por tiempo determinado e indeterminado",
+        "Duración y condiciones",
+        "Prestaciones laborales",
+        "Contratos discontinuos y especiales en el sector salud"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: Importancia Estratégica de la Administración en Salud",
+      "topics": [
+        "Unidad 1: Rol de la Administración en los Servicios de Salud",
+        "Relevancia de una buena gestión para el sistema sanitario",
+        "Impacto en la eficiencia, calidad y accesibilidad",
+        "Unidad 2: Continuación y Profundización",
+        "Casos prácticos y ejemplos de éxito",
+        "Buenas prácticas administrativas en instituciones de salud"
+      ]
+    }
+  ]
+}

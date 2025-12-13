@@ -1,0 +1,157 @@
+---
+// Banner carousel component
+---
+
+<section id="modalidades" class="py-12 lg:py-16 bg-gradient-to-b from-gray-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl lg:text-4xl font-bold text-secondary text-center mb-12">
+      Descubrí nuestros cursos online
+    </h2>
+    
+    <div class="relative max-w-5xl mx-auto">
+      <!-- Banner Container -->
+      <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+        <!-- Banner Slides -->
+        <div class="flex transition-transform duration-500 ease-in-out" id="banner-slides">
+          <div class="w-full flex-shrink-0">
+            <img 
+              src="/images/banner_toori1.png" 
+              alt="Banner 1 - Cursos IADE" 
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full flex-shrink-0">
+            <img 
+              src="/images/banner_toori2.jpg" 
+              alt="Banner 2 - Cursos IADE" 
+              class="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button 
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-blur-sm"
+          id="prev-banner"
+          aria-label="Banner anterior"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button 
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/20 hover:bg-black/40 text-white p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 backdrop-blur-sm"
+          id="next-banner"
+          aria-label="Banner siguiente"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Indicators -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <button 
+            class="w-4 h-4 rounded-full bg-white/80 hover:bg-white transition-all duration-200 indicator active shadow-lg"
+            data-slide="0"
+            aria-label="Ir al banner 1"
+          ></button>
+          <button 
+            class="w-4 h-4 rounded-full bg-white/40 hover:bg-white/80 transition-all duration-200 indicator shadow-lg"
+            data-slide="1"
+            aria-label="Ir al banner 2"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const slidesContainer = document.getElementById('banner-slides');
+    const prevButton = document.getElementById('prev-banner');
+    const nextButton = document.getElementById('next-banner');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    let currentSlide = 0;
+    const totalSlides = 2;
+    let startX = 0;
+    let endX = 0;
+
+    function goToSlide(slideIndex) {
+      currentSlide = slideIndex;
+      const translateX = -slideIndex * 100;
+      slidesContainer.style.transform = `translateX(${translateX}%)`;
+      
+      // Update indicators
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === slideIndex);
+        indicator.classList.toggle('bg-white/80', index === slideIndex);
+        indicator.classList.toggle('bg-white/40', index !== slideIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      goToSlide(currentSlide);
+    }
+
+    // Event listeners
+    if (prevButton) {
+      prevButton.addEventListener('click', prevSlide);
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', nextSlide);
+    }
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Touch/swipe support
+    if (slidesContainer) {
+      slidesContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      slidesContainer.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+      });
+
+      slidesContainer.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+      });
+
+      slidesContainer.addEventListener('mouseup', (e) => {
+        endX = e.clientX;
+        handleSwipe();
+      });
+    }
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = startX - endX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+    }
+
+    // Auto-play
+    setInterval(nextSlide, 5000);
+  });
+</script> 

@@ -1,0 +1,71 @@
+{
+  "title": "CURSO DE ELECTRÓNICA DIGITAL",
+  "slug": "curso-de-electronica-digital",
+  "description": "Circuitos digitales, microcontroladores y programación. Diseño de sistemas electrónicos. Formación en tecnología digital.",
+  "duration": "6 meses",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "/images/curso-electronica-digital.jpg",
+  "syllabus": [
+    {
+      "title": "Módulo 1: Fundamentos del Curso",
+      "topics": [
+        "Introducción al área de especialización",
+        "Conceptos básicos y terminología",
+        "Herramientas y equipos necesarios",
+        "Normativas de seguridad",
+        "Preparación del entorno de trabajo"
+      ]
+    },
+    {
+      "title": "Módulo 2: Técnicas Básicas",
+      "topics": [
+        "Procedimientos fundamentales",
+        "Manejo de herramientas especializadas",
+        "Técnicas de diagnóstico",
+        "Métodos de reparación básicos",
+        "Control de calidad inicial"
+      ]
+    },
+    {
+      "title": "Módulo 3: Técnicas Avanzadas",
+      "topics": [
+        "Procedimientos complejos",
+        "Diagnóstico avanzado",
+        "Reparaciones especializadas",
+        "Optimización de procesos",
+        "Resolución de problemas complejos"
+      ]
+    },
+    {
+      "title": "Módulo 4: Tecnología Moderna",
+      "topics": [
+        "Equipos y herramientas modernas",
+        "Software especializado",
+        "Tecnologías emergentes",
+        "Automatización de procesos",
+        "Mantenimiento predictivo"
+      ]
+    },
+    {
+      "title": "Módulo 5: Gestión y Administración",
+      "topics": [
+        "Gestión de inventarios",
+        "Control de costos",
+        "Atención al cliente",
+        "Documentación técnica",
+        "Planificación de mantenimiento"
+      ]
+    },
+    {
+      "title": "Módulo 6: Práctica Profesional",
+      "topics": [
+        "Prácticas en empresas del sector",
+        "Desarrollo de proyectos reales",
+        "Preparación para el mercado laboral",
+        "Networking profesional",
+        "Certificación final del curso"
+      ]
+    }
+  ]
+}

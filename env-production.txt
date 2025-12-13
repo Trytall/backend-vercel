@@ -1,0 +1,21 @@
+# MercadoPago Configuration (Production Environment)
+# IMPORTANTE: Reemplaza estos valores con tus credenciales reales de MercadoPago
+MERCADOPAGO_ACCESS_TOKEN=TU_ACCESS_TOKEN_REAL_AQUI
+MERCADOPAGO_PUBLIC_KEY=TU_PUBLIC_KEY_REAL_AQUI
+
+# WhatsApp Business API Configuration
+# IMPORTANTE: Necesitas obtener estas credenciales desde business.whatsapp.com
+WHATSAPP_API_TOKEN=your_whatsapp_api_token_here
+WHATSAPP_PHONE_ID=your_whatsapp_phone_id_here
+WHATSAPP_BUSINESS_ACCOUNT_ID=your_whatsapp_business_account_id_here
+
+# Webhook Configuration
+WEBHOOK_URL=https://tu-dominio.com/api/webhook
+WEBHOOK_SECRET=your_webhook_secret_here
+
+# Server Configuration
+PORT=3000
+NODE_ENV=production
+
+# Database Configuration (opcional para almacenar datos)
+DATABASE_URL=your_database_url_here 

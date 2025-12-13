@@ -1,0 +1,180 @@
+---
+// Course catalog component with search and filters
+import cursos from '../data/cursos.js';
+---
+
+<section id="cursos" class="py-16 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+        Nuestros cursos de oficio
+      </h2>
+    </div>
+
+    <!-- Filters -->
+    <div class="mb-8">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6">
+        <!-- Modality Filter -->
+        <div>
+          <h3 class="font-semibold mb-3">Modalidad</h3>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <button class="filter-btn bg-primary text-white px-4 py-2 rounded-lg font-semibold" data-filtro="todos">Todos los cursos</button>
+            <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-filtro="online">Cursos Online</button>
+            <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-filtro="presencial">Cursos Presenciales</button>
+          </div>
+        </div>
+        <!-- Sede Filter (hidden by default) -->
+        <div id="sedeFilter" class="hidden">
+          <h3 class="font-semibold mb-3">Sede Presencial</h3>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <button class="filter-sede-btn bg-primary text-white px-4 py-2 rounded-lg font-semibold" data-sede="todas">Todas las sedes</button>
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="moron">Morón</button>
+
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="lomas">Lomas de Zamora</button>
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="avellaneda">Avellaneda</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="max-w-md mx-auto mb-8">
+      <div class="relative">
+        <input 
+          type="text" 
+          id="courseSearch" 
+          placeholder="Buscar curso..." 
+          class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+        />
+        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Course Grid -->
+    <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Courses will be populated by JavaScript -->
+    </div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="hidden text-center py-12">
+      <p class="text-gray-500 text-lg">No se encontraron cursos que coincidan con tu búsqueda.</p>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ cursos }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    const courseGrid = document.getElementById('courseGrid');
+    const courseSearch = document.getElementById('courseSearch');
+    const noResults = document.getElementById('noResults');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sedeFilterBtns = document.querySelectorAll('.filter-sede-btn');
+    const sedeFilter = document.getElementById('sedeFilter');
+
+    let currentFilter = 'todos';
+    let currentSedeFilter = 'todas';
+    let searchTerm = '';
+
+    // Convertir los datos de cursos al formato esperado por el JavaScript
+    const courses = cursos.map(curso => ({
+      title: curso.titulo,
+      image: curso.imagen,
+      url: `/cursos/${curso.slug}`,
+      modalidad: curso.modalidad.toLowerCase().includes('online') ? 'online' : 'presencial',
+      sede: 'todas' // Por defecto todas las sedes
+    }));
+
+    function renderCourses() {
+      let filteredCourses = courses.filter(course => {
+        const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesFilter = currentFilter === 'todos' || course.modalidad === currentFilter;
+        const matchesSede = currentSedeFilter === 'todas' || course.sede === currentSedeFilter;
+        
+        return matchesSearch && matchesFilter && matchesSede;
+      });
+
+      if (filteredCourses.length === 0) {
+        courseGrid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      
+      courseGrid.innerHTML = filteredCourses.map(course => `
+        <div class="course-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <img src="${course.image}" alt="${course.title}" class="w-full h-48 object-cover" loading="lazy" />
+            <div class="absolute top-2 right-2">
+              <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">${course.modalidad}</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-gray-800 mb-3 line-clamp-2">${course.title}</h3>
+            <div class="flex justify-between items-center">
+              <a href="${course.url}" class="text-primary font-semibold hover:text-primary/80 transition-colors duration-200">
+                Ver más →
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Search functionality
+    courseSearch.addEventListener('input', function() {
+      searchTerm = this.value;
+      renderCourses();
+    });
+
+    // Filter functionality
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-white');
+          b.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        this.classList.remove('bg-gray-200', 'text-gray-700');
+        this.classList.add('bg-primary', 'text-white');
+        
+        currentFilter = this.dataset.filtro;
+        
+        // Show/hide sede filter based on modality
+        if (currentFilter === 'presencial') {
+          sedeFilter.classList.remove('hidden');
+        } else {
+          sedeFilter.classList.add('hidden');
+          currentSedeFilter = 'todas';
+          sedeFilterBtns.forEach(b => {
+            b.classList.remove('bg-primary', 'text-white');
+            b.classList.add('bg-gray-200', 'text-gray-700');
+          });
+          sedeFilterBtns[0].classList.remove('bg-gray-200', 'text-gray-700');
+          sedeFilterBtns[0].classList.add('bg-primary', 'text-white');
+        }
+        
+        renderCourses();
+      });
+    });
+
+    // Sede filter functionality
+    sedeFilterBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        sedeFilterBtns.forEach(b => {
+          b.classList.remove('bg-primary', 'text-white');
+          b.classList.add('bg-gray-200', 'text-gray-700');
+        });
+        this.classList.remove('bg-gray-200', 'text-gray-700');
+        this.classList.add('bg-primary', 'text-white');
+        
+        currentSedeFilter = this.dataset.sede;
+        renderCourses();
+      });
+    });
+
+    // Initial render
+    renderCourses();
+  });
+</script> 

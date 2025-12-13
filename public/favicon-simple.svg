@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="white" stroke="#dc2626" stroke-width="1"/>
+  
+  <!-- "ESC" at top (simplified letters) -->
+  <rect x="12" y="4" width="1" height="3" fill="#dc2626" rx="0.5"/>
+  <rect x="14" y="4" width="1" height="3" fill="#dc2626" rx="0.5"/>
+  <rect x="16" y="4" width="1" height="3" fill="#dc2626" rx="0.5"/>
+  
+  <!-- "iade" in center -->
+  <!-- Letter "i" with square dot -->
+  <rect x="10" y="10" width="1" height="6" fill="#dc2626" rx="0.5"/>
+  <rect x="9.5" y="8" width="1.5" height="1.5" fill="#dc2626"/>
+  
+  <!-- Letter "a" -->
+  <path d="M12 16 Q12 14 14 14 Q16 14 16 16 L16 18 Q16 20 14 20 Q12 20 12 18 Z" fill="#dc2626"/>
+  <rect x="13" y="14" width="1" height="2" fill="white"/>
+  
+  <!-- Letter "d" -->
+  <rect x="17" y="10" width="1" height="6" fill="#dc2626" rx="0.5"/>
+  <path d="M18 16 Q18 14 20 14 Q22 14 22 16 L22 18 Q22 20 20 20 Q18 20 18 18 Z" fill="#dc2626"/>
+  <rect x="19" y="14" width="1" height="2" fill="white"/>
+  
+  <!-- Letter "e" -->
+  <path d="M24 16 Q24 14 26 14 L26 16 Q24 16 24 18 L26 18 L26 20 Q24 20 24 18 Z" fill="#dc2626"/>
+  
+  <!-- "OTD" at bottom (simplified letters) -->
+  <rect x="12" y="24" width="1" height="3" fill="#dc2626" rx="0.5"/>
+  <rect x="14" y="24" width="1" height="3" fill="#dc2626" rx="0.5"/>
+  <rect x="16" y="24" width="1" height="3" fill="#dc2626" rx="0.5"/>
+</svg> 

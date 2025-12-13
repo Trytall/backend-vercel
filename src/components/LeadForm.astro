@@ -1,0 +1,550 @@
+---
+// Lead form component with course selection
+---
+
+<section id="lead-form" class="py-16 lg:py-20 bg-light-bg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+        ¡Inscribite ahora y obtené tu certificado!
+      </h2>
+      <p class="text-lg text-gray-600">
+        Completá tus datos, elegí tu modalidad y seleccioná los cursos que te interesan
+      </p>
+    </div>
+
+    <!-- Progress Steps -->
+    <div class="flex justify-center mb-8">
+      <div class="flex items-center space-x-4">
+        <div class="flex items-center">
+          <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <span class="ml-2 text-sm font-medium text-primary">Completa tus datos</span>
+        </div>
+        <div class="w-8 h-1 bg-gray-300"></div>
+        <div class="flex items-center">
+          <div class="w-8 h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <span class="ml-2 text-sm font-medium text-gray-600">Modalidad y cursos</span>
+        </div>
+        <div class="w-8 h-1 bg-gray-300"></div>
+        <div class="flex items-center">
+          <div class="w-8 h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <span class="ml-2 text-sm font-medium text-gray-600">Inscripción</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="leadForm" class="bg-white rounded-2xl shadow-xl p-8">
+      <!-- Personal Information -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div>
+          <label for="nombre" class="block text-sm font-semibold text-gray-700 mb-2">
+            Nombre y Apellido *
+          </label>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            required
+            placeholder="Ej: Juan Pérez"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="dni" class="block text-sm font-semibold text-gray-700 mb-2">
+            DNI *
+          </label>
+          <input 
+            type="text" 
+            id="dni" 
+            name="dni" 
+            required
+            placeholder="Ej: 12345678"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+            Correo Electrónico *
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required
+            placeholder="tu@email.com"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="telefono" class="block text-sm font-semibold text-gray-700 mb-2">
+            Número de Contacto *
+          </label>
+          <input 
+            type="tel" 
+            id="telefono" 
+            name="telefono" 
+            required
+            placeholder="Ej: 11-1234-5678"
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="provincia" class="block text-sm font-semibold text-gray-700 mb-2">
+            Provincia *
+          </label>
+          <select 
+            id="provincia" 
+            name="provincia" 
+            required
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          >
+            <option value="">Seleccioná tu provincia</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+          </select>
+        </div>
+        <div>
+          <label for="localidad" class="block text-sm font-semibold text-gray-700 mb-2">
+            Localidad *
+          </label>
+          <input 
+            type="text" 
+            id="localidad" 
+            name="localidad" 
+            required
+            placeholder="Ej: Morón, Lomas de Zamora, etc."
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Modality Selection -->
+      <div class="mb-8">
+        <label class="block text-sm font-semibold text-gray-700 mb-4">
+          Modalidad de Estudio *
+        </label>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-center">
+          <button 
+            type="button" 
+            class="modality-btn selected p-4 border-2 border-primary rounded-lg text-left transition-all duration-200"
+            data-modalidad="online"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <span class="text-2xl">💻</span>
+                <div>
+                  <div class="font-semibold text-gray-800">Online</div>
+                  <div class="text-sm text-gray-600">Aprendé desde tu casa</div>
+                </div>
+              </div>
+              <div class="text-right">
+                <div class="font-bold text-primary">$150.000</div>
+              </div>
+            </div>
+          </button>
+          <button 
+            type="button" 
+            class="modality-btn p-4 border-2 border-gray-300 rounded-lg text-left transition-all duration-200"
+            data-modalidad="presencial"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <span class="text-2xl">🏢</span>
+                <div>
+                  <div class="font-semibold text-gray-800">Presencial</div>
+                  <div class="text-sm text-gray-600">En nuestras sedes</div>
+                </div>
+              </div>
+              <div class="text-right">
+                <div class="font-bold text-gray-600">Consultar</div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <input type="hidden" id="modalidad" name="modalidad" value="online" />
+      </div>
+
+      <!-- Course Selection -->
+      <div class="mb-8">
+        <label class="block text-sm font-semibold text-gray-700 mb-4">
+          Seleccioná tu curso de interés *
+        </label>
+        <p class="text-sm text-gray-600 mb-4">
+          Hacé clic en los cursos que te interesan para seleccionarlos
+        </p>
+        
+        <!-- Course Carousel -->
+        <div class="relative mb-4">
+          <button 
+            type="button" 
+            class="course-nav-btn prev absolute -left-6 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white border border-primary rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200"
+            aria-label="Cursos anteriores"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <div class="course-carousel overflow-visible">
+            <div class="flex transition-transform duration-300 ease-in-out" id="course-slides">
+              <!-- Course slides will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <button 
+            type="button" 
+            class="course-nav-btn next absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 bg-primary text-white border border-primary rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200"
+            aria-label="Cursos siguientes"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Selected Courses Display -->
+        <div id="selectedCoursesDisplay" class="min-h-[60px] p-4 bg-gray-50 rounded-lg">
+          <p class="text-gray-500 text-center">Aún no seleccionaste ningún curso</p>
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="mb-8">
+        <button 
+          type="button" 
+          id="acepto_terminos_btn" 
+          class="w-full text-left p-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+          data-checked="false"
+        >
+          <div class="flex items-start space-x-3">
+            <span class="acepto-icon text-xl">☐</span>
+            <span class="acepto-text text-sm">
+              Acepto recibir información sobre cursos y promociones. Puedo cancelar en cualquier momento.
+            </span>
+          </div>
+        </button>
+        <input type="hidden" id="acepto_terminos" name="acepto_terminos" value="false" />
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full bg-primary text-white py-4 px-8 rounded-lg font-bold text-lg hover:bg-primary/90 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+      >
+        <span>¡Quiero inscribirme ahora!</span>
+        <span>📝</span>
+      </button>
+    </form>
+
+    <!-- Form Benefits -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl">✅</span>
+        <span class="font-semibold">Certificado oficial</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl">✅</span>
+        <span class="font-semibold">100% online disponible</span>
+      </div>
+      <div class="flex items-center space-x-3">
+        <span class="text-2xl">✅</span>
+        <span class="font-semibold">Acceso inmediato</span>
+      </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="formMessage" class="hidden mt-6 p-4 rounded-lg"></div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Ensure every course has a valid slug or URL
+    const courses = [
+      { title: "CURSO DE ADMINISTRACIÓN Y GESTIÓN EN SALUD", image: "/images/curso-administracion-salud.jpg", slug: "curso-de-administracion-y-gestion-en-salud" },
+      { title: "CURSO DE AUXILIAR EN CARDIOLOGÍA", image: "/images/curso-auxiliar-cardiologia.jpg", slug: "curso-de-auxiliar-en-cardiologia" },
+      { title: "CURSO DE CUIDADO DEL ADULTO MAYOR", image: "/images/curso-cuidado-adultos-mayores.jpg", slug: "curso-de-cuidado-del-adulto-mayor" },
+      { title: "CURSO DE AUXILIAR DE FARMACIA", image: "/images/curso-auxiliar-farmacia.jpg", slug: "curso-de-auxiliar-de-farmacia" },
+      { title: "CURSO DE REFRIGERACIÓN Y AIRE ACONDICIONADO", image: "/images/curso-refrigeracion-aire.jpg", slug: "curso-de-refrigeracion-y-aire-acondicionado" },
+      { title: "CURSO DE ELECTRICIDAD Y ELECTRÓNICA AUTOMOTRIZ", image: "/images/curso-electricidad-automotriz.jpg", slug: "curso-de-electricidad-y-electronica-automotriz" },
+      { title: "CURSO DE INSTALACIONES ELÉCTRICAS Y MOTORES ELÉCTRICOS", image: "/images/curso-electricidad-industrial.jpg", slug: "curso-de-instalaciones-electricas-y-motores-electricos" },
+      { title: "CURSO DE INSTALACIONES SANITARIAS Y DE GAS", image: "/images/curso-instalaciones-sanitarias.jpg", slug: "curso-de-instalaciones-sanitarias-y-de-gas" },
+      { title: "CURSO DE MECÁNICA DE MOTOS", image: "/images/curso-motos-alta-cilindrada.jpg", slug: "curso-de-mecanica-de-motos" },
+      { title: "CURSO DE MECÁNICA GENERAL", image: "/images/curso-electricidad-automotriz.jpg", slug: "curso-de-mecanica-general" },
+      { title: "CURSO DE SOLDADURA ELÉCTRICA", image: "/images/curso-soldadura-electrica.jpg", slug: "curso-de-soldadura-electrica" },
+      { title: "CURSO DE CERRAJERÍA", image: "/images/curso-cerrajeria.jpg", slug: "curso-de-cerrajeria" },
+      { title: "CURSO DE BOBINADO Y REPARACIÓN DE MOTORES ELÉCTRICOS", image: "/images/curso-bobinado.jpg", slug: "curso-de-bobinado-y-reparacion-de-motores-electricos" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA", image: "/images/curso-inyeccion-electronica-gnc.jpg", slug: "curso-de-inyeccion-electronica" },
+      { title: "CURSO DE CONSTRUCCIÓN", image: "/images/curso-construccion.jpg", slug: "curso-de-construccion" },
+      { title: "CURSO DE DISEÑO Y CONFECCIÓN DE INDUMENTARIA", image: "/images/curso-diseno-confeccion.jpg", slug: "curso-de-diseno-y-confeccion-de-indumentaria" },
+      { title: "CURSO DE ESTÉTICA Y MASAJE CORPORAL", image: "/images/curso-estetica-masaje.jpg", slug: "curso-de-estetica-y-masaje-corporal" },
+      { title: "CURSO DE MOTORES DIÉSEL", image: "/images/curso-motores-diesel.jpg", slug: "curso-de-motores-diesel" },
+      { title: "CURSO DE MOTOS DE ALTO CILINDRAJE", image: "/images/curso-motos-alta-cilindrada.jpg", slug: "curso-de-motos-de-alto-cilindraje" },
+      { title: "CURSO DE ELECTRICIDAD Y ELECTRÓNICA INDUSTRIAL", image: "/images/curso-electricidad-industrial.jpg", slug: "curso-de-electricidad-y-electronica-industrial" },
+      { title: "CURSO DE ELECTRÓNICA DIGITAL", image: "/images/curso-electronica-digital.jpg", slug: "curso-de-electronica-digital" },
+      { title: "CURSO DE PLAQUETAS ELECTRÓNICAS", image: "/images/curso-plaquetas-electronicas.jpg", slug: "curso-de-plaquetas-electronicas" },
+      { title: "CURSO DE REPARACIÓN DE CELULARES", image: "/images/curso-celulares.jpg", slug: "curso-de-reparacion-de-celulares" },
+      { title: "CURSO DE REPARACIÓN DE ELECTRODOMÉSTICOS", image: "/images/curso-reparacion-electrodomesticos.jpg", slug: "curso-de-reparacion-de-electrodomesticos" },
+      { title: "CURSO DE COSMETOLOGÍA Y MAQUILLAJE", image: "/images/curso-estetica-masaje.jpg", slug: "curso-de-cosmetologia-y-maquillaje" },
+      { title: "CURSO DE PELUQUERÍA Y COLORIMETRÍA", image: "/images/curso-barberia.jpg", slug: "curso-de-peluqueria-y-colorimetria" },
+      { title: "CURSO DE BARBERÍA", image: "/images/curso-barberia.jpg", slug: "curso-de-barberia" },
+      { title: "CURSO DE MANICURÍA Y PEDICURÍA", image: "/images/curso-estetica-masaje.jpg", slug: "curso-de-manicuria-y-pedicuria" },
+      { title: "CURSO DE MASAJE TERAPÉUTICO ORIENTAL", image: "/images/curso-masaje-oriental.jpg", slug: "curso-de-masaje-terapeutico-oriental" },
+      { title: "CURSO DE FRENOS", image: "/images/curso-frenos.jpg", slug: "curso-de-frenos" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA DIÉSEL", image: "/images/curso-inyeccion-diesel.jpg", slug: "curso-de-inyeccion-electronica-diesel" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA Y GAS VEHICULAR", image: "/images/curso-inyeccion-gas.jpg", slug: "curso-de-inyeccion-electronica-y-gas-vehicular" },
+      { title: "CURSO DE DISEÑO DE MODAS", image: "/images/curso-diseno-modas.jpg", slug: "curso-de-diseno-de-modas" }
+    ];
+
+    // Update titleSlugMap to ensure all titles have corresponding slugs
+    const titleSlugMap = Object.fromEntries(courses.map(c => [c.title, c.slug]));
+
+    let selectedCourses = []; // cada elemento: {title, slug}
+    let currentCoursePage = 0;
+    const coursesPerPage = 6;
+
+    // Check for pre-selected course from URL
+    function checkPreSelectedCourse() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const preSelectedCourse = urlParams.get('curso');
+      
+      if (preSelectedCourse) {
+        // Find the course by slug
+        const course = courses.find(c => c.slug === preSelectedCourse);
+        if (course) {
+          // Pre-select the course
+          selectCourse(course.title, course.slug);
+          
+          // Scroll to the form
+          document.getElementById('lead-form').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    }
+
+    // Initialize course carousel
+    function initializeCourseCarousel() {
+      const courseSlides = document.getElementById('course-slides');
+      const totalPages = Math.ceil(courses.length / coursesPerPage);
+
+      for (let i = 0; i < totalPages; i++) {
+        const slide = document.createElement('div');
+        slide.className = 'w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 gap-4';
+        if (i > 0) slide.style.display = 'none';
+
+        const startIndex = i * coursesPerPage;
+        const endIndex = Math.min(startIndex + coursesPerPage, courses.length);
+
+        for (let j = startIndex; j < endIndex; j++) {
+          const course = courses[j];
+          const courseBtn = document.createElement('button');
+          courseBtn.type = 'button';
+          courseBtn.className = 'course-btn relative h-32 rounded-xl overflow-hidden group focus:outline-none focus:ring-2 focus:ring-primary';
+          courseBtn.dataset.course = course.title;
+          const slugTmp = course.slug ?? (course.url ? course.url.split('/').pop() : '');
+          if (slugTmp) courseBtn.dataset.slug = slugTmp;
+          courseBtn.innerHTML = `
+            <img src="${course.image}" alt="${course.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
+              <span class="relative z-10 text-white text-sm font-semibold text-center px-2">${course.title}</span>
+            </div>
+          `;
+          courseBtn.onclick = () => toggleCourse({ title: course.title, slug: slugTmp });
+          slide.appendChild(courseBtn);
+        }
+
+        courseSlides.appendChild(slide);
+      }
+    }
+
+    // Course navigation
+    function updateCourseNavigation() {
+      const totalPages = Math.ceil(courses.length / coursesPerPage);
+      const prevBtn = document.querySelector('.course-nav-btn.prev');
+      const nextBtn = document.querySelector('.course-nav-btn.next');
+      const slides = document.querySelectorAll('#course-slides > div');
+
+      prevBtn.disabled = currentCoursePage === 0;
+      nextBtn.disabled = currentCoursePage === totalPages - 1;
+
+      slides.forEach((slide, index) => {
+        slide.style.display = index === currentCoursePage ? 'grid' : 'none';
+      });
+    }
+
+    // Toggle course selection
+    function selectCourse(title, slug) {
+      // Check if course is already selected
+      const idx = selectedCourses.findIndex(c => c.slug === slug);
+      if (idx === -1) {
+        selectedCourses.push({ title, slug });
+        updateSelectedCoursesDisplay();
+        updateCourseButtons();
+      }
+    }
+
+    function toggleCourse(course) {
+      const idx = selectedCourses.findIndex(c => c.slug === course.slug);
+      if (idx > -1) {
+        selectedCourses.splice(idx, 1);
+      } else {
+        selectedCourses.push(course);
+      }
+      updateSelectedCoursesDisplay();
+      updateCourseButtons();
+    }
+
+    // Update selected courses display
+    function updateSelectedCoursesDisplay() {
+      const display = document.getElementById('selectedCoursesDisplay');
+      if (selectedCourses.length === 0) {
+        display.innerHTML = '<p class="text-gray-500 text-center">Aún no seleccionaste ningún curso</p>';
+      } else {
+        const coursesHTML = selectedCourses.map(course => 
+          `<span class="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm mr-2 mb-2">${course.title}</span>`
+        ).join('');
+        display.innerHTML = coursesHTML;
+      }
+    }
+
+    // Update course buttons appearance
+    function updateCourseButtons() {
+      const courseBtns = document.querySelectorAll('.course-btn');
+      courseBtns.forEach(btn => {
+        const course = btn.dataset.course || btn.textContent;
+        if (selectedCourses.some(c => c.title === course)) {
+          btn.classList.add('ring-4','ring-primary');
+        } else {
+          btn.classList.remove('ring-4','ring-primary');
+        }
+      });
+    }
+
+    // Modality selection
+    const modalityBtns = document.querySelectorAll('.modality-btn');
+    const modalityInput = document.getElementById('modalidad');
+
+    modalityBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        modalityBtns.forEach(b => {
+          b.classList.remove('selected', 'border-primary');
+          b.classList.add('border-gray-300');
+        });
+        this.classList.add('selected', 'border-primary');
+        this.classList.remove('border-gray-300');
+        modalityInput.value = this.getAttribute('data-modalidad');
+      });
+    });
+
+    // Terms and conditions
+    const aceptoBtn = document.getElementById('acepto_terminos_btn');
+    const aceptoInput = document.getElementById('acepto_terminos');
+
+    aceptoBtn.addEventListener('click', function() {
+      const isChecked = this.getAttribute('data-checked') === 'true';
+      const newState = !isChecked;
+      
+      this.setAttribute('data-checked', newState.toString());
+      aceptoInput.value = newState.toString();
+      
+      const icon = this.querySelector('.acepto-icon');
+      icon.textContent = newState ? '☑' : '☐';
+    });
+
+    // Course navigation buttons
+    document.querySelector('.course-nav-btn.prev').addEventListener('click', () => {
+      if (currentCoursePage > 0) {
+        currentCoursePage--;
+        updateCourseNavigation();
+      }
+    });
+
+    document.querySelector('.course-nav-btn.next').addEventListener('click', () => {
+      const totalPages = Math.ceil(courses.length / coursesPerPage);
+      if (currentCoursePage < totalPages - 1) {
+        currentCoursePage++;
+        updateCourseNavigation();
+      }
+    });
+
+    // Form submission
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (selectedCourses.length === 0) {
+        alert('Debes seleccionar al menos un curso.');
+        return;
+      }
+
+      const formData = new FormData(this);
+      const nombre    = formData.get('nombre');
+      const dni       = formData.get('dni');
+      const email     = formData.get('email');
+      const telefono  = formData.get('telefono');
+      const provincia = formData.get('provincia');
+      const localidad = formData.get('localidad');
+      const modalidad = formData.get('modalidad');
+
+      if (!nombre || !dni || !email || !telefono || !provincia || !localidad) {
+        alert('Completa todos los datos obligatorios.');
+        return;
+      }
+
+      // Obtener slug del primer curso seleccionado
+      const firstCourse = selectedCourses[0];
+      let slug = firstCourse.slug;
+      if (!slug) {
+        slug = titleSlugMap[firstCourse.title] ?? '';
+      }
+
+      if (slug) {
+        // Construir query-string con todos los datos
+        const cursosSeleccionados = selectedCourses.map(c => c.title).join(', ');
+        const qs = new URLSearchParams({
+          nombre: nombre,
+          dni: dni,
+          email: email,
+          telefono: telefono,
+          provincia: provincia,
+          localidad: localidad,
+          modalidad: modalidad,
+          cursos: cursosSeleccionados
+        }).toString();
+
+        // Redirigir a la página de inscripción
+        window.location.href = `/inscripcion/${slug}?${qs}`;
+      } else {
+        alert('No se pudo determinar el curso seleccionado.');
+      }
+    });
+
+    // Initialize
+    initializeCourseCarousel();
+    updateCourseNavigation();
+    checkPreSelectedCourse();
+  });
+</script> 

@@ -154,15 +154,30 @@ app.get('/health', (req, res) => {
   const hasWhatsApp = !!process.env.WHATSAPP_API_TOKEN;
   const hasSMTP = !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
   
-  // Log para debugging (solo en desarrollo o si hay problemas)
+  // Información de debug para incluir en la respuesta
+  const debugInfo = {
+    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
+    SMTP_USER: process.env.SMTP_USER ? 'SET' : 'NOT SET',
+    SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
+    EMAIL_FROM: process.env.EMAIL_FROM || 'NOT SET',
+    EMAIL_NOTIFICACIONES: process.env.EMAIL_NOTIFICACIONES || 'NOT SET',
+    NODE_ENV: process.env.NODE_ENV || 'NOT SET',
+    VERCEL: process.env.VERCEL || 'NOT SET',
+    // Lista de todas las variables de entorno que contienen estas palabras clave
+    availableEnvKeys: Object.keys(process.env).filter(key => 
+      key.includes('MERCADOPAGO') || 
+      key.includes('SMTP') || 
+      key.includes('EMAIL') ||
+      key === 'NODE_ENV' ||
+      key === 'WEBHOOK_URL' ||
+      key === 'VERCEL'
+    )
+  };
+  
+  // Log para debugging
   if (!hasMercadoPago || !hasSMTP) {
-    console.log('⚠️ Variables de entorno:', {
-      MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
-      SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
-      SMTP_USER: process.env.SMTP_USER ? 'SET' : 'NOT SET',
-      SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
-      NODE_ENV: process.env.NODE_ENV || 'NOT SET'
-    });
+    console.log('⚠️ Variables de entorno:', debugInfo);
   }
   
   res.json({
@@ -171,7 +186,8 @@ app.get('/health', (req, res) => {
     mercadopago: hasMercadoPago,
     whatsapp: hasWhatsApp,
     email: hasSMTP,
-    nodeEnv: process.env.NODE_ENV || 'not set'
+    nodeEnv: process.env.NODE_ENV || 'not set',
+    debug: debugInfo // Incluir información de debug en la respuesta
   });
 });
 

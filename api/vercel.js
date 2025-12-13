@@ -10,14 +10,25 @@ import nodemailer from 'nodemailer';
 
 // Load environment variables (solo para desarrollo local)
 // En Vercel, las variables se inyectan automáticamente en process.env
-// No usar dotenv en producción porque Vercel ya inyecta las variables
-if (process.env.VERCEL !== '1' && process.env.NODE_ENV !== 'production') {
+// NO usar dotenv en Vercel - las variables vienen de las configuraciones del dashboard
+const isVercel = process.env.VERCEL === '1' || process.env.VERCEL_ENV;
+if (!isVercel && process.env.NODE_ENV !== 'production') {
   dotenv.config();
+} else {
+  // En Vercel, loguear qué variables están disponibles para debugging
+  console.log('🌐 Running on Vercel - Variables disponibles:', {
+    hasMercadoPago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
+    hasSMTP: !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS),
+    envKeys: Object.keys(process.env).filter(k => 
+      k.includes('MERCADOPAGO') || k.includes('SMTP') || k.includes('EMAIL')
+    )
+  });
 }
 
 const app = express();
 
 // Configurar trust proxy para Vercel (necesario para rate limiting)
+// DEBE estar ANTES de cualquier middleware que use rate limiting
 app.set('trust proxy', true);
 
 // Security Middleware

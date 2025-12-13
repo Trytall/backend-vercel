@@ -8,8 +8,11 @@ import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import nodemailer from 'nodemailer';
 
-// Load environment variables
-dotenv.config();
+// Load environment variables (solo para desarrollo local)
+// En Vercel, las variables se inyectan automáticamente en process.env
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
+}
 
 const app = express();
 
@@ -103,11 +106,29 @@ app.get('/', (req, res) => {
 
 // Health check endpoint
 app.get('/health', (req, res) => {
+  // Debug: verificar variables de entorno disponibles
+  const hasMercadoPago = !!process.env.MERCADOPAGO_ACCESS_TOKEN;
+  const hasWhatsApp = !!process.env.WHATSAPP_API_TOKEN;
+  const hasSMTP = !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
+  
+  // Log para debugging (solo en desarrollo o si hay problemas)
+  if (!hasMercadoPago || !hasSMTP) {
+    console.log('⚠️ Variables de entorno:', {
+      MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+      SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
+      SMTP_USER: process.env.SMTP_USER ? 'SET' : 'NOT SET',
+      SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
+      NODE_ENV: process.env.NODE_ENV || 'NOT SET'
+    });
+  }
+  
   res.json({
     status: 'OK',
     timestamp: new Date().toISOString(),
-    mercadopago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
-    whatsapp: !!process.env.WHATSAPP_API_TOKEN
+    mercadopago: hasMercadoPago,
+    whatsapp: hasWhatsApp,
+    email: hasSMTP,
+    nodeEnv: process.env.NODE_ENV || 'not set'
   });
 });
 

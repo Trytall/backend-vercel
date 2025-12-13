@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "backend-vercel",
+  "builds": [
+    { "src": "api/vercel.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/vercel.js" }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+} 

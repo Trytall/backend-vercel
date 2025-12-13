@@ -10,11 +10,15 @@ import nodemailer from 'nodemailer';
 
 // Load environment variables (solo para desarrollo local)
 // En Vercel, las variables se inyectan automáticamente en process.env
-if (process.env.NODE_ENV !== 'production') {
+// No usar dotenv en producción porque Vercel ya inyecta las variables
+if (process.env.VERCEL !== '1' && process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
 
 const app = express();
+
+// Configurar trust proxy para Vercel (necesario para rate limiting)
+app.set('trust proxy', true);
 
 // Security Middleware
 app.use(helmet({

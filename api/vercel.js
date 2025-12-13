@@ -154,6 +154,17 @@ app.get('/health', (req, res) => {
   const hasWhatsApp = !!process.env.WHATSAPP_API_TOKEN;
   const hasSMTP = !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
   
+  // Obtener TODAS las claves de process.env para debugging
+  const allEnvKeys = Object.keys(process.env);
+  const relevantEnvKeys = allEnvKeys.filter(key => 
+    key.includes('MERCADOPAGO') || 
+    key.includes('SMTP') || 
+    key.includes('EMAIL') ||
+    key === 'NODE_ENV' ||
+    key === 'WEBHOOK_URL' ||
+    key === 'VERCEL'
+  );
+  
   // Información de debug para incluir en la respuesta
   const debugInfo = {
     MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
@@ -162,23 +173,23 @@ app.get('/health', (req, res) => {
     SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
     EMAIL_FROM: process.env.EMAIL_FROM || 'NOT SET',
     EMAIL_NOTIFICACIONES: process.env.EMAIL_NOTIFICACIONES || 'NOT SET',
+    WEBHOOK_URL: process.env.WEBHOOK_URL || 'NOT SET',
     NODE_ENV: process.env.NODE_ENV || 'NOT SET',
     VERCEL: process.env.VERCEL || 'NOT SET',
-    // Lista de todas las variables de entorno que contienen estas palabras clave
-    availableEnvKeys: Object.keys(process.env).filter(key => 
-      key.includes('MERCADOPAGO') || 
-      key.includes('SMTP') || 
-      key.includes('EMAIL') ||
-      key === 'NODE_ENV' ||
-      key === 'WEBHOOK_URL' ||
-      key === 'VERCEL'
-    )
+    // Lista de todas las variables de entorno relevantes disponibles
+    availableEnvKeys: relevantEnvKeys,
+    // Total de variables de entorno (para debugging)
+    totalEnvKeys: allEnvKeys.length
   };
   
-  // Log para debugging
-  if (!hasMercadoPago || !hasSMTP) {
-    console.log('⚠️ Variables de entorno:', debugInfo);
-  }
+  // Log para debugging - SIEMPRE loguear en producción para diagnosticar
+  console.log('🔍 Health Check Debug:', {
+    hasMercadoPago,
+    hasSMTP,
+    relevantEnvKeys,
+    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
+    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET'
+  });
   
   res.json({
     status: 'OK',

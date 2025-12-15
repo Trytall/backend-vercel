@@ -159,7 +159,7 @@ app.get('/debug', (req, res) => {
 });
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
   // Debug: verificar variables de entorno disponibles
   const hasMercadoPago = !!process.env.MERCADOPAGO_ACCESS_TOKEN;
   const hasWhatsApp = !!process.env.WHATSAPP_API_TOKEN;
@@ -214,7 +214,7 @@ app.get('/health', (req, res) => {
 });
 
 // Create Payment Preference
-app.post('/create-preference', paymentLimiter, async (req, res) => {
+app.post('/api/create-preference', paymentLimiter, async (req, res) => {
   try {
     console.log('Received request body:', req.body);
     
@@ -302,9 +302,7 @@ app.post('/create-preference', paymentLimiter, async (req, res) => {
           pending: `https://escuelasiade.com.ar/pending`
         },
         external_reference: `SIADE_${Date.now()}`,
-        notification_url: process.env.WEBHOOK_URL 
-          ? `${process.env.WEBHOOK_URL}/api/webhook`
-          : `https://escuelasiade.com.ar/api/webhook`,
+        notification_url: process.env.WEBHOOK_URL || `https://escuelasiade.com.ar/api/webhook`,
         metadata: {
           nombre: nombre || '',
           dni: dni || '',
@@ -355,7 +353,7 @@ app.post('/create-preference', paymentLimiter, async (req, res) => {
 });
 
 // Endpoint para enviar notificación de formulario completado
-app.post('/send-form-notification', async (req, res) => {
+app.post('/api/send-form-notification', async (req, res) => {
   try {
     console.log('\n' + '='.repeat(60));
     console.log('📧 [NUEVA SOLICITUD] Endpoint /api/send-form-notification llamado');
@@ -573,7 +571,7 @@ No responder a este email.
 }
 
 // Webhook endpoint for MercadoPago
-app.post('/webhook', async (req, res) => {
+app.post('/api/webhook', async (req, res) => {
   try {
     const { type, data } = req.body;
     console.log('Webhook received:', { type, data });

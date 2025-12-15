@@ -4,6 +4,7 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import WhatsAppButton from '../../components/WhatsAppButton.astro';
 import courses from '../../data/courses.js';
+import { Fragment } from 'astro/jsx-runtime';
 
 export function getStaticPaths() {
   return courses.map(c => ({ params: { slug: c.slug } }));
@@ -12,58 +13,100 @@ export function getStaticPaths() {
 const { slug } = Astro.params;
 const course = courses.find(c => c.slug === slug);
 if (!course) throw new Error('Curso no encontrado');
+
+// Leer modalidad y sede desde query
+const url = new URL(Astro.request.url);
+const modalidadQS = (url.searchParams.get('modalidad') || '').toLowerCase();
+const sedeQS = (url.searchParams.get('sede') || '').toLowerCase();
+const isOnline = modalidadQS ? modalidadQS === 'online' : (course.modality || '').toLowerCase().includes('online');
+const sedeMap = { moron: 'Morón', lomas: 'Lomas de Zamora', avellaneda: 'Avellaneda' };
+const sedeVista = sedeMap[sedeQS] || '';
 ---
 
 <Layout title={`Inscripción | ${course.title}`} description={`Elegí cómo inscribirte al ${course.title}. Pago directo o asesor personalizado.`}>
   <Header />
 
   <!-- Hero / Title -->
-  <section class="pt-12 pb-8 bg-light-bg text-center">
+  <section id="insc-root" data-course-title={course.title} class="pt-12 pb-8 bg-light-bg text-center">
     <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-4">¡Elegí cómo querés inscribirte!</h1>
-    <p class="text-gray-700 max-w-2xl mx-auto">Tenés dos opciones para comenzar tu curso {course.modality?.toLowerCase() ?? 'online'}</p>
+    {isOnline ? (
+      <p class="text-gray-700 max-w-2xl mx-auto">Tenés opción de pago directo para comenzar tu curso online ahora mismo.</p>
+    ) : (
+      <p class="text-gray-700 max-w-2xl mx-auto">
+        Reservá tu vacante presencial abonando la inscripción con MercadoPago o coordiná con un asesor de la sede seleccionada.
+      </p>
+    )}
+    {!isOnline && sedeVista && (
+      <div class="mt-3 inline-block bg-primary/10 text-primary px-3 py-1 rounded">Sede: <strong>{sedeVista}</strong></div>
+    )}
   </section>
 
   <!-- Options -->
   <section class="py-12 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
-      <!-- MercadoPago Option -->
-      <div class="border border-primary rounded-xl p-8 shadow-lg flex flex-col">
-        <div class="text-4xl mb-4 text-center">💳</div>
-        <h2 class="text-xl font-semibold mb-2 text-center">Pago con MercadoPago</h2>
-        <p class="text-primary font-bold text-lg mb-6 text-center">Desde $150.000</p>
-        <p class="text-gray-600 mb-6">Inscribite ahora mismo y accedé inmediatamente a tu curso. Pago seguro con MercadoPago.</p>
+        <div class="border-2 border-red-600 rounded-xl p-8 shadow-lg flex flex-col bg-red-50">
+          <div class="text-4xl mb-4 text-center">💳</div>
+          <h2 class="text-xl font-semibold mb-2 text-center">Pago con MercadoPago</h2>
+          <p id="precioDesde" class="text-primary font-bold text-lg mb-6 text-center">Desde $150.000</p>
+        <p class="text-gray-600 mb-6 text-center">
+          {isOnline
+            ? 'Inscribite ahora mismo y accedé inmediatamente a tu curso. Pago seguro con MercadoPago.'
+            : `Reservá tu vacante presencial abonando la inscripción. Una vez acreditado, el equipo de ${sedeVista || 'IADE'} te contactará para coordinar horarios y fechas.`}
+        </p>
 
-        <!-- Payment Plans -->
-        <div class="space-y-4 mb-6">
-          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btnContado">
-            <span>Pago al contado</span>
-            <span>$150.000</span>
-          </button>
-          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn3Cuotas">
-            <span>3 cuotas</span>
-            <span>$240.000</span>
-          </button>
-          <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn6Cuotas">
-            <span>6 cuotas</span>
-            <span>$300.000</span>
-          </button>
+          <!-- Payment Plans -->
+          <div class="space-y-4 mb-6">
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btnContado">
+              <span>Pago al contado</span>
+              <span class="precio-plan">$150.000</span>
+            </button>
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn3Cuotas">
+              <span>3 cuotas</span>
+              <span class="precio-plan">$240.000</span>
+            </button>
+            <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-between px-4" id="btn6Cuotas">
+              <span>6 cuotas</span>
+              <span class="precio-plan">$300.000</span>
+            </button>
+          </div>
+
+          <ul class="text-sm text-gray-600 space-y-1 mt-auto">
+          {isOnline ? (
+            <Fragment>
+            <li>✅ Acceso inmediato al curso</li>
+            <li>✅ Acceso permanente al material</li>
+            <li>✅ Certificado oficial incluido</li>
+            <li>✅ Pago seguro con Mercado Pago</li>
+            <li>✅ Sin comisiones adicionales</li>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <li>✅ Reservás tu vacante en {sedeVista || 'la sede elegida'}</li>
+              <li>✅ Coordinamos horarios y fechas luego del pago</li>
+              <li>✅ Material y práctica presencial incluidos</li>
+              <li>✅ Certificado oficial al finalizar</li>
+              <li>✅ Pago seguro con Mercado Pago</li>
+            </Fragment>
+          )}
+          </ul>
         </div>
 
-        <ul class="text-sm text-gray-600 space-y-1 mt-auto">
-          <li>✅ Acceso inmediato al curso</li>
-          <li>✅ Acceso permanente al material</li>
-          <li>✅ Certificado oficial incluido</li>
-          <li>✅ Pago seguro con Mercado Pago</li>
-          <li>✅ Sin comisiones adicionales</li>
-        </ul>
-      </div>
-
       <!-- Asesor Option -->
-      <div class="border border-primary rounded-xl p-8 shadow-lg flex flex-col">
+      <div class="border-2 border-red-600 rounded-xl p-8 shadow-lg flex flex-col bg-red-50">
         <div class="text-4xl mb-4 text-center">👨‍💼</div>
         <h2 class="text-xl font-semibold mb-2 text-center">Contacto con Asesor</h2>
-        <p class="text-primary font-bold text-lg mb-6 text-center">Consultar</p>
-        <p class="text-gray-600 mb-6">Un asesor te contactará inmediatamente para resolver todas tus dudas y ayudarte en la inscripción.</p>
+        <p class="text-primary font-bold text-lg mb-6 text-center">{isOnline ? 'Consultar' : 'Asesor presencial'}</p>
+        <p class="text-gray-600 mb-6 text-center">
+          {isOnline
+            ? 'Un asesor te contactará inmediatamente para resolver todas tus dudas y ayudarte en la inscripción.'
+            : `Preferís coordinar con alguien del equipo? Un asesor de ${sedeVista || 'IADE'} te acompañará para finalizar tu inscripción presencial.`}
+        </p>
+
+        {!isOnline && sedeVista && (
+          <div class="mb-6 text-center">
+            <div class="inline-block bg-primary/10 text-primary px-3 py-1 rounded">Sede: <strong>{sedeVista}</strong></div>
+          </div>
+        )}
 
         <ul class="text-sm text-gray-600 space-y-1 mb-6">
           <li>✅ Atención personalizada</li>
@@ -72,14 +115,14 @@ if (!course) throw new Error('Curso no encontrado');
           <li>✅ Acceso permanente incluido</li>
           <li>✅ Asesoramiento completo</li>
         </ul>
-        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg w-full mt-auto" id="contactarAsesorBtn">Contactar Asesor 👨‍💼</button>
+        <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 rounded-lg w-full mt-auto" id="contactarAsesorBtn">Contactar por WhatsApp 👨‍💼</button>
       </div>
     </div>
   </section>
 
   <!-- Summary Box -->
   <section class="py-12 bg-light-bg">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow p-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow p-6 border-2 border-red-600">
       <h3 class="text-lg font-semibold text-center mb-6">Resumen de tu inscripción</h3>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-gray-50 p-4 rounded-lg">
@@ -97,158 +140,294 @@ if (!course) throw new Error('Curso no encontrado');
   <Footer />
   <WhatsAppButton />
 
-  <script>
-    // Helpers ----------------------------------------------------------
-    function params() {
-      return Object.fromEntries(new URLSearchParams(location.search));
-    }
-
-    // Rellena el cuadro resumen con los datos de query-string (si existen)
-    const data = params();
-    const resumenDatos = document.getElementById('resumenDatos');
-    const resumenCursos = document.getElementById('resumenCursos');
-    
-    if (resumenDatos) {
-      const datosHTML = `
-        <div><strong>Nombre:</strong> ${data.nombre || 'No especificado'}</div>
-        <div><strong>DNI:</strong> ${data.dni || 'No especificado'}</div>
-        <div><strong>Email:</strong> ${data.email || 'No especificado'}</div>
-        <div><strong>Teléfono:</strong> ${data.telefono || 'No especificado'}</div>
-        <div><strong>Provincia:</strong> ${data.provincia || 'No especificado'}</div>
-        <div><strong>Localidad:</strong> ${data.localidad || 'No especificado'}</div>
-        <div><strong>Modalidad:</strong> ${data.modalidad || 'Online'}</div>
-      `;
-      resumenDatos.innerHTML = datosHTML;
-    }
-    
-    if (resumenCursos) {
-      const cursos = data.cursos || course.title;
-      const cursosHTML = `<div class="bg-primary/10 text-primary px-3 py-2 rounded">${cursos}</div>`;
-      resumenCursos.innerHTML = cursosHTML;
-    }
-
-    // MercadoPago Integration -------------------------------------------
-    async function pagar(plan) {
-      console.log('Función pagar llamada con plan:', plan);
+  <script is:inline>
+    // Asegurar que todas las variables estén en el scope correcto
+    (function() {
+      'use strict';
       
-      const nombre = data.nombre || '';
-      const dni = data.dni || '';
-      const email = data.email || '';
-      const telefono = data.telefono || '';
-      const provincia = data.provincia || '';
-      const localidad = data.localidad || '';
-      const modalidad = data.modalidad || 'Online';
-      const cursos = data.cursos || course.title;
-      
-      // Determinar monto según el plan
-      let amount;
-      let description;
-      switch(plan) {
-        case 'contado':
-          amount = 150000;
-          description = 'Pago al contado';
-          break;
-        case '3cuotas':
-          amount = 240000;
-          description = '3 cuotas';
-          break;
-        case '6cuotas':
-          amount = 300000;
-          description = '6 cuotas';
-          break;
-        default:
-          amount = 150000;
-          description = 'Pago al contado';
+      const TEST_PRICE = false;
+      const TEST_AMOUNT = 1;
+
+      function params() { return Object.fromEntries(new URLSearchParams(location.search)); }
+
+      const data = params();
+      const resumenDatos = document.getElementById('resumenDatos');
+      const resumenCursos = document.getElementById('resumenCursos');
+      const fallbackCourse = document.getElementById('insc-root')?.dataset.courseTitle || '';
+      const cursosTexto = data.cursos || fallbackCourse;
+      const sedeMap = { moron: 'Morón', lomas: 'Lomas de Zamora', avellaneda: 'Avellaneda' };
+      const sedeVista = sedeMap[(data.sede || '').toLowerCase()] || '';
+      const isOnline = (data.modalidad || '').toLowerCase() === 'online';
+      const modalidadTexto = (data.modalidad || (isOnline ? 'online' : 'presencial')).toString();
+      const modalidadLabel = modalidadTexto.charAt(0).toUpperCase() + modalidadTexto.slice(1);
+
+      if (resumenDatos) {
+        const datosHTML = `
+          <div><strong>Nombre:</strong> ${data.nombre || 'No especificado'}</div>
+          <div><strong>DNI:</strong> ${data.dni || 'No especificado'}</div>
+          <div><strong>Email:</strong> ${data.email || 'No especificado'}</div>
+          <div><strong>Teléfono:</strong> ${data.telefono || 'No especificado'}</div>
+          <div><strong>Provincia:</strong> ${data.provincia || 'No especificado'}</div>
+          <div><strong>Localidad:</strong> ${data.localidad || 'No especificado'}</div>
+          <div><strong>Modalidad:</strong> ${modalidadLabel}</div>
+          ${!isOnline && sedeVista ? `<div><strong>Sede:</strong> ${sedeVista}</div>` : ''}
+        `;
+        resumenDatos.innerHTML = datosHTML;
       }
-      
-      try {
-        console.log('Iniciando proceso de pago...');
-        
-        // Mostrar loading
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(btn => btn.disabled = true);
-        
-        // Crear preferencia de MercadoPago
-        const paymentData = {
-          nombre,
-          dni,
-          email,
-          telefono,
-          provincia,
-          localidad,
-          modalidad,
-          cursos: cursos.split(',').map(c => c.trim()),
-          totalAmount: amount,
-          plan: description
-        };
-        
-        console.log('Datos de pago:', paymentData);
-        
-        const response = await fetch(`${import.meta.env.DEV ? 'http://localhost:3000' : 'https://tu-backend.vercel.app'}/api/create-preference`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(paymentData)
+      if (resumenCursos) { resumenCursos.innerHTML = `<div class="bg-primary/10 text-primary px-3 py-2 rounded">${cursosTexto}</div>`; }
+
+      // Persistencia (para retorno de pago o WA)
+      (function persistInicial() {
+        const preliminar = { nombre: data.nombre||'', dni: data.dni||'', email: data.email||'', telefono: data.telefono||'', provincia: data.provincia||'', localidad: data.localidad||'', curso: cursosTexto, sede: sedeVista };
+        try { const prev = sessionStorage.getItem('datosPago'); if (!prev || prev !== JSON.stringify(preliminar)) { sessionStorage.setItem('datosPago', JSON.stringify(preliminar)); } } catch {}
+      })();
+
+      // reCAPTCHA v3
+      const SITE_KEY = '6Ld_Uq8rAAAAAA7J5Mfy817Tn__ybWtIYLeihOqq';
+      (function loadRecaptcha(){
+        if (typeof window === 'undefined') return;
+        if (window.grecaptcha) return;
+        const s = document.createElement('script');
+        s.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+        s.async = true;
+        document.head.appendChild(s);
+      })();
+
+      function waitForRecaptchaReady(timeoutMs = 6000) {
+        return new Promise((resolve, reject) => {
+          const start = Date.now();
+          (function check(){
+            if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) return resolve();
+            if (Date.now() - start > timeoutMs) return reject(new Error('recaptcha_not_ready'));
+            setTimeout(check, 100);
+          })();
         });
+      }
+
+      async function fetchRecaptchaToken() {
+        // 1) Intentar recuperar por query o sessionStorage
+        try {
+          const tokenFieldQS = new URLSearchParams(location.search).get('recaptcha_token');
+          if (tokenFieldQS) return tokenFieldQS;
+          const stored = sessionStorage.getItem('recaptcha_token');
+          if (stored) return stored;
+        } catch {}
+        // 2) Generar un token nuevo
+        try {
+          await waitForRecaptchaReady();
+          const token = await grecaptcha.execute(SITE_KEY, { action: 'pay_inscripcion' });
+          try { sessionStorage.setItem('recaptcha_token', token); } catch {}
+          return token;
+        } catch {}
+        return '';
+      }
+
+      async function pagar(plan) {
+        // Inicializar amount con un valor por defecto
+        let amount = 150000;
+        let description = 'Pago al contado';
+        let maxInstallments = 1;
         
-        const result = await response.json();
-        
-        if (result.success) {
-          // Redirigir a MercadoPago
-          const initPoint = result.initPoint;
-          
-          window.location.href = initPoint;
-        } else {
-          throw new Error(result.error || 'Error creating payment');
+        // Validar que plan sea un string válido
+        if (!plan || typeof plan !== 'string') {
+          plan = 'contado';
         }
         
-      } catch (error) {
-        console.error('Payment error:', error);
-        alert('Error al procesar el pago. Por favor, intenta nuevamente.');
+        switch(plan){
+          case '3cuotas':
+            amount = 240000; 
+            description = '3 cuotas'; 
+            maxInstallments = 3; 
+            break;
+          case '6cuotas':
+            amount = 300000; 
+            description = '6 cuotas'; 
+            maxInstallments = 6; 
+            break;
+          case 'contado':
+          default:
+            amount = 150000; 
+            description = 'Pago al contado'; 
+            maxInstallments = 1; 
+            break;
+        }
         
-        // Restaurar botones
-        const buttons = document.querySelectorAll('button');
-        buttons.forEach(btn => btn.disabled = false);
+        if (TEST_PRICE) {
+          amount = TEST_AMOUNT;
+        }
+        
+        const overrideStr = (data.precioTest || data.precio || '').toString().replace(',', '.');
+        const override = parseFloat(overrideStr);
+        if (!Number.isNaN(override) && override > 0) {
+          amount = override;
+        }
+        
+        // Validar que amount sea un número válido antes de continuar
+        if (typeof amount !== 'number' || isNaN(amount) || amount <= 0) {
+          console.error('Error: amount no es válido:', amount);
+          alert('Error al calcular el monto. Por favor, recarga la página e intenta nuevamente.');
+          return;
+        }
+
+        // Guardar datos en sessionStorage para cuando regrese del pago
+        try {
+          sessionStorage.setItem('datosPago', JSON.stringify({
+            nombre: data.nombre || '',
+            dni: data.dni || '',
+            email: data.email || '',
+            telefono: data.telefono || '',
+            provincia: data.provincia || '',
+            localidad: data.localidad || '',
+            curso: cursosTexto,
+            modalidad: modalidadLabel,
+            sede: sedeVista,
+            monto: amount,
+            plan: plan
+          }));
+        } catch (e) {
+          console.error('Error guardando datos:', e);
+        }
+
+        try {
+          const buttons = document.querySelectorAll('button'); 
+          buttons.forEach(b => b.disabled = true);
+          
+          // Usar Vercel API en producción, localhost en desarrollo
+          const VERCEL_API_URL = 'https://backend-vercel-silk.vercel.app';
+          const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+          const apiUrl = isLocalhost
+            ? 'http://localhost:3000/api/create-preference'
+            : `${VERCEL_API_URL}/api/create-preference`;
+          
+          console.log('🔗 URL de API de MercadoPago:', apiUrl);
+          
+          // Asegurar que amount esté definido antes de enviar
+          const amountToSend = typeof amount === 'number' && !isNaN(amount) ? amount : 150000;
+          
+          const requestBody = {
+            nombre: data.nombre || '',
+            dni: data.dni || '',
+            email: data.email || '',
+            telefono: data.telefono || '',
+            provincia: data.provincia || '',
+            localidad: data.localidad || '',
+            modalidad: modalidadTexto || 'online',
+            sede: sedeVista || '',
+            cursos: cursosTexto ? [cursosTexto] : [],
+            totalAmount: amountToSend,
+            plan: plan || 'contado'
+          };
+          
+          console.log('Enviando solicitud de pago con amount:', amountToSend);
+          
+          const response = await fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+          });
+          
+          console.log('Response status:', response.status);
+          console.log('Response headers:', response.headers);
+          
+          if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Error response:', errorText);
+            throw new Error(`Error HTTP: ${response.status} - ${errorText}`);
+          }
+          
+          const result = await response.json();
+          console.log('Preferencia creada:', result);
+          
+          if (result.success && result.preferenceId) {
+            // Redirigir directamente al checkout de MercadoPago
+            window.location.href = result.initPoint || `https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=${result.preferenceId}`;
+          } else {
+            throw new Error(result.error || 'No se pudo crear la preferencia');
+          }
+          
+          buttons.forEach(b => b.disabled = false);
+        } catch (e) {
+          console.error('Error al crear preferencia:', e);
+          alert('Error al procesar el pago. Por favor, intenta nuevamente.');
+          const buttons = document.querySelectorAll('button');
+          buttons.forEach(b => b.disabled = false);
+        }
       }
-    }
-    
-    // Función para contactar asesor
-    function contactarAsesor() {
-      const nombre = data.nombre || '';
-      const dni = data.dni || '';
-      const email = data.email || '';
-      const telefono = data.telefono || '';
-      const provincia = data.provincia || '';
-      const localidad = data.localidad || '';
-      const modalidad = data.modalidad || 'Online';
-      const cursos = data.cursos || course.title;
+
+      function contactarAsesor() {
+        const sedeLinea = !isOnline && sedeVista ? `\nSede: ${sedeVista}` : '';
+        const mensaje = `Hola IADE! Me interesa el curso de ${cursosTexto}.\n\nModalidad: ${modalidadLabel}${sedeLinea}\n\nMis datos:\nNombre: ${data.nombre || ''}\nDNI: ${data.dni || ''}\nEmail: ${data.email || ''}\nTeléfono: ${data.telefono || ''}\nProvincia: ${data.provincia || ''}\nLocalidad: ${data.localidad || ''}\n\n¿Podrían brindarme más información sobre el curso?`;
+        const url = `https://wa.me/5491130112419?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+      }
+
+      // Listeners - asegurar que se ejecuten después de que el DOM esté listo
+      function setupEventListeners() {
+        const btnContado = document.getElementById('btnContado');
+        const btn3Cuotas = document.getElementById('btn3Cuotas');
+        const btn6Cuotas = document.getElementById('btn6Cuotas');
+        const contactarAsesorBtn = document.getElementById('contactarAsesorBtn');
+        
+        if (btnContado) {
+          btnContado.addEventListener('click', (e) => {
+            e.preventDefault();
+            pagar('contado');
+          });
+        }
+        
+        if (btn3Cuotas) {
+          btn3Cuotas.addEventListener('click', (e) => {
+            e.preventDefault();
+            pagar('3cuotas');
+          });
+        }
+        
+        if (btn6Cuotas) {
+          btn6Cuotas.addEventListener('click', (e) => {
+            e.preventDefault();
+            pagar('6cuotas');
+          });
+        }
+        
+        if (contactarAsesorBtn) {
+          contactarAsesorBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            contactarAsesor();
+          });
+        }
+      }
       
-      const mensaje = `Hola IADE, soy ${nombre} (DNI: ${dni}). 
-Quiero información sobre los siguientes cursos: ${cursos}.
-Modalidad: ${modalidad}
-Email: ${email}
-Teléfono: ${telefono}
-Provincia: ${provincia}
-Localidad: ${localidad}`;
-      
-      const url = `https://wa.me/5491130112419?text=${encodeURIComponent(mensaje)}`;
-      window.open(url, '_blank');
-    }
-    
-    // Agregar event listeners para los botones de pago
-    document.getElementById('btnContado')?.addEventListener('click', () => pagar('contado'));
-    document.getElementById('btn3Cuotas')?.addEventListener('click', () => pagar('3cuotas'));
-    document.getElementById('btn6Cuotas')?.addEventListener('click', () => pagar('6cuotas'));
-    
-    // Agregar event listener para el botón de asesor
-    const btn = document.getElementById('contactarAsesorBtn');
-    if (btn) {
-      btn.onclick = function(e) {
-        e.preventDefault();
-        contactarAsesor();
-      };
-    }
+      // Ejecutar cuando el DOM esté listo
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupEventListeners);
+      } else {
+        setupEventListeners();
+      }
+    })(); // Cerrar IIFE
+  </script>
+  
+  <script>
+    // Verificar eventos de tracking guardados en sessionStorage (desde formulario)
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        const storedEvents = sessionStorage.getItem('lead_submit_events');
+        if (storedEvents) {
+          const events = JSON.parse(storedEvents);
+          if (events && events.length > 0) {
+            const lastEvent = events[events.length - 1];
+            console.log('✅ Evento lead_submit detectado desde formulario:', lastEvent);
+            console.log('Para ver todos los eventos guardados, ejecuta: JSON.parse(sessionStorage.getItem("lead_submit_events"))');
+            
+            // Opcionalmente, reenviar a dataLayer en la nueva página
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(lastEvent);
+          }
+        }
+      } catch(e) {
+        // Ignorar errores de sessionStorage
+      }
+    });
   </script>
 </Layout>
-

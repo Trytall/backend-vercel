@@ -277,10 +277,18 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
     }
 
     // Create preference
-    console.log('Creating MercadoPago preference with data:', {
+    const webhookUrl = process.env.WEBHOOK_URL 
+      ? `${process.env.WEBHOOK_URL}/api/webhook`
+      : `https://escuelasiade.com.ar/api/webhook`;
+    
+    console.log('🔗 Creando preferencia de MercadoPago:');
+    console.log('🔗 Webhook URL configurado:', webhookUrl);
+    console.log('🔗 WEBHOOK_URL env:', process.env.WEBHOOK_URL || 'NO CONFIGURADO');
+    console.log('🔗 Datos de preferencia:', {
       title: `Inscripción SIADE - ${cursos.join(', ')}`,
       unit_price: parseFloat(totalAmount),
-      payer: { name: nombre, email: email }
+      payer: { name: nombre, email: email },
+      notification_url: webhookUrl
     });
     
     const preference = new Preference(client);
@@ -304,9 +312,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
           pending: `https://escuelasiade.com.ar/pending`
         },
         external_reference: `SIADE_${Date.now()}`,
-        notification_url: process.env.WEBHOOK_URL 
-          ? `${process.env.WEBHOOK_URL}/api/webhook`
-          : `https://escuelasiade.com.ar/api/webhook`,
+        notification_url: webhookUrl,
         metadata: {
           nombre: nombre || '',
           dni: dni || '',
@@ -578,7 +584,12 @@ No responder a este email.
 app.post('/api/webhook', async (req, res) => {
   try {
     const { type, data } = req.body;
-    console.log('Webhook received:', { type, data });
+    console.log('🔔 ========== WEBHOOK RECIBIDO ==========');
+    console.log('🔔 Timestamp:', new Date().toISOString());
+    console.log('🔔 Type:', type);
+    console.log('🔔 Data:', JSON.stringify(data, null, 2));
+    console.log('🔔 Headers:', JSON.stringify(req.headers, null, 2));
+    console.log('🔔 ======================================');
     
     if (type === 'payment') {
       const paymentId = data.id;
@@ -657,6 +668,7 @@ app.post('/api/webhook', async (req, res) => {
       
       // Si aún no encontramos los datos, usar los datos del pago de MercadoPago como último recurso
       if (!paymentData && paymentInfo.payer) {
+        console.log('⚠️ No se encontraron datos en metadata, usando datos del payer de MercadoPago');
         paymentData = {
           nombre: paymentInfo.payer.first_name + ' ' + (paymentInfo.payer.last_name || ''),
           email: paymentInfo.payer.email || '',
@@ -669,11 +681,34 @@ app.post('/api/webhook', async (req, res) => {
         };
       }
       
+      if (!paymentData) {
+        console.error('❌ No se pudo obtener paymentData. No se enviará email.');
+        console.error('❌ PaymentInfo disponible:', {
+          id: paymentInfo.id,
+          status: paymentInfo.status,
+          payer: paymentInfo.payer,
+          metadata: paymentInfo.metadata,
+          preference_id: paymentInfo.preference_id
+        });
+      }
+      
       // Enviar email según el estado del pago
       if (paymentData) {
+        console.log('📧 PaymentData encontrado:', {
+          nombre: paymentData.nombre,
+          email: paymentData.email,
+          status: paymentInfo.status
+        });
+        
         if (paymentInfo.status === 'approved') {
-          console.log('Payment approved, sending email notification...');
-          await sendPaymentEmailNotification(paymentData, paymentInfo, 'approved');
+          console.log('✅ Payment approved, sending email notification...');
+          console.log('📧 Email destino:', process.env.EMAIL_NOTIFICACIONES || 'informes@escuelaiade.com');
+          const emailResult = await sendPaymentEmailNotification(paymentData, paymentInfo, 'approved');
+          if (emailResult) {
+            console.log('✅ Email enviado exitosamente. Message ID:', emailResult.messageId);
+          } else {
+            console.error('❌ Email NO se pudo enviar. Revisar logs de SMTP.');
+          }
         } else if (paymentInfo.status === 'rejected' || paymentInfo.status === 'cancelled' || paymentInfo.status === 'refunded') {
           console.log(`Payment ${paymentInfo.status}, sending email notification...`);
           await sendPaymentEmailNotification(paymentData, paymentInfo, paymentInfo.status);

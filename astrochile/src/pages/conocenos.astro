@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Conocenos from '../components/Conocenos.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout 
+  title="Conocenos - Escuelas IADE Chile"
+  description="Descubre todo sobre Escuelas IADE Chile, nuestra historia, metodología y compromiso con tu formación profesional"
+  canonical={`https://escuelasiade.cl${import.meta.env.BASE_URL}conocenos`}
+>
+  <Header />
+  <Conocenos />
+  <Footer />
+  <WhatsAppButton />
+</Layout> 

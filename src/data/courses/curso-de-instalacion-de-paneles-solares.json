@@ -1,0 +1,141 @@
+{
+  "title": "Curso de Instalador de Paneles Solares – Escuelas IADE Argentina 🇦🇷",
+  "slug": "curso-de-instalacion-de-paneles-solares",
+  "description": "🎥 8 clases en video + 📘 7 manuales de estudio. Aprendé a instalar sistemas solares fotovoltaicos desde cero, con una base sólida en electricidad.",
+  "duracion": "8 Clases en Video + 7 Manuales de Estudio",
+  "certificacion": "Certificación en Instalación de Paneles Solares",
+  "modalidad": "100% Online",
+  "objetivo": "Formar instaladores profesionales de sistemas solares fotovoltaicos con conocimientos sólidos en electricidad y energía renovable, capaces de diseñar e instalar sistemas solares completos.",
+  "caracteristicas_curso": [
+    "8 Clases en Video",
+    "7 Manuales de Estudio",
+    "Base sólida en electricidad",
+    "Instalación de sistemas solares",
+    "Energía renovable",
+    "Acceso permanente al contenido",
+    "Formación integral en energía solar",
+    "Certificación profesional"
+  ],
+  "modulos": [
+    {
+      "title": "⚡ PRINCIPIOS ELÉCTRICOS FUNDAMENTALES",
+      "topics": [
+        "Amperaje, voltaje, resistencia",
+        "Potencia y energía",
+        "Diferencia entre corriente continua y alterna",
+        "Ley de Ohm aplicada"
+      ]
+    },
+    {
+      "title": "🔧 INSTRUMENTOS DE MEDICIÓN ELÉCTRICA",
+      "topics": [
+        "Uso de multímetros",
+        "Medición de voltaje y corriente",
+        "Verificación de continuidad",
+        "Herramientas de diagnóstico"
+      ]
+    },
+    {
+      "title": "☀️ COMPONENTES DEL SISTEMA SOLAR",
+      "topics": [
+        "Funcionamiento de paneles solares",
+        "Reguladores de carga",
+        "Baterías solares",
+        "Inversores solares"
+      ]
+    },
+    {
+      "title": "🔌 INSTALACIÓN COMPLETA DEL SISTEMA",
+      "topics": [
+        "Conexión de paneles solares",
+        "Instalación de reguladores",
+        "Instalación de baterías",
+        "Instalación de iluminación y tomas"
+      ]
+    },
+    {
+      "title": "📊 CÁLCULOS Y CONEXIONES",
+      "topics": [
+        "Cálculo de potencia de una célula solar",
+        "Conexiones en serie",
+        "Conexiones en paralelo",
+        "Dimensionamiento del sistema"
+      ]
+    },
+    {
+      "title": "🏠 TIPOS DE INSTALACIONES",
+      "topics": [
+        "Instalaciones solares aisladas (OFF GRID)",
+        "Instalaciones conectadas a red (ON GRID)",
+        "Sistemas híbridos",
+        "Aplicaciones residenciales y comerciales"
+      ]
+    },
+    {
+      "title": "🔬 FUNDAMENTOS DE ELECTRICIDAD APLICADA",
+      "topics": [
+        "Fusibles y protecciones",
+        "Transformadores",
+        "Magnetismo",
+        "Inducción electromagnética"
+      ]
+    }
+  ],
+  "sistemas_solares": [
+    "Sistemas fotovoltaicos residenciales",
+    "Sistemas comerciales e industriales",
+    "Bombeo solar de agua",
+    "Iluminación solar",
+    "Sistemas de respaldo energético",
+    "Instalaciones rurales y aisladas"
+  ],
+  "herramientas_instalacion": [
+    "Multímetro digital",
+    "Destornilladores especializados",
+    "Crimpeadora para conectores",
+    "Herramientas de corte y pelado",
+    "Equipos de medición solar",
+    "Herramientas de seguridad"
+  ],
+  "ideal_para": [
+    "Personas que quieren ingresar al mundo de la energía renovable",
+    "Trabajadores que quieren trabajar como instaladores solares",
+    "Técnicos en electricidad que quieren especializarse",
+    "Emprendedores en energía solar",
+    "Personas interesadas en sustentabilidad",
+    "Trabajadores del sector eléctrico",
+    "Quienes buscan una nueva profesión técnica",
+    "Personas comprometidas con el medio ambiente"
+  ],
+  "salida_laboral": [
+    "Instalador de paneles solares",
+    "Técnico en energía renovable",
+    "Especialista en sistemas fotovoltaicos",
+    "Trabajador en empresas de energía solar",
+    "Instalador independiente",
+    "Consultor en energía solar",
+    "Técnico en mantenimiento de sistemas solares",
+    "Emprendedor en instalaciones solares"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "8 clases en video",
+    "7 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en energía solar"
+  ],
+  "requisitos": [
+    "Interés en la energía renovable",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en la electricidad y la tecnología"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Instalación de Paneles Solares que te permitirá trabajar profesionalmente en el sector de la energía renovable",
+  "duracion_detalle": "8 clases en video + 7 manuales de estudio con acceso permanente al contenido"
+}
+
+

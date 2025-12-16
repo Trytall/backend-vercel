@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap served at domain root (Astro generates sitemap-index.xml)
+Sitemap: https://escuelasiade.com.ar/sitemap-index.xml
+
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /logs/
+

@@ -1,0 +1,115 @@
+{
+  "title": "Curso Virtual de Office Básico 💻",
+  "slug": "curso-de-office-basico",
+  "description": "2 clases audiovisuales + 1 manual de estudio para dominar las herramientas básicas de Office. Aprende a crear documentos, informes, presentaciones y más.",
+  "duracion": "2 Clases Audiovisuales + 1 Manual de Estudio",
+  "certificacion": "Certificación en Office Básico",
+  "modalidad": "100% Online",
+  "objetivo": "Proporcionar conocimientos fundamentales en el uso de las herramientas de Office para crear documentos profesionales, informes, presentaciones y manejar datos de manera eficiente.",
+  "caracteristicas_curso": [
+    "2 Clases Audiovisuales",
+    "1 Manual de Estudio",
+    "Aplicación del teclado, ratón y barra de herramientas",
+    "Creación de documentos profesionales",
+    "Elaboración de informes y presentaciones",
+    "Manejo de datos y gráficos",
+    "Acceso permanente al contenido",
+    "Formación práctica en Office"
+  ],
+  "modulos": [
+    {
+      "title": "⌨️ FUNDAMENTOS BÁSICOS",
+      "topics": [
+        "Aplicación del teclado, ratón y barra de herramientas",
+        "Creación de párrafos y redacción de cartas",
+        "Elaboración de informes y recetas",
+        "Párrafos con ilustraciones"
+      ]
+    },
+    {
+      "title": "📄 DOCUMENTOS Y COMUNICACIÓN",
+      "topics": [
+        "Tarjetas",
+        "Cartas de recomendación",
+        "Operaciones con números",
+        "Listados"
+      ]
+    },
+    {
+      "title": "📊 DATOS Y GRÁFICOS",
+      "topics": [
+        "Gráficos de ganancias y producción",
+        "Presentaciones",
+        "Datos personales",
+        "Cuentos y deportes"
+      ]
+    },
+    {
+      "title": "🖼️ ELEMENTOS VISUALES",
+      "topics": [
+        "Imágenes y fotos",
+        "Secuencias de formas",
+        "Diagramas",
+        "Objetos en 3D"
+      ]
+    }
+  ],
+  "herramientas_office": [
+    "Microsoft Word - Procesador de texto",
+    "Microsoft Excel - Hojas de cálculo",
+    "Microsoft PowerPoint - Presentaciones",
+    "Microsoft Publisher - Publicaciones",
+    "Herramientas de Office Online"
+  ],
+  "habilidades_desarrolladas": [
+    "Manejo eficiente del teclado y ratón",
+    "Creación de documentos profesionales",
+    "Elaboración de informes estructurados",
+    "Diseño de presentaciones atractivas",
+    "Manejo de datos y gráficos",
+    "Creación de elementos visuales",
+    "Organización de información",
+    "Comunicación escrita efectiva"
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender Office desde cero",
+    "Estudiantes que necesitan manejar Office",
+    "Trabajadores que quieren mejorar sus habilidades",
+    "Empleados de oficina",
+    "Personas que buscan trabajo administrativo",
+    "Quienes quieren emprender en servicios de oficina",
+    "Profesionales que necesitan actualizarse",
+    "Cualquier persona interesada en computación básica"
+  ],
+  "salida_laboral": [
+    "Asistente administrativo",
+    "Oficinista",
+    "Secretario/a",
+    "Auxiliar de oficina",
+    "Trabajador en empresas",
+    "Empleado en sector público",
+    "Freelancer en servicios de oficina",
+    "Administrativo independiente"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "2 clases audiovisuales",
+    "1 manual de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en Office"
+  ],
+  "requisitos": [
+    "Interés en aprender Office",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Conocimientos básicos de computación"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Office Básico que te permitirá trabajar en áreas administrativas y de oficina",
+  "duracion_detalle": "2 clases audiovisuales + 1 manual de estudio con acceso permanente al contenido"
+}
+
+

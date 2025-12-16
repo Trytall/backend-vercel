@@ -1,0 +1,106 @@
+{
+  "title": "CURSO DE MECÁNICA DE MOTOS DE BAJA Y ALTA CILINDRADA",
+  "slug": "curso-de-mecanica-de-motos-baja-cilindrada",
+  "description": "Formación integral en mecánica de motos de baja y alta cilindrada. Aprende diagnóstico, reparación y mantenimiento de motocicletas con clases audiovisuales y manuales de estudio.",
+  "duracion": "10 Clases Audiovisuales + 8 Manuales de Estudio",
+  "certificacion": "Certificación en Mecánica de Motos de Baja y Alta Cilindrada",
+  "modalidad": "100% Online",
+  "objetivo": "Formar mecánicos profesionales especializados en motos de baja y alta cilindrada, capaces de diagnosticar, reparar y mantener todo tipo de motocicletas.",
+  "caracteristicas_curso": [
+    "10 Clases Audiovisuales",
+    "8 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite"
+  ],
+  "modulos": [
+    {
+      "title": "MÓDULO 1: INTRODUCCIÓN A LA MECÁNICA DE MOTOS",
+      "topics": [
+        "Seguridad y Herramientas: Conocer las herramientas esenciales y los protocolos de seguridad al trabajar con motos",
+        "El Motor de 2 y 4 tiempos: Diferencias, funcionamiento y mantenimiento de los motores de dos y cuatro tiempos",
+        "Frenos de disco y de tambor: Funcionamiento, mantenimiento y servicio de los frenos",
+        "Ruedas: Servicio de neumáticos y rodamientos, técnicas de inspección y reparación"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: SUSPENSIÓN Y ELECTRICIDAD",
+      "topics": [
+        "Suspensión delantera y trasera: Cambio de aceite de horquilla, ajustes de suspensiones traseras y mantenimiento",
+        "Electricidad aplicada a la moto: Introducción al sistema eléctrico de las motos y componentes esenciales"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: DIAGNÓSTICO Y REPARACIÓN DE SISTEMAS ELÉCTRICOS",
+      "topics": [
+        "Sistema eléctrico: Lectura de diagramas y diagnóstico de circuitos eléctricos de motos",
+        "Sistemas de batería, carga y arranque: Inspección, diagnóstico y servicio de sistemas eléctricos relacionados con la batería, carga y arranque"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: COMBUSTIBLE Y ENCENDIDO",
+      "topics": [
+        "Sistema de suministro de combustible: Desmontaje, limpieza, ajuste y sincronización de carburadores",
+        "Sistema de encendido: Funcionamiento y control de encendido convencional, electrónico y con CDI"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: INSPECCIÓN Y MANTENIMIENTO DEL MOTOR",
+      "topics": [
+        "Inspección del motor: Despiece, inspección, mediciones y armado de motores",
+        "Transmisión y embrague: Funcionamiento, inspección y ajuste de la caja de cambios, embrague y cadena"
+      ]
+    },
+    {
+      "title": "MÓDULO 6: MOTOR HONDA CG-125 Y MOTORES DE DOS TIEMPOS",
+      "topics": [
+        "Motor Honda CG-125: Despiece, inspección y armado del motor Honda CG 125",
+        "Verificaciones eléctricas de la Honda CG 125: Procedimientos y herramientas para la verificación eléctrica del motor",
+        "Motores de dos tiempos: Bomba de aceite, sistemas de admisión de 2 tiempos, sistemas de válvula rotativa"
+      ]
+    },
+    {
+      "title": "MÓDULO 7: MOTORES DE COMPETICIÓN Y MANTENIMIENTO ESPECÍFICO",
+      "topics": [
+        "Motor de ciclomotor Hero Puch: Despiece e inspección del motor de ciclomotor",
+        "Motos de competición Cross: Consideraciones pre y post carrera, mantenimiento, cambio de aro, ajuste de la cadena y suspensión para competición"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Mecánicos que quieren especializarse en motos",
+    "Aficionados a las motocicletas",
+    "Estudiantes de mecánica automotriz",
+    "Personas que quieren aprender mecánica de motos",
+    "Trabajadores de talleres de motos",
+    "Quienes buscan una nueva profesión técnica"
+  ],
+  "salida_laboral": [
+    "Mecánico especializado en motos",
+    "Técnico de motocicletas",
+    "Mecánico de talleres de motos",
+    "Diagnosticador de motos",
+    "Mecánico independiente",
+    "Instructor de cursos de mecánica",
+    "Técnico de competición"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "10 clases audiovisuales",
+    "8 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable"
+  ],
+  "requisitos": [
+    "Interés en la mecánica de motos",
+    "Disposición para el estudio online",
+    "Conocimientos básicos de mecánica (recomendado)",
+    "No se requieren conocimientos previos específicos"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Mecánica de Motos de Baja y Alta Cilindrada que te permitirá trabajar profesionalmente en el sector de las motocicletas",
+  "duracion_detalle": "10 clases audiovisuales + 8 manuales de estudio con acceso permanente al contenido"
+}
+
+

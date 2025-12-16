@@ -353,7 +353,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
     console.log('🔗 Webhook URL configurado:', webhookUrl);
     console.log('🔗 WEBHOOK_URL env:', process.env.WEBHOOK_URL || 'NO CONFIGURADO');
     console.log('🔗 Datos de preferencia:', {
-      title: `Inscripción SIADE - ${cursos.join(', ')}`,
+      title: `Inscripción IADE`,
       unit_price: parseFloat(totalAmount),
       payer: { name: nombre, email: email },
       notification_url: webhookUrl
@@ -364,7 +364,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
       body: {
         items: [
           {
-            title: `Inscripción SIADE - ${cursos.join(', ')}`,
+            title: `Inscripción IADE`,
             unit_price: parseFloat(totalAmount),
             quantity: 1,
             currency_id: 'ARS'

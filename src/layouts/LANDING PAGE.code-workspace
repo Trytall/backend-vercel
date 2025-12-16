@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "../../../LANDING PAGE"
+		},
+		{
+			"path": "../../../Sahokry"
+		},
+		{
+			"path": "../../../iade_campus_exp"
+		},
+		{
+			"path": "../../../carrefour_campus_exp"
+		},
+		{
+			"path": "../../../OC"
+		},
+		{
+			"path": "../../../../../Users/Tomás/Desktop/Landin page"
+		},
+		{
+			"path": "../../../Ingles"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"powershell.cwd": "iade_campus_exp"
+	}
+}

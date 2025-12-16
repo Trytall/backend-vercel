@@ -1,0 +1,161 @@
+{
+  "title": "Curso Virtual de Soldadura Eléctrica y Herrería",
+  "slug": "curso-de-soldadura-electrica",
+  "description": "Formación integral en soldadura eléctrica y herrería. Aprende técnicas de soldadura al arco, oxiacetilénica, MIG, TIG y herrería con clases audiovisuales y manuales de estudio.",
+  "duracion": "11 Clases Audiovisuales + 8 Manuales de Estudio",
+  "certificacion": "Certificación en Soldadura Eléctrica y Herrería",
+  "modalidad": "100% Online",
+  "objetivo": "Formar profesionales especializados en soldadura eléctrica y herrería, capaces de realizar trabajos de soldadura en diferentes materiales y técnicas, así como trabajos de herrería y metalurgia.",
+  "caracteristicas_curso": [
+    "11 Clases Audiovisuales",
+    "8 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable"
+  ],
+  "modulos": [
+    {
+      "title": "SISTEMA ARCO MANUAL Y FUNDAMENTOS",
+      "topics": [
+        "Sistema arco manual, seguridad en soldadura al arco",
+        "Posiciones en soldaduras, problemas y defectos comunes en la soldadura al arco",
+        "Los electrodos, elección del electrodo",
+        "Conocimientos básicos de electricidad"
+      ]
+    },
+    {
+      "title": "METALURGIA Y ACEROS",
+      "topics": [
+        "Introducción a la metalurgia, aceros, recalentamiento",
+        "Acero inoxidable, conocimientos generales del acero inoxidable",
+        "La soldadura de acero inoxidable"
+      ]
+    },
+    {
+      "title": "SOLDADURA OXACETILÉNICA",
+      "topics": [
+        "Componentes de la soldadura oxiacetilénica",
+        "Generador de acetileno, acetileno disuelto",
+        "Cilindros tubos o botellas, reductores de presión",
+        "Elección del soplete, encendido del soplete",
+        "La llama oxiacetilénica, técnicas de la soldadura oxiacetilénica",
+        "Soldadura a la izquierda, soldadura ascendente con doble carbón, soldadura en cornisa"
+      ]
+    },
+    {
+      "title": "TÉCNICAS AVANZADAS Y DIFERENTES METALES",
+      "topics": [
+        "Economizador de gases, soldadura oxiacetilénica en distintos metales",
+        "Soldadura del acero, soldadura amarilla, soldadura blanda"
+      ]
+    },
+    {
+      "title": "SISTEMA MIG",
+      "topics": [
+        "Descripción del proceso, transferencia metálica",
+        "Spray, globular, por corto circuito",
+        "Electrodos y protección gaseosa, máquinas soldadoras, electrodos"
+      ]
+    },
+    {
+      "title": "SISTEMA TIG",
+      "topics": [
+        "Descripción del proceso, características y ventajas del sistema TIG",
+        "Diagrama esquemático, electrodos para sistema TIG",
+        "Aplicaciones del sistema, varillas para sistema TIG",
+        "Sistema arco sumergido"
+      ]
+    }
+  ],
+  "herreria": [
+    {
+      "title": "VIDEO 1: FUNDAMENTOS Y HERRAMIENTAS",
+      "topics": [
+        "Identificación de perfiles de hierro, acero y aluminio",
+        "Herrero, balconero, aluminador, forjador",
+        "Trazado de líneas y figuras sobre metales",
+        "Utilización de herramientas: escalímetro, escuadras, transportadores, compás",
+        "Medición de objetos metálicos con el sistema inglés",
+        "Instrumentos: reglas, escuadra, flexómetro, vernier, micrómetro, medidor de altura",
+        "Interpretación de dibujos técnicos: símbolos, instrumentos, dibujos, normas",
+        "Cortes de perfiles de metal: hierro, aluminio",
+        "Uso de esmeril, esmeril de mano, pulidor",
+        "Manejo sierra eléctrica, prensa de banco, segueta, pulidos",
+        "Pulidos de perfiles y cordones de soldadura con esmeril",
+        "Identificación de los equipos y herramientas para soldar",
+        "Soldadura por arco eléctrico: máquina soldadora, caladora, pulidora, esmeril",
+        "Regla metálica, escuadra, transportador, cabezal de centrado, compás de puntas",
+        "Piqueta, martillo, tenazas, prensa, pinza de presión, cepillo de alambre",
+        "Conexión y manejo de soldadura por arco, manejo del equipo, seguridad"
+      ]
+    },
+    {
+      "title": "VIDEO 2: DISEÑO Y ESTRUCTURAS",
+      "topics": [
+        "Descripción del diseño de estructuras de aluminio: puertas, toma de medidas, partes de la puerta, cálculo de los materiales, cotización",
+        "Ventanas: toma de medidas, modelos, partes, cálculo de los materiales, cotización",
+        "Mamparas para baño: toma de medidas, cálculo de materiales, costo, mano de obra",
+        "Soldadura autógena: seguridad, acetileno, oxígeno, equipos y herramientas, boquilla, manómetros",
+        "Conexión y manejo del equipo de soldadura autógena, formas de soldar, procedimientos",
+        "Dibujos a escala del proyecto",
+        "Descripción y diseño de estructuras de hierro forjado",
+        "Soldadura por arco eléctrico: zonas y dimensiones de un cordón de soldadura, clasificaciones, recomendaciones",
+        "Realización de relleno, reconstrucción de soldadura",
+        "Descripción de diseño de estructuras con solera y ángulo: estantes, jaulas, guarda para máquinas, estructuras para techos"
+      ]
+    },
+    {
+      "title": "VIDEO 3: ENSAMBLE Y TRABAJOS PRÁCTICOS",
+      "topics": [
+        "Corte y ensamble de ventanas de una pieza, herramientas",
+        "Corte y ensamble de mamparas para baños",
+        "Corte y ensamble de puertas con corredera",
+        "Corte y ensamble de puertas",
+        "Corte y ensamble de ventanas con correderas",
+        "Moldeo de hierro para figuras sencillas: yunque, horno, fragua, martillos, prensa",
+        "Soldado de hierro en puertas",
+        "Corte y soldado de estructuras con solera y ángulos",
+        "Corte y soldado de estructuras tubulares para recreación",
+        "Corte, soldado, pulido, ventanas de perfil de metal"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender soldadura desde cero",
+    "Estudiantes de soldadura y herrería",
+    "Aficionados a la metalurgia",
+    "Quienes buscan una nueva profesión técnica",
+    "Trabajadores de talleres de soldadura",
+    "Herreros que quieren actualizar conocimientos",
+    "Personas interesadas en trabajos con metales"
+  ],
+  "salida_laboral": [
+    "Soldador profesional",
+    "Herrero especializado",
+    "Técnico en soldadura",
+    "Operador de máquinas soldadoras",
+    "Trabajador de talleres metalúrgicos",
+    "Soldador independiente",
+    "Instructor de cursos de soldadura",
+    "Técnico en estructuras metálicas"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "11 clases audiovisuales",
+    "8 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable",
+    "Videos demostrativos paso a paso"
+  ],
+  "requisitos": [
+    "Interés en la soldadura y herrería",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Soldadura Eléctrica y Herrería que te permitirá trabajar profesionalmente en el sector metalúrgico",
+  "duracion_detalle": "11 clases audiovisuales + 8 manuales de estudio con acceso permanente al contenido"
+}

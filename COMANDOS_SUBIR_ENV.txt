@@ -1,0 +1,14 @@
+# Comandos para subir todas las variables de entorno a Vercel de una vez
+
+# 1. Ir a la carpeta backend-vercel
+cd backend-vercel
+
+# 2. Subir todas las variables para Production
+npx vercel env push vercel-env.txt production
+
+# 3. Subir todas las variables para Preview (opcional)
+npx vercel env push vercel-env.txt preview
+
+# 4. Hacer redeploy para aplicar los cambios
+npx vercel --prod
+

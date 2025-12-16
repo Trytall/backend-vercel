@@ -1,0 +1,231 @@
+{
+  "title": "ASISTENTE DE ENFERMERÍA",
+  "slug": "curso-de-asistente-de-enfermeria-moron",
+  "description": "Formación integral en asistencia de enfermería con prácticas en clínica y primeros auxilios. Aprende atención básica al paciente, control de signos vitales y asistencia médica. 32 clases en 8 meses.",
+  "duracion": "8 meses - 32 clases semanales de 2 horas",
+  "certificacion": "Asistente de enfermería",
+  "modalidad": "Presencial",
+  "campus": "Morón",
+  "objetivo": "Formar asistentes de enfermería capaces de proporcionar atención básica al paciente, asistir a enfermeros y médicos en tareas cotidianas, dar respuesta a problemáticas inmediatas del paciente y establecer relaciones terapéuticas con los destinatarios del cuidado.",
+  "caracteristicas_curso": [
+    "8 meses de duración",
+    "32 clases en total",
+    "Una clase semanal de 2 horas",
+    "Modalidad presencial",
+    "Incluye prácticas en clínica",
+    "Primeros auxilios integrados",
+    "Certificación oficial",
+    "Formación integral en enfermería"
+  ],
+  "modulos": [
+    {
+      "title": "🏥 MÓDULO 1: FUNDAMENTOS DE ENFERMERÍA",
+      "topics": [
+        "Concepto de salud",
+        "Rol del auxiliar de enfermería",
+        "Control de signos vitales",
+        "Higiene y confort del paciente",
+        "Tipos de tendidos de cama",
+        "Posiciones terapéuticas",
+        "Piel: Úlceras por presión, clasificación y curación"
+      ]
+    },
+    {
+      "title": "🔬 MÓDULO 2: ANATOMÍA Y FISIOLOGÍA",
+      "topics": [
+        "Célula y su funcionamiento",
+        "Sistema respiratorio",
+        "Sistema digestivo",
+        "Sistema circulatorio",
+        "Sistema renal",
+        "Sistema nervioso",
+        "Sistema reproductor",
+        "Paciente quemado"
+      ]
+    },
+    {
+      "title": "🚨 MÓDULO 3: PRIMEROS AUXILIOS Y PROCEDIMIENTOS",
+      "topics": [
+        "Primeros auxilios básicos",
+        "Vías periféricas",
+        "Sonda nasogástrica",
+        "Sonda vesical",
+        "Oxigenoterapia",
+        "Técnicas de emergencia",
+        "Protocolos de urgencia"
+      ]
+    },
+    {
+      "title": "💊 MÓDULO 4: FARMACOLOGÍA",
+      "topics": [
+        "Farmacología básica",
+        "Farmacocinética",
+        "Farmacoterapia",
+        "Vías de administración",
+        "Dosificación de medicamentos",
+        "Interacciones medicamentosas",
+        "Efectos adversos"
+      ]
+    },
+    {
+      "title": "🏥 MÓDULO 5: PATOLOGÍAS Y AISLAMIENTOS",
+      "topics": [
+        "Patologías respiratorias",
+        "Patologías cardiológicas",
+        "Patologías renales",
+        "Patologías digestivas",
+        "Patologías neurológicas",
+        "Patologías endócrinas",
+        "Patologías infecto-contagiosas",
+        "Tipos de aislamientos",
+        "Shock: Hipovolémico, cardiogénico, séptico, neurogénico, anafiláctico"
+      ]
+    },
+    {
+      "title": "⚕️ MÓDULO 6: CLÍNICA QUIRÚRGICA",
+      "topics": [
+        "Clínica quirúrgica",
+        "Cuidados del paciente pre-quirúrgico",
+        "Cuidados del paciente post-quirúrgico",
+        "Signos de alarma",
+        "Protocolos quirúrgicos",
+        "Manejo de complicaciones post-operatorias"
+      ]
+    },
+    {
+      "title": "📋 MÓDULO 7: DOCUMENTACIÓN Y REPORTES",
+      "topics": [
+        "Interpretación de indicaciones médicas",
+        "Hoja de evolución de enfermería",
+        "Report y documentación",
+        "Registro de signos vitales",
+        "Historia clínica del paciente",
+        "Protocolos de documentación"
+      ]
+    }
+  ],
+  "areas_formacion": [
+    "Fundamentos de enfermería",
+    "Anatomía y fisiología",
+    "Primeros auxilios",
+    "Farmacología básica",
+    "Patologías comunes",
+    "Clínica quirúrgica",
+    "Documentación médica",
+    "Prácticas clínicas"
+  ],
+  "tecnicas_enfermeria": [
+    "Control de signos vitales",
+    "Tendidos de cama",
+    "Posiciones terapéuticas",
+    "Curación de úlceras por presión",
+    "Colocación de sondas",
+    "Oxigenoterapia",
+    "Administración de medicamentos",
+    "Aislamientos"
+  ],
+  "procedimientos_basicos": [
+    "Control de temperatura",
+    "Control de presión arterial",
+    "Control de frecuencia cardíaca",
+    "Control de frecuencia respiratoria",
+    "Higiene del paciente",
+    "Movilización del paciente",
+    "Alimentación del paciente",
+    "Eliminación del paciente"
+  ],
+  "patologias_estudiadas": [
+    "Patologías respiratorias",
+    "Patologías cardiológicas",
+    "Patologías renales",
+    "Patologías digestivas",
+    "Patologías neurológicas",
+    "Patologías endócrinas",
+    "Patologías infecto-contagiosas",
+    "Pacientes quemados"
+  ],
+  "cuidados_especializados": [
+    "Cuidados pre-quirúrgicos",
+    "Cuidados post-quirúrgicos",
+    "Cuidados de pacientes críticos",
+    "Cuidados de pacientes geriátricos",
+    "Cuidados de pacientes pediátricos",
+    "Cuidados de pacientes oncológicos",
+    "Cuidados paliativos"
+  ],
+  "equipos_materiales": [
+    "Equipos de monitoreo",
+    "Material de curación",
+    "Sondas nasogástricas y vesicales",
+    "Equipos de oxigenoterapia",
+    "Material de inmovilización",
+    "Equipos de aspiración",
+    "Material de aislamiento",
+    "Equipos de medición"
+  ],
+  "practicas_clinica": [
+    "Prácticas en clínica real",
+    "Simulación de procedimientos",
+    "Práctica de primeros auxilios",
+    "Manejo de equipos médicos",
+    "Protocolos de enfermería",
+    "Atención al paciente",
+    "Trabajo en equipo",
+    "Comunicación terapéutica"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Presentación o examen final",
+    "Evaluación continua del aprendizaje",
+    "Prácticas en clínica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas interesadas en enfermería",
+    "Quienes buscan trabajar en el sector salud",
+    "Personal de instituciones geriátricas",
+    "Trabajadores de clínicas y sanatorios",
+    "Quienes quieren especializarse en asistencia médica",
+    "Personas que buscan reconversión laboral",
+    "Personal de obras sociales y prepagas",
+    "Quienes quieren emprender en servicios de salud"
+  ],
+  "salida_laboral": [
+    "Instituciones geriátricas",
+    "Empresas de internación domiciliaria",
+    "Centros de día",
+    "Guardias privadas",
+    "Clínicas",
+    "Sanatorios",
+    "Obras sociales",
+    "Empresas de medicina prepaga",
+    "Hospitales",
+    "Centros de salud",
+    "Servicios de enfermería domiciliaria"
+  ],
+  "metodologia": [
+    "Modalidad presencial",
+    "32 clases en 8 meses",
+    "Una clase semanal de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Prácticas en clínica",
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Examen final o presentación"
+  ],
+  "requisitos": [
+    "Interés en el área de salud",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en el trabajo con pacientes",
+    "Disposición para aprender técnicas médicas",
+    "Responsabilidad en el cuidado del paciente",
+    "Empatía y vocación de servicio"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Asistente de Enfermería que te permitirá trabajar profesionalmente en el sector de la salud y asistencia médica",
+  "duracion_detalle": "8 meses con 32 clases semanales de 2 horas cada una en modalidad presencial, incluyendo prácticas en clínica"
+}
+
+

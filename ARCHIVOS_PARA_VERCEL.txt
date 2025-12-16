@@ -1,0 +1,33 @@
+ARCHIVOS PARA SUBIR A VERCEL
+==============================
+
+Solo necesitas estos archivos para desplegar el API en Vercel:
+
+ESTRUCTURA:
+-----------
+proyecto-vercel/
+├── api/
+│   ├── vercel.js              ← API principal (obligatorio)
+│   └── middleware/
+│       ├── security-logger.js
+│       └── validation.js
+├── package.json               ← Dependencias (obligatorio)
+└── vercel.json                ← Configuración Vercel (obligatorio)
+
+NO NECESITAS:
+-------------
+- dist/ (solo es para el sitio web)
+- src/ (solo para desarrollo)
+- node_modules/ (Vercel los instala automáticamente)
+
+PASOS:
+------
+1. Crea una carpeta nueva
+2. Copia solo los archivos de arriba
+3. Sube a GitHub o usa Vercel CLI
+4. En Vercel: Import Project
+5. Configura variables de entorno
+6. Deploy!
+
+TIEMPO ESTIMADO: 10-15 minutos
+

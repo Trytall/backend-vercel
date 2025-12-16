@@ -1,0 +1,115 @@
+{
+  "title": "CURSO DE BOBINADO DE MOTORES Y TRANSFORMADORES",
+  "slug": "curso-de-bobinado-y-reparacion-de-motores-electricos",
+  "description": "Formate para trabajar en uno de los oficios más demandados del rubro eléctrico. Aprendé paso a paso a diagnosticar fallas y realizar el bobinado completo de motores monofásicos, trifásicos y transformadores.",
+  "duracion": "7 Clases Audiovisuales + 6 Manuales de Estudio",
+  "certificacion": "Certificación en Bobinado de Motores y Transformadores",
+  "modalidad": "100% Online",
+  "objetivo": "Formar profesionales especializados en bobinado de motores y transformadores, capaces de diagnosticar fallas y realizar reparaciones completas con herramientas e instrumentos profesionales.",
+  "caracteristicas_curso": [
+    "7 Clases Audiovisuales",
+    "6 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Teoría aplicada y práctica guiada"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 MÓDULO 1 – HERRAMIENTAS BÁSICAS Y USO DEL TESTER",
+      "topics": [
+        "Herramientas básicas para bobinado",
+        "Uso correcto del tester",
+        "Mediciones fundamentales"
+      ]
+    },
+    {
+      "title": "🔹 MÓDULO 2 – MEDICIONES CON PINZA AMPEROMÉTRICA, CALIBRE Y MICRÓMETRO",
+      "topics": [
+        "Uso de pinza amperométrica",
+        "Mediciones con calibre",
+        "Mediciones con micrómetro",
+        "Técnicas de medición precisas"
+      ]
+    },
+    {
+      "title": "🔹 MÓDULO 3 – MOTORES MONOFÁSICOS: CONEXIONES, INVERSIÓN DE GIRO Y DIAGNÓSTICO",
+      "topics": [
+        "Conexiones de motores monofásicos",
+        "Inversión de giro",
+        "Diagnóstico de fallas",
+        "Análisis de problemas comunes"
+      ]
+    },
+    {
+      "title": "🔹 MÓDULO 4 – MOTORES TRIFÁSICOS: ANÁLISIS ESTRUCTURAL, CONEXIONES Y PRUEBAS",
+      "topics": [
+        "Análisis estructural de motores trifásicos",
+        "Conexiones trifásicas",
+        "Pruebas de funcionamiento",
+        "Diagnóstico avanzado"
+      ]
+    },
+    {
+      "title": "🔹 MÓDULO 5 – BOBINADO DE MOTORES MONOFÁSICOS + FALLAS MÁS COMUNES",
+      "topics": [
+        "Bobinado completo de motores monofásicos",
+        "Identificación de fallas más comunes",
+        "Técnicas de reparación",
+        "Procedimientos paso a paso"
+      ]
+    },
+    {
+      "title": "🔹 MÓDULO 6 – BOBINADO DE TRANSFORMADORES Y MOTORES TRIFÁSICOS",
+      "topics": [
+        "Bobinado de transformadores",
+        "Bobinado de motores trifásicos",
+        "Técnicas avanzadas",
+        "Control de calidad"
+      ]
+    }
+  ],
+  "electronica_aplicada": [
+    "Semiconductores, soldadura, componentes electrónicos",
+    "Fuentes de alimentación y reguladores de voltaje",
+    "Amplificadores, osciladores y electrónica analógica/digital",
+    "Uso correcto de instrumental técnico para diagnóstico y reparación"
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender bobinado desde cero",
+    "Estudiantes de electricidad y electrónica",
+    "Técnicos eléctricos que quieren especializarse",
+    "Quienes buscan una nueva profesión técnica",
+    "Trabajadores del rubro eléctrico",
+    "Aficionados a la electrónica y motores",
+    "Personas interesadas en reparación de equipos eléctricos"
+  ],
+  "salida_laboral": [
+    "Bobinador de motores eléctricos",
+    "Técnico en transformadores",
+    "Reparador de motores eléctricos",
+    "Técnico en bobinado industrial",
+    "Especialista en motores monofásicos y trifásicos",
+    "Técnico en electrónica aplicada",
+    "Bobinador independiente",
+    "Instructor de cursos de bobinado"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "7 clases audiovisuales",
+    "6 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Teoría aplicada y práctica guiada",
+    "Contenido de electrónica aplicada"
+  ],
+  "requisitos": [
+    "Interés en la electricidad y electrónica",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Bobinado de Motores y Transformadores que te permitirá trabajar profesionalmente en el sector eléctrico",
+  "duracion_detalle": "7 clases audiovisuales + 6 manuales de estudio con acceso permanente al contenido"
+}

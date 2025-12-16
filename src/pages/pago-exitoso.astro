@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Pago aprobado" description="Tu pago fue aprobado. Finalizá el alta por WhatsApp.">
+  <section class="py-16 bg-light-bg">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="bg-white rounded-2xl shadow-xl border border-primary/30 p-8 text-center">
+        <h1 class="text-3xl font-extrabold text-primary mb-3">¡Pago aprobado!</h1>
+        <p class="text-gray-700">Tu pago fue procesado exitosamente. Te redirigimos a WhatsApp para confirmar tus datos y aguardar el envío de tu acceso a la plataforma. Si no se abre automáticamente, usá el botón.</p>
+        <button id="btnWpp" class="mt-6 inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">Confirmar datos en WhatsApp</button>
+        <p class="text-sm text-gray-500 mt-3">Si tu navegador bloquea ventanas emergentes, permitilas para este sitio.</p>
+
+        <div class="mt-8 text-left bg-blue-50 rounded-xl p-6 border border-blue-200">
+          <h2 class="text-xl font-bold text-blue-700 mb-4">📚 Próximos pasos</h2>
+          <div class="space-y-3 text-blue-800">
+            <div class="flex items-start">
+              <span class="text-blue-600 mr-2">1.</span>
+              <span>Confirma tus datos en WhatsApp para verificar la información</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-blue-600 mr-2">2.</span>
+              <span>Recibirás tu acceso a la plataforma de estudio en las próximas 24-48 horas</span>
+            </div>
+            <div class="flex items-start">
+              <span class="text-blue-600 mr-2">3.</span>
+              <span>Podrás comenzar tu curso inmediatamente una vez recibas las credenciales</span>
+            </div>
+          </div>
+        </div>
+
+                 <div class="mt-6 text-left bg-gray-50 rounded-xl p-6">
+           <h2 class="text-xl font-bold text-secondary mb-4">📋 Datos que se enviarán por WhatsApp</h2>
+           <p class="text-sm text-gray-600 mb-4">Estos son todos los datos que se enviarán para tu alta en la plataforma:</p>
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">👤 Nombre:</span> 
+               <span id="rNombre" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">🆔 DNI:</span> 
+               <span id="rDni" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">📧 Email:</span> 
+               <span id="rEmail" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">📱 Teléfono:</span> 
+               <span id="rTel" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">📍 Provincia:</span> 
+               <span id="rProv" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="flex items-center">
+               <span class="font-semibold text-primary">🏘️ Localidad:</span> 
+               <span id="rLoc" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+             <div class="md:col-span-2 flex items-start">
+               <span class="font-semibold text-primary">📚 Curso:</span> 
+               <span id="rCurso" class="ml-2 bg-white px-2 py-1 rounded border">-</span>
+             </div>
+           </div>
+           <div class="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg">
+             <p class="text-sm text-green-800">
+               <strong>✅ Confirmado:</strong> Todos estos datos se enviarán automáticamente por WhatsApp para tu alta inmediata en la plataforma.
+             </p>
+           </div>
+         </div>
+
+        <a href="/" class="mt-6 inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      const NUMERO_WPP = "5491126132091"; // sin '+'
+      const qp = new URLSearchParams(location.search);
+
+      // Intentar sessionStorage, con fallback a querystring (inyectado en back_urls)
+      let datos = {};
+      try { datos = JSON.parse(sessionStorage.getItem('datosPago') || '{}'); } catch (e) {}
+      if (!datos || Object.keys(datos).length === 0) {
+        datos = {
+          nombre: qp.get('nombre') || '',
+          dni: qp.get('dni') || '',
+          email: qp.get('email') || '',
+          telefono: qp.get('telefono') || '',
+          provincia: qp.get('provincia') || '',
+          localidad: qp.get('localidad') || '',
+          curso: qp.get('curso') || ''
+        };
+      }
+
+      const rawStatus = qp.get('status') || 'approved';
+      const status = rawStatus === 'approved' ? 'aprobado' : rawStatus === 'pending' ? 'pendiente' : (rawStatus === 'rejected' || rawStatus === 'failure') ? 'rechazado' : rawStatus;
+
+      // Rellenar en pantalla
+      const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v || '-'; };
+      set('rNombre', datos?.nombre);
+      set('rDni', datos?.dni);
+      set('rEmail', datos?.email);
+      set('rTel', datos?.telefono);
+      set('rProv', datos?.provincia);
+      set('rLoc', datos?.localidad);
+      set('rCurso', datos?.curso);
+
+             // Mensaje para WhatsApp - CLIENTE CON PAGO APROBADO
+       const msg = `🚀 *NUEVO PAGO APROBADO - ESCUELAS IADE*
+
+*Estado del Pago:* ${status.toUpperCase()}
+
+*Datos del Cliente:*
+👤 Nombre: ${datos?.nombre || 'No especificado'}
+🆔 DNI: ${datos?.dni || 'No especificado'}
+📧 Email: ${datos?.email || 'No especificado'}
+📱 Teléfono: ${datos?.telefono || 'No especificado'}
+📍 Provincia: ${datos?.provincia || 'No especificado'}
+🏘️ Localidad: ${datos?.localidad || 'No especificado'}
+📚 Curso: ${datos?.curso || 'No especificado'}
+
+*Acción Requerida:* Dar de alta en la plataforma y enviar credenciales de acceso.
+
+*Mensaje del Cliente:* "Mi pago fue ${status}. Aguardo el envío de mi acceso a la plataforma de estudio."`.trim();
+      const url = `https://wa.me/${NUMERO_WPP}?text=${encodeURIComponent(msg)}`;
+      const abrir = () => window.open(url, '_blank');
+
+      // Google Ads Conversion - fire on load with dynamic value if available
+      try {
+        // Attempt to read amount from stored payment data or query params
+        let amountValue = 1.0;
+        try {
+          const stored = sessionStorage.getItem('datosPago');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            const maybeAmount = parseFloat(String(parsed?.monto ?? ''));
+            if (!Number.isNaN(maybeAmount) && maybeAmount > 0) amountValue = maybeAmount;
+          }
+        } catch {}
+        const qpAmount = parseFloat(qp.get('amount') || '');
+        if (!Number.isNaN(qpAmount) && qpAmount > 0) amountValue = qpAmount;
+
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-16914267267/5-AcCLyi5qgaEIP5rIE_',
+            value: amountValue,
+            currency: 'ARS'
+          });
+        }
+      } catch {}
+
+      // Autoredirección suave
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        setTimeout(abrir, 120);
+      } else {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(abrir, 120));
+      }
+      document.getElementById('btnWpp')?.addEventListener('click', abrir);
+    })();
+  </script>
+</Layout>

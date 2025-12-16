@@ -1,0 +1,256 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppButton from '../../../components/WhatsAppButton.astro';
+import cursos, { type Curso, type Modalidad } from '../../../data/cursos.ts';
+
+export async function getStaticPaths() {
+  const paths = [] as { params: { slug: string } }[];
+  for (const c of cursos) {
+    const hasOnline = c.modalidades.some(m => m.tipo === 'online');
+    if (hasOnline) paths.push({ params: { slug: c.slug } });
+  }
+  return paths;
+}
+
+const { slug } = Astro.params;
+const curso: Curso | undefined = cursos.find(c => c.slug === slug);
+if (!curso) { throw new Error('Curso no encontrado'); }
+const modalidad: Modalidad | undefined = curso.modalidades.find(m => m.tipo === 'online');
+if (!modalidad) { throw new Error('Versión online no disponible'); }
+---
+
+<Layout title={`${curso.nombre} (Online) - Escuelas IADE`} description={curso.descripcion}>
+  <Header />
+
+  <section class="pt-24 pb-12 bg-light-bg relative overflow-hidden">
+    <!-- Doodle Background -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
+      <div class="absolute inset-0 opacity-20" style="background-image: url('/images/iade-doodle-red.svg'); background-repeat: repeat; background-size: 120px 120px; background-position: center; will-change: background-position; animation: doodle-drift 60s linear infinite;"></div>
+    </div>
+    
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-[1]">
+      <!-- Hero Section with Image -->
+      <div class="grid lg:grid-cols-2 gap-8 items-center mb-8">
+        <div>
+          <h1 class="text-3xl lg:text-4xl font-bold text-primary mb-4 tracking-tight">{curso.nombre}</h1>
+          <p class="text-lg text-gray-700 mb-6">{curso.descripcion}</p>
+
+          <div class="bg-gradient-to-r from-primary to-primary/80 text-white p-5 rounded-xl shadow-md mb-6 border border-white/20">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left">
+              <div class="flex flex-col md:flex-row md:items-center md:gap-4">
+                <div class="text-4xl md:text-5xl">🎁</div>
+                <div>
+                  <p class="font-bold text-xl leading-tight">Promoción 2x1 en cursos online</p>
+                  <p class="text-white/90 text-sm md:text-base mt-1">
+                    ¡Por la gran demanda de nuestros alumnos, extendimos la promoción! Hasta el 10 de enero, abonando la inscripción en un solo pago obtenés un curso extra de regalo a elección para vos o para regalar a otra persona.
+                  </p>
+                </div>
+              </div>
+              <div class="bg-white/15 text-white font-semibold uppercase tracking-wide px-4 py-2 rounded-lg text-sm">
+                Vigente hasta el 10/01
+              </div>
+            </div>
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-3 mb-6">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Duración</div>
+              <div class="font-semibold text-primary">{modalidad.duracion || 'Duración aproximada 2 a 3 meses'}</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Modalidad</div>
+              <div class="font-semibold text-primary">Online</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={`/?curso=${curso.slug}`} class="bg-primary text-white px-5 py-3 rounded-lg font-bold hover:bg-primary/90 transition text-center">¡Inscribirme ahora!</a>
+            <a href={`https://wa.me/5491126132091?text=Hola, me interesa el ${curso.nombre} Online`} target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-5 py-3 rounded-lg font-bold hover:bg-green-700 transition text-center">
+               Consultar por WhatsApp
+             </a>
+          </div>
+        </div>
+        
+        <div class="flex justify-center lg:justify-end">
+          <img src={curso.imagen || '/images/logo.png'} alt={curso.nombre} class="max-w-sm lg:max-w-md rounded-lg shadow-lg" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuadro informativo y Temario con diseño centrado -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Cuadro informativo Cursos Online -->
+      <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-8 mb-12 shadow-sm">
+        <h3 class="text-2xl font-bold text-blue-900 mb-6 flex items-center justify-center">
+          📚 Cursos Online – Escuelas IADE
+        </h3>
+        
+        <p class="text-blue-800 mb-8 text-center text-lg">Estudiá 100% a tu ritmo, sin horarios fijos ni clases en vivo. Desde tu casa, con acceso 24/7.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-4 flex items-center justify-center">
+              👨‍💻 Plataforma online con:
+            </h4>
+            <ul class="space-y-3 text-blue-800">
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Clases grabadas</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Material de estudio</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Apoyo de profes cuando lo necesites</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-4 flex items-center justify-center">
+              ⭐ Ventajas:
+            </h4>
+            <ol class="space-y-2 text-blue-800">
+              <li>1. Estudiás cuando podés</li>
+              <li>2. Exámenes sin fechas</li>
+              <li>3. Ayuda por Zoom o chat (lun a sáb, 9 a 21 hs)</li>
+              <li>4. Certificado nacional al finalizar</li>
+              <li>5. Opcional: Certificado internacional (Mercosur o UTN)</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="text-center">
+            <h4 class="font-semibold text-blue-900 mb-3 flex items-center justify-center">
+              ⏱️ Duración estimada:
+            </h4>
+                         <p class="text-blue-800 text-lg">2 a 3 meses (sin fecha límite)</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-blue-900 mb-4 text-center">Precio, promoción y medios de pago</h4>
+            <div class="bg-primary text-white p-5 rounded-lg mb-4 text-center space-y-1">
+              <div class="text-sm font-semibold uppercase tracking-wide text-white/80">Promoción especial 2x1</div>
+              <div class="text-2xl font-bold">Aboná $150.000 en un pago</div>
+              <div class="text-sm text-white/90">
+                Obtenés un curso extra de regalo a elección (hasta el 10 de enero). Podés sumarlo para vos o regalarlo a quien quieras.
+              </div>
+            </div>
+            <ul class="space-y-2 text-blue-800">
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Transferencia bancaria</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Mercado Pago</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Cuenta DNI / Brubank / Ualá</span>
+              </li>
+              <li class="flex items-center">
+                <span class="text-green-600 mr-3 text-xl">✅</span>
+                <span>Débito o crédito</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temario -->
+      <div class="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
+        <h2 class="text-3xl font-bold text-primary mb-8 text-center">Temario del Curso</h2>
+        {Array.isArray(modalidad.temario) && modalidad.temario.length ? (
+          <div class="space-y-6">
+            {modalidad.temario.map((m, index) => (
+              <details class={`bg-gray-50 rounded-lg shadow-sm p-6 border border-gray-200 ${index === 0 ? 'bg-blue-50 border-blue-200' : ''}`} open={index === 0}>
+                <summary class="font-semibold cursor-pointer text-gray-900 text-lg hover:text-primary transition-colors">
+                  {m.titulo}
+                </summary>
+                <ul class="list-disc pl-6 mt-4 text-gray-700 space-y-2">
+                  {Array.isArray(m.unidades) ? (
+                    m.unidades.map((u) => (<li class="text-base">{u}</li>))
+                  ) : Array.isArray(m.contenido) ? (
+                    m.contenido.map((c) => (<li class="text-base">{c}</li>))
+                  ) : (
+                    <li class="text-base text-gray-600">Contenido en preparación.</li>
+                  )}
+                </ul>
+              </details>
+            ))}
+          </div>
+        ) : typeof modalidad.temario === 'string' ? (
+          <div class="temario-content" set:html={modalidad.temario} />
+        ) : (
+          <div class="text-gray-600 text-center text-lg">Temario en preparación.</div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Por qué elegir este curso? -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-primary text-center mb-12">¿Por qué elegir este curso?</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Certificado Oficial -->
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <div class="text-4xl">🎓</div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Certificado Oficial</h3>
+          <p class="text-gray-600">Obtén tu certificado avalado por Escuelas IADE</p>
+        </div>
+
+        <!-- Modalidad Flexible -->
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <div class="text-4xl">💻</div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Modalidad Flexible</h3>
+          <p class="text-gray-600">Online y presencial según tu disponibilidad</p>
+        </div>
+
+        <!-- Acceso Inmediato -->
+        <div class="bg-white rounded-lg shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+            <div class="text-4xl">🚀</div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Acceso Inmediato</h3>
+          <p class="text-gray-600">Comienza tu formación cuando quieras</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Listo para comenzar? -->
+  <section class="py-16 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-6">¿Listo para comenzar?</h2>
+      <p class="text-white/90 text-lg mb-8">No pierdas la oportunidad de convertirte en un profesional del sector</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`/?curso=${curso.slug}`} class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition border border-primary">
+          ¡Inscribirme ahora!
+        </a>
+        <a href={`https://wa.me/5491126132091?text=Hola, me interesa el ${curso.nombre} Online`} target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+

@@ -1,0 +1,103 @@
+{
+  "title": "Curso de Motores Diésel",
+  "slug": "curso-de-motores-diesel",
+  "description": "¡Aprendé a trabajar con motores diésel chicos, medianos y grandes con salida laboral inmediata! Formación completa en mecánica diésel, bombas de inyección y sistemas electrónicos.",
+  "duracion": "12 Clases en Video + 10 Manuales de Estudio",
+  "certificacion": "Certificación en Motores Diésel",
+  "modalidad": "100% Online",
+  "objetivo": "Formar mecánicos especializados en motores diésel con conocimientos completos en diagnóstico, reparación, bombas de inyección y sistemas electrónicos para motores de diferentes tamaños.",
+  "caracteristicas_curso": [
+    "12 Clases en Video",
+    "10 Manuales de Estudio",
+    "Acceso permanente al material",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y aplicable",
+    "Salida laboral inmediata"
+  ],
+  "modulos": [
+    {
+      "title": "🔩 MECÁNICA COMPLETA DE MOTORES DIÉSEL",
+      "topics": [
+        "Descripción y funcionamiento de cada componente",
+        "Diagnóstico, desmontaje e inspección de motores",
+        "Reparaciones y ajustes profesionales"
+      ]
+    },
+    {
+      "title": "🛠️ BOMBAS DE INYECCIÓN",
+      "topics": [
+        "Bomba rotativa: inspección, calibración y puesta a punto",
+        "Bomba lineal en motor Volvo de 6 cilindros: ajuste, prueba y montaje en el motor"
+      ]
+    },
+    {
+      "title": "🛢️ LUBRICACIÓN Y TURBOS",
+      "topics": [
+        "Tipos de aceites y sistemas de lubricación",
+        "Funcionamiento y reparación de turbos alimentadores"
+      ]
+    },
+    {
+      "title": "🚛 MOTORES DE CAMIONES – REPARACIÓN Y ANÁLISIS POR MODELO",
+      "topics": [
+        "SCANIA 94 – 310 HP",
+        "Volkswagen 6 cilindros",
+        "Detroit 210 HP y Detroit 9.800 – 405 HP",
+        "Cummins 6 cilindros electrónico"
+      ]
+    },
+    {
+      "title": "🧠 CONTROLES ELECTRÓNICOS",
+      "topics": [
+        "Sistemas de inyección electrónica",
+        "Diagnóstico electrónico del motor"
+      ]
+    },
+    {
+      "title": "🚙 ADAPTACIÓN Y DIAGNÓSTICO",
+      "topics": [
+        "Adaptación de motores diésel a camionetas",
+        "Reparación y diagnóstico de motores medianos y grandes"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Mecánicos que quieren especializarse",
+    "Personas que trabajan en transporte o logística",
+    "Emprendedores que buscan ampliar su oficio",
+    "Amantes de la mecánica pesada",
+    "Técnicos automotrices",
+    "Quienes buscan una nueva profesión técnica",
+    "Trabajadores de talleres de camiones"
+  ],
+  "salida_laboral": [
+    "Mecánico especializado en motores diésel",
+    "Técnico en bombas de inyección",
+    "Mecánico de camiones y vehículos pesados",
+    "Especialista en sistemas electrónicos diésel",
+    "Técnico en turbos alimentadores",
+    "Mecánico independiente especializado",
+    "Instructor de cursos de mecánica diésel",
+    "Técnico en talleres de transporte"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "12 clases en video",
+    "10 manuales de estudio",
+    "Acceso permanente al material",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable",
+    "Formación especializada en motores diésel"
+  ],
+  "requisitos": [
+    "Interés en la mecánica diésel",
+    "Disposición para el estudio online",
+    "Conocimientos básicos de mecánica (recomendado)",
+    "Acceso a internet y dispositivo",
+    "Interés en vehículos pesados y camiones"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Motores Diésel que te permitirá trabajar profesionalmente en el sector de la mecánica pesada",
+  "duracion_detalle": "12 clases en video + 10 manuales de estudio con acceso permanente al material"
+}

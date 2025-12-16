@@ -1,0 +1,98 @@
+{
+  "title": "CURSO DE ELECTRICIDAD Y ELECTRÓNICA AUTOMOTRIZ",
+  "slug": "curso-de-electricidad-y-electronica-automotriz",
+  "description": "Formate como técnico en electricidad automotriz con conocimientos actualizados y prácticos. Aprende sistemas eléctricos, electrónicos y diagnóstico de vehículos modernos.",
+  "duracion": "13 clases audiovisuales + 14 manuales de estudio",
+  "certificacion": "Certificación en Electricidad y Electrónica Automotriz",
+  "modalidad": "100% Online",
+  "objetivo": "Formar técnicos profesionales en electricidad automotriz con conocimientos actualizados y prácticos para diagnosticar y reparar sistemas eléctricos y electrónicos de vehículos modernos.",
+  "caracteristicas_curso": [
+    "13 clases audiovisuales",
+    "14 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 BASES ELÉCTRICAS FUNDAMENTALES",
+      "topics": [
+        "Átomo, voltaje, corriente, resistencia",
+        "Ley de Ohm, asociación de resistencias",
+        "Cómo usar el tester y multímetro correctamente"
+      ]
+    },
+    {
+      "title": "🔹 SISTEMAS ELÉCTRICOS DEL VEHÍCULO",
+      "topics": [
+        "Alternador, caja reguladora, batería y sistema de carga",
+        "Motor de arranque, solenoide, Bendix: diagnóstico y reparación"
+      ]
+    },
+    {
+      "title": "🔹 ENCENDIDO CONVENCIONAL Y ELECTRÓNICO",
+      "topics": [
+        "Distribuidor, bobina, platinos, bujías",
+        "Unidad de mando y sistemas de encendido moderno",
+        "Puesta a punto, diagnóstico de fallas"
+      ]
+    },
+    {
+      "title": "🔹 SISTEMA DE ALUMBRADO Y ACCESORIOS",
+      "topics": [
+        "Conexiones de luces (alta, baja, posición, giro, stop)",
+        "Bocina, limpiaparabrisas, tablero de instrumentos"
+      ]
+    },
+    {
+      "title": "🔹 ELECTRÓNICA DEL AUTOMÓVIL ACTUAL",
+      "topics": [
+        "ECU (unidad de control electrónico)",
+        "Sensores de motor: masa de aire, temperatura, presión, posición",
+        "Mariposa, acelerador, freno, embrague, sonda lambda y más",
+        "Actuadores: bomba de combustible, bobinas, inyectores, válvulas"
+      ]
+    },
+    {
+      "title": "🔹 SISTEMAS ELECTRÓNICOS AVANZADOS",
+      "topics": [
+        "Control de marcha, airbags, ABS, cuadro de instrumentos",
+        "Diagnóstico con scanner, tester, multímetro y osciloscopio",
+        "Interpretación de fallas electrónicas y eléctricas en vehículos modernos"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Mecánicos que quieren especializarse en electricidad automotriz",
+    "Electricistas que quieren aprender sobre vehículos",
+    "Estudiantes técnicos automotrices",
+    "Personas que quieran especializarse en autos modernos",
+    "Profesionales del sector automotriz"
+  ],
+  "salida_laboral": [
+    "Técnico en electricidad automotriz",
+    "Electricista especializado en vehículos",
+    "Diagnosticador de sistemas electrónicos",
+    "Reparador de sistemas eléctricos automotrices",
+    "Técnico en talleres automotrices",
+    "Consultor en electricidad automotriz",
+    "Instructor de cursos técnicos"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "13 clases audiovisuales",
+    "14 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable"
+  ],
+  "requisitos": [
+    "Interés en la electricidad automotriz",
+    "Disposición para el estudio online",
+    "Conocimientos básicos de mecánica (recomendado)",
+    "No se requieren conocimientos previos de electricidad"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Electricidad y Electrónica Automotriz que te permitirá trabajar como técnico especializado en sistemas eléctricos y electrónicos de vehículos",
+  "duracion_detalle": "13 clases audiovisuales + 14 manuales de estudio con acceso permanente al contenido"
+}

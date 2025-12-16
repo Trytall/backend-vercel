@@ -1,0 +1,151 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  noindex?: boolean;
+}
+
+const { 
+  title, 
+  description = "Aprende un oficio con Escuelas IADE Chile. Ofrecemos cursos técnicos en modalidad online. ¡Inscríbete hoy!",
+  canonical,
+  noindex = false
+} = Astro.props;
+
+const canonicalUrl = canonical || new URL(Astro.url.pathname, Astro.site).href;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta property="og:site_name" content="Escuelas IADE Chile" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/images/og-image.jpg" />
+    
+    <!-- SEO -->
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="author" content="Escuelas IADE Chile" />
+    <meta name="keywords" content="cursos online, oficios, formación técnica, Chile, IADE" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Escuelas IADE Chile",
+        "url": "https://escuelasiade.cl",
+        "logo": "https://escuelasiade.cl/images/logo.png",
+        "description": "Institución educativa líder en formación técnica y profesional en Chile",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL",
+          "addressLocality": "Santiago"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+54-9-11-2291-7871",
+          "contactType": "customer service",
+          "availableLanguage": "Spanish"
+        }
+      }
+    </script>
+    
+    <title>{title}</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MV9V97LR');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MV9V97LR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --color-primary: #dc2626;
+    --color-secondary: #1f2937;
+    --color-light-bg: #f9fafb;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #374151;
+  }
+  
+  .bg-primary { background-color: var(--color-primary); }
+  .text-primary { color: var(--color-primary); }
+  .border-primary { border-color: var(--color-primary); }
+  
+  .bg-secondary { background-color: var(--color-secondary); }
+  .text-secondary { color: var(--color-secondary); }
+  
+  .bg-light-bg { background-color: var(--color-light-bg); }
+  
+  /* Animaciones */
+  @keyframes doodle-drift {
+    0% { background-position: 0 0; }
+    100% { background-position: 120px 120px; }
+  }
+  
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c;
+  }
+</style> 

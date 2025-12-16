@@ -1,0 +1,91 @@
+{
+  "title": "Curso de Auxiliar en Cardiología y R.C.P.",
+  "slug": "curso-de-auxiliar-en-cardiologia",
+  "modalidad": "Presencial",
+  "sede": "Morón",
+  "certificacion": "Asistente de cardiología y R.C.P.",
+  "duracion": "6 meses",
+  "duracion_detalle": "Una clase semanal de 2 horas. 24 clases en total.",
+  "objetivos_generales": [
+    "Realizar un análisis del trazado electrocardiográfico normal y anormal",
+    "Interpretar diferentes trazados en un ECG",
+    "Conocer causas, signos, síntomas y tratamientos farmacológicos de las alteraciones cardíacas más frecuentes"
+  ],
+  "metodologia": [
+    "Clases presenciales teórico-prácticas",
+    "Una clase semanal de 2 horas",
+    "Prácticas con interpretación de ECG"
+  ],
+  "modulos": [
+    {
+      "title": "Módulo 1",
+      "topics": [
+        "Anatomía cardíaca",
+        "Sistema de conducción eléctrica",
+        "Derivaciones del electrocardiograma: anteriores derecha e izquierda y posteriores",
+        "Lectura e informe"
+      ]
+    },
+    {
+      "title": "Módulo 2",
+      "topics": [
+        "Alteraciones auriculares",
+        "Hipertrofia auricular derecha e izquierda",
+        "Extrasístoles auriculares",
+        "Bigeminismo auricular",
+        "Trigeminismo auricular",
+        "Síndrome de pre-excitación",
+        "Síndrome de Brugada",
+        "Sistemas compensadores"
+      ]
+    },
+    {
+      "title": "Módulo 3",
+      "topics": [
+        "Bloqueos aurículo-ventriculares de primer grado, segundo grado tipo 1, segundo grado tipo 2 y de tercer grado (completo)",
+        "Aleteo auricular",
+        "Fibrilación auricular",
+        "Soplos cardíacos",
+        "Bloqueo de rama derecha e izquierda",
+        "Bigeminismo ventricular",
+        "Pareja o doblete de extrasístoles",
+        "Arritmias cardíacas más frecuentes"
+      ]
+    },
+    {
+      "title": "Módulo 4",
+      "topics": [
+        "Taquicardias supraventriculares",
+        "Extrasístoles ventriculares: monomorfas y polimorfas",
+        "Sistemas compensadores",
+        "Bradicardias y taquicardias",
+        "Ritmos desfibrilables: taquicardia ventricular y fibrilación ventricular",
+        "Infarto agudo de miocardio",
+        "Isquemias y necrosis"
+      ]
+    },
+    {
+      "title": "Módulo 5",
+      "topics": [
+        "Signos, síntomas y tratamientos en cada alteración cardíaca",
+        "Farmacología coronaria",
+        "Holter",
+        "Ergometría"
+      ]
+    }
+  ],
+  "salida_laboral": [
+    "Clínicas",
+    "Sanatorios",
+    "Hospitales",
+    "Salitas",
+    "Empresas que realicen aptos físicos / preocupacionales"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos para complementar el aprendizaje",
+    "2 exámenes parciales",
+    "Presentación o examen final"
+  ]
+}
+
+

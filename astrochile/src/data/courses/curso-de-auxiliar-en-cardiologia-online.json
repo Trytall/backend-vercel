@@ -1,0 +1,135 @@
+{
+  "title": "Curso de Auxiliar en Cardiología",
+  "description": "El curso de capacitación Auxiliar en Cardiología los egresados serán capaces de inspeccionar o trabajar en establecimientos públicos y/o privados que tengan consultorios cardiológicos, donde podrán realizar pruebas diagnósticas, como el electrocardiograma, y asistiendo al cardiólogo en ergometría y holter.",
+  "duracion": "3 meses",
+  "certificacion": "Certificación nacional e internacional una vez aprobado el examen final",
+  "modalidad": "Online",
+  "objetivo": "Adquirir conocimientos básicos en cardiología, comprender el rol del auxiliar en cardiología dentro del sistema de salud, adquirir confianza para el correcto manejo del paciente, manejo del equipo para electrocardiografía, reconocer la anatomía coronaria y su relación con patologías asociadas, interpretación básica del ECG, adquirir nociones básicas de patologías",
+  "modulos": [
+    {
+      "title": "MÓDULO 1: INTRODUCCIÓN A LA CARDIOLOGÍA",
+      "topics": [
+        "Qué es la cardiología",
+        "Rol del auxiliar en cardiología",
+        "Anamnesis a realizarle al paciente"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: CONCEPTOS BÁSICOS Y SIGNOS VITALES",
+      "topics": [
+        "Conceptos básicos: impulso eléctrico, tensión arterial, frecuencia cardiaca y respiratoria",
+        "Signos vitales",
+        "Valores normales de T.A, T, Frec respiratoria y cardiaca",
+        "Procedimientos / Valores normales"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: EQUIPAMIENTO Y PROCEDIMIENTOS",
+      "topics": [
+        "Equipo: sus partes y funcionamiento",
+        "Confección de la orden médica",
+        "Responsabilidad del auxiliar en cardiología frente a la recepción del paciente"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: ANATOMÍA Y FISIOLOGÍA CARDÍACA",
+      "topics": [
+        "Anatomía y fisiología del corazón (Estructuras, caras, cavidades, válvulas, irrigación, drenaje e inervación)"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: ELECTROCARDIOGRAMA (ECG)",
+      "topics": [
+        "Colocación de las derivaciones periféricas y precordiales",
+        "Procedimiento para realizar un ECG",
+        "Interpretación del ECG (segmentos y ondas)",
+        "Patologías más comunes que pueden detectarse en un ECG"
+      ]
+    },
+    {
+      "title": "MÓDULO 6: PRUEBAS DIAGNÓSTICAS AVANZADAS",
+      "topics": [
+        "Ergometría: objetivo, cómo se realiza",
+        "Holter: tipos de holter, objetivo, colocación"
+      ]
+    },
+    {
+      "title": "MÓDULO 7: PATOLOGÍAS Y MEDICACIÓN",
+      "topics": [
+        "Nociones de patologías cardiacas",
+        "Patologías y medicación cardiológica"
+      ]
+    },
+    {
+      "title": "MÓDULO 8: VOCABULARIO MÉDICO Y DOCUMENTACIÓN",
+      "topics": [
+        "Vocabulario médico",
+        "Interpretación de DG médicos",
+        "Conceptos básicos"
+      ]
+    }
+  ],
+  "objetivos_detallados": [
+    "Adquirir conocimientos básicos en cardiología",
+    "Comprender el rol del auxiliar en cardiología dentro del sistema de salud",
+    "Adquirir confianza para el correcto manejo del paciente",
+    "Manejo del equipo para electrocardiografía",
+    "Reconocer la anatomía coronaria y su relación con patologías asociadas",
+    "Interpretación básica del ECG",
+    "Adquirir nociones básicas de patologías"
+  ],
+  "modalidad_online": [
+    "Clases virtuales en campus",
+    "Manuales y videos de estudio",
+    "Consultas con profesor",
+    "Examen libre y sin costo",
+    "Certificación nacional e internacional una vez aprobado el examen final"
+  ],
+  "requisitos": [
+    "Manejo básico de internet",
+    "Tener PC (Computadora) o celular"
+  ],
+  "proceso_inscripcion": [
+    "Deje sus datos en cualquiera de los 2 formularios y elija el curso el cual está interesado/a",
+    "Un Asesor de Ventas se estará contactando con usted lo antes posible",
+    "El Asesor de Ventas le resolverá todas las dudas que tenga, le dirá métodos de pago y promociones",
+    "Si le interesa la propuesta del Asesor de Ventas le debe decir que quiere inscribirse",
+    "Nuestro Asesor de Ventas lo Registrará en nuestro Campus",
+    "Comience a Estudiar y a Certificarse"
+  ],
+  "caracteristicas_curso": [
+    "Más vendido",
+    "Alta demanda laboral",
+    "Hacé crecer tu CV"
+  ],
+  "salida_laboral": [
+    "Establecimientos públicos con consultorios cardiológicos",
+    "Establecimientos privados con consultorios cardiológicos",
+    "Realización de pruebas diagnósticas",
+    "Electrocardiograma",
+    "Asistencia al cardiólogo en ergometría",
+    "Asistencia al cardiólogo en holter"
+  ],
+  "conocimientos_adquiridos": [
+    "Anatomía y fisiología del corazón",
+    "Interpretación básica de ECG",
+    "Manejo de equipos de electrocardiografía",
+    "Colocación de derivaciones periféricas y precordiales",
+    "Procedimientos de ergometría",
+    "Tipos y colocación de holter",
+    "Patologías cardiacas comunes",
+    "Medicación cardiológica",
+    "Vocabulario médico",
+    "Interpretación de diagnósticos médicos"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "Acceso a campus virtual",
+    "Clases virtuales",
+    "Material de estudio digital",
+    "Consultas con profesores",
+    "Evaluación final"
+  ],
+  "certificacion_detalle": "Certificación nacional e internacional una vez aprobado el examen final, con validez en establecimientos públicos y privados",
+  "duracion_detalle": "Curso online con acceso permanente al campus virtual hasta completar la certificación"
+}

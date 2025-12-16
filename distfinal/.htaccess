@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# No reescribir archivos estáticos comunes
+RewriteRule \.(css|js|png|jpe?g|gif|svg|ico|webp|woff2?|ttf|map)$ - [L]
+
+# Si no es archivo ni carpeta, servir index.html (rutas limpias / SPA)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L] 

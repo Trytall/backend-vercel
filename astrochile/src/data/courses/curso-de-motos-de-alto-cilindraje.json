@@ -1,0 +1,142 @@
+{
+  "title": "CURSO DE MECÁNICA DE MOTOS DE ALTO CILINDRAJE",
+  "slug": "curso-de-motos-de-alto-cilindraje",
+  "description": "Formación especializada en mecánica de motos de alto cilindraje. Aprende diagnóstico, reparación y mantenimiento avanzado de motocicletas de alta potencia con clases audiovisuales prácticas.",
+  "duracion": "7 Clases Audiovisuales",
+  "certificacion": "Certificación en Mecánica de Motos de Alto Cilindraje",
+  "modalidad": "100% Online",
+  "objetivo": "Formar mecánicos profesionales especializados en motos de alto cilindraje, capaces de diagnosticar, reparar y mantener motocicletas de alta potencia con conocimientos avanzados.",
+  "caracteristicas_curso": [
+    "7 Clases Audiovisuales",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable"
+  ],
+  "modulos": [
+    {
+      "title": "COMPONENTES Y FUNCIONES ESENCIALES",
+      "topics": [
+        "Funciones de las bujías: Comprensión de su rol en el motor y mantenimiento adecuado",
+        "Amortiguadores: Inspección, mantenimiento y ajuste de amortiguadores en motos de alta cilindrada",
+        "Cambio de líquido de frenos: Procedimiento correcto para cambiar el líquido de frenos",
+        "Clasificación de aceites para motor: Tipos de aceites y su clasificación según el motor",
+        "Construcción de un comprobador de presión: Fabricación y uso del comprobador de presión para motores",
+        "Desmontaje de un variador: Proceso de desmontaje y mantenimiento del variador",
+        "Descarbonizado de tubo de escape: Técnicas de descarbonización y limpieza del tubo de escape",
+        "ABC del aceite: Conocimiento esencial sobre los aceites utilizados en la moto",
+        "El casco del motorista: Consideraciones sobre seguridad y elección del casco adecuado",
+        "Cilindros y cuidados esenciales: Mantenimiento y revisión de cilindros en motos de alta cilindrada",
+        "Filtro de aire: Inspección, limpieza y reemplazo del filtro de aire",
+        "Funcionamiento del motor de dos tiempos: Explicación detallada sobre cómo funciona un motor de dos tiempos"
+      ]
+    },
+    {
+      "title": "COMPONENTES DEL MOTOR Y TRANSMISIÓN",
+      "topics": [
+        "Funcionamiento e importancia de los aros del pistón: Explicación de la función crítica de los aros en el pistón y su mantenimiento",
+        "Baterías: Mantenimiento y cuidado de las baterías de moto",
+        "Distribución: Comprensión del sistema de distribución y su mantenimiento",
+        "Suspensión: Tipos y mantenimiento de sistemas de suspensión en motos de alta cilindrada",
+        "Frenos: Sistema de frenos y mantenimiento adecuado",
+        "Cadena de transmisión: Ajustes y mantenimiento de la cadena de transmisión",
+        "Embrague: Funcionamiento y ajuste del sistema de embrague",
+        "Mantenimiento de la moto: Recomendaciones generales para el cuidado y mantenimiento regular de la moto",
+        "Refrigeración: Sistemas de refrigeración en motos y su importancia"
+      ]
+    }
+  ],
+  "videos_practicos": [
+    {
+      "title": "Video 1: Motores de dos tiempos",
+      "topics": [
+        "Piezas componentes de un motor en su forma real",
+        "Trabajos en el motor: Desarmado, limpieza y armado"
+      ]
+    },
+    {
+      "title": "Video 2: Motor de cuatro tiempos",
+      "topics": [
+        "Válvula de admisión, escape",
+        "Desarmado y armado del motor"
+      ]
+    },
+    {
+      "title": "Video 3: Sistema de transmisión",
+      "topics": [
+        "Embrague, caja de velocidades, desmontaje, limpieza y armado",
+        "Ajustes del sistema de transmisión"
+      ]
+    },
+    {
+      "title": "Video 4: Caja de velocidades",
+      "topics": [
+        "Funcionamiento, desarmado, armado",
+        "Ajustes y regulación de la transmisión por cadenas y correas, sistema cardán"
+      ]
+    },
+    {
+      "title": "Video 5: Frenos a tambor",
+      "topics": [
+        "Desarmado, armado y mantenimiento del sistema de frenos",
+        "Mantenimiento de la bomba de frenos, amortiguadores"
+      ]
+    },
+    {
+      "title": "Video 6: Electricidad y Encendido",
+      "topics": [
+        "Conexiones eléctricas y sistema de encendido en motos"
+      ]
+    },
+    {
+      "title": "Video 7: Sistemas de inyección",
+      "topics": [
+        "ECU control electrónico por computadora",
+        "Sensores y diagnóstico por computadora"
+      ]
+    },
+    {
+      "title": "Video 8: Sistema de inyección",
+      "topics": [
+        "Bomba de combustible, inyectores",
+        "Limpieza de inyectores por ultrasonido, regulación de las partes"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Mecánicos especializados en motos de alta cilindrada",
+    "Técnicos de motocicletas deportivas",
+    "Mecánicos de talleres de motos de alto rendimiento",
+    "Diagnosticadores de motos de alta potencia",
+    "Mecánicos independientes especializados",
+    "Instructores de cursos de mecánica avanzada",
+    "Técnicos de competición y motos deportivas"
+  ],
+  "salida_laboral": [
+    "Mecánico especializado en motos de alto cilindraje",
+    "Técnico de motocicletas deportivas",
+    "Mecánico de talleres de motos de alta potencia",
+    "Diagnosticador de motos de alto rendimiento",
+    "Mecánico independiente especializado",
+    "Instructor de cursos de mecánica avanzada",
+    "Técnico de competición y motos deportivas",
+    "Especialista en sistemas de inyección electrónica"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "7 clases audiovisuales prácticas",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable",
+    "Videos demostrativos paso a paso"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de mecánica de motos",
+    "Interés en motos de alto cilindraje",
+    "Disposición para el estudio online",
+    "Experiencia previa en mecánica (recomendado)"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Mecánica de Motos de Alto Cilindraje que te permitirá trabajar profesionalmente en el sector de las motocicletas de alta potencia",
+  "duracion_detalle": "7 clases audiovisuales con acceso permanente al contenido"
+}

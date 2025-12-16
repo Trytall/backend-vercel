@@ -1,0 +1,160 @@
+{
+  "title": "Curso Virtual de Diseño y Confección de Vestimenta",
+  "slug": "curso-de-diseno-y-confeccion-de-indumentaria",
+  "description": "Formación integral en diseño y confección de vestimenta. Aprendé desde el trazado de moldes hasta la confección de prendas completas con 24 clases audiovisuales y 17 manuales de estudio.",
+  "duracion": "24 Clases Audiovisuales + 17 Manuales de Estudio",
+  "certificacion": "Certificación en Diseño y Confección de Vestimenta",
+  "modalidad": "100% Online",
+  "objetivo": "Formar profesionales del diseño y la confección de vestimenta con conocimientos prácticos y teóricos para crear prendas desde el molde hasta la confección final.",
+  "caracteristicas_curso": [
+    "24 Clases Audiovisuales",
+    "17 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en diseño y confección"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 DISEÑO Y FALDAS",
+      "topics": [
+        "Diseñar, silueta de moda",
+        "Trazado falda recta 'falda base'",
+        "Confección de falda recta",
+        "Falda recta (continuación)",
+        "Falda asimétrica con forro de tela a cuadros"
+      ]
+    },
+    {
+      "title": "🔹 CAMISAS FEMENINAS Y MASCULINAS",
+      "topics": [
+        "Camisa femenina de líneas amplias",
+        "Camisa femenina II (moldes)",
+        "Confección de camisa femenina",
+        "Cómo seguir los modelos y moldes de las revistas",
+        "Camisa femenina III (en seda)",
+        "Camisa III, camisa masculina"
+      ]
+    },
+    {
+      "title": "🔹 EQUIPOS DEPORTIVOS Y PANTALONES",
+      "topics": [
+        "Equipo deportivo de niño",
+        "Buzo tipo cárdigan",
+        "Pantalón de seda con pretina elastizada",
+        "Pantalón con pretina sin elástica",
+        "Pantalón jean, confección de pantalón jean"
+      ]
+    },
+    {
+      "title": "🔹 ABRIGOS Y VESTIDOS",
+      "topics": [
+        "Abrigo, tipo sacón",
+        "Vestido maxifalda simétricos",
+        "Estilo sastre, manga sastre",
+        "Ojales sastre, bolsillo sastre, cuello sastre",
+        "Diseño equipo deportivo para dama, interpretación del diseño",
+        "Chaleco estilo Sastre"
+      ]
+    },
+    {
+      "title": "🔹 BLUSAS, POLLERAS Y VESTIDOS",
+      "topics": [
+        "Conjunto de blusa y pollera larga",
+        "Vestido veraniego, diseño de la silueta",
+        "Tela con estampado, prendas sport",
+        "Pantalón, medidas necesarias, trazado pantalón base",
+        "Pantalón largo recto, pantalón en forma amplio"
+      ]
+    },
+    {
+      "title": "🔹 PUNTOS DE BORDADO Y LENCERÍA",
+      "topics": [
+        "Punto cruz, punto escama, punto parís, punto sombra",
+        "Vainilla simple, vainilla palito",
+        "Punto para bordado relleno, punto nido de abeja",
+        "Punto realce, punto pasado matizado, punto festón separado",
+        "Punto cadena, punto relleno fantasía",
+        "Camisón, pijama, deshebillé"
+      ]
+    },
+    {
+      "title": "🔹 TEORÍA Y MANUALES",
+      "topics": [
+        "Vocabulario, distintos tipos de puntos",
+        "Aritmética elemental, medidas",
+        "Patrones o moldes, falda recta, falda Evaseé",
+        "Indicaciones varias, corpiño base, falda simétrica",
+        "Blusa semi entallada con pinza al costado, blusa cortada"
+      ]
+    },
+    {
+      "title": "🔹 CONFECCIÓN AVANZADA",
+      "topics": [
+        "Confección de la blusa, forros o vistas escote",
+        "Planchado, falda 'campana plato'",
+        "Vestido liso y recto, forrado de mangas, blusa simétrica",
+        "Armado del vestido recto, confección de vestido recto",
+        "Estudio de cuellos, bolsillos"
+      ]
+    },
+    {
+      "title": "🔹 DISEÑOS ESPECIALES Y MANGAS",
+      "topics": [
+        "Vestido con recortes simétricos, chaleco fantasía",
+        "Mangas, vestido tipo Chemise",
+        "Manga japonesa, manga ranglán",
+        "Pantalón femenino, calza deportiva",
+        "Bóxer de niño, vestido y cubre pañal"
+      ]
+    },
+    {
+      "title": "🔹 LENCERÍA Y CONFECCIÓN ESPECIALIZADA",
+      "topics": [
+        "Confección de body de niños",
+        "Confección de pantys, confección de tangas",
+        "Confección de babydoll",
+        "Confección de pantys 2"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender diseño y confección desde cero",
+    "Estudiantes de diseño de moda",
+    "Aficionados a la costura y el diseño",
+    "Quienes buscan una nueva profesión creativa",
+    "Trabajadores de la industria textil",
+    "Emprendedores en moda",
+    "Personas interesadas en crear su propia ropa"
+  ],
+  "salida_laboral": [
+    "Diseñador de moda",
+    "Confeccionista profesional",
+    "Patronista",
+    "Modista independiente",
+    "Trabajador en talleres de confección",
+    "Emprendedor en moda",
+    "Instructor de cursos de costura",
+    "Técnico en confección industrial"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "24 clases audiovisuales",
+    "17 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en diseño y confección"
+  ],
+  "requisitos": [
+    "Interés en el diseño y la confección",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Creatividad y paciencia para el trabajo manual"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Diseño y Confección de Vestimenta que te permitirá trabajar profesionalmente en el sector de la moda",
+  "duracion_detalle": "24 clases audiovisuales + 17 manuales de estudio con acceso permanente al contenido"
+}

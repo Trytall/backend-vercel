@@ -141,7 +141,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
 
     // Create preference
     console.log('Creating MercadoPago preference with data:', {
-      title: `Inscripción SIADE - ${cursos.join(', ')}`,
+      title: `Inscripción IADE`,
       unit_price: parseFloat(totalAmount),
       payer: { name: nombre, email: email }
     });
@@ -151,7 +151,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
       body: {
         items: [
           {
-            title: `Inscripción SIADE - ${cursos.join(', ')}`,
+            title: `Inscripción IADE`,
             unit_price: parseFloat(totalAmount),
             quantity: 1,
             currency_id: 'ARS'

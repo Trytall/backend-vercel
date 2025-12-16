@@ -1,0 +1,156 @@
+---
+import Layout from '../../../../../layouts/Layout.astro';
+import Header from '../../../../../components/Header.astro';
+import Footer from '../../../../../components/Footer.astro';
+import cursos from '../../../../../data/cursos.js';
+import fs from 'fs';
+import path from 'path';
+
+const sedeMap = {
+  moron: 'Morón',
+  lomas: 'Lomas de Zamora',
+  avellaneda: 'Avellaneda'
+};
+
+export async function getStaticPaths() {
+  const moron = new Set([
+    'curso-de-instalaciones-electricas-y-motores-electricos',
+    'curso-de-refrigeracion-y-aire-acondicionado',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-reparacion-de-celulares',
+    'curso-de-alarmas-y-camaras-de-seguridad',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-auxiliar-en-cardiologia'
+  ]);
+  const lomas = new Set([
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-reparacion-de-celulares',
+    'curso-de-instalaciones-electricas-y-motores-electricos',
+    'curso-de-refrigeracion-y-aire-acondicionado',
+    'curso-de-plasma-rico-en-plaquetas',
+    'curso-de-electricidad-y-electronica-industrial'
+  ]);
+  const avellaneda = new Set([
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio'
+  ]);
+
+  const valid = [];
+  cursos.forEach(c => {
+    const slug = c.slug;
+    if (moron.has(slug)) valid.push({ params: { sede: 'moron', slug } });
+    if (lomas.has(slug)) valid.push({ params: { sede: 'lomas', slug } });
+    if (avellaneda.has(slug)) valid.push({ params: { sede: 'avellaneda', slug } });
+  });
+  return valid;
+}
+
+const { sede, slug } = Astro.params;
+const sedeVista = sedeMap[sede] || '';
+const curso = cursos.find(c => c.slug === slug);
+if (!curso || !sedeVista) throw new Error('Curso o sede no válidos');
+
+let cursoDetallado = null;
+try {
+  const sedeSpecificPath = path.join(process.cwd(), 'src', 'data', 'courses', `${slug}-${sede}.json`);
+  if (fs.existsSync(sedeSpecificPath)) {
+    const courseData = fs.readFileSync(sedeSpecificPath, 'utf-8');
+    cursoDetallado = JSON.parse(courseData);
+  } else {
+    const courseDataPath = path.join(process.cwd(), 'src', 'data', 'courses', `${slug}.json`);
+    if (fs.existsSync(courseDataPath)) {
+      const courseData = fs.readFileSync(courseDataPath, 'utf-8');
+      cursoDetallado = JSON.parse(courseData);
+    }
+  }
+} catch {}
+
+const modulos = cursoDetallado?.modulos || [];
+---
+
+<Layout title={`Temario: ${curso.titulo} - ${sedeVista} | Escuelas IADE`} description={`Temario del curso ${curso.titulo} en ${sedeVista}`}>
+  <Header />
+
+  <section class="pt-24 pb-8 bg-light-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-baseline justify-between">
+        <h1 class="text-3xl lg:text-4xl font-bold text-primary">
+          Temario: {curso.titulo} — {sedeVista}
+        </h1>
+        <a href={`/cursos/presencial/${sede}/${slug}`} class="text-primary hover:underline">Volver al curso</a>
+      </div>
+      <p class="text-gray-700 mt-2">Detalle de contenidos y módulos.</p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {modulos.length > 0 ? (
+        <div class="space-y-4">
+          {modulos.map((modulo, index) => (
+            <div class="bg-gray-50 rounded-lg overflow-hidden">
+              <button class="w-full p-6 text-left bg-primary text-white font-semibold text-lg hover:bg-primary/90 transition-colors duration-200 flex justify-between items-center modulo-button" data-modulo-index={index}>
+                <span>{modulo.title}</span>
+                <span class="text-2xl transform transition-transform duration-200" id={`arrow-${index}`}>▼</span>
+              </button>
+              <div class="hidden p-6 bg-white" id={`modulo-${index}`}>
+                <div class="space-y-3">
+                  {(modulo.topics || []).length ? (
+                    (modulo.topics || []).map((topic) => (
+                      <div class="flex items-start space-x-3">
+                        <span class="text-primary font-bold text-sm mt-1">•</span>
+                        <span class="text-gray-700">{topic}</span>
+                      </div>
+                    ))
+                  ) : (
+                    <div class="flex items-start space-x-3">
+                      <span class="text-primary font-bold text-sm mt-1">•</span>
+                      <span class="text-gray-700">{modulo.title}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 gap-6">
+          {(curso.temario || []).map((topic) => (
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <div class="flex items-start space-x-3">
+                <span class="text-primary font-bold text-lg">•</span>
+                <span class="text-gray-700 font-medium">{topic}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  function toggleModulo(index) {
+    const modulo = document.getElementById(`modulo-${index}`);
+    const arrow = document.getElementById(`arrow-${index}`);
+    if (modulo.classList.contains('hidden')) {
+      modulo.classList.remove('hidden');
+      arrow.style.transform = 'rotate(180deg)';
+    } else {
+      modulo.classList.add('hidden');
+      arrow.style.transform = 'rotate(0deg)';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.modulo-button').forEach(btn => btn.addEventListener('click', function(){ toggleModulo(this.getAttribute('data-modulo-index')); }));
+  });
+</script>
+

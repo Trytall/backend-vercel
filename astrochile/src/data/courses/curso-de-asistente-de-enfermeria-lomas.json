@@ -1,0 +1,240 @@
+{
+  "title": "ASISTENTE DE ENFERMERÍA",
+  "slug": "curso-de-asistente-de-enfermeria-lomas",
+  "description": "Formación especializada en asistencia de enfermería con enfoque en cuidados domiciliarios y atención geriátrica. Incluye prácticas en clínica y manejo de pacientes crónicos. 32 clases en 8 meses.",
+  "duracion": "8 meses - 32 clases semanales de 2 horas",
+  "certificacion": "Asistente de enfermería especializado en cuidados domiciliarios",
+  "modalidad": "Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Formar asistentes de enfermería especializados en cuidados domiciliarios, atención geriátrica y manejo de pacientes crónicos, con habilidades para trabajar en internación domiciliaria y centros de día.",
+  "caracteristicas_curso": [
+    "8 meses de duración",
+    "32 clases en total",
+    "Una clase semanal de 2 horas",
+    "Modalidad presencial",
+    "Especialización en cuidados domiciliarios",
+    "Enfoque en atención geriátrica",
+    "Manejo de pacientes crónicos",
+    "Certificación oficial especializada"
+  ],
+  "modulos": [
+    {
+      "title": "🏠 MÓDULO 1: CUIDADOS DOMICILIARIOS",
+      "topics": [
+        "Fundamentos de enfermería domiciliaria",
+        "Organización del trabajo en domicilio",
+        "Seguridad en el entorno domiciliario",
+        "Adaptación del ambiente para el paciente",
+        "Manejo de equipos en domicilio",
+        "Protocolos de visita domiciliaria",
+        "Coordinación con familiares"
+      ]
+    },
+    {
+      "title": "👴 MÓDULO 2: ATENCIÓN GERIÁTRICA",
+      "topics": [
+        "Características del paciente geriátrico",
+        "Cambios fisiológicos del envejecimiento",
+        "Cuidados específicos del adulto mayor",
+        "Prevención de caídas en domicilio",
+        "Manejo de demencias y Alzheimer",
+        "Cuidados de confort en geriatría",
+        "Apoyo a familiares cuidadores"
+      ]
+    },
+    {
+      "title": "💊 MÓDULO 3: PACIENTES CRÓNICOS",
+      "topics": [
+        "Manejo de pacientes diabéticos",
+        "Cuidados de pacientes hipertensos",
+        "Atención a pacientes cardíacos",
+        "Manejo de pacientes respiratorios",
+        "Cuidados de pacientes oncológicos",
+        "Protocolos de medicación crónica",
+        "Educación del paciente y familia"
+      ]
+    },
+    {
+      "title": "🩺 MÓDULO 4: PROCEDIMIENTOS DOMICILIARIOS",
+      "topics": [
+        "Control de signos vitales en domicilio",
+        "Técnicas de curación domiciliaria",
+        "Administración de medicamentos",
+        "Colocación de sondas en domicilio",
+        "Oxigenoterapia domiciliaria",
+        "Manejo de heridas crónicas",
+        "Prevención de infecciones"
+      ]
+    },
+    {
+      "title": "🏥 MÓDULO 5: PATOLOGÍAS ESPECÍFICAS",
+      "topics": [
+        "Úlceras por presión y heridas crónicas",
+        "Incontinencia urinaria y fecal",
+        "Problemas de movilidad",
+        "Trastornos del sueño",
+        "Problemas nutricionales",
+        "Depresión y ansiedad en el adulto mayor",
+        "Manejo del dolor crónico"
+      ]
+    },
+    {
+      "title": "👥 MÓDULO 6: TRABAJO CON FAMILIAS",
+      "topics": [
+        "Comunicación con familiares",
+        "Educación del cuidador principal",
+        "Apoyo emocional a familias",
+        "Manejo de conflictos familiares",
+        "Coordinación de cuidados",
+        "Planificación del alta",
+        "Seguimiento post-alta"
+      ]
+    },
+    {
+      "title": "📱 MÓDULO 7: TECNOLOGÍA DOMICILIARIA",
+      "topics": [
+        "Equipos de monitoreo domiciliario",
+        "Telemedicina y seguimiento remoto",
+        "Aplicaciones móviles en salud",
+        "Registro digital de cuidados",
+        "Comunicación con el equipo médico",
+        "Alertas y sistemas de emergencia",
+        "Manejo de equipos especializados"
+      ]
+    },
+    {
+      "title": "🚨 MÓDULO 8: EMERGENCIAS DOMICILIARIAS",
+      "topics": [
+        "Primeros auxilios en domicilio",
+        "Manejo de emergencias médicas",
+        "Protocolos de evacuación",
+        "Coordinación con servicios de emergencia",
+        "RCP básico en domicilio",
+        "Manejo de caídas y traumatismos",
+        "Prevención de accidentes"
+      ]
+    }
+  ],
+  "areas_formacion": [
+    "Cuidados domiciliarios",
+    "Atención geriátrica",
+    "Manejo de pacientes crónicos",
+    "Procedimientos domiciliarios",
+    "Patologías específicas",
+    "Trabajo con familias",
+    "Tecnología domiciliaria",
+    "Emergencias domiciliarias"
+  ],
+  "tecnicas_enfermeria": [
+    "Cuidados domiciliarios especializados",
+    "Atención geriátrica integral",
+    "Manejo de pacientes crónicos",
+    "Procedimientos en domicilio",
+    "Trabajo con familias",
+    "Tecnología aplicada a la salud",
+    "Emergencias en domicilio",
+    "Prevención y educación"
+  ],
+  "procedimientos_domiciliarios": [
+    "Control de signos vitales",
+    "Curación de heridas",
+    "Administración de medicamentos",
+    "Colocación de sondas",
+    "Oxigenoterapia",
+    "Manejo de equipos",
+    "Prevención de infecciones",
+    "Educación del paciente"
+  ],
+  "cuidados_geriatricos": [
+    "Atención al adulto mayor",
+    "Prevención de caídas",
+    "Manejo de demencias",
+    "Cuidados de confort",
+    "Apoyo a cuidadores",
+    "Manejo del dolor",
+    "Prevención de úlceras",
+    "Cuidados nutricionales"
+  ],
+  "pacientes_cronicos": [
+    "Pacientes diabéticos",
+    "Pacientes hipertensos",
+    "Pacientes cardíacos",
+    "Pacientes respiratorios",
+    "Pacientes oncológicos",
+    "Pacientes con demencia",
+    "Pacientes con movilidad reducida",
+    "Pacientes con dolor crónico"
+  ],
+  "equipos_domiciliarios": [
+    "Equipos de monitoreo",
+    "Equipos de oxigenoterapia",
+    "Material de curación",
+    "Equipos de movilidad",
+    "Sistemas de alerta",
+    "Equipos de telemedicina",
+    "Material de primeros auxilios",
+    "Equipos de confort"
+  ],
+  "practicas_clinica": [
+    "Prácticas en clínica real",
+    "Simulación de cuidados domiciliarios",
+    "Práctica con pacientes geriátricos",
+    "Manejo de equipos domiciliarios",
+    "Protocolos de enfermería",
+    "Trabajo con familias",
+    "Comunicación terapéutica",
+    "Coordinación de cuidados"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Presentación o examen final",
+    "Evaluación continua del aprendizaje",
+    "Prácticas en clínica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas interesadas en enfermería domiciliaria",
+    "Quienes buscan especializarse en geriatría",
+    "Personal de internación domiciliaria",
+    "Trabajadores de centros de día",
+    "Quienes quieren trabajar con adultos mayores",
+    "Personas que buscan reconversión laboral",
+    "Personal de instituciones geriátricas",
+    "Quienes quieren emprender en servicios domiciliarios"
+  ],
+  "salida_laboral": [
+    "Empresas de internación domiciliaria",
+    "Centros de día para adultos mayores",
+    "Instituciones geriátricas",
+    "Servicios de enfermería domiciliaria",
+    "Clínicas especializadas en geriatría",
+    "Residencias para adultos mayores",
+    "Servicios de acompañamiento",
+    "Consultorios geriátricos"
+  ],
+  "metodologia": [
+    "Modalidad presencial",
+    "32 clases en 8 meses",
+    "Una clase semanal de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Prácticas en clínica",
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Examen final o presentación"
+  ],
+  "requisitos": [
+    "Interés en enfermería domiciliaria",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en el trabajo con adultos mayores",
+    "Disposición para aprender técnicas especializadas",
+    "Responsabilidad en el cuidado domiciliario",
+    "Empatía y vocación de servicio"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Asistente de Enfermería especializado en cuidados domiciliarios que te permitirá trabajar profesionalmente en el sector de la salud domiciliaria y geriátrica",
+  "duracion_detalle": "8 meses con 32 clases semanales de 2 horas cada una en modalidad presencial, incluyendo prácticas en clínica y especialización en cuidados domiciliarios"
+}
+
+

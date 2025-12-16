@@ -1,0 +1,126 @@
+{
+  "title": "CURSO SOBRE PLASMA RICO EN PLAQUETAS (PRP)",
+  "description": "Curso diseñado para capacitar en el uso terapéutico y estético del Plasma Rico en Plaquetas (PRP). Técnica innovadora que utiliza componentes sanguíneos para estimular la regeneración celular, mejorar la cicatrización de tejidos y rejuvenecer la piel.",
+  "duracion": "16 CLASES, 4 MESES",
+  "certificacion": "CURSO SOBRE PLASMA RICO EN PLAQUETAS (PRP)",
+  "modalidad": "100% Presencial",
+  "aplicaciones": [
+    "Medicina estética",
+    "Dermatología",
+    "Traumatología",
+    "Odontología",
+    "Medicina regenerativa"
+  ],
+  "modulos": [
+    {
+      "title": "MÓDULO 1: FUNDAMENTOS DEL PRP",
+      "topics": [
+        "Fisiología sanguínea",
+        "Función y estructura de las plaquetas",
+        "Anatomía arteriovenosa del miembro superior",
+        "Técnicas de venopunción",
+        "Centrifugación y separación de PRP"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: PROTOCOLOS Y APLICACIONES",
+      "topics": [
+        "Análisis de los diferentes protocolos vigentes",
+        "Beneficios y contraindicaciones",
+        "Uso de activadores de la coagulación",
+        "Confección de historia clínica",
+        "Consentimiento informado"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: BIOSEGURIDAD Y TÉCNICAS",
+      "topics": [
+        "Normas de bioseguridad",
+        "Pasos para la obtención de PRP",
+        "Obtención – Centrifugación – Formas de activación",
+        "Autología",
+        "Autotransfusión"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: ASPECTOS LEGALES Y PROFESIONALES",
+      "topics": [
+        "Aspectos legales",
+        "Profesionales autorizados para su aplicación médica",
+        "Regulaciones vigentes",
+        "Responsabilidades profesionales",
+        "Marco legal del PRP"
+      ]
+    }
+  ],
+  "objetivos_generales": [
+    "Capacitar al estudiante en la aplicación segura, ética y efectiva del PRP",
+    "Evaluación del paciente hasta la técnica de aplicación y seguimiento"
+  ],
+  "objetivos_especificos": [
+    "Dominar las técnicas de extracción, centrifugado y preparación del plasma",
+    "Aprender los protocolos de aplicación en diferentes áreas (estética, traumatología, etc.)",
+    "Identificar indicaciones, contraindicaciones y efectos secundarios del tratamiento",
+    "Promover prácticas seguras, higiénicas y éticamente responsables"
+  ],
+  "tecnica_prp": "Técnica innovadora que utiliza componentes sanguíneos para estimular la regeneración celular, mejorar la cicatrización de tejidos y rejuvenecer la piel",
+  "beneficios": [
+    "Estimulación de la regeneración celular",
+    "Mejora de la cicatrización de tejidos",
+    "Rejuvenecimiento de la piel",
+    "Aplicación en múltiples especialidades médicas",
+    "Técnica mínimamente invasiva"
+  ],
+  "metodologia": [
+    "100% presencial",
+    "16 clases en 4 meses",
+    "Formación teórica y práctica",
+    "Protocolos de aplicación reales",
+    "Prácticas de extracción y centrifugación",
+    "Material de apoyo especializado",
+    "Evaluación continua"
+  ],
+  "requisitos": [
+    "MAYOR DE 18 AÑOS",
+    "CONOCIMIENTOS EN EXTRACCIÓN DE SANGRE",
+    "ESQUEMA DE VACUNACIÓN COMPLETA CONTRA HEPATITIS B O SEROLOGÍAS RECIENTES, PARA EL MÓDULO PRÁCTICO"
+  ],
+  "salida_laboral": [
+    "Médicos estéticos",
+    "Dermatólogos",
+    "Traumatólogos",
+    "Odontólogos",
+    "Especialistas en medicina regenerativa",
+    "Clínicas estéticas",
+    "Centros de medicina regenerativa",
+    "Consultorios médicos especializados",
+    "Institutos de belleza médica",
+    "Centros de traumatología y rehabilitación"
+  ],
+  "aplicaciones_especificas": [
+    "Medicina estética y rejuvenecimiento facial",
+    "Tratamiento de alopecia y caída del cabello",
+    "Regeneración de tejidos en traumatología",
+    "Cicatrización de heridas y úlceras",
+    "Tratamiento de lesiones deportivas",
+    "Regeneración ósea en odontología",
+    "Tratamiento de lesiones de la piel",
+    "Regeneración muscular y articular"
+  ],
+  "equipamiento": [
+    "Centrífugas especializadas para PRP",
+    "Material de extracción sanguínea",
+    "Activadores de coagulación",
+    "Equipos de bioseguridad",
+    "Material para venopunción",
+    "Sistemas de separación de plasma"
+  ],
+  "bioseguridad": [
+    "Normas de asepsia y antisepsia",
+    "Manejo seguro de muestras sanguíneas",
+    "Protocolos de desinfección",
+    "Equipos de protección personal",
+    "Disposición de residuos biológicos",
+    "Prevención de infecciones"
+  ]
+}

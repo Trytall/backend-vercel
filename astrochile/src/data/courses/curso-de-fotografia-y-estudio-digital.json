@@ -1,0 +1,166 @@
+{
+  "title": "Curso Virtual de Fotografía y Estudio Digital 📸",
+  "slug": "curso-de-fotografia-y-estudio-digital",
+  "description": "4 clases audiovisuales + 3 manuales de estudio para dominar la fotografía digital. Aprende desde nociones básicas hasta técnicas avanzadas de composición y edición.",
+  "duracion": "4 Clases Audiovisuales + 3 Manuales de Estudio",
+  "certificacion": "Certificación en Fotografía y Estudio Digital",
+  "modalidad": "100% Online",
+  "objetivo": "Proporcionar conocimientos completos en fotografía digital, desde los fundamentos básicos hasta técnicas avanzadas de composición, iluminación y edición digital.",
+  "caracteristicas_curso": [
+    "4 Clases Audiovisuales",
+    "3 Manuales de Estudio",
+    "Fundamentos de fotografía digital",
+    "Técnicas de composición avanzadas",
+    "Manejo de cámara profesional",
+    "Edición digital de imágenes",
+    "Acceso permanente al contenido",
+    "Formación integral en fotografía"
+  ],
+  "modulos": [
+    {
+      "title": "📷 FUNDAMENTOS BÁSICOS",
+      "topics": [
+        "Nociones elementales: Cámara, Motivo, Luz, Fotógrafo",
+        "Cámara de fotos digital",
+        "Archivos de imagen",
+        "Apertura, obturación, ISO. Gestión de la luz"
+      ]
+    },
+    {
+      "title": "⚙️ CONFIGURACIÓN TÉCNICA",
+      "topics": [
+        "Apertura del diafragma",
+        "Hablemos un poco del obturador",
+        "Trepidación y movimiento",
+        "Fotos movidas",
+        "Sensor y sensibilidad ISO",
+        "Proporciones del sensor"
+      ]
+    },
+    {
+      "title": "🎯 ENFOQUE Y PROFUNDIDAD",
+      "topics": [
+        "El objetivo. Enfocar. Enfoque selectivo",
+        "Profundidad de campo. Distancia hiperfocal",
+        "Modo de enfoque automático y modo manual",
+        "Cuándo utilizar el enfoque manual",
+        "Análisis de teleobjetivos. Uso de teleobjetivos largos",
+        "Tipos de objetivo"
+      ]
+    },
+    {
+      "title": "💡 EXPOSICIÓN E ILUMINACIÓN",
+      "topics": [
+        "Exposición",
+        "Fotómetro",
+        "Modos de la cámara",
+        "Estelas de luz. Efecto agua sedosa en ríos",
+        "Medición de la luz",
+        "Información sobre pantalla del sensor: evaluativa, evaluativa parcial, central y puntual"
+      ]
+    },
+    {
+      "title": "🎨 COMPOSICIÓN Y ESTÉTICA",
+      "topics": [
+        "Enfoque y profundidad de campo en la práctica",
+        "Métodos de enfoque y distancia mínima",
+        "Composición. Armonía en la composición",
+        "Espiral áurea y regla de los tercios",
+        "El fondo",
+        "Planificación. Sentimientos"
+      ]
+    },
+    {
+      "title": "📐 TÉCNICAS AVANZADAS",
+      "topics": [
+        "Orientación, proporción y re-encuadre",
+        "Orientación vertical y horizontal",
+        "Balance de blancos",
+        "El histograma",
+        "Fotografía subexpuesta y sobreexpuesta. Exposición correcta",
+        "Contraluz, parcial y realce de motivo"
+      ]
+    },
+    {
+      "title": "💻 EDICIÓN DIGITAL",
+      "topics": [
+        "Datos EXIF. Archivos .RAW y .JPG",
+        "Accesorios",
+        "Iluminación adicional: el flash. Flashes de estudio",
+        "Reflectores y difusores",
+        "Exposímetro de luz reflejada y de luz incidente",
+        "El trípode",
+        "Filtros",
+        "Anexo manual del laboratorio digital (editor de imágenes)"
+      ]
+    }
+  ],
+  "tecnicas_fotograficas": [
+    "Fotografía de retrato",
+    "Fotografía de paisaje",
+    "Fotografía macro",
+    "Fotografía nocturna",
+    "Fotografía de acción",
+    "Fotografía de estudio",
+    "Fotografía callejera",
+    "Fotografía arquitectónica"
+  ],
+  "equipamiento_fotografico": [
+    "Cámaras DSLR y mirrorless",
+    "Objetivos de diferentes distancias focales",
+    "Trípodes y monopods",
+    "Flashes y iluminación de estudio",
+    "Filtros fotográficos",
+    "Accesorios de cámara",
+    "Equipos de edición digital"
+  ],
+  "software_edicion": [
+    "Adobe Photoshop",
+    "Adobe Lightroom",
+    "Capture One",
+    "GIMP (gratuito)",
+    "Darktable (gratuito)",
+    "Herramientas de edición móvil"
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender fotografía desde cero",
+    "Aficionados que quieren mejorar sus técnicas",
+    "Estudiantes de comunicación y diseño",
+    "Quienes quieren emprender en fotografía",
+    "Personas interesadas en el arte visual",
+    "Trabajadores que necesitan fotografía para su profesión",
+    "Quienes buscan una nueva profesión creativa",
+    "Personas que quieren documentar momentos especiales"
+  ],
+  "salida_laboral": [
+    "Fotógrafo/a profesional",
+    "Fotógrafo/a de eventos",
+    "Fotógrafo/a de retrato",
+    "Fotógrafo/a de producto",
+    "Fotógrafo/a de moda",
+    "Fotógrafo/a de arquitectura",
+    "Editor/a de imágenes",
+    "Fotógrafo/a independiente"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "4 clases audiovisuales",
+    "3 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en fotografía digital"
+  ],
+  "requisitos": [
+    "Interés en la fotografía",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en el arte visual y la creatividad"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Fotografía y Estudio Digital que te permitirá trabajar profesionalmente en el sector fotográfico",
+  "duracion_detalle": "4 clases audiovisuales + 3 manuales de estudio con acceso permanente al contenido"
+}
+
+

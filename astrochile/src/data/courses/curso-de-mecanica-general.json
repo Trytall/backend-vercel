@@ -1,0 +1,99 @@
+{
+  "title": "CURSO DE MECÁNICA GENERAL",
+  "slug": "curso-de-mecanica-general",
+  "description": "Aprendé mecánica desde cero con formación práctica y enfocada en el diagnóstico y reparación de vehículos. Curso completo con 19 clases audiovisuales y 10 manuales de estudio.",
+  "duracion": "19 Clases Audiovisuales + 10 Manuales de Estudio",
+  "certificacion": "Certificación en Mecánica General",
+  "modalidad": "100% Online",
+  "objetivo": "Formar mecánicos profesionales capaces de diagnosticar, reparar y mantener vehículos desde cero, con conocimientos prácticos en motor, carburación, chasis, electricidad e inyección electrónica.",
+  "caracteristicas_curso": [
+    "19 Clases Audiovisuales",
+    "10 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y aplicable"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 MOTOR COMPLETO",
+      "topics": [
+        "Identificación de piezas",
+        "Desarme y revisión del motor",
+        "Inspección del block y la culata",
+        "Mediciones con instrumentos",
+        "Armado, montaje final y puesta a punto",
+        "Medición de compresión"
+      ]
+    },
+    {
+      "title": "🔹 CARBURACIÓN",
+      "topics": [
+        "Desmontaje y análisis de distintos carburadores",
+        "Limpieza, ajuste y regulación (incluyendo motores VW bóxer)",
+        "Diagnóstico y resolución de fallas"
+      ]
+    },
+    {
+      "title": "🔹 CHASIS, SUSPENSIÓN, DIRECCIÓN Y FRENOS",
+      "topics": [
+        "Revisión y servicio de frenos a tambor y disco",
+        "Análisis del sistema de suspensión y dirección"
+      ]
+    },
+    {
+      "title": "🔹 ELECTRICIDAD DEL AUTOMÓVIL",
+      "topics": [
+        "Uso de tester y herramientas de diagnóstico",
+        "Revisión de baterías, arranque, carga e instalación eléctrica",
+        "Sistemas de encendido (convencional y electrónico)",
+        "Instalación de alarmas, autorradio y levantavidrios eléctricos"
+      ]
+    },
+    {
+      "title": "🔹 INYECCIÓN ELECTRÓNICA",
+      "topics": [
+        "Diagnóstico y análisis con scanner y multímetro",
+        "Sistemas específicos:",
+        "• EEC IV (VW monopunto)",
+        "• MI 1AVB (VW secuencial)",
+        "• GM MPFI (Corsa multipunto)",
+        "• Motronic (Gol 1000)"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender mecánica desde cero",
+    "Estudiantes de mecánica automotriz",
+    "Aficionados a los automóviles",
+    "Quienes buscan una nueva profesión técnica",
+    "Mecánicos que quieren actualizar conocimientos",
+    "Trabajadores de talleres automotrices"
+  ],
+  "salida_laboral": [
+    "Mecánico general de automóviles",
+    "Técnico automotriz",
+    "Diagnosticador de vehículos",
+    "Mecánico de talleres",
+    "Mecánico independiente",
+    "Instructor de cursos de mecánica",
+    "Técnico de sistemas de inyección"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "19 clases audiovisuales",
+    "10 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable"
+  ],
+  "requisitos": [
+    "Interés en la mecánica automotriz",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Mecánica General que te permitirá trabajar profesionalmente en el sector automotriz",
+  "duracion_detalle": "19 clases audiovisuales + 10 manuales de estudio con acceso permanente al contenido"
+}

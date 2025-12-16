@@ -1,0 +1,202 @@
+{
+  "title": "CURSO DE AUXILIAR DE FARMACIA",
+  "description": "Formación integral para trabajar como auxiliar de farmacia. Aprende sobre medicamentos, sistemas del cuerpo humano, farmacología, atención farmacéutica y facturación a obras sociales, PAMI y prepagas.",
+  "duracion": "10 meses",
+  "certificacion": "CURSO COMPLETO 10 MESES - CERTIFICACIÓN NACIONAL (Con Facturación a Obras Sociales, PAMI y Prepagas)",
+  "modalidad": "Presencial",
+  "modulos": [
+    {
+      "title": "MÓDULO 1: INTRODUCCIÓN A LA FARMACIA",
+      "topics": [
+        "Farmacia",
+        "Historia de la farmacia",
+        "Disciplinas de la farmacia",
+        "Organización de la farmacia",
+        "Medicamentos",
+        "Definición de medicamentos",
+        "Drogas",
+        "Medicamentos geriátricos",
+        "Nombre Comercial",
+        "Condiciones de venta",
+        "Venta libre",
+        "Venta bajo receta",
+        "Presentación de los medicamentos",
+        "Metabolismo de los medicamentos"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: LEGISLACIÓN Y NORMATIVAS",
+      "topics": [
+        "Legislación vigente",
+        "Ciudad Autónoma de Buenos Aires",
+        "Gran Buenos Aires y Provincias Argentinas",
+        "Ley de genéricas",
+        "Reemplazo de la especialidad por la monodroga",
+        "ANMAT",
+        "Áreas de actividad",
+        "Salud y enfermedad"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: SISTEMAS DEL CUERPO HUMANO I",
+      "topics": [
+        "Sistema Circulatorio",
+        "Presión Arterial",
+        "Factores de riesgo",
+        "La Presión arterial",
+        "Sistema Articular",
+        "Función y como está compuesto el sistema articular",
+        "Sistema Muscular",
+        "Patologías (Artrosis)",
+        "Prevención",
+        "Esteroides",
+        "Sistema Digestivo",
+        "Patologías",
+        "Medicamentos",
+        "Farmacología digestiva",
+        "Sistema Excretor u urinario",
+        "Función renal",
+        "Farmacología",
+        "Sistema Tegumentario",
+        "Como está constituido",
+        "Farmacología",
+        "Cuidados más importantes"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: SISTEMAS DEL CUERPO HUMANO II",
+      "topics": [
+        "Sistema Respiratorio",
+        "Función",
+        "Como está formado el aparato respiratorio",
+        "Farmacología",
+        "Sistema Nervioso",
+        "Características",
+        "Farmacologías",
+        "Sistema Endocrino",
+        "Glándulas tiroideas",
+        "Glándulas suprarrenales",
+        "Sistema Reproductor",
+        "Órganos sexuales femeninos y masculinos",
+        "Sistema Inmunológico",
+        "Células",
+        "Tipos de defensas"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: FARMACOLOGÍA ESPECIALIZADA",
+      "topics": [
+        "Farmacología I",
+        "Farmacocinética y Farmacodinamia",
+        "Formas farmacéuticas, analgésicos, laxantes y antihipertensivos",
+        "Psicotrópicos",
+        "Farmacología II",
+        "Diabetes",
+        "Tiroides",
+        "Antialérgicos",
+        "Anticonceptivos",
+        "Artritis",
+        "Artrosis",
+        "Enfermedad neurodegenerativa",
+        "Alzheimer",
+        "Parkinson",
+        "Vacunas"
+      ]
+    },
+    {
+      "title": "MÓDULO 6: ATENCIÓN FARMACÉUTICA",
+      "topics": [
+        "Atención farmacéutica",
+        "Calidad del medicamento",
+        "Información al paciente",
+        "Atención Primaria",
+        "Control de Presión Arterial",
+        "Inyecciones",
+        "RCP",
+        "Promoción del uso Nacional de medicamentos",
+        "Comunicación eficaz con el paciente",
+        "Etapas de la dispensación",
+        "Control de stock",
+        "Ordenamiento en estantería"
+      ]
+    },
+    {
+      "title": "MÓDULO 7: FACTURACIÓN Y OBRAS SOCIALES",
+      "topics": [
+        "Facturación",
+        "PAMI",
+        "IOMA",
+        "Obra sociales",
+        "Obra social Sindical",
+        "Obra social Prepagas"
+      ]
+    }
+  ],
+  "objetivos": [
+    "Formar auxiliares de farmacia capacitados en el manejo de medicamentos",
+    "Comprender la organización y funcionamiento de una farmacia",
+    "Conocer los sistemas del cuerpo humano y su farmacología",
+    "Aprender sobre medicamentos, drogas y formas farmacéuticas",
+    "Manejar la legislación farmacéutica vigente",
+    "Desarrollar habilidades en atención farmacéutica",
+    "Capacitar en facturación a obras sociales, PAMI y prepagas",
+    "Promover el uso racional de medicamentos",
+    "Controlar stock y organización de estanterías",
+    "Brindar información clara y precisa a los pacientes"
+  ],
+  "metodologia": [
+    "Curso 100% presencial",
+    "Duración: 10 meses",
+    "Formación teórica y práctica",
+    "Material de apoyo especializado",
+    "Evaluación continua",
+    "Prácticas en farmacias",
+    "Simulaciones de atención al cliente"
+  ],
+  "requisitos": [
+    "Mayor de 18 años",
+    "Secundario completo",
+    "Interés en el área farmacéutica",
+    "Responsabilidad en el manejo de medicamentos",
+    "Buenas habilidades de comunicación",
+    "Disposición para el trabajo con público"
+  ],
+  "salida_laboral": [
+    "Auxiliar de farmacia",
+    "Farmacias privadas y de cadena",
+    "Farmacias hospitalarias",
+    "Farmacias de obras sociales",
+    "Farmacias de PAMI",
+    "Centros de distribución de medicamentos",
+    "Laboratorios farmacéuticos",
+    "Consultorios médicos",
+    "Clínicas y hospitales",
+    "Obras sociales y prepagas"
+  ],
+  "facturacion": "Capacitación completa en facturación a Obras Sociales, PAMI y Prepagas",
+  "certificacion_detalle": "CURSO COMPLETO 10 MESES - CERTIFICACIÓN NACIONAL",
+  "sistemas_corporales": [
+    "Sistema Circulatorio",
+    "Sistema Articular y Muscular",
+    "Sistema Digestivo",
+    "Sistema Excretor",
+    "Sistema Tegumentario",
+    "Sistema Respiratorio",
+    "Sistema Nervioso",
+    "Sistema Endocrino",
+    "Sistema Reproductor",
+    "Sistema Inmunológico"
+  ],
+  "farmacologia_especializada": [
+    "Farmacocinética y Farmacodinamia",
+    "Analgésicos y antiinflamatorios",
+    "Antihipertensivos",
+    "Psicotrópicos",
+    "Medicamentos para diabetes",
+    "Medicamentos para tiroides",
+    "Antialérgicos",
+    "Anticonceptivos",
+    "Vacunas",
+    "Medicamentos para enfermedades neurodegenerativas"
+  ]
+}

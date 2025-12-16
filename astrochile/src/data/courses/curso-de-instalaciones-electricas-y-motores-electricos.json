@@ -1,0 +1,431 @@
+{
+  "title": "ELECTRICIDAD DOMICILIARIA - Morón",
+  "slug": "curso-de-instalaciones-electricas-y-motores-electricos",
+  "description": "Formación completa en electricidad domiciliaria. Aprende a realizar reparaciones, identificar fallas y atender la seguridad eléctrica en domicilios y pequeños comercios.",
+  "duracion": "6 meses - 24 clases semanales de 2 horas",
+  "certificacion": "Electricista Domiciliario",
+  "modality": "Online",
+  "campuses": "Online",
+  "image": "/images/curso-cerrajeria.jpg",
+  "syllabus": [
+    {
+      "title": "Módulo 1: Fundamentos del Curso",
+      "topics": [
+        "Introducción al área de especialización",
+        "Conceptos básicos y terminología",
+        "Herramientas y equipos necesarios",
+        "Normativas de seguridad",
+        "Preparación del entorno de trabajo"
+      ]
+    },
+    {
+      "title": "Módulo 2: Técnicas Básicas",
+      "topics": [
+        "Procedimientos fundamentales",
+        "Manejo de herramientas especializadas",
+        "Técnicas de diagnóstico",
+        "Métodos de reparación básicos",
+        "Control de calidad inicial"
+      ]
+    },
+    {
+      "title": "Módulo 3: Técnicas Avanzadas",
+      "topics": [
+        "Procedimientos complejos",
+        "Diagnóstico avanzado",
+        "Reparaciones especializadas",
+        "Optimización de procesos",
+        "Resolución de problemas complejos"
+      ]
+    },
+    {
+      "title": "Módulo 4: Tecnología Moderna",
+      "topics": [
+        "Equipos y herramientas modernas",
+        "Software especializado",
+        "Tecnologías emergentes",
+        "Automatización de procesos",
+        "Mantenimiento predictivo"
+      ]
+    },
+    {
+      "title": "Módulo 5: Gestión y Administración",
+      "topics": [
+        "Gestión de inventarios",
+        "Control de costos",
+        "Atención al cliente",
+        "Documentación técnica",
+        "Planificación de mantenimiento"
+      ]
+    },
+    {
+      "title": "Módulo 6: Práctica Profesional",
+      "topics": [
+        "Prácticas en empresas del sector",
+        "Desarrollo de proyectos reales",
+        "Preparación para el mercado laboral",
+        "Networking profesional",
+        "Certificación final del curso"
+      ]
+    }
+  ],
+  "objetivo": "Acompañar a personas a conocer el mundo de la electricidad domiciliaria, despejar dudas y mitos, y proporcionar conocimientos teórico-prácticos fundamentales para realizar reparaciones domiciliarias, identificar fallas y atender la seguridad de las personas.",
+  "caracteristicas_curso": [
+    "6 meses de duración",
+    "24 clases en total",
+    "Una clase semanal de 2 horas",
+    "Modalidad presencial",
+    "Aprendizaje teórico/práctico",
+    "12 módulos especializados",
+    "Asistencia obligatoria 75%",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "🏛️ MÓDULO 1: AUTORIDADES Y RACIONALIZACIÓN DE LA ENERGÍA ELÉCTRICA",
+      "topics": [
+        "Asociaciones, organizaciones y entes reguladores",
+        "APSE, COPIME, AEA, ENRE con incidencia en el rubro eléctrico",
+        "Seguridad y normas establecidas en nuestro país",
+        "El uso racional de la energía eléctrica",
+        "Uso consciente para utilizar lo estrictamente necesario",
+        "Maximizar el aprovechamiento de los recursos naturales"
+      ]
+    },
+    {
+      "title": "🔧 MÓDULO 2: HERRAMIENTAS",
+      "topics": [
+        "Herramientas e instrumentos del mercado: marcas, tipos, costos",
+        "Diferencias de herramientas para diferentes rubros y sus similitudes",
+        "Herramientas necesarias para comenzar y adquisición paulatina",
+        "Tipos de herramientas de seguridad según voltaje para operar",
+        "Normas de fabricación y control nacionales e internacionales",
+        "Herramientas especiales e instrumentos de medición"
+      ]
+    },
+    {
+      "title": "⚡ MÓDULO 3: MAGNITUDES",
+      "topics": [
+        "Concepto general sobre las magnitudes y su posibilidad de obtener valor",
+        "Tensión, Corriente, Resistencia",
+        "Cálculos matemáticos entre sí",
+        "Prácticas sobre circuitos eléctricos",
+        "Analogía hidráulica",
+        "Efectos de la corriente eléctrica",
+        "Alterna - Continua",
+        "Ley de Watt, Edison, Tesla"
+      ]
+    },
+    {
+      "title": "📊 MÓDULO 4: MEDICIONES",
+      "topics": [
+        "Utilización de instrumentos de medición",
+        "Tester, Pinza Amperométrica, Buscapolo, Detector Inductivo",
+        "Partes integrantes, escalas, puntas",
+        "Correcta utilización de cada instrumento",
+        "Similitudes y diferencias entre instrumentos",
+        "Cuándo y cómo usar cada uno",
+        "Otros instrumentos más complejos y exactos"
+      ]
+    },
+    {
+      "title": "🛡️ MÓDULO 5: SEGURIDAD",
+      "topics": [
+        "Riesgos eléctricos",
+        "Contacto directo e indirecto",
+        "Recomendaciones de seguridad en trabajo y hogar",
+        "Efectos fisiológicos de la electricidad en el cuerpo humano",
+        "Cómo salvar vidas sin arriesgar la propia",
+        "Los primeros auxilios",
+        "Las cinco (5) Reglas de oro"
+      ]
+    },
+    {
+      "title": "🔌 MÓDULO 6: CONDUCTORES",
+      "topics": [
+        "Tipos de conductores: cobre – aluminio",
+        "Cables unipolar y multipolar",
+        "Modos de instalación",
+        "Normas IRAM en cada caso",
+        "Código de colores",
+        "Corriente máxima admisible para cada sección",
+        "Caída de tensión"
+      ]
+    },
+    {
+      "title": "🔗 MÓDULO 7: EMPALMES",
+      "topics": [
+        "Diferentes tipos de empalmes más utilizados",
+        "Importancia y razones de cada tipo",
+        "Prácticas para utilización de herramientas",
+        "Tipos de accesorios comercializados",
+        "Normas de aplicación"
+      ]
+    },
+    {
+      "title": "⚙️ MÓDULO 8: ELEMENTOS DE PROTECCIÓN",
+      "topics": [
+        "Interruptor diferencial: funcionamiento y acción",
+        "Tipos de interruptores comercializados actualmente",
+        "Tensión de servicio, cantidad de polos, corriente, sensibilidad y tiempo de actuación",
+        "Interruptor termo magnético: funcionamiento y acción",
+        "Tensión de servicio, cantidad de polos, corriente, curva de disparo y corriente de corto circuito",
+        "Fusible: tipos, prestaciones y características generales"
+      ]
+    },
+    {
+      "title": "⚡ MÓDULO 9: SISTEMAS DE PAT",
+      "topics": [
+        "Puesta a tierra (PAT)",
+        "Descripción de elementos integrantes en una buena instalación",
+        "Jabalinas, tipos de materiales del mercado, radios de trabajo",
+        "Tapas de inspección, toma cables: función e importancia",
+        "Medición y normas vigentes"
+      ]
+    },
+    {
+      "title": "📦 MÓDULO 10: CANALIZACIONES",
+      "topics": [
+        "Descripción de materiales aprobados para instalaciones eléctricas",
+        "Modo de instalación y generalidades de cada caso",
+        "Realización de cañerías en diferentes ámbitos",
+        "Materiales homologados",
+        "Normas IRAM"
+      ]
+    },
+    {
+      "title": "🏠 MÓDULO 11: EL CIRCUITO DOMICILIARIO",
+      "topics": [
+        "Descripción de todas las partes integrantes en un circuito típico",
+        "Tipos de acometidas: aérea, subterránea y mixta",
+        "Elementos integrantes del pilar, toma de compañía",
+        "Gabinete de medidor y tablero general",
+        "Tableros seccionales: dimensiones, usos y generalidades"
+      ]
+    },
+    {
+      "title": "🎛️ MÓDULO 12: ACCIONAMIENTOS",
+      "topics": [
+        "Tomacorrientes: tipos, normas, instalación, tipos de conexionado",
+        "Teclas de encendido: punto simple y combinación",
+        "Circuitos, Timbre o Campanilla",
+        "Contactor, Telerruptor, Sensor de Movimiento",
+        "Componentes del mercado: cableado, conexionado y puesta en marcha",
+        "Automático de escalera o pasillo",
+        "Sensores PIR: infrarrojos pasivos, funcionamiento, cableado y utilización"
+      ]
+    }
+  ],
+  "objetivos_especificos": [
+    "Conocer elementos constitutivos de una red eléctrica domiciliaria",
+    "Adquirir capacidad para resolver problemas frecuentes en redes domiciliarias",
+    "Conocer equipos que una red eléctrica va a alimentar",
+    "Adquirir capacidad de medir variables eléctricas en una red",
+    "Calcular consumos de potencias e intensidades de corriente",
+    "Dimensionar conductores eléctricos y artefactos de seguridad",
+    "Utilización de elementos de Seguridad eléctrica",
+    "Capacitar para realizar reparaciones domiciliarias básicas",
+    "Inducir aplicación de normas de seguridad eléctrica en el hogar",
+    "Establecer pautas sobre uso racional de la Energía Eléctrica",
+    "Conocer principios generales de Generación, Transmisión y Distribución"
+  ],
+  "herramientas_instrumentos": [
+    "Tester digital y analógico",
+    "Pinza amperométrica",
+    "Buscapolo",
+    "Detector inductivo",
+    "Herramientas de seguridad certificadas",
+    "Herramientas especializadas para electricidad",
+    "Instrumentos de medición avanzados"
+  ],
+  "normas_seguridad": [
+    "Normas IRAM para instalaciones eléctricas",
+    "Normas de seguridad nacionales e internacionales",
+    "Las cinco reglas de oro de la electricidad",
+    "Protección contra contactos directos e indirectos",
+    "Sistemas de puesta a tierra (PAT)",
+    "Elementos de protección: diferenciales, termomagnéticos, fusibles"
+  ],
+  "practicas_curso": [
+    "Medición de magnitudes eléctricas",
+    "Instalación de circuitos domiciliarios",
+    "Realización de empalmes eléctricos",
+    "Instalación de elementos de protección",
+    "Configuración de sistemas de puesta a tierra",
+    "Instalación de canalizaciones",
+    "Conexionado de accionamientos",
+    "Reparaciones domiciliarias básicas"
+  ],
+  "ideal_para": [
+    "Personas que deseen adquirir conocimientos de electricidad",
+    "Quienes quieren realizar reparaciones en domicilios particulares",
+    "Personas interesadas en trabajar como electricistas",
+    "Trabajadores de pequeños comercios",
+    "Personas de cualquier edad sin conocimientos previos",
+    "Quienes buscan una nueva profesión técnica",
+    "Empleados que necesitan conocimientos eléctricos",
+    "Personas interesadas en la seguridad eléctrica"
+  ],
+  "salida_laboral": [
+    "Electricista domiciliario",
+    "Técnico en instalaciones eléctricas",
+    "Reparador de instalaciones domiciliarias",
+    "Instalador de sistemas eléctricos",
+    "Técnico en mantenimiento eléctrico",
+    "Electricista independiente",
+    "Trabajador en empresas de electricidad",
+    "Técnico en seguridad eléctrica"
+  ],
+  "metodologia": [
+    "Modalidad presencial",
+    "24 clases semanales de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Asistencia obligatoria 75%",
+    "Trabajos prácticos complementarios",
+    "3 exámenes parciales",
+    "Examen final o presentación",
+    "Formación integral y práctica"
+  ],
+  "evaluacion": [
+    "Asistencia obligatoria 75% del tiempo total",
+    "Trabajos prácticos complementarios",
+    "3 exámenes parciales",
+    "Examen final o presentación",
+    "Evaluación continua del aprendizaje",
+    "Prácticas en instalaciones reales"
+  ],
+  "requisitos": [
+    "Interés en la electricidad domiciliaria",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases (75% mínimo)",
+    "Interés en la seguridad eléctrica",
+    "Disposición para aprender una profesión técnica"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Electricista Domiciliario que te permitirá trabajar profesionalmente en el sector",
+  "duracion_detalle": "6 meses con 24 clases semanales de 2 horas cada una en modalidad presencial",
+  "campus_content": {
+    "moron": {
+      "title": "ELECTRICIDAD DOMICILIARIA - Morón",
+      "description": "Formación completa en electricidad domiciliaria. Aprende a realizar reparaciones, identificar fallas y atender la seguridad eléctrica en domicilios y pequeños comercios.",
+      "syllabus": [
+        {
+          "title": "Módulo 1: Fundamentos del Curso",
+          "topics": [
+            "Introducción al área de especialización",
+            "Conceptos básicos y terminología",
+            "Herramientas y equipos necesarios",
+            "Normativas de seguridad",
+            "Preparación del entorno de trabajo"
+          ]
+        },
+        {
+          "title": "Módulo 2: Técnicas Básicas",
+          "topics": [
+            "Procedimientos fundamentales",
+            "Manejo de herramientas especializadas",
+            "Técnicas de diagnóstico",
+            "Métodos de reparación básicos",
+            "Control de calidad inicial"
+          ]
+        }
+      ]
+    },
+    "lomas": {
+      "title": "ELECTRICIDAD DOMICILIARIA - Lomas",
+      "description": "Enfoque en instalaciones residenciales y comerciales. Aprende electricidad domiciliaria completa.",
+      "syllabus": [
+        {
+          "title": "Módulo 1: Fundamentos de Electricidad",
+          "topics": [
+            "Conceptos básicos de electricidad",
+            "Voltaje, corriente, resistencia y potencia",
+            "Ley de Ohm y cálculos eléctricos"
+          ]
+        },
+        {
+          "title": "Módulo 2: Instalaciones Domiciliarias",
+          "topics": [
+            "Tipos de instalaciones residenciales",
+            "Cálculo de cargas eléctricas",
+            "Selección de conductores"
+          ]
+        }
+      ]
+    },
+    "avellaneda": {
+      "title": "ELECTRICIDAD DOMICILIARIA - Avellaneda",
+      "description": "Preparación para trabajar en el sector eléctrico residencial con seguridad y eficiencia.",
+      "syllabus": [
+        {
+          "title": "Módulo 1: Componentes Eléctricos",
+          "topics": [
+            "Interruptores y tomacorrientes",
+            "Lámparas y sistemas de iluminación",
+            "Motores monofásicos"
+          ]
+        },
+        {
+          "title": "Módulo 2: Planos y Esquemas Eléctricos",
+          "topics": [
+            "Simbología eléctrica normalizada",
+            "Esquemas unifilares",
+            "Planos de instalaciones"
+          ]
+        }
+      ]
+    },
+    "online": {
+      "title": "Curso de Instalaciones Eléctricas - Escuelas IADE Argentina",
+      "description": "Incluye 17 clases audiovisuales y 10 manuales técnicos para acompañar tu aprendizaje.",
+      "syllabus": [
+        {
+          "title": "📘 Módulo 1: Fundamentos y Herramientas",
+          "topics": [
+            "Principios básicos de electricidad",
+            "Uso correcto de herramientas: pinzas, destornilladores, soldadores",
+            "Instrumentos de medición",
+            "Técnicas para quitar el aislamiento a conductores",
+            "Tipos de empalmes y aislaciones",
+            "Armado de circuitos en serie y paralelo"
+          ]
+        },
+        {
+          "title": "⚡ Módulo 2: Componentes y Circuitos Eléctricos",
+          "topics": [
+            "Generación de corriente alterna (C.A.)",
+            "Transformadores, capacitores, impedancia y resonancia",
+            "Código de colores en resistencias y capacitores",
+            "Armado de circuitos Serie-Paralelo",
+            "Ejercicios prácticos: lámparas con distintas configuraciones de llaves (unipolar, combinadas, doble combinación)"
+          ]
+        },
+        {
+          "title": "🧪 Módulo 3: Medición, Cálculos y Teoría",
+          "topics": [
+            "Uso del multímetro, voltímetro y amperímetro",
+            "Prácticas en protoboards",
+            "Materiales eléctricos: aislantes, conductores, pérdidas dieléctricas",
+            "Cálculo de resistencias, Ley de Ohm y Reglas de Kirchhoff",
+            "Corrientes trifásicas y tipos de líneas (aéreas y subterráneas)"
+          ]
+        },
+        {
+          "title": "🏠 Módulo 4: Instalaciones y Aplicaciones Prácticas",
+          "topics": [
+            "Interpretación de planos eléctricos",
+            "Cálculos para instalaciones seguras",
+            "Normativas eléctricas vigentes",
+            "Instalación de porteros eléctricos, luces automáticas y sistemas para tanques de agua",
+            "Colocación de artefactos de iluminación",
+            "Protección: llaves térmicas, disyuntores y magnéticas",
+            "Diagnóstico y servicio de motores eléctricos",
+            "Conexión estrella y triángulo",
+            "Uso de contactores en la industria"
+          ]
+        }
+      ],
+      "note": "Curso pensado para que aprendas desde cero hasta un nivel profesional. ¡Ideal para trabajar en domicilios, obras o industrias!"
+    }
+  }
+}

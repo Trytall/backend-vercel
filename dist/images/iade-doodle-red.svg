@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <defs>
+    <style>
+      .r{fill:none;stroke:#E10613;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:.28;}
+    </style>
+    <!-- ICONS -->
+    <symbol id="ico-wrench" viewBox="0 0 32 32">
+      <path class="r" d="M7 7 l10 -5 a6 6 0 0 1 8 8 l-5 10 l-8 8 a5 5 0 1 1 -7 -7 z"/>
+      <circle class="r" cx="7" cy="25" r="2.2"/>
+    </symbol>
+    <symbol id="ico-hammer" viewBox="0 0 32 32">
+      <path class="r" d="M4 8 l12 -4 l6 6 l-6 2" />
+      <path class="r" d="M10 12 l-2 2 l10 10 l2 -2 z"/>
+    </symbol>
+    <symbol id="ico-screwdriver" viewBox="0 0 32 32">
+      <path class="r" d="M4 20 l6 -6 l4 4 l-6 6 z"/>
+      <path class="r" d="M14 14 l10 -10 l4 4 l-10 10 z"/>
+    </symbol>
+    <symbol id="ico-gear" viewBox="0 0 32 32">
+      <circle class="r" cx="16" cy="16" r="5"/>
+      <path class="r" d="M16 2 v6 M16 24 v6 M2 16 h6 M24 16 h6 M5 5 l4 4 M23 23 l4 4 M27 5 l-4 4 M9 23 l-4 4"/>
+    </symbol>
+    <symbol id="ico-monitor" viewBox="0 0 32 32">
+      <rect class="r" x="4" y="6" width="24" height="16" rx="3"/>
+      <path class="r" d="M10 26 h12 M16 22 v4"/>
+    </symbol>
+    <symbol id="ico-laptop" viewBox="0 0 32 32">
+      <rect class="r" x="6" y="8" width="20" height="12" rx="2"/>
+      <path class="r" d="M2 22 h28 l-2 4 H4 z"/>
+    </symbol>
+    <symbol id="ico-pen" viewBox="0 0 32 32">
+      <path class="r" d="M4 22 l10 -18 l6 6 l-18 10 z"/>
+      <circle class="r" cx="5" cy="23" r="1.5"/>
+    </symbol>
+    <symbol id="ico-calculator" viewBox="0 0 32 32">
+      <rect class="r" x="6" y="4" width="20" height="24" rx="3"/>
+      <rect class="r" x="10" y="8" width="12" height="6" rx="1"/>
+      <path class="r" d="M10 18 h12 M10 22 h12"/>
+    </symbol>
+    <symbol id="ico-drill" viewBox="0 0 32 32">
+      <path class="r" d="M4 14 h12 l4 3 v6 h-8 l-2 -2 H4z"/>
+      <path class="r" d="M20 17 h6 l2 2 l-2 2 h-6"/>
+    </symbol>
+    <symbol id="ico-mail" viewBox="0 0 32 32">
+      <rect class="r" x="4" y="8" width="24" height="16" rx="2"/>
+      <path class="r" d="M4 10 l12 8 l12 -8"/>
+    </symbol>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#E10613" opacity=".08"/>
+    </pattern>
+  </defs>
+
+  <!-- Background soft dots -->
+  <rect width="360" height="360" fill="url(#dots)"/>
+
+  <!-- Tiled icons grid (manually placed for a natural, non-perfect repeat) -->
+  <g opacity="1">
+    <!-- Row 1 -->
+    <use href="#ico-wrench" x="10" y="10" width="32" height="32"/>
+    <use href="#ico-gear" x="70" y="6" width="32" height="32"/>
+    <use href="#ico-monitor" x="124" y="8" width="36" height="36"/>
+    <use href="#ico-pen" x="184" y="12" width="28" height="28"/>
+    <use href="#ico-drill" x="232" y="8" width="36" height="36"/>
+    <use href="#ico-mail" x="290" y="6" width="36" height="36"/>
+
+    <!-- Row 2 -->
+    <use href="#ico-hammer" x="26" y="64" width="32" height="32"/>
+    <use href="#ico-laptop" x="86" y="62" width="36" height="36"/>
+    <use href="#ico-calculator" x="148" y="62" width="32" height="32"/>
+    <use href="#ico-wrench" x="206" y="62" width="32" height="32"/>
+    <use href="#ico-gear" x="266" y="64" width="32" height="32"/>
+
+    <!-- Row 3 -->
+    <use href="#ico-monitor" x="8" y="118" width="36" height="36"/>
+    <use href="#ico-pen" x="66" y="120" width="28" height="28"/>
+    <use href="#ico-drill" x="112" y="116" width="36" height="36"/>
+    <use href="#ico-mail" x="170" y="116" width="36" height="36"/>
+    <use href="#ico-hammer" x="232" y="118" width="32" height="32"/>
+    <use href="#ico-laptop" x="290" y="116" width="36" height="36"/>
+
+    <!-- Row 4 -->
+    <use href="#ico-wrench" x="30" y="174" width="32" height="32"/>
+    <use href="#ico-gear" x="86" y="176" width="32" height="32"/>
+    <use href="#ico-monitor" x="144" y="172" width="36" height="36"/>
+    <use href="#ico-pen" x="206" y="176" width="28" height="28"/>
+    <use href="#ico-drill" x="252" y="174" width="36" height="36"/>
+    <use href="#ico-calculator" x="310" y="176" width="32" height="32"/>
+
+    <!-- Row 5 -->
+    <use href="#ico-mail" x="6" y="230" width="36" height="36"/>
+    <use href="#ico-hammer" x="64" y="232" width="32" height="32"/>
+    <use href="#ico-laptop" x="120" y="230" width="36" height="36"/>
+    <use href="#ico-wrench" x="182" y="232" width="32" height="32"/>
+    <use href="#ico-gear" x="242" y="232" width="32" height="32"/>
+    <use href="#ico-monitor" x="298" y="230" width="36" height="36"/>
+
+    <!-- Row 6 -->
+    <use href="#ico-pen" x="26" y="288" width="28" height="28"/>
+    <use href="#ico-drill" x="76" y="286" width="36" height="36"/>
+    <use href="#ico-mail" x="136" y="286" width="36" height="36"/>
+    <use href="#ico-hammer" x="194" y="288" width="32" height="32"/>
+    <use href="#ico-laptop" x="248" y="286" width="36" height="36"/>
+    <use href="#ico-calculator" x="306" y="288" width="32" height="32"/>
+  </g>
+</svg>

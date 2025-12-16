@@ -1,0 +1,106 @@
+{
+  "title": "Curso Virtual de Frenos",
+  "slug": "curso-de-frenos",
+  "description": "Formación completa en sistemas de frenos automotrices con 6 clases audiovisuales y 6 manuales de estudio. Aprendé desde frenos básicos hasta sistemas ABS avanzados.",
+  "duracion": "6 Clases Audiovisuales + 6 Manuales de Estudio",
+  "certificacion": "Certificación en Sistemas de Frenos Automotrices",
+  "modalidad": "100% Online",
+  "objetivo": "Formar técnicos especializados en sistemas de frenos automotrices con conocimientos completos en diagnóstico, reparación y mantenimiento de frenos convencionales y ABS.",
+  "caracteristicas_curso": [
+    "6 Clases Audiovisuales",
+    "6 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y teórica",
+    "Sistemas de frenos completos",
+    "Técnicas de diagnóstico avanzado"
+  ],
+  "modulos": [
+    {
+      "title": "🔧 UNIDAD 1 Y 2 - SISTEMAS BÁSICOS Y ABS",
+      "topics": [
+        "Sistema básico de frenos",
+        "Descripción y funcionamiento diagnosis y comprobación",
+        "Procedimientos de servicio",
+        "Desmontaje e instalación",
+        "Desensamblaje y ensamblaje",
+        "Limpieza e inspección",
+        "Ajustes - Herramientas especiales",
+        "Sistema de frenos anti bloqueo Teves Mark 20",
+        "Descripción y funcionamiento",
+        "Diagnosis y comprobación",
+        "Procedimientos de servicio",
+        "Desmontaje e instalación",
+        "Especificaciones técnicas"
+      ]
+    },
+    {
+      "title": "🚗 UNIDAD 3, 4 Y 5 - COMPONENTES Y SISTEMAS",
+      "topics": [
+        "Los frenos en el automóvil",
+        "Exigencias de la legislación",
+        "Nociones de hidráulica",
+        "La bomba",
+        "La bomba doble o bomba tandem",
+        "Limitador de frenada",
+        "Dispositivo de asistencia",
+        "Servofrenos",
+        "Indicadores y testigos",
+        "Los sistemas de frenos",
+        "El mando mecánico",
+        "Diagnóstico y comprobación",
+        "Los líquidos para frenos"
+      ]
+    },
+    {
+      "title": "⚡ UNIDAD 6 - SISTEMAS AVANZADOS",
+      "topics": [
+        "El automovilista eficiente",
+        "Funcionamientos de los frenos",
+        "Frenos de disco",
+        "Frenos de tambor",
+        "Sistema anti bloqueo de frenos - ABS"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender sistemas de frenos desde cero",
+    "Técnicos mecánicos automotrices",
+    "Estudiantes de mecánica",
+    "Quienes buscan una nueva profesión técnica",
+    "Trabajadores de talleres automotrices",
+    "Emprendedores en el sector automotriz",
+    "Personas interesadas en la seguridad vehicular",
+    "Técnicos que quieren especializarse en frenos"
+  ],
+  "salida_laboral": [
+    "Técnico en sistemas de frenos",
+    "Especialista en frenos ABS",
+    "Mecánico de frenos",
+    "Trabajador en talleres automotrices",
+    "Especialista en seguridad vehicular",
+    "Técnico independiente en frenos",
+    "Instructor de cursos de mecánica",
+    "Emprendedor en taller de frenos"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "6 clases audiovisuales",
+    "6 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en sistemas de frenos"
+  ],
+  "requisitos": [
+    "Interés en los sistemas de frenos automotrices",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en la mecánica automotriz"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Sistemas de Frenos Automotrices que te permitirá trabajar profesionalmente en el sector automotriz",
+  "duracion_detalle": "6 clases audiovisuales + 6 manuales de estudio con acceso permanente al contenido"
+}

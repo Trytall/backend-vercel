@@ -1,0 +1,320 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import WhatsAppButton from '../../../components/WhatsAppButton.astro';
+import cursos, { type Curso, type Modalidad } from '../../../data/cursos.ts';
+
+export async function getStaticPaths() {
+  const paths = [] as { params: { slug: string; sede: string } }[];
+  for (const c of cursos) {
+    // Si tiene modalidades (nuevo formato)
+    if (c.modalidades && Array.isArray(c.modalidades)) {
+      for (const m of c.modalidades) {
+        if (m.tipo === 'presencial' && m.sede) {
+          const sedeSlug = (m.sede || '')
+            .toLowerCase()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+          paths.push({ params: { slug: c.slug, sede: sedeSlug } });
+        }
+      }
+    }
+    // Si tiene modalidad como string (formato anterior)
+    else if (c.modalidad && typeof c.modalidad === 'string') {
+      const modalidadText = c.modalidad.toLowerCase();
+      if (modalidadText.includes('presencial')) {
+        let sede = '';
+        if (modalidadText.includes('morón') || modalidadText.includes('moron')) {
+          sede = 'moron';
+        } else         if (modalidadText.includes('lomas')) {
+          sede = 'lomas-de-zamora';
+        } else if (modalidadText.includes('avellaneda')) {
+          sede = 'avellaneda';
+        }
+        if (sede) {
+          paths.push({ params: { slug: c.slug, sede: sede } });
+        }
+      }
+    }
+  }
+  return paths;
+}
+
+const { slug, sede } = Astro.params;
+const curso: Curso | undefined = cursos.find(c => c.slug === slug);
+if (!curso) { throw new Error('Curso no encontrado'); }
+
+function findModalidadBySedeSlug(curso: Curso, sedeSlug: string): Modalidad | undefined {
+  // Si tiene modalidades (nuevo formato)
+  if (curso.modalidades && Array.isArray(curso.modalidades)) {
+    for (const m of curso.modalidades) {
+      if (m.tipo !== 'presencial') continue;
+      const s = (m.sede || '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+      if (s === sedeSlug) return m;
+    }
+  }
+  // Si tiene modalidad como string (formato anterior), crear un objeto Modalidad temporal
+  else if (curso.modalidad && typeof curso.modalidad === 'string') {
+    const modalidadText = curso.modalidad.toLowerCase();
+    if (modalidadText.includes('presencial')) {
+      let sede = '';
+      if (modalidadText.includes('morón') || modalidadText.includes('moron')) {
+        sede = 'Morón';
+      } else if (modalidadText.includes('lomas')) {
+        sede = 'Lomas de Zamora';
+      } else if (modalidadText.includes('avellaneda')) {
+        sede = 'Avellaneda';
+      }
+      if (sede && sede.toLowerCase().replace(/[^a-z0-9]+/g, '-') === sedeSlug) {
+        // Crear un objeto Modalidad temporal para cursos con modalidad string
+        return {
+          tipo: 'presencial',
+          sede: sede,
+          duracion: curso.duracion || '—',
+          temario: curso.temario || []
+        } as Modalidad;
+      }
+    }
+  }
+  return undefined;
+}
+
+const modalidad = findModalidadBySedeSlug(curso, sede);
+if (!modalidad) { 
+  // En lugar de lanzar error, redirigir a página de error o mostrar mensaje
+  return Astro.redirect('/404');
+}
+---
+
+<Layout title={`${curso.titulo || curso.nombre} (Presencial · ${modalidad.sede}) - Escuelas IADE`} description={curso.descripcion}>
+  <Header />
+
+  <!-- Hero Section con fondo doodle -->
+  <section class="relative bg-light-bg pt-24 pb-12 overflow-hidden">
+    <!-- Doodle animado de fondo -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
+      <div class="absolute inset-0 opacity-20" style="background-image: url('/images/iade-doodle-red.svg'); background-repeat: repeat; background-size: 120px 120px; background-position: center; will-change: background-position; animation: doodle-drift 60s linear infinite;"></div>
+    </div>
+
+    <div class="relative z-[1] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Contenido principal -->
+        <div>
+          <h1 class="text-3xl lg:text-4xl font-bold text-primary mb-2 tracking-tight">
+            {curso.titulo || curso.nombre}
+          </h1>
+          {curso.subtitulo && (
+            <p class="text-lg text-gray-600 mb-4 italic">{curso.subtitulo}</p>
+          )}
+          <p class="text-lg text-gray-700 mb-6">{curso.descripcion}</p>
+
+          <!-- Información del curso -->
+          <div class="grid sm:grid-cols-2 gap-4 mb-8">
+            {curso.tipoTrayecto && (
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-sm text-gray-600 mb-1">Tipo de trayecto formativo</div>
+                <div class="font-semibold text-primary">{curso.tipoTrayecto}</div>
+              </div>
+            )}
+            {curso.certificacion && (
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="text-sm text-gray-600 mb-1">Certificación</div>
+                <div class="font-semibold text-primary">{curso.certificacion}</div>
+              </div>
+            )}
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Modalidad</div>
+              <div class="font-semibold text-primary">{curso.modalidadEstudio || 'Presencial'}</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+              <div class="text-sm text-gray-600 mb-1">Sede</div>
+              <div class="font-semibold text-primary">{modalidad.sede}</div>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-sm sm:col-span-2">
+              <div class="text-sm text-gray-600 mb-1">Duración</div>
+              <div class="font-semibold text-primary">{curso.duracionCompleta || modalidad.duracion || '—'}</div>
+            </div>
+          </div>
+
+          <!-- Botones de acción -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={`/?curso=${curso.slug}`} class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary/90 transition text-center">¡Inscribirme!</a>
+            <a href={`https://wa.me/5491130112419?text=Hola, me interesa el ${curso.titulo || curso.nombre} Presencial en ${modalidad.sede}`} target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-700 transition text-center">WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Imagen del curso -->
+        <div class="lg:order-first">
+          <div class="bg-white rounded-2xl shadow-xl p-6">
+            <img src={curso.imagen} alt={curso.titulo || curso.nombre} class="w-full h-64 object-cover rounded-lg mb-4" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metodología de Estudio -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h3 class="text-2xl font-bold text-primary mb-6 text-center">🏫 Cursos Presenciales – Escuelas IADE</h3>
+      
+      <p class="text-gray-700 mb-6 text-center text-lg">
+        Clases prácticas en nuestras sedes. 👉🏻 Junto a nosotros, vas a poder aprender todo lo que necesitás y mucho más, contando siempre con prácticas reales.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-4">🤔 ¿Por qué elegirnos?</h4>
+          <ul class="space-y-2 text-gray-700 list-disc list-inside">
+            <li>✨ Acompañamiento profesional en todo momento</li>
+            <li>✨ Prácticas reales dentro del establecimiento</li>
+            <li>✨ Rápida salida laboral</li>
+            <li>✨ Cálido ambiente para aprender</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-4">🌟 Ventajas</h4>
+          <ul class="space-y-2 text-gray-700 list-disc list-inside">
+            <li>Clases 100% prácticas en taller/laboratorio</li>
+            <li>Grupos reducidos y atención personalizada</li>
+            <li>Docentes con experiencia profesional</li>
+            <li>Material de apoyo y seguimiento continuo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg">
+        <h5 class="font-semibold text-gray-800 mb-3">🪪 Certificaciones (Modalidad Presencial)</h5>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <h6 class="font-semibold text-gray-800 mb-2">Certificación cursos de oficios</h6>
+            <ul class="space-y-1 text-gray-700 list-disc list-inside">
+              <li>CERTIFICACIÓN IADE</li>
+              <li>CERTIFICACIÓN UTN</li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold text-gray-800 mb-2">Certificación cursos de salud</h6>
+            <ul class="space-y-1 text-gray-700 list-disc list-inside">
+              <li>CERTIFICACIÓN IADE</li>
+              <li>CERTIFICACIÓN CRUZ ROJA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos Generales -->
+  {curso.objetivosGenerales && (
+    <section class="py-12 bg-light-bg">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h2 class="text-2xl font-bold text-primary mb-6 text-center">🎯 Objetivos Generales</h2>
+          <p class="text-lg text-gray-700 leading-relaxed text-center">{curso.objetivosGenerales}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Temario -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+        <h2 class="text-2xl font-bold text-primary mb-8 text-center">📚 Temario y Módulos</h2>
+        
+        {Array.isArray(curso.temario) && curso.temario.length ? (
+          <div class="space-y-6">
+            {curso.temario.map((modulo, index) => (
+              <details class={`bg-gray-50 rounded-lg shadow-sm p-6 border border-gray-200 ${index === 0 ? 'bg-blue-50 border-blue-200' : ''}`} open={index === 0}>
+                <summary class="font-semibold cursor-pointer text-gray-900 text-lg hover:text-primary transition-colors">
+                  {modulo.titulo}
+                </summary>
+                <ul class="list-disc pl-6 mt-4 text-gray-700 space-y-2">
+                  {modulo.contenido.map((item) => (
+                    <li class="text-base">{item}</li>
+                  ))}
+                </ul>
+              </details>
+            ))}
+          </div>
+        ) : modalidad.temario && Array.isArray(modalidad.temario) && modalidad.temario.length ? (
+          <div class="space-y-4">
+            {modalidad.temario.map((m) => (
+              <details class="bg-white rounded-lg shadow-sm p-4" open>
+                <summary class="font-semibold cursor-pointer text-gray-900">{`Módulo ${m.modulo}: ${m.titulo}`}</summary>
+                <ul class="list-disc pl-6 mt-2 text-gray-700 space-y-1">
+                  {m.unidades.map((u) => (<li>{u}</li>))}
+                </ul>
+              </details>
+            ))}
+          </div>
+        ) : (
+          <div class="text-gray-600 text-center text-lg">Temario en preparación.</div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Salida Laboral -->
+  {curso.salidaLaboral && curso.salidaLaboral.length > 0 && (
+    <section class="py-12 bg-light-bg">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8">
+          <h2 class="text-2xl font-bold text-primary mb-6 text-center">💼 Salida Laboral</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            {curso.salidaLaboral.map((salida) => (
+              <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                <span class="text-green-500">✅</span>
+                <span class="text-gray-700">{salida}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Modalidad de Evaluación -->
+  {curso.modalidadEvaluacion && (
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+          <h2 class="text-2xl font-bold text-primary mb-6 text-center">📝 Modalidad de Evaluación y Acreditación</h2>
+          <p class="text-lg text-gray-700 leading-relaxed text-center">{curso.modalidadEvaluacion}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ¿Listo para comenzar? -->
+  <section class="py-16 bg-primary">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-6">¿Listo para comenzar?</h2>
+      <p class="text-white/90 text-lg mb-8">No pierdas la oportunidad de convertirte en un profesional del sector</p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`/inscripcion/presencial/${sede}/${slug}`} class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition border border-primary">
+          ¡Inscribirme ahora!
+        </a>
+        <a href={`https://wa.me/5491130112419?text=Hola, me interesa el ${curso.nombre} Presencial en ${modalidad.sede}`} target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition">
+          Consultar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+</Layout>
+
+

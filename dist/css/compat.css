@@ -1,0 +1,21 @@
+/* Standard appearance properties to complement vendor-prefixed rules */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	appearance: button;
+}
+
+[type="search"] {
+	appearance: textfield;
+}
+
+::-webkit-search-decoration {
+	appearance: none;
+}
+
+::-webkit-file-upload-button {
+	appearance: button;
+}
+
+

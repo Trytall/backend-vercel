@@ -1,0 +1,243 @@
+{
+  "title": "ASISTENTE DE ENFERMERÍA",
+  "slug": "curso-de-asistente-de-enfermeria-avellaneda",
+  "description": "Formación integral en asistencia de enfermería con prácticas en clínica y primeros auxilios. Aprende signos vitales, higiene, alimentación, patologías y procedimientos de enfermería. 32 clases en 8 meses.",
+  "duracion": "8 meses - 32 clases semanales de 2 horas",
+  "certificacion": "Asistente de enfermería",
+  "modalidad": "Presencial",
+  "campus": "Avellaneda",
+  "objetivo": "Formar asistentes de enfermería capacitados en signos vitales, higiene y confort, alimentación, patologías, procedimientos de enfermería, farmacología y primeros auxilios para trabajar en diversos entornos de salud.",
+  "caracteristicas_curso": [
+    "8 meses de duración",
+    "32 clases en total",
+    "Una clase semanal de 2 horas",
+    "Modalidad presencial",
+    "Incluye prácticas en clínica",
+    "Primeros auxilios integrados",
+    "Manejo de informática",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "💓 MÓDULO 1: SIGNOS VITALES Y EVALUACIÓN",
+      "topics": [
+        "Control de signos vitales",
+        "Temperatura corporal",
+        "Presión arterial",
+        "Frecuencia cardíaca",
+        "Frecuencia respiratoria",
+        "Evaluación del estado del paciente",
+        "Registro de signos vitales"
+      ]
+    },
+    {
+      "title": "🛁 MÓDULO 2: HIGIENE Y CONFORT",
+      "topics": [
+        "Higiene del paciente",
+        "Confort y bienestar",
+        "Tendidos de cama",
+        "Posiciones terapéuticas",
+        "Cuidado de la piel",
+        "Prevención de úlceras por presión",
+        "Mantenimiento del entorno limpio"
+      ]
+    },
+    {
+      "title": "🍽️ MÓDULO 3: ALIMENTACIÓN Y NUTRICIÓN",
+      "topics": [
+        "Alimentación del paciente",
+        "Tipos de dietas",
+        "Técnicas de alimentación",
+        "Nutrición enteral",
+        "Hidratación del paciente",
+        "Control de ingesta",
+        "Manejo de problemas alimentarios"
+      ]
+    },
+    {
+      "title": "🏥 MÓDULO 4: PATOLOGÍAS Y SALUD MENTAL",
+      "topics": [
+        "Patologías comunes",
+        "Enfermedades del sistema respiratorio",
+        "Enfermedades del sistema cardiovascular",
+        "Enfermedades del sistema digestivo",
+        "Salud mental y psiquiatría",
+        "Trastornos del comportamiento",
+        "Atención a pacientes con problemas mentales"
+      ]
+    },
+    {
+      "title": "⚕️ MÓDULO 5: PROCEDIMIENTOS DE ENFERMERÍA",
+      "topics": [
+        "Procedimientos básicos de enfermería",
+        "Técnicas de curación",
+        "Administración de medicamentos",
+        "Colocación de sondas",
+        "Oxigenoterapia",
+        "Técnicas de inmovilización",
+        "Protocolos de enfermería"
+      ]
+    },
+    {
+      "title": "💊 MÓDULO 6: FARMACOLOGÍA BÁSICA",
+      "topics": [
+        "Farmacología básica",
+        "Vías de administración",
+        "Dosificación de medicamentos",
+        "Interacciones medicamentosas",
+        "Efectos adversos",
+        "Almacenamiento de medicamentos",
+        "Control de stock farmacéutico"
+      ]
+    },
+    {
+      "title": "⚖️ MÓDULO 7: DERECHOS Y OBLIGACIONES",
+      "topics": [
+        "Derechos del paciente",
+        "Obligaciones del personal de salud",
+        "Ética en enfermería",
+        "Confidencialidad del paciente",
+        "Consentimiento informado",
+        "Marco legal de la profesión",
+        "Responsabilidades profesionales"
+      ]
+    },
+    {
+      "title": "💻 MÓDULO 8: INFORMÁTICA Y PRIMEROS AUXILIOS",
+      "topics": [
+        "Manejo de informática básica",
+        "Sistemas de información en salud",
+        "Historia clínica digital",
+        "Primeros auxilios básicos",
+        "RCP básico",
+        "Manejo de emergencias",
+        "Protocolos de urgencia"
+      ]
+    }
+  ],
+  "areas_formacion": [
+    "Signos vitales y evaluación",
+    "Higiene y confort del paciente",
+    "Alimentación y nutrición",
+    "Patologías y salud mental",
+    "Procedimientos de enfermería",
+    "Farmacología básica",
+    "Derechos y obligaciones",
+    "Informática en salud",
+    "Primeros auxilios"
+  ],
+  "tecnicas_enfermeria": [
+    "Control de signos vitales",
+    "Higiene del paciente",
+    "Tendidos de cama",
+    "Posiciones terapéuticas",
+    "Alimentación asistida",
+    "Curación básica",
+    "Administración de medicamentos",
+    "Colocación de sondas"
+  ],
+  "procedimientos_basicos": [
+    "Control de temperatura",
+    "Control de presión arterial",
+    "Control de frecuencia cardíaca",
+    "Control de frecuencia respiratoria",
+    "Higiene personal del paciente",
+    "Movilización del paciente",
+    "Alimentación del paciente",
+    "Eliminación del paciente"
+  ],
+  "patologias_estudiadas": [
+    "Patologías respiratorias",
+    "Patologías cardiológicas",
+    "Patologías digestivas",
+    "Patologías neurológicas",
+    "Problemas de salud mental",
+    "Trastornos del comportamiento",
+    "Enfermedades crónicas",
+    "Enfermedades agudas"
+  ],
+  "cuidados_especializados": [
+    "Cuidados básicos del paciente",
+    "Cuidados de pacientes geriátricos",
+    "Cuidados de pacientes pediátricos",
+    "Cuidados de pacientes con problemas mentales",
+    "Cuidados de pacientes crónicos",
+    "Cuidados paliativos básicos",
+    "Cuidados de confort"
+  ],
+  "equipos_materiales": [
+    "Equipos de monitoreo básico",
+    "Material de curación",
+    "Equipos de oxigenoterapia",
+    "Material de inmovilización",
+    "Equipos de medición",
+    "Material de higiene",
+    "Equipos de alimentación",
+    "Material de primeros auxilios"
+  ],
+  "practicas_clinica": [
+    "Prácticas en clínica real",
+    "Simulación de procedimientos",
+    "Práctica de primeros auxilios",
+    "Manejo de equipos básicos",
+    "Protocolos de enfermería",
+    "Atención al paciente",
+    "Trabajo en equipo",
+    "Comunicación terapéutica"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Presentación o examen final",
+    "Evaluación continua del aprendizaje",
+    "Prácticas en clínica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas interesadas en enfermería",
+    "Quienes buscan trabajar en el sector salud",
+    "Personal de instituciones geriátricas",
+    "Trabajadores de clínicas y sanatorios",
+    "Quienes quieren especializarse en asistencia médica",
+    "Personas que buscan reconversión laboral",
+    "Personal de obras sociales y prepagas",
+    "Quienes quieren emprender en servicios de salud"
+  ],
+  "salida_laboral": [
+    "Instituciones geriátricas",
+    "Empresas de internación domiciliaria",
+    "Centros de día",
+    "Guardias privadas",
+    "Clínicas",
+    "Sanatorios",
+    "Obras sociales",
+    "Empresas de medicina prepaga",
+    "Hospitales",
+    "Centros de salud",
+    "Servicios de enfermería domiciliaria"
+  ],
+  "metodologia": [
+    "Modalidad presencial",
+    "32 clases en 8 meses",
+    "Una clase semanal de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Prácticas en clínica",
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Examen final o presentación"
+  ],
+  "requisitos": [
+    "Interés en el área de salud",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en el trabajo con pacientes",
+    "Disposición para aprender técnicas médicas",
+    "Responsabilidad en el cuidado del paciente",
+    "Empatía y vocación de servicio"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Asistente de Enfermería que te permitirá trabajar profesionalmente en el sector de la salud y asistencia médica",
+  "duracion_detalle": "8 meses con 32 clases semanales de 2 horas cada una en modalidad presencial, incluyendo prácticas en clínica"
+}
+
+

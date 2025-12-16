@@ -1,0 +1,137 @@
+{
+  "title": "AUXILIAR DE CARDIOLOGÍA Y R.C.P.",
+  "description": "Curso presencial especializado en cardiología y reanimación cardiopulmonar que capacita al alumno para realizar análisis de trazados electrocardiográficos normales y anormales, interpretar ECGs y adquirir conocimientos sobre causas, signos, síntomas y tratamientos farmacológicos de las alteraciones cardíacas más frecuentes.",
+  "duracion": "6 meses - 24 clases semanales de 2 horas",
+  "certificacion": "Asistente de cardiología y R.C.P.",
+  "modalidad": "Presencial",
+  "objetivo": "Conseguir que el alumno sea capaz de realizar un análisis del trazado electrocardiográfico normal y anormal. Saber interpretar la lectura de diferentes trazados en un ECG, además de adquirir los conocimientos de las causas, signos, síntomas y tratamientos farmacológicos de las alteraciones cardíacas más frecuentes.",
+  "modulos": [
+    {
+      "title": "MÓDULO 1: ANATOMÍA CARDÍACA Y FUNDAMENTOS",
+      "topics": [
+        "Anatomía cardíaca",
+        "Sistema de conducción eléctrica",
+        "Derivaciones del electrocardiograma: anterior derecho e izquierdo y posteriores",
+        "Lectura e informe"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: ALTERACIONES AURICULARES",
+      "topics": [
+        "Alteraciones auriculares",
+        "Hipertrofia auricular derecha e izquierda",
+        "Extrasístoles auriculares",
+        "Bigeminismo auricular",
+        "Trigeminismo auricular",
+        "Síndrome de pre-exitación",
+        "Síndrome de Brugada",
+        "Sistemas compensadores"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: BLOQUEOS Y ARRITMIAS",
+      "topics": [
+        "Bloqueos auriculo-ventriculares de primer grado, segundo grado tipo 1, segundo grado tipo 2 y de tercer grado o completo",
+        "Aleteo auricular",
+        "Fibrilación auricular",
+        "Soplos cardíacos",
+        "Bloqueo de rama derecha e izquierda",
+        "Bigeminismo ventricular",
+        "Pareja o doblete de extrasístoles",
+        "Arritmias cardíacas más frecuentes"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: TAQUICARDIAS Y PATOLOGÍAS GRAVES",
+      "topics": [
+        "Taquicardias supraventriculares",
+        "Extrasístoles ventriculares: monomorfas y polimorfas",
+        "Sistemas compensadores",
+        "Bradicardias y taquicardias",
+        "Ritmos desfibrilables: taquicardia ventricular y fibrilación ventricular",
+        "Infarto agudo al miocardio",
+        "Isquemias, necrosis"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: TRATAMIENTOS Y PRUEBAS DIAGNÓSTICAS",
+      "topics": [
+        "Signos, síntomas y tratamientos en cada alteración cardíaca",
+        "Farmacología coronaria",
+        "Holter",
+        "Ergometría"
+      ]
+    }
+  ],
+  "objetivos_generales": [
+    "Conseguir que el alumno sea capaz de realizar un análisis del trazado electrocardiográfico normal y anormal",
+    "Saber interpretar la lectura de diferentes trazados en un ECG",
+    "Adquirir los conocimientos de las causas, signos, síntomas y tratamientos farmacológicos de las alteraciones cardíacas más frecuentes"
+  ],
+  "conocimientos_tecnicos": [
+    "Análisis de trazados electrocardiográficos normales y anormales",
+    "Interpretación de diferentes trazados en ECG",
+    "Identificación de alteraciones auriculares y ventriculares",
+    "Reconocimiento de bloqueos y arritmias",
+    "Diagnóstico de taquicardias y bradicardias",
+    "Identificación de infartos e isquemias",
+    "Interpretación de Holter y Ergometría"
+  ],
+  "patologias_cardiovasculares": [
+    "Hipertrofia auricular derecha e izquierda",
+    "Extrasístoles auriculares y ventriculares",
+    "Síndrome de pre-exitación",
+    "Síndrome de Brugada",
+    "Bloqueos auriculo-ventriculares",
+    "Aleteo y fibrilación auricular",
+    "Bloqueos de rama",
+    "Taquicardias supraventriculares",
+    "Infarto agudo al miocardio",
+    "Isquemias y necrosis"
+  ],
+  "procedimientos_diagnosticos": [
+    "Electrocardiograma (ECG)",
+    "Holter",
+    "Ergometría",
+    "Lectura e interpretación de trazados",
+    "Análisis de derivaciones",
+    "Identificación de alteraciones"
+  ],
+  "farmacologia_cardiovascular": [
+    "Farmacología coronaria",
+    "Tratamientos farmacológicos para alteraciones cardíacas",
+    "Medicamentos para arritmias",
+    "Tratamiento de infartos",
+    "Medicación para hipertensión",
+    "Anticoagulantes"
+  ],
+  "salida_laboral": [
+    "Clínicas",
+    "Sanatorios",
+    "Hospitales",
+    "Salitas",
+    "Empresas que realicen aptos físicos / preocupacionales"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos para complementar el aprendizaje",
+    "2 exámenes parciales",
+    "Presentación o examen final"
+  ],
+  "metodologia": [
+    "Formación 100% presencial",
+    "Clases semanales de 2 horas",
+    "Duración total: 6 meses",
+    "24 clases en total",
+    "Trabajos prácticos",
+    "Evaluación continua",
+    "Exámenes parciales y final"
+  ],
+  "requisitos": [
+    "Interés en cardiología y emergencias",
+    "Disposición para el trabajo en equipo",
+    "Responsabilidad en el manejo de equipos médicos",
+    "Compromiso con la atención al paciente"
+  ],
+  "certificacion_detalle": "Asistente de cardiología y R.C.P. con validez nacional para trabajar en establecimientos de salud públicos y privados",
+  "duracion_detalle": "6 meses con una clase semanal de 2 horas, totalizando 24 clases presenciales"
+}

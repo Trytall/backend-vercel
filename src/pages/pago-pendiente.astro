@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Pago pendiente" description="Tu pago está pendiente.">
+  <section class="py-16 bg-light-bg">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="bg-white rounded-2xl shadow-xl border border-yellow-300 p-8 text-center">
+        <h1 class="text-3xl font-extrabold text-yellow-600 mb-3">Tu pago está pendiente</h1>
+        <p class="text-gray-700">Te avisaremos ni bien se acredite. Si necesitás asistencia, escribinos por WhatsApp.</p>
+        <a href="/" class="mt-6 inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-all">Volver al inicio</a>
+
+        <div class="mt-8 text-left bg-gray-50 rounded-xl p-6">
+          <h2 class="text-xl font-bold text-secondary mb-4">Datos (si los completaste)</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div><span class="font-semibold">Nombre:</span> <span id="rNombre">-</span></div>
+            <div><span class="font-semibold">DNI:</span> <span id="rDni">-</span></div>
+            <div><span class="font-semibold">Email:</span> <span id="rEmail">-</span></div>
+            <div><span class="font-semibold">Teléfono:</span> <span id="rTel">-</span></div>
+            <div><span class="font-semibold">Provincia:</span> <span id="rProv">-</span></div>
+            <div><span class="font-semibold">Localidad:</span> <span id="rLoc">-</span></div>
+            <div class="md:col-span-2"><span class="font-semibold">Curso:</span> <span id="rCurso">-</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      const qp = new URLSearchParams(location.search);
+      let datos = {}; try { datos = JSON.parse(sessionStorage.getItem('datosPago') || '{}'); } catch {}
+      if (!datos || Object.keys(datos).length === 0) {
+        datos = {
+          nombre: qp.get('nombre') || '',
+          dni: qp.get('dni') || '',
+          email: qp.get('email') || '',
+          telefono: qp.get('telefono') || '',
+          provincia: qp.get('provincia') || '',
+          localidad: qp.get('localidad') || '',
+          curso: qp.get('curso') || ''
+        };
+      }
+      const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v || '-'; };
+      set('rNombre', datos?.nombre);
+      set('rDni', datos?.dni);
+      set('rEmail', datos?.email);
+      set('rTel', datos?.telefono);
+      set('rProv', datos?.provincia);
+      set('rLoc', datos?.localidad);
+      set('rCurso', datos?.curso);
+    })();
+  </script>
+</Layout>

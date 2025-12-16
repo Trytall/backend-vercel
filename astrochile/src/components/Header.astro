@@ -1,0 +1,102 @@
+---
+---
+<header id="site-header" class="sticky top-0 z-40 bg-white/90 backdrop-blur supports-backdrop-blur:border-b-2 supports-backdrop-blur:border-red-600 transition-shadow shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href={import.meta.env.BASE_URL} class="flex items-center gap-2 shrink-0">
+        <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="Escuelas IADE" class="h-10 w-auto" loading="eager" />
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a href={import.meta.env.BASE_URL} class="text-gray-700 hover:text-primary font-medium">Inicio</a>
+        <a href={`${import.meta.env.BASE_URL}cursos`} class="text-gray-700 hover:text-primary font-medium">Cursos</a>
+        <a href={`${import.meta.env.BASE_URL}conocenos`} class="text-gray-700 hover:text-primary font-medium">Conocenos</a>
+        <a href={`${import.meta.env.BASE_URL}faq`} class="text-gray-700 hover:text-primary font-medium">FAQ</a>
+      </nav>
+
+      <!-- Right side -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="https://wa.me/5491130112419?text=Hola%20IADE,%20quiero%20recibir%20información%20sobre%20sus%20cursos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1 text-gray-700 font-semibold" aria-label="WhatsApp">
+          <svg class="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" fill="currentColor" />
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+          </svg>
+          <span>+54 9 11 3011-2419</span>
+        </a>
+        <a href="https://www.escuelasiade.com.ar/iade_campus_exp/login.php" target="_blank" rel="noopener noreferrer" class="campus-btn bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition">Campus</a>
+        <a href={`${import.meta.env.BASE_URL}#lead-form` } class="inscribete-btn bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition border-2 border-red-700 shadow-lg">Inscríbete</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" aria-label="Abrir menú" aria-expanded="false" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col gap-3 pt-2">
+        <a href={import.meta.env.BASE_URL} class="text-gray-700 hover:text-primary font-medium">Inicio</a>
+        <a href={`${import.meta.env.BASE_URL}cursos`} class="text-gray-700 hover:text-primary font-medium">Cursos</a>
+        <a href={`${import.meta.env.BASE_URL}conocenos`} class="text-gray-700 hover:text-primary font-medium">Conocenos</a>
+        <a href={`${import.meta.env.BASE_URL}faq`} class="text-gray-700 hover:text-primary font-medium">FAQ</a>
+        <a href="https://www.escuelasiade.com.ar/iade_campus_exp/login.php" target="_blank" rel="noopener noreferrer" class="campus-btn bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition w-full text-center">Campus</a>
+        <a href={`${import.meta.env.BASE_URL}#lead-form`} class="inscribete-btn bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 transition w-full text-center border-2 border-red-700 shadow-lg">Inscríbete</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const header = document.getElementById('site-header');
+    const onScroll = () => { if (window.scrollY > 10) header?.classList.add('shadow-sm'); else header?.classList.remove('shadow-sm'); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
+</header>
+
+<style>
+  .campus-btn, .inscribete-btn { position: relative; overflow: hidden; }
+  .campus-btn::before, .inscribete-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); transition: left .5s; }
+  .campus-btn:hover::before, .inscribete-btn:hover::before { left: 100%; }
+  .ripple { position: absolute; border-radius: 50%; background: rgba(255,255,255,.3); transform: scale(0); animation: ripple-animation .6s linear; pointer-events: none; }
+  @keyframes ripple-animation { to { transform: scale(4); opacity: 0; } }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButtonSvg = mobileMenuButton.querySelector('svg');
+
+    mobileMenuButton.addEventListener('click', function() {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      if (isExpanded) {
+        mobileMenuButtonSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+      } else {
+        mobileMenuButtonSvg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+      }
+    });
+
+    const buttons = document.querySelectorAll('.campus-btn, .inscribete-btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.classList.add('ripple');
+        this.appendChild(ripple);
+        setTimeout(() => { ripple.remove(); }, 600);
+      });
+    });
+  });
+</script> 

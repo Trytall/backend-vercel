@@ -1,0 +1,236 @@
+{
+  "title": "REPARACIÓN DE CELULARES",
+  "slug": "curso-de-reparacion-de-celulares-lomas",
+  "description": "Formación avanzada en reparación de celulares con enfoque en procedimientos especializados y reparaciones complejas. Duración: 32 clases en 8 meses. Modalidad: Teórico-práctico. Aprende reparación avanzada de celulares.",
+  "duracion": "32 clases - 8 meses",
+  "certificacion": "Técnico Avanzado en Reparación de Celulares",
+  "modalidad": "Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Proporcionar formación técnica avanzada en reparación de celulares, preparando al alumno para realizar reparaciones complejas y trabajar en talleres especializados de alta tecnología.",
+  "caracteristicas_curso": [
+    "32 clases en total",
+    "8 meses de duración",
+    "Modalidad teórico-práctico",
+    "Formación técnica avanzada",
+    "Enfoque en reparaciones complejas",
+    "Procedimientos especializados",
+    "Prácticas con equipos de alta tecnología",
+    "Certificación oficial avanzada"
+  ],
+  "modulos": [
+    {
+      "title": "📱 MÓDULO 1: HERRAMIENTAS Y EQUIPAMIENTO AVANZADO",
+      "topics": [
+        "Estación de soldadura profesional",
+        "Microscopio digital de alta resolución",
+        "Osciloscopio para diagnóstico",
+        "Fuente de alimentación programable",
+        "Herramientas de microsoldadura",
+        "Equipos de diagnóstico avanzado",
+        "Software especializado de análisis",
+        "Herramientas de calibración"
+      ]
+    },
+    {
+      "title": "⚡ MÓDULO 2: ELECTRÓNICA AVANZADA EN CELULARES",
+      "topics": [
+        "Análisis de circuitos integrados",
+        "Componentes SMD y BGA",
+        "Técnicas de microsoldadura",
+        "Análisis de señales digitales",
+        "Diagnóstico de fallas complejas",
+        "Reparación de placas madre",
+        "Análisis de esquemas electrónicos",
+        "Técnicas de diagnóstico avanzado"
+      ]
+    },
+    {
+      "title": "🔧 MÓDULO 3: REPARACIONES ESPECIALIZADAS",
+      "topics": [
+        "Reparación de pantallas OLED/AMOLED",
+        "Cambio de módulos de cámara",
+        "Reparación de conectores de carga",
+        "Reemplazo de altavoces y micrófonos",
+        "Reparación de sensores biométricos",
+        "Cambio de módulos de antena",
+        "Reparación de botones de volumen",
+        "Mantenimiento de baterías"
+      ]
+    },
+    {
+      "title": "💻 MÓDULO 4: SOFTWARE Y DIAGNÓSTICO AVANZADO",
+      "topics": [
+        "Análisis de logs del sistema",
+        "Diagnóstico de problemas de software",
+        "Recuperación de datos perdidos",
+        "Flasheo de firmware",
+        "Desbloqueo de patrones",
+        "Reparación de problemas de red",
+        "Optimización de rendimiento",
+        "Backup y restauración avanzada"
+      ]
+    },
+    {
+      "title": "🛠️ MÓDULO 5: REPARACIONES DE ALTA COMPLEJIDAD",
+      "topics": [
+        "Reparación de celulares mojados",
+        "Recuperación post-inundación",
+        "Reparación de pantallas rotas",
+        "Cambio de cristales de pantalla",
+        "Reparación de módulos de carga",
+        "Cambio de conectores USB-C",
+        "Reparación de problemas de audio",
+        "Mantenimiento de sistemas de refrigeración"
+      ]
+    },
+    {
+      "title": "🔍 MÓDULO 6: DIAGNÓSTICO Y ANÁLISIS",
+      "topics": [
+        "Metodología de diagnóstico sistemático",
+        "Análisis de síntomas complejos",
+        "Uso de equipos de medición avanzados",
+        "Interpretación de códigos de error",
+        "Análisis de fallas intermitentes",
+        "Diagnóstico de problemas de red",
+        "Análisis de consumo de batería",
+        "Diagnóstico de problemas de rendimiento"
+      ]
+    },
+    {
+      "title": "🏁 MÓDULO 7: PROYECTO INTEGRADOR AVANZADO",
+      "topics": [
+        "Reparación completa de dispositivo complejo",
+        "Diagnóstico de múltiples fallas",
+        "Planificación de reparación",
+        "Ejecución de procedimientos avanzados",
+        "Pruebas de funcionamiento",
+        "Documentación técnica completa",
+        "Análisis de costos y presupuesto",
+        "Presentación del proyecto final"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Herramientas y equipamiento avanzado",
+    "Estación de soldadura profesional",
+    "Microscopio digital de alta resolución",
+    "Electrónica avanzada en celulares",
+    "Componentes SMD y BGA",
+    "Técnicas de microsoldadura",
+    "Reparaciones especializadas",
+    "Pantallas OLED/AMOLED",
+    "Software y diagnóstico avanzado",
+    "Reparaciones de alta complejidad",
+    "Diagnóstico y análisis sistemático",
+    "Proyecto integrador avanzado"
+  ],
+  "tecnicas_reparacion": [
+    "Microsoldadura avanzada",
+    "Reparación de componentes SMD",
+    "Análisis de circuitos integrados",
+    "Diagnóstico de fallas complejas",
+    "Reparación de placas madre",
+    "Cambio de módulos especializados",
+    "Recuperación post-inundación",
+    "Análisis de señales digitales"
+  ],
+  "herramientas_avanzadas": [
+    "Estación de soldadura profesional",
+    "Microscopio digital de alta resolución",
+    "Osciloscopio para diagnóstico",
+    "Fuente de alimentación programable",
+    "Herramientas de microsoldadura",
+    "Equipos de diagnóstico avanzado",
+    "Software especializado",
+    "Herramientas de calibración"
+  ],
+  "componentes_especializados": [
+    "Componentes SMD y BGA",
+    "Circuitos integrados",
+    "Módulos de cámara",
+    "Sensores biométricos",
+    "Conectores de carga",
+    "Módulos de antena",
+    "Sistemas de audio",
+    "Sistemas de refrigeración"
+  ],
+  "reparaciones_complejas": [
+    "Reparación de celulares mojados",
+    "Recuperación post-inundación",
+    "Reparación de pantallas rotas",
+    "Cambio de cristales de pantalla",
+    "Reparación de módulos de carga",
+    "Cambio de conectores USB-C",
+    "Reparación de problemas de audio",
+    "Mantenimiento de sistemas"
+  ],
+  "diagnostico_avanzado": [
+    "Metodología sistemática",
+    "Análisis de síntomas complejos",
+    "Uso de equipos avanzados",
+    "Interpretación de códigos",
+    "Análisis de fallas intermitentes",
+    "Diagnóstico de problemas de red",
+    "Análisis de consumo",
+    "Diagnóstico de rendimiento"
+  ],
+  "practicas_curso": [
+    "Microsoldadura avanzada",
+    "Reparación de componentes SMD",
+    "Análisis de circuitos",
+    "Diagnóstico de fallas",
+    "Reparaciones especializadas",
+    "Proyectos integradores",
+    "Trabajo con equipos avanzados",
+    "Análisis de dispositivos complejos"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Prácticas con equipos avanzados",
+    "Reparaciones especializadas",
+    "Proyecto integrador avanzado",
+    "Evaluación final práctica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas con experiencia básica en reparación",
+    "Quienes buscan formación técnica avanzada",
+    "Técnicos que quieren especializarse",
+    "Personal de talleres especializados",
+    "Quienes quieren trabajar en alta tecnología",
+    "Técnicos que buscan reconversión laboral",
+    "Personas interesadas en electrónica avanzada",
+    "Técnicos independientes experimentados"
+  ],
+  "salida_laboral": [
+    "Técnico avanzado en reparación de celulares",
+    "Especialista en reparaciones complejas",
+    "Técnico de talleres especializados",
+    "Supervisor técnico móvil",
+    "Técnico independiente especializado",
+    "Personal de empresas de alta tecnología",
+    "Técnico en centros de servicio",
+    "Especialista en diagnóstico avanzado"
+  ],
+  "metodologia": [
+    "Modalidad teórico-práctico",
+    "32 clases en 8 meses",
+    "Prácticas con equipos avanzados",
+    "Trabajo con dispositivos complejos",
+    "Reparaciones especializadas",
+    "Proyecto integrador avanzado",
+    "Evaluación continua",
+    "Formación técnica especializada"
+  ],
+  "requisitos": [
+    "Conocimientos básicos de electrónica",
+    "Experiencia previa en reparación",
+    "Disposición para el estudio presencial",
+    "Asistencia regular a las clases",
+    "Interés en tecnología avanzada",
+    "Disposición para aprender técnicas complejas",
+    "Responsabilidad en el trabajo técnico"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Técnico Avanzado en Reparación de Celulares que te permitirá trabajar profesionalmente en talleres especializados de alta tecnología",
+  "duracion_detalle": "32 clases distribuidas en 8 meses con modalidad teórico-práctico y enfoque en reparaciones avanzadas y especializadas"
+}

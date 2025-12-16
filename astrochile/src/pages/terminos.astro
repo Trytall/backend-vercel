@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Términos y Condiciones – Escuelas IADE Chile" canonical={`https://escuelasiade.cl${import.meta.env.BASE_URL}terminos`}>
+  <Header />
+  <main class="py-16 lg:py-20 bg-light-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h1 class="text-3xl font-bold text-primary mb-8">Términos y Condiciones</h1>
+        
+        <div class="prose prose-lg max-w-none">
+          <h2>1. Aceptación de los Términos</h2>
+          <p>Al acceder y utilizar los servicios de Escuelas IADE Chile, usted acepta estar sujeto a estos términos y condiciones.</p>
+          
+          <h2>2. Servicios Educativos</h2>
+          <p>Escuelas IADE Chile ofrece cursos de formación técnica en modalidad online, diseñados para proporcionar habilidades prácticas y conocimientos teóricos necesarios para el desarrollo profesional.</p>
+          
+          <h2>3. Inscripción y Pagos</h2>
+          <p>La inscripción a nuestros cursos implica el pago completo del valor establecido. Los pagos se realizan de forma anticipada y son no reembolsables.</p>
+          
+          <h2>4. Modalidad de Estudio</h2>
+          <p>Nuestros cursos se imparten en modalidad online, permitiendo al estudiante acceder al contenido las 24 horas del día, los 7 días de la semana.</p>
+          
+          <h2>5. Certificaciones</h2>
+          <p>Al completar exitosamente un curso, el estudiante recibirá un certificado avalado por Escuelas IADE Chile.</p>
+          
+          <h2>6. Contacto</h2>
+          <ul>
+            <li>Consultas generales: <a class="text-primary underline" href="mailto:informes@escuelaiade.cl">informes@escuelaiade.cl</a></li>
+            <li>Consultas legales: <a class="text-primary underline" href="mailto:informes@escuelaiade.cl">informes@escuelaiade.cl</a></li>
+            <li>Teléfono: +54 9 11 2291-7871</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

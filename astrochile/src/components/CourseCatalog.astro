@@ -1,0 +1,266 @@
+---
+// Course catalog component with search and filters
+import cursos from '../data/cursos.ts';
+const { hideTitle = false, compact = false, searchOffset = false } = Astro.props;
+---
+
+<section id="cursos" class={`${compact ? 'pt-6 md:pt-10 pb-12' : 'py-16 lg:py-20'} bg-white relative overflow-hidden`}>
+  <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(currentColor 1px, transparent 1px); background-size: 12px 12px; color: #e5e7eb"></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    {!hideTitle && (
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-secondary mb-4">
+          Nuestros cursos de oficio
+        </h2>
+      </div>
+    )}
+
+    <!-- Filters -->
+    <div class="mb-3">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center gap-6">
+        <!-- Modality Filter -->
+        <div>
+          <h3 class="font-semibold mb-3">Modalidad</h3>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <button class="filter-btn bg-primary text-white px-4 py-2 rounded-lg font-semibold" data-filtro="todos">Todos los cursos</button>
+            <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-filtro="online">Cursos Online</button>
+            <button class="filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-filtro="presencial">Cursos Presenciales</button>
+          </div>
+        </div>
+        <!-- Sede Filter (hidden by default) -->
+        <div id="sedeFilter" class="hidden">
+          <h3 class="font-semibold mb-3">Sede Presencial</h3>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <button class="filter-sede-btn bg-primary text-white px-4 py-2 rounded-lg font-semibold" data-sede="todas">Todas las sedes</button>
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="moron">Morón</button>
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="lomas">Lomas de Zamora</button>
+            <button class="filter-sede-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold" data-sede="avellaneda">Avellaneda</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class={`max-w-md mx-auto mt-2 md:mt-3 mb-4`}>
+      <div class="relative">
+        <input 
+          type="text" 
+          id="courseSearch" 
+          placeholder="Buscar curso..." 
+          class="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+        />
+        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Course Grid -->
+    <div id="courseGrid" class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-3 md:gap-6">
+      <!-- Courses will be populated by JavaScript -->
+    </div>
+
+    <!-- Mobile pager -->
+    <div id="mobilePager" class="mt-4 flex justify-center gap-3 sm:hidden"></div>
+
+    <!-- No Results Message -->
+    <div id="noResults" class="hidden text-center py-12">
+      <p class="text-gray-500 text-lg">No se encontraron cursos que coincidan con tu búsqueda.</p>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ cursos }}>
+  document.addEventListener('DOMContentLoaded', function() {
+    const courseGrid = document.getElementById('courseGrid');
+    const courseSearch = document.getElementById('courseSearch');
+    const noResults = document.getElementById('noResults');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sedeFilterBtns = document.querySelectorAll('.filter-sede-btn');
+    const sedeFilter = document.getElementById('sedeFilter');
+    const mobilePager = document.getElementById('mobilePager');
+
+    let currentFilter = 'todos';
+    let currentSedeFilter = 'todas';
+    let searchTerm = '';
+    let isMobile = window.matchMedia('(max-width: 640px)').matches;
+
+    // Mobile paging: 2 filas x 3 columnas = 6 cursos por página
+    const MOBILE_PAGE_SIZE = 6;
+    let currentMobilePage = 0;
+
+    const avellanedaSlugs = new Set([
+      'curso-de-auxiliar-de-farmacia-avellaneda',
+      'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio-avellaneda',
+      'curso-de-auxiliar-de-emergencias-medicas-sanitarias-avellaneda',
+      'curso-de-asistente-de-enfermeria-avellaneda'
+    ]);
+    const moronSlugs = new Set([
+      'curso-de-auxiliar-en-cardiologia',
+      'curso-de-auxiliar-de-farmacia',
+      'curso-de-refrigeracion-y-aire-acondicionado',
+      'curso-de-instalaciones-electricas-y-motores-electricos',
+      'curso-de-reparacion-de-celulares',
+      'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+      'curso-de-asistente-de-enfermeria',
+      'curso-de-alarmas-y-camaras-de-seguridad'
+    ]);
+    const lomasSlugs = new Set([
+      'curso-de-refrigeracion-y-aire-acondicionado-lomas',
+      'curso-de-electricidad-y-electronica-industrial',
+      'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio',
+      'curso-de-asistente-de-enfermeria',
+      'curso-de-plasma-rico-en-plaquetas'
+    ]);
+
+    const sedeToBadge = (sede) => {
+      switch (sede) {
+        case 'moron': return { label: 'Morón', cls: 'bg-blue-600' };
+        case 'lomas': return { label: 'Lomas de Zamora', cls: 'bg-violet-600' };
+        case 'avellaneda': return { label: 'Avellaneda', cls: 'bg-amber-600' };
+        default: return { label: '', cls: '' };
+      }
+    };
+
+    const base = cursos.map(curso => {
+      const nuevo = Array.isArray(curso.modalidades);
+      const slug = curso.slug;
+      const title = curso.nombre || curso.titulo;
+      const image = curso.imagen || curso.image;
+      let hasOnline = false; let hasPresencial = false; let inAvellaneda = false; let inMoron = false; let inLomas = false;
+      if (nuevo) {
+        hasOnline = curso.modalidades.some(m => m.tipo === 'online');
+        const presenciales = curso.modalidades.filter(m => m.tipo === 'presencial');
+        hasPresencial = presenciales.length > 0;
+        inAvellaneda = presenciales.some(m => (m.sede||'').toLowerCase().includes('avellaneda')) || avellanedaSlugs.has(slug);
+        inMoron = presenciales.some(m => (m.sede||'').toLowerCase().includes('morón') || (m.sede||'').toLowerCase().includes('moron')) || moronSlugs.has(slug);
+        inLomas = presenciales.some(m => (m.sede||'').toLowerCase().includes('lomas')) || lomasSlugs.has(slug);
+      } else {
+        const modalidadText = (curso.modalidad || '').toLowerCase();
+        hasOnline = modalidadText.includes('online');
+        // Verificar si es presencial específico de una sede
+        const hasPresencialMoron = modalidadText.includes('morón') || modalidadText.includes('moron');
+        const hasPresencialLomas = modalidadText.includes('lomas');
+        const hasPresencialAvellaneda = modalidadText.includes('avellaneda');
+        
+        // También verificar si el curso está disponible en múltiples sedes
+        const hasPresencialMoronAndLomas = modalidadText.includes('morón y lomas') || modalidadText.includes('moron y lomas');
+        const hasPresencialLomasAndAvellaneda = modalidadText.includes('lomas y avellaneda');
+        const hasPresencialAllThree = modalidadText.includes('morón, lomas y avellaneda') || modalidadText.includes('moron, lomas y avellaneda');
+        
+        inAvellaneda = hasPresencialAvellaneda || hasPresencialLomasAndAvellaneda || hasPresencialAllThree || avellanedaSlugs.has(slug);
+        inMoron = hasPresencialMoron || hasPresencialMoronAndLomas || hasPresencialAllThree || moronSlugs.has(slug);
+        inLomas = hasPresencialLomas || hasPresencialMoronAndLomas || hasPresencialLomasAndAvellaneda || hasPresencialAllThree || lomasSlugs.has(slug);
+        hasPresencial = inAvellaneda || inMoron || inLomas;
+      }
+      return { title, image, slug, hasOnline, hasPresencial, inAvellaneda, inMoron, inLomas };
+    });
+
+    const entries = [];
+    base.forEach(item => {
+      if (item.hasOnline) {
+        entries.push({
+          title: item.title,
+          image: item.image,
+          url: `/cursos/${item.slug}/online`,
+          modalidad: 'online',
+          sede: 'todas',
+          badgeText: 'ONLINE',
+          badgeClass: 'bg-red-600'
+        });
+      }
+      if (item.inAvellaneda) {
+        const { label, cls } = sedeToBadge('avellaneda');
+        entries.push({ title: item.title, image: item.image, url: `/cursos/${item.slug}/avellaneda` , modalidad: 'presencial', sede: 'avellaneda', sedeLabel: label, sedeClass: cls, badgeText: 'PRESENCIAL', badgeClass: 'bg-emerald-600' });
+      }
+      if (item.inMoron) {
+        const { label, cls } = sedeToBadge('moron');
+        entries.push({ title: item.title, image: item.image, url: `/cursos/${item.slug}/moron` , modalidad: 'presencial', sede: 'moron', sedeLabel: label, sedeClass: cls, badgeText: 'PRESENCIAL', badgeClass: 'bg-emerald-600' });
+      }
+      if (item.inLomas) {
+        const { label, cls } = sedeToBadge('lomas');
+        entries.push({ title: item.title, image: item.image, url: `/cursos/${item.slug}/lomas-de-zamora` , modalidad: 'presencial', sede: 'lomas', sedeLabel: label, sedeClass: cls, badgeText: 'PRESENCIAL', badgeClass: 'bg-emerald-600' });
+      }
+    });
+
+    function renderCourses() {
+      let filtered = entries.filter(course => {
+        const matchesSearch = course.title.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesFilter = (currentFilter === 'todos' || course.modalidad === currentFilter);
+        const matchesSede = (currentSedeFilter === 'todas' || course.sede === currentSedeFilter);
+        return matchesSearch && matchesFilter && matchesSede;
+      });
+
+      if (filtered.length === 0) { courseGrid.innerHTML = ''; noResults.classList.remove('hidden'); mobilePager.innerHTML = ''; return; }
+      noResults.classList.add('hidden');
+
+      // Mobile paging window
+      let visibleList = filtered;
+      if (isMobile) {
+        const totalPages = Math.ceil(filtered.length / MOBILE_PAGE_SIZE);
+        if (currentMobilePage >= totalPages) currentMobilePage = totalPages - 1;
+        if (currentMobilePage < 0) currentMobilePage = 0;
+        const start = currentMobilePage * MOBILE_PAGE_SIZE;
+        const end = start + MOBILE_PAGE_SIZE;
+        visibleList = filtered.slice(start, end);
+
+        // Render pager
+        if (totalPages > 1) {
+          const prevDisabled = currentMobilePage===0;
+          const nextDisabled = currentMobilePage===totalPages-1;
+          mobilePager.innerHTML = `
+            <button id="mobPrev" ${prevDisabled ? 'disabled' : ''} class="inline-flex items-center gap-1 px-3 py-2 text-xs font-semibold rounded-lg shadow-sm transition-colors ${prevDisabled ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-primary text-white hover:bg-primary/90'}">
+              <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 15.707a1 1 0 010-1.414L15.586 11H4a1 1 0 110-2h11.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" transform="scale(-1,1) translate(-20,0)"/></svg>
+              Anterior
+            </button>
+            <span class="text-xs text-gray-600 self-center">${currentMobilePage+1} / ${totalPages}</span>
+            <button id="mobNext" ${nextDisabled ? 'disabled' : ''} class="inline-flex items-center gap-1 px-3 py-2 text-xs font-semibold rounded-lg shadow-sm transition-colors ${nextDisabled ? 'bg-gray-200 text-gray-500 cursor-not-allowed' : 'bg-primary text-white hover:bg-primary/90'}">
+              Siguiente
+              <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.293 15.707a1 1 0 010-1.414L15.586 11H4a1 1 0 110-2h11.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+            </button>
+          `;
+          document.getElementById('mobPrev')?.addEventListener('click', function(){ if (currentMobilePage>0){ currentMobilePage--; renderCourses(); } });
+          document.getElementById('mobNext')?.addEventListener('click', function(){ const tp = Math.ceil(filtered.length / MOBILE_PAGE_SIZE); if (currentMobilePage<tp-1){ currentMobilePage++; renderCourses(); } });
+        } else {
+          mobilePager.innerHTML = '';
+        }
+      } else {
+        mobilePager.innerHTML = '';
+      }
+
+      const sizes = '(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw';
+      courseGrid.innerHTML = visibleList.map(course => `
+        <a href="${course.url}" class="group block h-full bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden">
+          <div class="relative h-24 sm:h-28">
+            <img src="${course.image}" alt="${course.title}" class="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" fetchpriority="low" sizes="${sizes}" />
+            <div class="absolute top-1 right-1 flex flex-col items-end gap-1">
+              <span class="${course.badgeClass} text-white text-[10px] sm:text-xs px-1.5 py-0.5 rounded-full">${course.badgeText}</span>
+            </div>
+          </div>
+          <div class="p-2 sm:p-3 flex flex-col">
+            <h3 class="text-[11px] sm:text-xs font-semibold text-gray-800 leading-snug line-clamp-2 min-h-[28px] sm:min-h-[32px]">${course.title}</h3>
+            <div class="mt-1 min-h-[18px] sm:min-h-[20px]">
+              ${course.modalidad === 'presencial' && course.sede !== 'todas' ? `
+                <span class="${course.sedeClass} text-white text-[10px] px-1.5 py-0.5 rounded">${course.sedeLabel}</span>
+              ` : (course.modalidad === 'online' ? `
+                <span class="bg-rose-600 text-white text-[10px] px-1.5 py-0.5 rounded">Oferta $150.000</span>
+              ` : '')}
+            </div>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    courseSearch.addEventListener('input', function() { searchTerm = this.value; currentMobilePage = 0; renderCourses(); });
+    filterBtns.forEach(btn => { btn.addEventListener('click', function() { filterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-gray-200', 'text-gray-700'); }); this.classList.remove('bg-gray-200', 'text-gray-700'); this.classList.add('bg-primary', 'text-white'); currentFilter = this.dataset.filtro; if (currentFilter === 'presencial') { sedeFilter.classList.remove('hidden'); } else { sedeFilter.classList.add('hidden'); currentSedeFilter = 'todas'; sedeFilterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-gray-200', 'text-gray-700'); }); sedeFilterBtns[0].classList.remove('bg-gray-200', 'text-gray-700'); sedeFilterBtns[0].classList.add('bg-primary', 'text-white'); } currentMobilePage = 0; renderCourses(); }); });
+    sedeFilterBtns.forEach(btn => { btn.addEventListener('click', function() { sedeFilterBtns.forEach(b => { b.classList.remove('bg-primary', 'text-white'); b.classList.add('bg-gray-200', 'text-gray-700'); }); this.classList.remove('bg-gray-200', 'text-gray-700'); this.classList.add('bg-primary', 'text-white'); currentSedeFilter = this.dataset.sede; currentMobilePage = 0; renderCourses(); }); });
+
+    renderCourses();
+
+    // Recalcular en cambios de tamaño
+    const mq = window.matchMedia('(max-width: 640px)');
+    mq.addEventListener?.('change', (e) => { isMobile = e.matches; currentMobilePage = 0; renderCourses(); });
+  });
+</script> 

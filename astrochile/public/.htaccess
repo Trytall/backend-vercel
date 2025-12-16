@@ -1,0 +1,79 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Servir archivos/carpetas reales tal cual
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback SPA: lo que no sea archivo real, a index.html
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+Options -MultiViews
+
+# Tipos MIME explícitos
+AddType text/css .css
+AddType application/javascript .js .mjs
+AddType image/svg+xml .svg
+
+# (Opcional) forzar no-www -> no-www
+RewriteCond %{HTTP_HOST} ^www\.escuelasiadearg\.com$ [NC]
+RewriteRule ^(.*)$ https://escuelasiadearg.com/$1 [R=301,L]
+
+# (Hotfix) redirigir restos de /paginanueva/ a la raíz (por si quedó HTML viejo)
+RewriteRule ^paginanueva/_astro/(.*)$ /_astro/$1 [R=301,L]
+RewriteRule ^paginanueva/assets/(.*)$ /assets/$1 [R=301,L]
+RewriteRule ^paginanueva/(.*)$ /$1 [R=301,L]
+
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Security: disable directory listing
+Options -Indexes
+
+# MIME types
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType image/svg+xml .svg
+  AddType application/json .json
+  AddType font/woff2 .woff2
+  AddType font/woff .woff
+</IfModule>
+
+# Avoid rewriting existing files and serve SPA fallback
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options nosniff
+</IfModule>
+
+# Opciones seguras
+Options -Indexes
+
+# Bloquear archivos sensibles
+<FilesMatch "\.(env|ini|log|sh|sql|bak|config)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_rewrite.c>
+  RewriteRule (^|/)\.git - [F]
+  RewriteRule (^|/)\.env - [F]
+</IfModule>
+
+# Si no es archivo ni carpeta, servir index.html (rutas limpias / SPA)
+RewriteCond %{REQUEST_URI} !^/api/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

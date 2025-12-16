@@ -1,0 +1,110 @@
+{
+  "title": "Curso de Inyección Electrónica Diésel / Naftero 🔧",
+  "slug": "curso-de-inyeccion-electronica-diesel",
+  "description": "¡Especializate en uno de los sistemas más importantes de los vehículos modernos! Formación completa en inyección electrónica para motores diésel y nafteros.",
+  "duracion": "5 Clases Audiovisuales",
+  "certificacion": "Certificación en Inyección Electrónica Diésel/Naftero",
+  "modalidad": "100% Online",
+  "objetivo": "Al finalizar, vas a estar capacitado para diagnosticar, interpretar y reparar fallas en sistemas de inyección electrónica tanto en motores diésel como nafteros.",
+  "caracteristicas_curso": [
+    "5 Clases Audiovisuales",
+    "Acceso permanente al contenido",
+    "Ideal para técnicos y aficionados",
+    "Formación desde cero hasta avanzado",
+    "Sistemas diésel y nafteros",
+    "Diagnóstico electrónico completo",
+    "Herramientas de diagnóstico",
+    "Salto profesional garantizado"
+  ],
+  "modulos": [
+    {
+      "title": "🔌 MÓDULO 1: ELECTRÓNICA BÁSICA APLICADA AL AUTOMÓVIL",
+      "topics": [
+        "Componentes eléctricos y electrónicos",
+        "Semiconductores, interruptores, potenciómetros, relés, termistores",
+        "Diodos, transistores, temporizadores",
+        "Comprobación con tester"
+      ]
+    },
+    {
+      "title": "📈 MÓDULO 2: ANÁLISIS E INTERPRETACIÓN DE CIRCUITOS",
+      "topics": [
+        "Diagramas eléctricos: serie, paralelo y electrónicos",
+        "Ondas analógicas y digitales",
+        "Mediciones con multímetro digital y osciloscopio"
+      ]
+    },
+    {
+      "title": "💻 MÓDULO 3: UNIDAD DE CONTROL ELECTRÓNICO (ECU)",
+      "topics": [
+        "Funciones de la ECU en sistemas de inyección",
+        "Interpretación de señales y diagnóstico de fallas"
+      ]
+    },
+    {
+      "title": "🚗 MÓDULO 4: SISTEMAS DE INYECCIÓN ELECTRÓNICA",
+      "topics": [
+        "Sistemas TDI – Common Rail",
+        "Inyección de alta y baja presión",
+        "Inyectores, bombas inyectoras lineales y rotativas (VP44, VE)"
+      ]
+    },
+    {
+      "title": "🧩 MÓDULO 5: SENSORES Y ACTUADORES",
+      "topics": [
+        "Sensores: temperatura del refrigerante, aire, combustible, flujo de aire",
+        "Señales del árbol de levas y punto muerto superior",
+        "Acelerador electrónico, velocidad, presión de combustible",
+        "Electroválvulas, caudal, avance, reguladores Borg Warner"
+      ]
+    },
+    {
+      "title": "🔍 HERRAMIENTAS DE DIAGNÓSTICO",
+      "topics": [
+        "Uso de scanner automotriz",
+        "Osciloscopio",
+        "Analizador de gases",
+        "Multitester"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Técnicos mecánicos",
+    "Estudiantes de mecánica automotriz",
+    "Talleristas que quieren actualizarse",
+    "Aficionados que buscan dar un salto profesional",
+    "Personas que quieren especializarse en inyección electrónica",
+    "Trabajadores de talleres automotrices",
+    "Emprendedores en el sector automotriz",
+    "Quienes buscan una nueva profesión técnica"
+  ],
+  "salida_laboral": [
+    "Técnico en inyección electrónica diésel/naftero",
+    "Especialista en sistemas Common Rail",
+    "Diagnosticador electrónico automotriz",
+    "Trabajador en talleres especializados",
+    "Especialista en sistemas TDI",
+    "Técnico independiente en inyección",
+    "Instructor de cursos de inyección",
+    "Emprendedor en taller de diagnóstico"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "5 clases audiovisuales",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en inyección electrónica",
+    "Salto profesional garantizado"
+  ],
+  "requisitos": [
+    "Interés en la inyección electrónica automotriz",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en la mecánica automotriz moderna"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Inyección Electrónica Diésel/Naftero que te permitirá trabajar profesionalmente en el sector automotriz",
+  "duracion_detalle": "5 clases audiovisuales con acceso permanente al contenido"
+}

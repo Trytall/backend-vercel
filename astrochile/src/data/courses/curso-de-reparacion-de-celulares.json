@@ -1,0 +1,132 @@
+{
+  "title": "CURSO DE REPARACIÓN DE CELULARES",
+  "slug": "curso-de-reparacion-de-celulares",
+  "description": "Reparación De Celulares: 16 Clases Audiovisuales + 6 Manuales De Estudio. Aprendé a reparar celulares desde cero con conocimientos teóricos y prácticos en mantenimiento y reparación de dispositivos móviles.",
+  "duracion": "16 Clases Audiovisuales + 6 Manuales de Estudio",
+  "certificacion": "Certificación en Reparación de Celulares",
+  "modalidad": "100% Online",
+  "objetivo": "Formar técnicos especializados en reparación de celulares con conocimientos teóricos y prácticos en mantenimiento, diagnóstico y reparación de dispositivos móviles de diferentes marcas y modelos.",
+  "caracteristicas_curso": [
+    "16 Clases Audiovisuales",
+    "6 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y teórica",
+    "Conocimientos específicos de electrónica",
+    "Oficio rentable con mínima inversión"
+  ],
+  "modulos": [
+    {
+      "title": "🔧 FUNDAMENTOS Y HERRAMIENTAS",
+      "topics": [
+        "Configuración de los servicios multimedia",
+        "Explicación en bloques de las etapas de un celular",
+        "Conocimiento práctico de los componentes electrónicos y su comprobación",
+        "Herramientas – Uso del multímetro o Tester",
+        "Desoldado – soldado de componentes - Estación de soldado"
+      ]
+    },
+    {
+      "title": "🔍 DIAGNÓSTICO Y REPARACIÓN",
+      "topics": [
+        "Diagnóstico y localización de fallas",
+        "Solución de problemas apagado – encendido – reinicio",
+        "Averías en teclados – audio – video – procesadores – SIM",
+        "Cómo obtener repuestos recuperados de otros celulares"
+      ]
+    },
+    {
+      "title": "📱 COMPONENTES Y DISPOSITIVOS",
+      "topics": [
+        "Display – dispositivos táctiles",
+        "Fallas debido a accidentes",
+        "Backup dates – Flasheo – Liberation",
+        "Software – hardware"
+      ]
+    },
+    {
+      "title": "🛠️ REPARACIONES ESPECÍFICAS",
+      "topics": [
+        "Cambio de micrófono A50",
+        "Cambio de pin de carga tipo C",
+        "Reparar móvil mojado",
+        "Hard Reset Samsung"
+      ]
+    },
+    {
+      "title": "🍎 IPHONE - DESMONTAJE Y REPARACIÓN",
+      "topics": [
+        "Desmontar iPhone 14 Pro Max",
+        "IPhone 12 Pro cambio de auricular",
+        "Reparación iPhone 12 pro mojado",
+        "Cambio de partes de iPhone 4, 5, 6"
+      ]
+    },
+    {
+      "title": "📱 SAMSUNG Y OTRAS MARCAS",
+      "topics": [
+        "Cambio de partes Samsung",
+        "Principios de soldadura",
+        "Mediciones",
+        "Cambio de micrófono Samsung A50"
+      ]
+    }
+  ],
+  "programa_estudio": [
+    "HERRAMIENTAS",
+    "ELECTRÓNICA",
+    "FUNCIONAMIENTO",
+    "CAMBIO DE PARTES DE IPHONE 4",
+    "CAMBIO DE PARTES DE IPHONE 5",
+    "CAMBIO DE PARTES DE IPHONE 6",
+    "CAMBIO DE PARTES SAMSUNG",
+    "PRINCIPIOS DE SOLDADURA",
+    "MEDICIONES",
+    "CAMBIO DE MICRÓFONO SAMSUNG A50",
+    "CAMBIO PIN DE CARGA TIPO C",
+    "REPARAR MÓVIL MOJADO",
+    "HARD RESET SAMSUNG",
+    "DESMONTAR IPHONE 14 PRO MAX",
+    "CAMBIO DE AURICULAR IPHONE 12 PRO",
+    "REPARACIÓN IPHONE 12 PRO MOJADO"
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender reparación de celulares desde cero",
+    "Técnicos que buscan especializarse en dispositivos móviles",
+    "Quienes buscan un oficio rentable con mínima inversión",
+    "Aficionados a la tecnología móvil",
+    "Emprendedores en el sector de reparación",
+    "Trabajadores de talleres de celulares",
+    "Personas interesadas en la electrónica aplicada"
+  ],
+  "salida_laboral": [
+    "Técnico en reparación de celulares",
+    "Reparador de dispositivos móviles",
+    "Especialista en iPhone y Samsung",
+    "Técnico independiente en reparación",
+    "Emprendedor en taller de celulares",
+    "Técnico en mantenimiento de dispositivos",
+    "Instructor de cursos de reparación",
+    "Trabajador en talleres de celulares"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "16 clases audiovisuales",
+    "6 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Conocimientos específicos de electrónica"
+  ],
+  "requisitos": [
+    "Interés en la reparación de celulares",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en la tecnología móvil"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Reparación de Celulares que te permitirá trabajar profesionalmente en el sector de reparación de dispositivos móviles",
+  "duracion_detalle": "16 clases audiovisuales + 6 manuales de estudio con acceso permanente al contenido"
+}

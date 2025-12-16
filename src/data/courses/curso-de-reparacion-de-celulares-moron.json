@@ -1,0 +1,184 @@
+{
+  "title": "REPARACIÓN DE CELULARES",
+  "slug": "curso-de-reparacion-de-celulares-moron",
+  "description": "Formación integral en reparación de celulares con enfoque en procedimientos básicos y fundamentos. Duración: 32 clases en 8 meses. Modalidad: Teórico-práctico. Aprende reparación básica de celulares.",
+  "duracion": "32 clases - 8 meses",
+  "certificacion": "Técnico en Reparación Básica de Celulares",
+  "modalidad": "Presencial",
+  "campus": "Morón",
+  "objetivo": "Proporcionar formación técnica básica en reparación de celulares, introduciendo al alumno en los fundamentos de la electrónica móvil y procedimientos básicos de reparación.",
+  "caracteristicas_curso": [
+    "32 clases en total",
+    "8 meses de duración",
+    "Modalidad teórico-práctico",
+    "Formación técnica básica",
+    "Enfoque en fundamentos",
+    "Procedimientos básicos de reparación",
+    "Prácticas con equipos reales",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "📱 MÓDULO 1: INTRODUCCIÓN A LA REPARACIÓN DE CELULARES",
+      "topics": [
+        "Historia y evolución de los celulares",
+        "Tipos de dispositivos móviles",
+        "Componentes básicos de un celular",
+        "Herramientas necesarias para reparación",
+        "Seguridad en el trabajo con celulares",
+        "Organización del taller de reparación",
+        "Normas de seguridad básicas",
+        "Introducción a la electrónica móvil"
+      ]
+    },
+    {
+      "title": "🔧 MÓDULO 2: HERRAMIENTAS Y EQUIPAMIENTO",
+      "topics": [
+        "Destornilladores especializados",
+        "Pinzas y herramientas de precisión",
+        "Estación de soldadura",
+        "Multímetro digital",
+        "Fuente de alimentación",
+        "Lupa y microscopio",
+        "Herramientas de apertura",
+        "Equipos de limpieza"
+      ]
+    },
+    {
+      "title": "⚡ MÓDULO 3: FUNDAMENTOS DE ELECTRÓNICA",
+      "topics": [
+        "Conceptos básicos de electricidad",
+        "Componentes electrónicos básicos",
+        "Resistencias, capacitores y diodos",
+        "Transistores y circuitos integrados",
+        "Mediciones con multímetro",
+        "Identificación de componentes",
+        "Circuitos básicos en celulares",
+        "Principios de funcionamiento"
+      ]
+    },
+    {
+      "title": "🛠️ MÓDULO 4: PROCEDIMIENTOS BÁSICOS",
+      "topics": [
+        "Desarmado seguro de celulares",
+        "Identificación de componentes",
+        "Limpieza de dispositivos",
+        "Reemplazo de pantallas rotas",
+        "Cambio de baterías",
+        "Reparación de conectores",
+        "Mantenimiento preventivo",
+        "Procedimientos de seguridad"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Introducción a la reparación de celulares",
+    "Historia y evolución de dispositivos móviles",
+    "Componentes básicos de celulares",
+    "Herramientas y equipamiento necesario",
+    "Fundamentos de electrónica básica",
+    "Componentes electrónicos en celulares",
+    "Procedimientos básicos de reparación",
+    "Desarmado y armado seguro",
+    "Mantenimiento preventivo",
+    "Seguridad en el trabajo"
+  ],
+  "tecnicas_reparacion": [
+    "Desarmado de celulares",
+    "Identificación de componentes",
+    "Limpieza de dispositivos",
+    "Reemplazo de pantallas",
+    "Cambio de baterías",
+    "Reparación de conectores",
+    "Mantenimiento preventivo",
+    "Procedimientos de seguridad"
+  ],
+  "herramientas_equipamiento": [
+    "Destornilladores especializados",
+    "Pinzas de precisión",
+    "Estación de soldadura",
+    "Multímetro digital",
+    "Fuente de alimentación",
+    "Lupa y microscopio",
+    "Herramientas de apertura",
+    "Equipos de limpieza"
+  ],
+  "componentes_electronicos": [
+    "Resistencias",
+    "Capacitores",
+    "Diodos",
+    "Transistores",
+    "Circuitos integrados",
+    "Componentes móviles",
+    "Conectores",
+    "Baterías"
+  ],
+  "procedimientos_basicos": [
+    "Desarmado seguro",
+    "Identificación de componentes",
+    "Limpieza de dispositivos",
+    "Reemplazo de pantallas",
+    "Cambio de baterías",
+    "Reparación de conectores",
+    "Mantenimiento preventivo",
+    "Procedimientos de seguridad"
+  ],
+  "practicas_curso": [
+    "Desarmado de celulares",
+    "Identificación de componentes",
+    "Limpieza de dispositivos",
+    "Reemplazo de pantallas",
+    "Cambio de baterías",
+    "Reparación de conectores",
+    "Mantenimiento preventivo",
+    "Trabajo con herramientas reales"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Prácticas con equipos reales",
+    "Procedimientos básicos de reparación",
+    "Evaluación final práctica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas que desean introducirse en la reparación de celulares",
+    "Quienes buscan formación técnica básica",
+    "Interesados en electrónica móvil",
+    "Técnicos que buscan especialización",
+    "Personal de mantenimiento",
+    "Quienes quieren trabajar en talleres de celulares",
+    "Personas interesadas en la tecnología móvil",
+    "Técnicos que buscan reconversión laboral"
+  ],
+  "salida_laboral": [
+    "Técnico básico en reparación de celulares",
+    "Ayudante en talleres de celulares",
+    "Técnico de mantenimiento móvil",
+    "Personal de atención al cliente",
+    "Técnico independiente básico",
+    "Personal de empresas de telefonía",
+    "Técnico en comercios de celulares",
+    "Ayudante técnico móvil"
+  ],
+  "metodologia": [
+    "Modalidad teórico-práctico",
+    "32 clases en 8 meses",
+    "Prácticas con equipos reales",
+    "Trabajo con herramientas especializadas",
+    "Procedimientos básicos de reparación",
+    "Evaluación continua",
+    "Formación técnica básica",
+    "Preparación para el mundo laboral"
+  ],
+  "requisitos": [
+    "Interés en reparación de celulares",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en electrónica móvil",
+    "Disposición para aprender procedimientos básicos",
+    "Responsabilidad en el trabajo técnico"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Técnico en Reparación Básica de Celulares que te permitirá trabajar profesionalmente en el sector de reparación móvil",
+  "duracion_detalle": "32 clases distribuidas en 8 meses con modalidad teórico-práctico y enfoque en fundamentos y procedimientos básicos de reparación"
+}

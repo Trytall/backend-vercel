@@ -1,0 +1,23 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^(www\.)?escuelasiadearg\.com$ [NC]
+RewriteRule ^ - [L]
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# No reescribir estáticos
+RewriteRule \.(css|js|png|jpe?g|gif|svg|ico|webp|woff2?|ttf|map)$ - [L]
+
+# Seguridad b�sica
+Options -Indexes
+
+# Fallback para rutas estáticas prerenderizadas y 404 amigable
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+# Asegurar que robots.txt y sitemaps no se reescriban (accesibles por bots)
+RewriteRule ^robots\.txt$ - [L]
+RewriteRule ^sitemap(.*)\.xml$ - [L]

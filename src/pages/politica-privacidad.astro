@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Política de Privacidad – Escuelas IADE" canonical={`https://escuelasiadearg.com${import.meta.env.BASE_URL}politica-privacidad`}>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl font-bold text-primary mb-6">Política de Privacidad</h1>
+    <p class="mb-4">Cuidamos tus datos personales conforme a la Ley 25.326 y buenas prácticas internacionales.</p>
+    <ul class="list-disc list-inside space-y-2 text-gray-700">
+      <li><strong>Qué recolectamos:</strong> nombre, DNI, email, teléfono, provincia, localidad y cursos de interés.</li>
+      <li><strong>Para qué:</strong> contacto comercial, inscripción y gestión de pagos.</li>
+      <li><strong>Terceros:</strong> procesamos pagos mediante MercadoPago (cumple PCI-DSS). No almacenamos datos de tarjetas.</li>
+      <li><strong>Retención:</strong> conservamos datos el tiempo necesario para brindar el servicio y obligaciones legales.</li>
+      <li><strong>Derechos:</strong> acceso, actualización y supresión; escribinos a <a class="text-primary underline" href="mailto:informes@escuelaiade.com">informes@escuelaiade.com</a>.</li>
+      <li><strong>Seguridad:</strong> aplicamos cifrado en tránsito (HTTPS) y medidas técnicas/organizativas para proteger la información.</li>
+    </ul>
+  </main>
+  <Footer />
+</Layout>

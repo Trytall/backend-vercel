@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Términos y Condiciones – Escuelas IADE" canonical={`https://escuelasiadearg.com${import.meta.env.BASE_URL}terminos`}>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h1 class="text-3xl font-bold text-primary mb-6">Términos y Condiciones</h1>
+    <ul class="list-disc list-inside space-y-2 text-gray-700">
+      <li>Los contenidos y precios pueden variar. Los pagos se procesan por MercadoPago.</li>
+      <li>Las certificaciones detalladas en cada curso aplican según modalidad y sede.</li>
+      <li>El uso del sitio implica aceptar estas condiciones y la Política de Privacidad.</li>
+      <li>Consultas legales: <a class="text-primary underline" href="mailto:informes@escuelaiade.com">informes@escuelaiade.com</a>.</li>
+    </ul>
+  </main>
+  <Footer />
+</Layout>

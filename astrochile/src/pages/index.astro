@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import BannerCarousel from '../components/BannerCarousel.astro';
+import LeadForm from '../components/LeadForm.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+---
+
+<Layout 
+  title="Escuelas IADE Chile | Cursos de Oficio Online"
+  description="Aprende un oficio con Escuelas IADE Chile. Ofrecemos cursos técnicos en modalidad online. ¡Inscríbete hoy!"
+  canonical={`https://escuelasiade.cl${import.meta.env.BASE_URL}`}
+>
+  <Header />
+
+  <!-- Fondo decorativo exclusivo del index (solo móvil) -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-[1] md:hidden">
+    <div class="absolute inset-x-0 top-16 mx-auto h-[420px] w-[90%] max-w-6xl rounded-[36px] bg-gradient-to-r from-primary/10 via-rose-200/20 to-emerald-200/20 blur-2xl"></div>
+    <svg class="absolute -top-10 -right-10 w-72 h-72 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#ef4444" d="M47.5,-58.8C62.1,-51.6,74.7,-37.1,78.7,-20.5C82.7,-3.9,78,14.7,67.9,29.8C57.7,44.9,42.2,56.6,25.7,62.3C9.2,68,-8.4,67.6,-24.6,61.3C-40.8,54.9,-55.6,42.5,-63.9,26.9C-72.2,11.3,-74,-7.4,-67.2,-22.7C-60.4,-38.1,-45,-50,-29,-57.2C-13,-64.4,3.6,-67,18.8,-63.7C34.1,-60.3,48.9,-51.9,47.5,-58.8Z" transform="translate(100 100)"/></svg>
+    <svg class="absolute bottom-10 left-0 w-80 h-80 opacity-20" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#06b6d4" d="M48.7,-65.4C61.1,-55.7,66.3,-37.2,70.9,-19.5C75.6,-1.8,79.6,15.1,74.9,29.3C70.1,43.4,56.6,54.8,41.6,62.8C26.7,70.8,10.3,75.4,-6.6,83.3C-23.5,91.2,-46.9,102.3,-58.2,93.9C-69.4,85.5,-68.4,57.7,-66.3,36.2C-64.2,14.7,-61,-0.6,-55.2,-14.9C-49.4,-29.2,-41,-42.5,-30.2,-52.3C-19.3,-62.2,-6.9,-68.2,7.3,-76.3C21.5,-84.4,43.1,-94.9,48.7,-65.4Z" transform="translate(100 100)"/></svg>
+  </div>
+
+  <!-- Hero móvil original -->
+  <div class="md:hidden">
+    <Hero />
+  </div>
+
+  <!-- Hero desktop con dos columnas (texto/botones + logo) y dimensiones unificadas con /cursos y /faq -->
+  <section class="relative bg-light-bg overflow-hidden hidden md:block">
+    <!-- fondo doodle bajo el título -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none z-0">
+      <div class="absolute inset-0 opacity-20" style={`background-image: url('${import.meta.env.BASE_URL}images/iade-doodle-red.svg'); background-repeat: repeat; background-size: 120px 120px; background-position: center; will-change: background-position; animation: doodle-drift 60s linear infinite;`}></div>
+    </div>
+
+    <div class="relative z-[1] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-[40vh] md:min-h-[44vh] py-8 md:py-12 flex items-center">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+        <!-- Columna texto y botones -->
+        <div class="text-left">
+          <h1 class="text-3xl lg:text-4xl font-bold text-primary leading-snug tracking-tight mb-3">Conviértete en un profesional de oficio con Escuelas IADE Chile</h1>
+          <p class="text-base lg:text-lg text-gray-700 mb-6">Formación práctica y rápida, 100% técnica, en modalidad <strong class="text-primary">online</strong>.</p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a 
+              href={`${import.meta.env.BASE_URL}#lead-form`} 
+              class="bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-base leading-snug hover:bg-primary/90 transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-center"
+            >
+              Contactame con un asesor
+            </a>
+            <a 
+              href="https://www.escuelasiade.com.ar/iade_campus_exp/login.php" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="bg-primary text-white px-5 py-2.5 rounded-lg font-bold text-base leading-snug hover:bg-primary/90 transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-center"
+            >
+              Acceder al Campus
+            </a>
+          </div>
+        </div>
+        <!-- Columna imagen de logo -->
+        <div class="flex justify-center lg:justify-end">
+          <img 
+            src="/images/logoiade.png" 
+            alt="Cursos de oficios IADE Chile" 
+            class="max-w-[380px] lg:max-w-[520px] xl:max-w-[600px] h-auto"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <BannerCarousel />
+
+  <!-- Banner informativo compacto -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid md:grid-cols-3 gap-6 items-stretch">
+        <div class="p-6 rounded-xl border border-gray-200 bg-gray-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Modalidad Online</h3>
+          <p class="text-gray-700 mb-3">Estudia a tu ritmo con acceso 24/7 y clases grabadas.</p>
+          <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+            <li>Acceso 24/7 desde cualquier lugar</li>
+            <li>Clases grabadas y material descargable</li>
+            <li>Sin horarios fijos</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200 bg-gray-50">
+          <h3 class="text-lg font-bold text-primary mb-2">Certificaciones</h3>
+          <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+            <li>Oficios: IADE</li>
+            <li>Salud: IADE</li>
+          </ul>
+          <div class="mt-3 text-sm text-gray-600">Aval institucional y alta empleabilidad.</div>
+        </div>
+        <div class="p-6 rounded-xl border border-gray-200 bg-gray-50 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-primary mb-2">Comenzá hoy</h3>
+            <p class="text-gray-700 mb-3">Inscribite en minutos y recibí acompañamiento de un asesor.</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="/cursos" class="bg-primary text-white px-4 py-2 rounded-lg font-bold hover:bg-primary/90 transition">Ver cursos</a>
+            <a href="#lead-form" class="bg-rose-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-rose-700 transition">Inscribirme</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <LeadForm />
+  <Footer />
+  <WhatsAppButton />
+</Layout> 

@@ -1,0 +1,99 @@
+{
+  "title": "Curso de Inyección Electrónica GNC – Escuelas IADE Argentina 🇦🇷",
+  "slug": "curso-de-inyeccion-electronica-y-gas-vehicular",
+  "description": "🎥 7 clases audiovisuales + 📘 7 manuales de estudio. Capacitate como técnico especializado en sistemas de inyección y conversión a GNC.",
+  "duracion": "7 Clases Audiovisuales + 7 Manuales de Estudio",
+  "certificacion": "Certificación en Inyección Electrónica GNC",
+  "modalidad": "100% Online",
+  "objetivo": "Formar técnicos especializados en sistemas de inyección electrónica y conversión a GNC con conocimientos completos en diagnóstico, reparación y conversión de vehículos.",
+  "caracteristicas_curso": [
+    "7 Clases Audiovisuales",
+    "7 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y teórica",
+    "Especialización en GNC",
+    "Sistemas de inyección completos"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 ENCENDIDO ELECTRÓNICO",
+      "topics": [
+        "Principios de funcionamiento y diagnóstico",
+        "Técnicas de servicio y reparación"
+      ]
+    },
+    {
+      "title": "🔹 INSTRUMENTACIÓN Y DIAGNÓSTICO",
+      "topics": [
+        "Uso práctico del multímetro, osciloscopio y otros instrumentos",
+        "Métodos para detectar y analizar fallas"
+      ]
+    },
+    {
+      "title": "🔹 SISTEMAS DE INYECCIÓN ELECTRÓNICA COMPUTARIZADA",
+      "topics": [
+        "Fundamentos de funcionamiento y componentes clave",
+        "Evaluación de rendimiento y solución de problemas"
+      ]
+    },
+    {
+      "title": "🔹 ANÁLISIS DE SISTEMAS ESPECÍFICOS DE INYECCIÓN ELECTRÓNICA",
+      "topics": [
+        "Sistema EEC IV (VW monopunto)",
+        "Sistema MI1AVB (VW multipunto secuencial)",
+        "Sistema B-16 (G.M. multipunto - Corsa)",
+        "Sistema Motronic 9.0 (Gol 1000)"
+      ]
+    },
+    {
+      "title": "🔹 CONVERSIÓN Y ANÁLISIS DE SISTEMAS A GAS",
+      "topics": [
+        "Instalación de equipos para GLP (gas licuado de petróleo)",
+        "Estudio de vehículos multipunto con instalación de gas",
+        "Diagnóstico de pérdida de moderación",
+        "Conversión de vehículos con motor de inyección multipunto a GNC"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Mecánicos automotrices",
+    "Gasistas del automotor",
+    "Técnicos en electrónica vehicular",
+    "Personas interesadas en la electrónica aplicada a vehículos a gas",
+    "Quienes buscan especializarse en GNC",
+    "Trabajadores de talleres automotrices",
+    "Emprendedores en el sector del gas vehicular",
+    "Estudiantes de mecánica automotriz"
+  ],
+  "salida_laboral": [
+    "Técnico en inyección electrónica GNC",
+    "Especialista en conversión a gas",
+    "Técnico en sistemas de inyección",
+    "Gasista del automotor especializado",
+    "Trabajador en talleres de GNC",
+    "Técnico independiente en inyección",
+    "Instructor de cursos de GNC",
+    "Emprendedor en taller de conversión"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "7 clases audiovisuales",
+    "7 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en inyección y GNC"
+  ],
+  "requisitos": [
+    "Interés en la inyección electrónica y GNC",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en la mecánica automotriz y gas vehicular"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Inyección Electrónica GNC que te permitirá trabajar profesionalmente en el sector del gas vehicular",
+  "duracion_detalle": "7 clases audiovisuales + 7 manuales de estudio con acceso permanente al contenido"
+}

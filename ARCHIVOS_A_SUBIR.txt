@@ -1,0 +1,20 @@
+ARCHIVOS A SUBIR AL SERVIDOR
+=============================
+
+1. CARPETA DIST/ (COMPLETA)
+   - Subir TODO el contenido de la carpeta dist/
+   - Destino: Carpeta pública del servidor web (public_html, www, etc.)
+
+2. ARCHIVOS DEL API
+   - api/vercel.js
+   - api/server.js (si existe)
+   - package.json
+   
+3. ARCHIVO DE CONFIGURACIÓN
+   - .env (crear en el servidor con las variables indicadas)
+
+NOTAS:
+- NO subir: node_modules/ (instalar en el servidor con npm install)
+- NO subir: src/ (solo el dist compilado)
+- NO subir: archivos de desarrollo (.git, etc.)
+

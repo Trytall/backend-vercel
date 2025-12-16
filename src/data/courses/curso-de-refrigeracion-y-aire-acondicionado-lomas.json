@@ -1,0 +1,173 @@
+{
+  "title": "CURSO DE REFRIGERACIÓN",
+  "slug": "curso-de-refrigeracion-y-aire-acondicionado-lomas",
+  "description": "Formación integral en refrigeración con 3 módulos especializados: heladeras familiares, circuitos comerciales y aire acondicionado. 24 clases presenciales en 6 meses.",
+  "duracion": "6 meses - 24 clases semanales de 2 horas",
+  "certificacion": "Técnico en Refrigeración y Aire Acondicionado",
+  "modalidad": "100% Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Preparar a los alumnos para que estén capacitados en la REPARACIÓN DE HELADERAS FAMILIARES, circuitos comerciales e instalación de aire acondicionado tipo Split.",
+  "caracteristicas_curso": [
+    "6 meses de duración",
+    "24 clases en total",
+    "1 clase semanal de 2 horas",
+    "Modalidad 100% presencial",
+    "3 módulos especializados",
+    "Aprendizaje teórico/práctico",
+    "Profesional matriculado con 25+ años de experiencia",
+    "Formación integral en refrigeración"
+  ],
+  "modulos": [
+    {
+      "title": "🏠 MÓDULO 1: HELADERAS FAMILIARES",
+      "topics": [
+        "Circuitos de refrigeración",
+        "Las partes de una heladera",
+        "Refrigerantes (R12, R134A, R401A, R437A)",
+        "Fallas de origen eléctrico y sus posibles causas",
+        "Fallas de origen mecánico y sus posibles causas",
+        "Soldadura cobre-cobre",
+        "Limpieza de condensador, utilización del R141B",
+        "Montajes de compresores",
+        "Reparación de equipos compactos y/o dividido",
+        "Tendido de alimentación eléctrica (PTC, relé, protector térmico, termostato, capacitores)",
+        "Uso apropiado de herramientas reconociendo su función",
+        "Deshidratado, vacío y carga de refrigerantes",
+        "Introducción a la electricidad, magnitudes eléctricas, ley de Ohm y Faraday",
+        "Circuito de serie paralelo",
+        "Instrumentos de mediciones generales, pinza anemométrica y voltímetro"
+      ]
+    },
+    {
+      "title": "🏪 MÓDULO 2: CIRCUITOS COMERCIALES",
+      "topics": [
+        "Motocompresor",
+        "Condensador con forzador (parrilla con ventilador)",
+        "Filtro deshidratador",
+        "Elementos de expansión (capilar)",
+        "Evaporadores estáticos",
+        "Reparación de circuitos comerciales",
+        "Detección de fallas de origen eléctrico y mecánico",
+        "Tendido de alimentación eléctrica (PTC, RELÉ, VOLTIMETRO, RELÉ AMPEROMETRICO, PROTECTOR TERMICO, TERMOSTATO, CAPACITOR DE ARRANQUE, CAPACITOR DE MARCHA, FORZADORES)"
+      ]
+    },
+    {
+      "title": "❄️ MÓDULO 3: AIRE ACONDICIONADO",
+      "topics": [
+        "Proyección e instalación de equipos tipo Split",
+        "Desinstalación de equipos de aire acondicionado",
+        "Detección de fallas y reparación",
+        "Equipos frío solo y frío calor",
+        "Actualización RH10A",
+        "Medición de capacitores de marcha",
+        "Montaje de aire acondicionado",
+        "Instalación de unidad interna y externa, ménsulas, fijaciones",
+        "Métodos de detección de pérdidas",
+        "Bomba de vacío: usos y características",
+        "Principios generales de instalación de equipos Split",
+        "Ubicación de unidades, interconexión de cañerías y cableado",
+        "Desagüe de condensador",
+        "Prueba de hermeticidad con nitrógeno",
+        "Vacío y puesta en marcha",
+        "Principales errores de la instalación",
+        "Procedimiento de desinstalación para reparación o traslado"
+      ]
+    }
+  ],
+  "conocimientos_refrigeracion": [
+    "Refrigeración: Conceptos, Energía, Calor",
+    "Calor específico, Calor sensible y latente",
+    "Presión: atmosférica, manométrica y absoluta",
+    "Vacío, Vapor saturado y sobrecalentado",
+    "Compresor: abierto, hermético, semihermético",
+    "Motor eléctrico y sus características",
+    "Relé amperométrico y voltimétrico",
+    "Capacitor electrolítico",
+    "Protector térmico"
+  ],
+  "sistemas_refrigerantes": [
+    "Fluido refrigerante y circuitos",
+    "Carga de fluido refrigerante",
+    "Tratamiento del gas refrigerante",
+    "Tareas preliminares sobre cañerías",
+    "Búsqueda de fugas",
+    "Funcionamiento del equipo",
+    "Control de las presiones",
+    "Consumo de corriente",
+    "Refrigerantes puros y mezclas (zeotrópicas y azeotrópicas)",
+    "CFC: Clorofluorcarbonados",
+    "HCFC: Hidroclorofluorcarbonados",
+    "HFC: Hidrofluorcarbonados",
+    "Cargas en fase gaseosa y líquida",
+    "Utilización de difusor de carga R141B y N3"
+  ],
+  "herramientas_equipos": [
+    "Herramientas de refrigeración",
+    "Pinza anemométrica",
+    "Voltímetro",
+    "Bomba de vacío",
+    "Equipos de soldadura",
+    "Manómetros",
+    "Material de apoyo",
+    "Testimonios de profesionales"
+  ],
+  "practicas_curso": [
+    "Reparación de heladeras familiares",
+    "Mantenimiento de circuitos comerciales",
+    "Instalación de aires acondicionados",
+    "Desinstalación de equipos",
+    "Detección y reparación de fallas",
+    "Soldadura y conexiones",
+    "Carga de refrigerantes",
+    "Pruebas de hermeticidad"
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender refrigeración desde cero",
+    "Quienes desean insertarse en el mercado laboral rápidamente",
+    "Personas interesadas en una profesión con alta demanda",
+    "Técnicos que quieren especializarse en refrigeración",
+    "Trabajadores del sector HVAC",
+    "Empleados de talleres de refrigeración",
+    "Personas que quieren emprender en refrigeración",
+    "Quienes buscan una nueva profesión técnica"
+  ],
+  "salida_laboral": [
+    "Técnico en refrigeración doméstica",
+    "Técnico en refrigeración comercial",
+    "Instalador de aires acondicionados",
+    "Reparador de heladeras familiares",
+    "Técnico en circuitos comerciales",
+    "Trabajador en talleres de refrigeración",
+    "Técnico independiente en refrigeración",
+    "Empleado en empresas de climatización"
+  ],
+  "metodologia": [
+    "Modalidad 100% presencial",
+    "24 clases semanales de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Material de apoyo",
+    "Herramientas de trabajo",
+    "Testimonios de profesionales",
+    "Prácticas en equipos reales",
+    "Formación integral y práctica"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Prácticas en equipos reales",
+    "Acreditación del trayecto formativo",
+    "Formación teórica y práctica",
+    "Desarrollo de habilidades técnicas"
+  ],
+  "requisitos": [
+    "Interés en la refrigeración y climatización",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Muchas ganas de aprender",
+    "Asistencia regular a las clases",
+    "Interés en desarrollar una profesión técnica"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación como Técnico en Refrigeración y Aire Acondicionado que te permitirá trabajar profesionalmente en el sector",
+  "duracion_detalle": "6 meses con 24 clases semanales de 2 horas cada una en modalidad 100% presencial"
+}
+
+

@@ -1,0 +1,17 @@
+# Pasos para subir backend-vercel a Vercel
+
+# 1. Instalar Vercel CLI (solo la primera vez)
+npm install -g vercel
+
+# 2. Login en Vercel
+vercel login
+
+# 3. Ir a la carpeta backend-vercel
+cd backend-vercel
+
+# 4. Subir a Vercel (desarrollo)
+vercel
+
+# 5. Subir a producción
+vercel --prod
+

@@ -22,4 +22,30 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
   <FAQ />
   <Footer />
   <WhatsAppButton />
+
+  <script is:inline>
+    // Evitar que aparezca el popup de promoción después de completar la inscripción
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        const inscripcionCompletada = localStorage.getItem('inscripcion_completada');
+        if (inscripcionCompletada === 'true') {
+          // Si se completó la inscripción, ocultar cualquier popup de promoción
+          // Buscar y ocultar modales/popups comunes
+          const modals = document.querySelectorAll('[id*="modal"], [id*="popup"], [class*="modal"], [class*="popup"]');
+          modals.forEach(modal => {
+            if (modal.style) {
+              modal.style.display = 'none';
+              modal.style.visibility = 'hidden';
+              modal.style.opacity = '0';
+            }
+          });
+          
+          // También prevenir que se muestren popups programados
+          window.preventPromoPopup = true;
+        }
+      } catch (e) {
+        console.warn('Error verificando estado de inscripción:', e);
+      }
+    });
+  </script>
 </Layout> 

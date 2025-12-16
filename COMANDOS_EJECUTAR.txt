@@ -1,0 +1,25 @@
+# Ejecuta estos comandos en PowerShell (uno por uno):
+
+# 1. Ir a la carpeta backend-vercel
+cd backend-vercel
+
+# 2. Login en Vercel (abrirá el navegador)
+npx vercel login
+
+# 3. Subir a Vercel (desarrollo/preview)
+npx vercel
+
+# Cuando pregunte:
+# - Set up and deploy? → Y (Yes)
+# - Link to existing project? → N (No, crear nuevo)
+# - Project name? → backend-vercel (o presiona Enter)
+# - In which directory is your code located? → ./ (presiona Enter)
+
+# 4. Subir a producción
+npx vercel --prod
+
+# ✅ Después de esto, Vercel te dará una URL como:
+# https://backend-vercel-xxx.vercel.app
+#
+# ¡Copia esa URL y compártela conmigo para actualizar el código!
+

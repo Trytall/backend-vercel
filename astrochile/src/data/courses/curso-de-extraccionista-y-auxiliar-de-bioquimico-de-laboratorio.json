@@ -1,0 +1,138 @@
+{
+  "title": "CURSO DE EXTRACCIONISTA Y AUXILIAR DE BIOQUÍMICO DE LABORATORIO",
+  "description": "Formación integral para trabajar en laboratorios de análisis clínicos como extraccionista y auxiliar de bioquímico. Aprende técnicas de venopunción, manejo de muestras biológicas, bioseguridad y análisis de laboratorio.",
+  "duracion": "10 meses (Incluye prácticas en laboratorio)",
+  "certificacion": "EXTRACCIONISTA DE LABORATORIO (Con Facturación a Obras Sociales, PAMI y Prepagas)",
+  "modalidad": "Presencial",
+  "modulos": [
+    {
+      "title": "MÓDULO 1: INTRODUCCIÓN AL LABORATORIO",
+      "topics": [
+        "Rol de un laboratorio de análisis clínicos",
+        "Áreas, organización, cargos y desempeño personal del laboratorio público y privado",
+        "Funciones como extraccionista, auxiliar de técnico y administrativo de laboratorio de análisis clínicos dentro del equipo de salud",
+        "Procesos de laboratorio fase: preanalítico, analítico y postanalítico",
+        "Muestras sanguíneas: Características y composición",
+        "Tipos (sangre, orina u otros fluidos corporales)"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: ANATOMÍA VASCULAR Y MUESTRAS",
+      "topics": [
+        "Anatomía vascular, características y composición de la sangre",
+        "Tipos de muestras sanguíneas (venosas, arterial y capilar)",
+        "Fase líquida y fase en suspensión",
+        "Diferencia entre suero y plasma"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: FASE PREANALÍTICA",
+      "topics": [
+        "Fase preanalítica: interpretación de la orden médica escrita (características y requisitos para su confección)",
+        "Área del laboratorio que determina la orden médica en relación a la atención directa del paciente",
+        "Hemograma, coagulograma, química clínica, reumatograma, eritrosedimentación, enzimología",
+        "Marcadores tumorales, hormonas y serología",
+        "Análisis de rutina y perfiles del laboratorio",
+        "Análisis de rutina ambulatorios, análisis de rutina de guardia y análisis de rutina de unidad de cuidados intensivos"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: TÉCNICAS DE EXTRACCIÓN",
+      "topics": [
+        "Toma de muestras de sangre, técnicas de venopunción (factores y complicaciones que intervienen)",
+        "Condiciones de conservación y transporte de muestras sanguíneas u otras muestras biológicas",
+        "Causa de error (hemólisis)",
+        "Identificación, numeración o etiquetado de los tubos de muestra con o sin anticoagulante",
+        "EDTA, citrato de sodio, heparina, oxalatos o fluoruro",
+        "Estandarización de colores de tubos, diferencia entre suero y plasma",
+        "Proporción y preparación de sangre (jeringas y agujas)",
+        "Preparación del paciente",
+        "Uso de descartadores"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: BIOSEGURIDAD Y NORMAS",
+      "topics": [
+        "Normas de uso habitual en el laboratorio de análisis clínicos",
+        "Bioseguridad del manipuleo de diferentes fluidos biológicos",
+        "Medidas de prevención y protección personal"
+      ]
+    },
+    {
+      "title": "MÓDULO 6: MATERIALES Y EQUIPAMIENTO",
+      "topics": [
+        "Material de uso habitual en el laboratorio de análisis clínicos",
+        "Tipos de materiales según su composición",
+        "Descripción y modo de uso",
+        "Equipamiento aplicable al laboratorio",
+        "Descripción y modo de uso"
+      ]
+    },
+    {
+      "title": "MÓDULO 7: ANÁLISIS DE ORINA",
+      "topics": [
+        "Estructura renal",
+        "Formación de la orina",
+        "Características generales de la orina",
+        "Examen de orina completo"
+      ]
+    },
+    {
+      "title": "MÓDULO 8: BIOSEGURIDAD AVANZADA",
+      "topics": [
+        "Normas de uso habitual en el laboratorio de análisis clínicos",
+        "Bioseguridad del manipuleo de diferentes fluidos biológicos",
+        "Medidas de prevención y protección personal"
+      ]
+    },
+    {
+      "title": "MÓDULO 9: MARCADORES BIOQUÍMICOS",
+      "topics": [
+        "Marcadores bioquímicos del estado nutricional: Glucemia, Urea, Ácido úrico, Creatinina",
+        "Colesterol total, HDL, LDL",
+        "Hepatograma, Amilasa",
+        "Marcadores tiroidales",
+        "Marcadores hormonales",
+        "Características generales de la orina",
+        "Examen de orina completa"
+      ]
+    }
+  ],
+  "objetivos": [
+    "Capacitar como extraccionista de laboratorio de análisis clínicos",
+    "Desarrollar habilidades en técnicas de venopunción y manejo de muestras",
+    "Comprender los procesos preanalítico, analítico y postanalítico",
+    "Aplicar normas de bioseguridad en el laboratorio",
+    "Manejar equipamiento y materiales de laboratorio",
+    "Interpretar órdenes médicas y perfiles de análisis",
+    "Realizar análisis de orina y marcadores bioquímicos",
+    "Trabajar con facturación a obras sociales, PAMI y prepagas"
+  ],
+  "metodologia": [
+    "Curso 100% presencial",
+    "Incluye prácticas en laboratorio",
+    "Material de apoyo y herramientas de trabajo",
+    "Prácticas reales con muestras biológicas",
+    "Evaluación continua y práctica"
+  ],
+  "requisitos": [
+    "Mayor de 18 años",
+    "Secundario completo",
+    "Interés en el área de laboratorio clínico",
+    "Disposición para el trabajo con muestras biológicas",
+    "Responsabilidad en el manejo de equipamiento"
+  ],
+  "salida_laboral": [
+    "Laboratorios de análisis clínicos públicos y privados",
+    "Hospitales y clínicas",
+    "Centros de diagnóstico",
+    "Obras sociales, PAMI y prepagas",
+    "Trabajo independiente como extraccionista",
+    "Auxiliar de bioquímico",
+    "Administrativo de laboratorio"
+  ],
+  "practicas": "Incluye prácticas en laboratorio durante los 10 meses del curso",
+  "facturacion": "Capacitación para facturación a Obras Sociales, PAMI y Prepagas"
+}
+
+

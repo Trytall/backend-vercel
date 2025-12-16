@@ -1,0 +1,219 @@
+{
+  "title": "CURSO DE ELECTRICIDAD Y ELECTRÓNICA INDUSTRIAL",
+  "slug": "curso-de-electricidad-y-electronica-industrial-lomas",
+  "description": "Formación integral en electricidad domiciliaria con PLC. Duración: 32 clases en 8 meses. Modalidad: Teórico-práctico. Aprende instalaciones eléctricas industriales y automatización con PLC.",
+  "duracion": "32 clases - 8 meses",
+  "certificacion": "Electricista domiciliario con PLC",
+  "modalidad": "Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Proporcionar una formación técnica sólida en instalaciones eléctricas industriales y automatización con PLC, preparando al alumno para trabajar en entornos industriales reales con seguridad y eficiencia.",
+  "caracteristicas_curso": [
+    "32 clases en total",
+    "8 meses de duración",
+    "Modalidad teórico-práctico",
+    "Formación técnica sólida",
+    "Enfoque en automatización industrial",
+    "Prácticas intensivas en aulas-taller",
+    "Trabajo con equipos reales",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "⚡ MÓDULO 1: FUNDAMENTOS DE ELECTRICIDAD",
+      "topics": [
+        "Conceptos básicos de electricidad: voltaje, corriente, resistencia, potencia",
+        "Ley de Ohm y tipos de corriente (continua y alterna)",
+        "Diferencias entre corriente monofásica y trifásica",
+        "Cálculos eléctricos básicos",
+        "Fundamentos para entender circuitos eléctricos"
+      ]
+    },
+    {
+      "title": "🔌 MÓDULO 2: INSTALACIONES ELÉCTRICAS INDUSTRIALES",
+      "topics": [
+        "Tipos de instalaciones: monofásicas y trifásicas",
+        "Protección eléctrica: disyuntores, térmicas, puesta a tierra",
+        "Canalización y cableado según normativa",
+        "Trabajo en entornos industriales con seguridad",
+        "Cableado de fábricas y talleres con máquinas trifásicas"
+      ]
+    },
+    {
+      "title": "📊 MÓDULO 3: LECTURA E INTERPRETACIÓN DE PLANOS ELÉCTRICOS",
+      "topics": [
+        "Simbología eléctrica normalizada",
+        "Esquemas unifilares y multifilares",
+        "Planos de automatización y tableros",
+        "Interpretación de planos complejos",
+        "Diseño de instalaciones complejas"
+      ]
+    },
+    {
+      "title": "🔧 MÓDULO 4: AUTOMATISMOS INDUSTRIALES",
+      "topics": [
+        "Contactores, temporizadores, relés térmicos",
+        "Circuitos de comando y fuerza",
+        "Lógica cableada básica",
+        "Control de motores sin programación",
+        "Automatización de cintas transportadoras"
+      ]
+    },
+    {
+      "title": "🧠 MÓDULO 5: INTRODUCCIÓN A LA AUTOMATIZACIÓN Y PLC",
+      "topics": [
+        "¿Qué es un PLC?",
+        "Controlador Lógico Programable para máquinas y procesos",
+        "Reemplazo de circuitos con relés",
+        "Flexibilidad, precisión y rapidez en automatización",
+        "Control programado de máquinas industriales"
+      ]
+    },
+    {
+      "title": "💻 MÓDULO 6: PROGRAMACIÓN DE PLC",
+      "topics": [
+        "Lenguaje Ladder (escalera)",
+        "Entradas, salidas, temporizadores, contadores",
+        "Simulación de programas",
+        "Creación de automatismos complejos y personalizados",
+        "Control de iluminación automática con sensores"
+      ]
+    },
+    {
+      "title": "🏭 MÓDULO 7: PRÁCTICAS DE TALLER Y MONTAJE DE TABLEROS",
+      "topics": [
+        "Armado físico de tableros eléctricos",
+        "Montaje de contactores, PLC, borneras, térmicas",
+        "Pruebas de funcionamiento",
+        "Aplicación práctica de conocimientos",
+        "Preparación para el mundo laboral"
+      ]
+    },
+    {
+      "title": "🏁 MÓDULO FINAL: PROYECTO INTEGRADOR",
+      "topics": [
+        "Desarrollo de un automatismo completo",
+        "Diseño, armado de tablero, cableado y programación",
+        "Evaluación final práctica",
+        "Demostración de capacidades adquiridas",
+        "Resolución de situaciones reales de automatización"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Electricidad básica y tipos de corriente",
+    "Diferencias entre corriente monofásica y trifásica",
+    "Componentes eléctricos industriales",
+    "Motores, contactores, térmicas, relés, sensores",
+    "Diseño e interpretación de planos industriales",
+    "Cómo entender un esquema eléctrico de fábrica",
+    "Tableros eléctricos y su armado",
+    "Qué llevan, para qué sirven y cómo se conectan",
+    "Automatismos eléctricos",
+    "Arranque de motores, inversión de giro, secuencias de mando",
+    "Introducción al PLC",
+    "Qué es un PLC y por qué es tan importante en la industria",
+    "Programación básica de PLC",
+    "Lógica cableada vs. lógica programada",
+    "Aplicaciones prácticas con PLC",
+    "Montaje de un circuito automatizado: luces, motores, sensores",
+    "Seguridad eléctrica en ambientes industriales"
+  ],
+  "tecnicas_automatizacion": [
+    "Programación de PLC",
+    "Lógica cableada",
+    "Automatismos eléctricos",
+    "Control de motores",
+    "Secuencias de mando",
+    "Temporizadores y contadores",
+    "Lenguaje Ladder",
+    "Simulación de programas"
+  ],
+  "equipos_industriales": [
+    "Tableros didácticos",
+    "Motores trifásicos",
+    "Sensores industriales",
+    "Simuladores de PLC",
+    "Contactores y relés",
+    "Térmicas y disyuntores",
+    "Temporizadores",
+    "Equipos de medición"
+  ],
+  "componentes_electricos": [
+    "Motores trifásicos",
+    "Contactores",
+    "Relés térmicos",
+    "Sensores",
+    "Temporizadores",
+    "Disyuntores",
+    "Térmicas",
+    "Borneras"
+  ],
+  "planos_esquemas": [
+    "Esquemas unifilares",
+    "Esquemas multifilares",
+    "Planos de automatización",
+    "Planos de tableros",
+    "Simbología eléctrica",
+    "Interpretación de planos",
+    "Diseño de instalaciones",
+    "Documentación técnica"
+  ],
+  "practicas_curso": [
+    "Armado de tableros eléctricos",
+    "Montaje de componentes",
+    "Cableado de circuitos",
+    "Programación de PLC",
+    "Pruebas de funcionamiento",
+    "Simulación de automatismos",
+    "Trabajo con equipos reales",
+    "Proyectos integradores"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Prácticas en equipos reales",
+    "Proyectos de automatización",
+    "Evaluación final práctica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas que deseen adquirir formación técnica sólida",
+    "Quienes quieren trabajar en instalaciones eléctricas industriales",
+    "Interesados en automatización con PLC",
+    "Técnicos que buscan especialización industrial",
+    "Personal de mantenimiento industrial",
+    "Quienes quieren trabajar en entornos industriales",
+    "Personas interesadas en la electricidad industrial",
+    "Técnicos que buscan reconversión laboral"
+  ],
+  "salida_laboral": [
+    "Técnico en instalaciones eléctricas industriales",
+    "Técnico en automatización industrial",
+    "Programador de PLC",
+    "Técnico de mantenimiento industrial",
+    "Electricista industrial",
+    "Técnico en automatismos",
+    "Personal de empresas industriales",
+    "Técnico independiente en electricidad industrial"
+  ],
+  "metodologia": [
+    "Modalidad teórico-práctico",
+    "32 clases en 8 meses",
+    "Prácticas intensivas en aulas-taller",
+    "Trabajo con tableros didácticos",
+    "Uso de motores trifásicos y sensores",
+    "Simuladores de PLC",
+    "Armado y mantenimiento de tableros",
+    "Interpretación de planos industriales"
+  ],
+  "requisitos": [
+    "Interés en electricidad industrial",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en automatización industrial",
+    "Disposición para aprender programación",
+    "Responsabilidad en el trabajo con equipos industriales"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Electricista domiciliario con PLC que te permitirá trabajar profesionalmente en el sector de electricidad industrial y automatización",
+  "duracion_detalle": "32 clases distribuidas en 8 meses con modalidad teórico-práctico y enfoque en automatización industrial"
+}

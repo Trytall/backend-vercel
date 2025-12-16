@@ -1,0 +1,6 @@
+# Versión simple para redirección a dist
+RewriteEngine On
+
+# Redirigir todo a la carpeta dist
+RewriteRule ^$ /dist/ [L]
+RewriteRule (.*) /dist/$1 [L] 

@@ -1,0 +1,150 @@
+{
+  "title": "Curso Virtual de Construcción",
+  "slug": "curso-de-construccion",
+  "description": "Formación integral en construcción. Aprendé desde proyectos y planos hasta estructuras, hormigón armado, materiales cerámicos y técnicas de construcción profesionales.",
+  "duracion": "10 Clases Audiovisuales + 11 Manuales de Estudio",
+  "certificacion": "Certificación en Construcción",
+  "modalidad": "100% Online",
+  "objetivo": "Formar profesionales de la construcción con conocimientos integrales en proyectos, estructuras, hormigón armado, materiales y técnicas constructivas modernas.",
+  "caracteristicas_curso": [
+    "10 Clases Audiovisuales",
+    "11 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y aplicable"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 PROYECTOS, PLANOS Y ESTRUCTURAS",
+      "topics": [
+        "Proyectos, orientación de la vivienda, planos",
+        "Nivel del umbral, plano de replanteo, replanteo",
+        "Qué es una estructura, exigencias estructurales",
+        "Elementos resistentes de una estructura",
+        "Estructuras de acero, estructuras de aluminio, estructuras de madera",
+        "Estructuras de muro portante, morteros y hormigones",
+        "Aglutinantes, cemento, cal, amasado de la mezcla",
+        "Techos, partes que componen los techos, hormigón armado"
+      ]
+    },
+    {
+      "title": "🔹 HORMIGÓN Y MATERIALES",
+      "topics": [
+        "Hormigón, características de los materiales del hormigón armado",
+        "Hormigones densos o seco, plásticos, fluidos"
+      ]
+    },
+    {
+      "title": "🔹 PILARES DE HORMIGÓN ARMADO",
+      "topics": [
+        "Pilares de hormigón armado, esbeltez de un pilar",
+        "Encofrado de un pilar de hormigón armado",
+        "Cómo deben ser los encofrados, material utilizados",
+        "Encofrado del pilar, armaduras de hierro de un pilar",
+        "Continuación de un pilar"
+      ]
+    },
+    {
+      "title": "🔹 VIGAS DE HORMIGÓN ARMADO",
+      "topics": [
+        "Vigas de hormigón armado, tipos de vigas",
+        "Tipos de varilla de acero a utilizar, estribos, ganchos",
+        "Formas o sección de las vigas",
+        "Vigas empotradas, vigas continuas, vigas ménsulas o voladas",
+        "Encofrado de vigas"
+      ]
+    },
+    {
+      "title": "🔹 LOSAS DE HORMIGÓN ARMADO",
+      "topics": [
+        "Losas de hormigón armado, tipos de cerramientos horizontales",
+        "Losas apoyadas y losas empotradas",
+        "Criterios básicos para la elección y colocación de las varillas de una losa",
+        "Encofrado de losas, apuntalamientos",
+        "Arriostramiento de los puntales"
+      ]
+    },
+    {
+      "title": "🔹 MATERIALES CERÁMICOS Y MORTEROS",
+      "topics": [
+        "Materiales cerámicos, cómo se fabrican",
+        "Ladrillos, cómo se fabrican, medidas de un ladrillo",
+        "Por qué se utilizan estas medidas, muro de ladrillo",
+        "Morteros, componentes de los morteros, uso de los morteros",
+        "Cómo se denominan los morteros, cómo medir los materiales para elaborar los morteros",
+        "Tipos de morteros para la construcción de un muro",
+        "Revoques, mortero (mezcla) para revoques finos"
+      ]
+    },
+    {
+      "title": "🔹 REVESTIMIENTOS Y CERÁMICOS",
+      "topics": [
+        "Revestimientos, materiales, qué revestimiento utilizar",
+        "Revestimiento cerámico, ladrillos y tejas",
+        "Consideraciones a tener en cuenta, útiles y herramientas necesarias",
+        "Colocación de pisos cerámicos, qué tipo de mezcla se utiliza",
+        "Sistema de colocación, llenado de juntas",
+        "Colocación de cerámico en muros"
+      ]
+    },
+    {
+      "title": "🔹 CIMENTACIÓN Y SUELOS",
+      "topics": [
+        "Importancia de una buena cimentación",
+        "Cómo se pueden estudiar los suelos, ensayos en el terreno",
+        "Uso de barrenos y trépanos, extracción de muestras inalteradas",
+        "Presencia de agua en los suelos, resistencia de las distintas capas del suelo",
+        "Terrenos de rellenos, ancho del cimiento",
+        "Viga de hormigón armado, cimentación con losa de hormigón armado",
+        "Cimentación con pilotes"
+      ]
+    },
+    {
+      "title": "🔹 ESCALERAS Y CONSTRUCCIÓN",
+      "topics": [
+        "Escaleras, partes integrantes de una escalera",
+        "Tipos de escaleras, altura de paso, caja de escalera",
+        "Desarrollo de una escalera, cómo se calcula una escalera",
+        "Ordenanzas, construcción de escaleras de hormigón armado"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender construcción desde cero",
+    "Estudiantes de arquitectura e ingeniería",
+    "Trabajadores de la construcción que quieren especializarse",
+    "Quienes buscan una nueva profesión técnica",
+    "Aficionados a la construcción y el diseño",
+    "Profesionales que quieren actualizar conocimientos",
+    "Personas interesadas en proyectos de construcción"
+  ],
+  "salida_laboral": [
+    "Maestro mayor de obras",
+    "Técnico en construcción",
+    "Supervisor de obras",
+    "Encargado de construcción",
+    "Técnico en estructuras",
+    "Especialista en hormigón armado",
+    "Técnico en materiales de construcción",
+    "Instructor de cursos de construcción"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "10 clases audiovisuales",
+    "11 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y aplicable",
+    "Formación integral en construcción"
+  ],
+  "requisitos": [
+    "Interés en la construcción y la arquitectura",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Construcción que te permitirá trabajar profesionalmente en el sector de la construcción",
+  "duracion_detalle": "10 clases audiovisuales + 11 manuales de estudio con acceso permanente al contenido"
+}

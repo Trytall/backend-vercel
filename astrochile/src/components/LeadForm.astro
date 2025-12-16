@@ -1,0 +1,820 @@
+---
+// Lead form component with course selection - SOLO ONLINE para Chile
+import cursosData from '../data/cursos.js';
+const onlineSlugs = cursosData
+  .filter(c => typeof c.modalidad === 'string' && c.modalidad.toLowerCase().includes('online'))
+  .map(c => c.slug);
+---
+
+<section id="lead-form" class="py-16 lg:py-20 bg-light-bg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Banner promocional -->
+    <div class="mb-16 text-center">
+      <img 
+        src="/images/banner_toori2.jpg" 
+        alt="Banner promocional IADE Chile" 
+        class="w-full max-w-4xl mx-auto rounded-xl shadow-lg"
+        loading="eager"
+      />
+    </div>
+    
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary mb-3 sm:mb-4">
+        ¡Inscríbete ahora y obtén tu certificado!
+      </h2>
+      <p class="text-sm sm:text-base text-gray-600">
+        Completa tus datos y selecciona los cursos online que te interesan
+      </p>
+    </div>
+
+    <!-- Progress Steps -->
+    <div class="mb-6 sm:mb-8">
+      <div class="flex flex-wrap sm:flex-nowrap items-center justify-center gap-2 sm:gap-4 overflow-x-auto no-scrollbar px-1">
+        <!-- Paso 1 -->
+        <div class="flex items-center flex-shrink-0">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">1</div>
+          <span class="ml-2 text-xs sm:text-sm font-medium text-primary whitespace-nowrap">Completa tus datos</span>
+        </div>
+        <div class="hidden sm:block w-8 h-1 bg-gray-300"></div>
+        <!-- Paso 2 -->
+        <div class="flex items-center flex-shrink-0">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">2</div>
+          <span class="ml-2 text-xs sm:text-sm font-medium text-gray-600 whitespace-nowrap">Selecciona cursos</span>
+        </div>
+        <div class="hidden sm:block w-8 h-1 bg-gray-300"></div>
+        <!-- Paso 3 -->
+        <div class="flex items-center flex-shrink-0">
+          <div class="w-7 h-7 sm:w-8 sm:h-8 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm">3</div>
+          <span class="ml-2 text-xs sm:text-sm font-medium text-gray-600 whitespace-nowrap">Inscripción</span>
+        </div>
+      </div>
+    </div>
+
+    <form id="leadForm" class="bg-white rounded-2xl shadow-xl p-5 sm:p-8 border-2 border-red-600">
+      <input type="hidden" id="recaptcha_token" name="recaptcha_token" />
+      <!-- Personal Information -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-8">
+        <div>
+          <label for="nombre" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+            Nombre y Apellido *
+          </label>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            required
+            placeholder="Ej: Juan Pérez"
+            class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+                 <div>
+           <label for="rut" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+             RUT *
+           </label>
+           <input 
+             type="text" 
+             id="rut" 
+             name="rut" 
+             required
+             placeholder="Ej: 12345678-9"
+             class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+           />
+         </div>
+        <div>
+          <label for="email" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+            Correo Electrónico *
+          </label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required
+            placeholder="tu@email.com"
+            class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="telefono" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+            Número de Contacto *
+          </label>
+          <input 
+            type="tel" 
+            id="telefono" 
+            name="telefono" 
+            required
+            placeholder="Ej: 11-1234-5678"
+            class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+        <div>
+          <label for="provincia" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+            Provincia *
+          </label>
+          <select 
+            id="provincia" 
+            name="provincia" 
+            required
+            class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200 appearance-none"
+            style="-webkit-appearance: none; -moz-appearance: none; appearance: none;"
+          >
+            <option value="">Seleccioná tu provincia</option>
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="CABA">Ciudad Autónoma de Buenos Aires</option>
+            <option value="Catamarca">Catamarca</option>
+            <option value="Chaco">Chaco</option>
+            <option value="Chubut">Chubut</option>
+            <option value="Córdoba">Córdoba</option>
+            <option value="Corrientes">Corrientes</option>
+            <option value="Entre Ríos">Entre Ríos</option>
+            <option value="Formosa">Formosa</option>
+            <option value="Jujuy">Jujuy</option>
+            <option value="La Pampa">La Pampa</option>
+            <option value="La Rioja">La Rioja</option>
+            <option value="Mendoza">Mendoza</option>
+            <option value="Misiones">Misiones</option>
+            <option value="Neuquén">Neuquén</option>
+            <option value="Río Negro">Río Negro</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="San Luis">San Luis</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Santa Fe">Santa Fe</option>
+            <option value="Santiago del Estero">Santiago del Estero</option>
+            <option value="Tierra del Fuego">Tierra del Fuego</option>
+            <option value="Tucumán">Tucumán</option>
+          </select>
+        </div>
+        <div>
+          <label for="localidad" class="block text-xs sm:text-sm font-semibold text-gray-700 mb-2">
+            Localidad *
+          </label>
+          <input 
+            type="text" 
+            id="localidad" 
+            name="localidad" 
+            required
+            placeholder="Ej: Morón, Lomas de Zamora, etc."
+            class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors duration-200"
+          />
+        </div>
+      </div>
+
+      <!-- Modality Selection -->
+      <div class="mb-8 p-4 border-2 border-red-200 rounded-lg bg-red-50">
+        <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
+          Modalidad de Estudio *
+        </label>
+        <div class="grid grid-cols-1 gap-4 justify-items-center">
+          <button 
+            type="button" 
+            class="modality-btn selected p-4 border-2 border-primary rounded-lg text-left transition-all duration-200 w-full"
+            data-modalidad="online"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <span class="text-xl sm:text-2xl">💻</span>
+                <div>
+                  <div class="font-semibold text-gray-800 text-sm sm:text-base">Online</div>
+                  <div class="text-xs sm:text-sm text-gray-600">Aprende desde tu casa</div>
+                </div>
+              </div>
+              <div class="text-right">
+                <div class="font-bold text-primary text-sm sm:text-base">$150.000</div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <input type="hidden" id="modalidad" name="modalidad" value="online" />
+      </div>
+
+      <!-- Course Selection -->
+      <div class="mb-8 p-4 border-2 border-red-200 rounded-lg bg-red-50">
+        <label class="block text-xs sm:text-sm font-semibold text-gray-700 mb-3 sm:mb-4">
+          Seleccioná tu curso de interés *
+        </label>
+        <p class="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">
+          Hacé clic en los cursos que te interesan para seleccionarlos
+        </p>
+        
+        <!-- Course Carousel -->
+        <div class="relative mb-4 overflow-hidden sm:overflow-visible">
+          <!-- Flechas de navegación solo en desktop -->
+          <button 
+            type="button" 
+            class="course-nav-btn prev absolute -left-12 top-1/2 -translate-y-1/2 z-10 bg-primary text-white border border-primary rounded-full p-2 shadow-lg hover:shadow-xl transition-all duration-200 hidden sm:inline-flex"
+            aria-label="Cursos anteriores"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          
+          <div class="course-carousel" style="touch-action: pan-y;">
+            <div class="flex transition-transform duration-300 ease-in-out" id="course-slides">
+              <!-- Course slides will be populated by JavaScript -->
+            </div>
+          </div>
+          
+          <button 
+            type="button" 
+            class="course-nav-btn next absolute -right-12 top-1/2 -translate-y-1/2 z-10 bg-primary text-white border border-primary rounded-full p-2 shadow-lg hover-shadow-xl transition-all duration-200 hidden sm:inline-flex"
+            aria-label="Cursos siguientes"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Paginación/Dots e indicación de deslizamiento (solo móvil) -->
+        <div class="sm:hidden flex flex-col items-center gap-2 mb-4">
+          <div id="course-pagination" class="flex items-center justify-center gap-2"></div>
+          <div id="swipe-hint" class="text-[12px] text-gray-500 flex items-center gap-1">
+            <span>Deslizá para ver más</span>
+            <svg class="w-3.5 h-3.5 text-gray-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+
+        <!-- Selected Courses Display -->
+        <div id="selectedCoursesDisplay" class="min-h-[60px] p-4 bg-gray-50 rounded-lg">
+          <p class="text-gray-500 text-center">Aún no seleccionaste ningún curso</p>
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="mb-8">
+        <button 
+          type="button" 
+          id="acepto_terminos_btn" 
+          class="w-full text-left p-4 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+          data-checked="false"
+        >
+          <div class="flex items-start space-x-3">
+            <span class="acepto-icon text-lg sm:text-xl">☐</span>
+            <span class="acepto-text text-xs sm:text-sm">
+              Acepto recibir información sobre cursos y promociones. Puedo cancelar en cualquier momento.
+            </span>
+          </div>
+        </button>
+        <input type="hidden" id="acepto_terminos" name="acepto_terminos" value="false" />
+      </div>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full bg-primary text-white py-3.5 sm:py-4 px-6 sm:px-8 rounded-lg font-bold text-base sm:text-lg hover:bg-primary/90 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 border-2 border-red-600"
+      >
+        <span>¡Quiero inscribirme ahora!</span>
+        <span>📝</span>
+      </button>
+    </form>
+
+
+
+    <!-- Success Message -->
+    <div id="formMessage" class="hidden mt-6 p-4 rounded-lg"></div>
+  </div>
+</section>
+
+<!-- Online slugs serialized for client script -->
+<script type="application/json" id="online-slugs" set:html={JSON.stringify(onlineSlugs)}></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    let ONLINE_SLUGS = new Set();
+    try {
+      const node = document.getElementById('online-slugs');
+      const arr = JSON.parse(node?.textContent || '[]');
+      ONLINE_SLUGS = new Set(Array.isArray(arr) ? arr : []);
+    } catch(_) { ONLINE_SLUGS = new Set(); }
+    const SITE_KEY = '6Ld_Uq8rAAAAAA7J5Mfy817Tn__ybWtIYLeihOqq';
+    const recaptchaScript = document.createElement('script');
+    recaptchaScript.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+    recaptchaScript.async = true;
+    document.head.appendChild(recaptchaScript);
+
+    function getRecaptchaToken(action) {
+      return new Promise((resolve) => {
+        if (!window.grecaptcha) return resolve('');
+        window.grecaptcha.ready(() => {
+          window.grecaptcha.execute(SITE_KEY, { action }).then(resolve).catch(() => resolve(''));
+        });
+      });
+    }
+
+    // Ensure every course has a valid slug or URL
+    const courses = [
+      { title: "CURSO DE REFRIGERACIÓN Y AIRE ACONDICIONADO", image: "/images/curso-refrigeracion-aire.jpg", slug: "curso-de-refrigeracion-y-aire-acondicionado" },
+      { title: "CURSO DE ADMINISTRACIÓN Y GESTIÓN EN SALUD", image: "/images/curso-administracion-salud.jpg", slug: "curso-de-administracion-y-gestion-en-salud" },
+      { title: "CURSO DE AUXILIAR EN CARDIOLOGÍA", image: "/images/curso-auxiliar-cardiologia.jpg", slug: "curso-de-auxiliar-en-cardiologia" },
+      { title: "CURSO DE CUIDADO DEL ADULTO MAYOR", image: "/images/curso-cuidado-adultos-mayores.jpg", slug: "curso-de-cuidado-del-adulto-mayor" },
+      { title: "CURSO DE AUXILIAR DE FARMACIA", image: "/images/curso-auxiliar-farmacia.jpg", slug: "curso-de-auxiliar-de-farmacia" },
+      { title: "ASISTENTE DE ENFERMERÍA", image: "/images/asistente.jpg", slug: "curso-de-asistente-de-enfermeria" },
+      { title: "AUXILIAR DE EMERGENCIAS MÉDICAS SANITARIAS", image: "/images/emergencias.jpg", slug: "curso-de-auxiliar-de-emergencias-medicas-sanitarias" },
+      { title: "EXTRACCIONISTA Y AUXILIAR DE BIOQUÍMICO DE LABORATORIO", image: "/images/extraccionista_laboratorio.jpg", slug: "curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio" },
+      { title: "CURSO DE ELECTRICIDAD Y ELECTRÓNICA AUTOMOTRIZ", image: "/images/curso-electricidad-automotriz.jpg", slug: "curso-de-electricidad-y-electronica-automotriz" },
+      { title: "CURSO DE INSTALACIONES ELÉCTRICAS", image: "/images/curso-electricidad-industrial.jpg", slug: "curso-de-instalaciones-electricas-y-motores-electricos" },
+      { title: "CURSO DE INSTALACIONES SANITARIAS Y DE GAS", image: "/images/curso-instalaciones-sanitarias.jpg", slug: "curso-de-instalaciones-sanitarias-y-de-gas" },
+      { title: "CURSO DE MECÁNICA DE MOTOS – BAJA CILINDRADA", image: "/images/curso-motos-alta-cilindrada.jpg", slug: "curso-de-mecanica-de-motos-baja-cilindrada" },
+      { title: "CURSO DE MECÁNICA DE MOTOS – ALTA CILINDRADA", image: "/images/curso-motos-alta-cilindrada.jpg", slug: "curso-de-motos-de-alto-cilindraje" },
+      { title: "CURSO DE MECÁNICA GENERAL", image: "/images/curso-electricidad-automotriz.jpg", slug: "curso-de-mecanica-general" },
+      { title: "CURSO DE SOLDADURA ELÉCTRICA", image: "/images/curso-soldadura-electrica.jpg", slug: "curso-de-soldadura-electrica" },
+      { title: "CURSO DE CERRAJERÍA", image: "/images/curso-cerrajeria.jpg", slug: "curso-de-cerrajeria" },
+      { title: "CURSO DE BOBINADO Y REPARACIÓN DE MOTORES ELÉCTRICOS", image: "/images/curso-bobinado.jpg", slug: "curso-de-bobinado-y-reparacion-de-motores-electricos" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA", image: "/images/curso-inyeccion-electronica-gnc.jpg", slug: "curso-de-inyeccion-electronica" },
+      { title: "CURSO DE CONSTRUCCIÓN", image: "/images/curso-construccion.jpg", slug: "curso-de-construccion" },
+      { title: "CURSO DE DISEÑO Y CONFECCIÓN DE INDUMENTARIA", image: "/images/curso-diseno-confeccion.jpg", slug: "curso-de-diseno-y-confeccion-de-indumentaria" },
+      { title: "CURSO DE ESTÉTICA Y MASAJE CORPORAL", image: "/images/curso-estetica-masaje.jpg", slug: "curso-de-estetica-y-masaje-corporal" },
+      { title: "CURSO DE MOTORES DIÉSEL", image: "/images/curso-motores-diesel.jpg", slug: "curso-de-motores-diesel" },
+      { title: "CURSO DE ELECTRÓNICA DIGITAL", image: "/images/curso-electronica-digital.jpg", slug: "curso-de-electronica-digital" },
+      { title: "CURSO DE PLAQUETAS ELECTRÓNICAS", image: "/images/curso-plaquetas-electronicas.jpg", slug: "curso-de-plaquetas-electronicas" },
+      { title: "ALARMAS Y CÁMARAS DE SEGURIDAD", image: "/images/camaras.jpg", slug: "curso-de-alarmas-y-camaras-de-seguridad" },
+      { title: "PLASMA RICO EN PLAQUETAS (PRP)", image: "/images/plasmaplaquetas.jpg", slug: "curso-de-plasma-rico-en-plaquetas" },
+      { title: "CURSO DE REPARACIÓN DE CELULARES", image: "/images/curso-celulares.jpg", slug: "curso-de-reparacion-de-celulares" },
+      { title: "CURSO DE REPARACIÓN DE ELECTRODOMÉSTICOS", image: "/images/curso-reparacion-electrodomesticos.jpg", slug: "curso-de-reparacion-de-electrodomesticos" },
+      { title: "CURSO DE COSMETOLOGÍA Y MAQUILLAJE", image: "/images/cosmetologia_y_maquillaje.jpg", slug: "curso-de-cosmetologia-y-maquillaje" },
+      { title: "CURSO DE PELUQUERÍA Y COLORIMETRÍA", image: "/images/peluqueria.jpg", slug: "curso-de-peluqueria-y-colorimetria" },
+      { title: "CURSO DE BARBERÍA", image: "/images/curso-barberia.jpg", slug: "curso-de-barberia" },
+      { title: "CURSO DE UÑAS ACRÍLICAS", image: "/images/acrilicas.jpg", slug: "curso-de-unas-acrilicas" },
+      { title: "CURSO DE MASAJE TERAPÉUTICO ORIENTAL", image: "/images/curso-masaje-oriental.jpg", slug: "curso-de-masaje-terapeutico-oriental" },
+      { title: "CURSO DE FRENOS", image: "/images/curso-frenos.jpg", slug: "curso-de-frenos" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA DIÉSEL", image: "/images/inyeccion_diesel.jpg", slug: "curso-de-inyeccion-electronica-diesel" },
+      { title: "CURSO DE INYECCIÓN ELECTRÓNICA Y GAS VEHICULAR", image: "/images/inyeccion_gnc.jpeg", slug: "curso-de-inyeccion-electronica-y-gas-vehicular" },
+      { title: "CURSO DE DISEÑO DE MODAS", image: "/images/curso-diseno-modas.jpg", slug: "curso-de-diseno-de-modas" },
+      { title: "CURSO DE OFFICE BÁSICO", image: "/images/curso-office.jpg", slug: "curso-de-office-basico" },
+      { title: "CURSO DE INSTALACIÓN DE PANELES SOLARES", image: "/images/curso-instalador-paneles-solares.jpg", slug: "curso-de-instalacion-de-paneles-solares" },
+      { title: "CURSO DE FOTOGRAFÍA Y ESTUDIO DIGITAL", image: "/images/fotografia_digital.jpg", slug: "curso-de-fotografia-y-estudio-digital" },
+      { title: "CURSO DE COMMUNITY MANAGER", image: "/images/curso-community-manager.jpg", slug: "curso-de-community-manager" },
+      { title: "CURSO DE COMERCIO ELECTRÓNICO", image: "/images/curso-comercio-electronico.jpg", slug: "curso-de-comercio-electronico" }
+    ];
+
+    // Sedes y cursos disponibles por sede (mismos slugs que en el catálogo)
+    const avellanedaSlugs = new Set([
+      'curso-de-asistente-de-enfermeria',
+      'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+      'curso-de-auxiliar-de-farmacia',
+      'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio'
+    ]);
+    const moronSlugs = new Set([
+      'curso-de-instalaciones-electricas-y-motores-electricos',
+      'curso-de-refrigeracion-y-aire-acondicionado',
+      'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+      'curso-de-reparacion-de-celulares',
+      'curso-de-alarmas-y-camaras-de-seguridad',
+      'curso-de-auxiliar-de-farmacia',
+      'curso-de-asistente-de-enfermeria',
+      'curso-de-auxiliar-en-cardiologia'
+    ]);
+    const lomasSlugs = new Set([
+      'curso-de-asistente-de-enfermeria',
+      'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio',
+      'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+      'curso-de-auxiliar-de-farmacia',
+      'curso-de-reparacion-de-celulares',
+      'curso-de-instalaciones-electricas-y-motores-electricos',
+      'curso-de-refrigeracion-y-aire-acondicionado',
+      'curso-de-plasma-rico-en-plaquetas',
+      'curso-de-electricidad-y-electronica-industrial'
+    ]);
+
+    // Estado para renderizado del carrusel
+    let visibleCourses = [];
+    let courseSlides;
+
+    function getVisibleCourses() {
+      const modalidad = modalityInput?.value || 'online';
+      if (modalidad !== 'presencial') {
+        // Mostrar únicamente cursos que estén marcados como Online en el catálogo
+        return courses.filter(c => ONLINE_SLUGS.has(c.slug));
+      }
+      const sedeVal = (sedeSelect?.value || '').toLowerCase();
+      if (!sedeVal) return [];
+      let allowedSet = null;
+      if (sedeVal === 'moron') allowedSet = moronSlugs;
+      else if (sedeVal === 'lomas') allowedSet = lomasSlugs;
+      else if (sedeVal === 'avellaneda') allowedSet = avellanedaSlugs;
+      if (!allowedSet) return [];
+      return courses.filter(c => allowedSet.has(c.slug));
+    }
+
+    function rebuildCarousel() {
+      if (!courseSlides) courseSlides = document.getElementById('course-slides');
+      // Reset page and visible
+      currentCoursePage = 0;
+      visibleCourses = getVisibleCourses();
+      // Limpiar seleccionados que ya no están visibles
+      selectedCourses = selectedCourses.filter(sc => visibleCourses.some(vc => vc.slug === sc.slug));
+      updateSelectedCoursesDisplay();
+
+      // Vaciar slides
+      courseSlides.innerHTML = '';
+
+      const totalPages = Math.ceil((visibleCourses.length || 1) / coursesPerPage);
+      for (let i = 0; i < totalPages; i++) {
+        const slide = document.createElement('div');
+        slide.className = 'w-full flex-shrink-0 grid grid-cols-2 md:grid-cols-3 gap-4';
+        if (i > 0) slide.style.display = 'none';
+
+        const startIndex = i * coursesPerPage;
+        const endIndex = Math.min(startIndex + coursesPerPage, visibleCourses.length);
+
+        for (let j = startIndex; j < endIndex; j++) {
+          const course = visibleCourses[j];
+          if (!course) continue;
+          const courseBtn = document.createElement('button');
+          courseBtn.type = 'button';
+          courseBtn.className = 'course-btn relative h-32 rounded-xl overflow-hidden group focus:outline-none focus:ring-2 focus:ring-primary';
+          courseBtn.dataset.course = course.title;
+          const slugTmp = course.slug ?? (course.url ? course.url.split('/').pop() : '');
+          if (slugTmp) courseBtn.dataset.slug = slugTmp;
+          courseBtn.innerHTML = `
+            <img src="${course.image}" alt="${course.title}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy" decoding="async" fetchpriority="low" />
+            <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-center justify-center">
+              <span class="relative z-10 text-white text-sm font-semibold text-center px-2">${course.title}</span>
+            </div>
+          `;
+          courseBtn.onclick = () => toggleCourse({ title: course.title, slug: slugTmp });
+          courseSlides.appendChild(slide);
+          slide.appendChild(courseBtn);
+        }
+      }
+
+      updateCourseButtons();
+      updateCourseNavigation();
+      buildMobilePagination();
+    }
+
+    // Update titleSlugMap to ensure all titles have corresponding slugs
+    const titleSlugMap = Object.fromEntries(courses.map(c => [c.title, c.slug]));
+
+    let selectedCourses = []; // cada elemento: {title, slug}
+    let currentCoursePage = 0;
+    const coursesPerPage = 6;
+
+    // Check for pre-selected course from URL
+    function checkPreSelectedCourse() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const preSelectedCourse = urlParams.get('curso');
+      
+      if (preSelectedCourse) {
+        // Find the course by slug
+        const course = courses.find(c => c.slug === preSelectedCourse);
+        if (course) {
+          // Pre-select the course
+          selectCourse(course.title, course.slug);
+          
+          // Scroll to the form
+          document.getElementById('lead-form').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    }
+
+    // Initialize course carousel
+    function initializeCourseCarousel() {
+      courseSlides = document.getElementById('course-slides');
+      rebuildCarousel();
+
+      // Click handlers para flechas (visible en sm+)
+      const prevBtn = document.querySelector('.course-nav-btn.prev');
+      const nextBtn = document.querySelector('.course-nav-btn.next');
+      prevBtn?.addEventListener('click', () => {
+        if (currentCoursePage > 0) {
+          currentCoursePage--;
+          updateCourseNavigation();
+        }
+      });
+      nextBtn?.addEventListener('click', () => {
+        const totalPages = Math.ceil((visibleCourses.length || 1) / coursesPerPage);
+        if (currentCoursePage < totalPages - 1) {
+          currentCoursePage++;
+          updateCourseNavigation();
+        }
+      });
+
+      enableSwipe();
+    }
+
+    // Course navigation
+    function updateCourseNavigation() {
+      const totalPages = Math.ceil((visibleCourses.length || 1) / coursesPerPage);
+      const prevBtn = document.querySelector('.course-nav-btn.prev');
+      const nextBtn = document.querySelector('.course-nav-btn.next');
+      const slides = document.querySelectorAll('#course-slides > div');
+
+      // Verificar si es sede Avellaneda (solo 4 cursos, caben en una página)
+      const modalidad = modalityInput?.value || 'online';
+      const sedeVal = (sedeSelect?.value || '').toLowerCase();
+      const isAvellaneda = modalidad === 'presencial' && sedeVal === 'avellaneda';
+      
+      if (isAvellaneda) {
+        // Ocultar flechas de navegación para Avellaneda
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+      } else {
+        // Mostrar flechas normalmente para otras sedes
+        if (prevBtn) prevBtn.style.display = 'inline-flex';
+        if (nextBtn) nextBtn.style.display = 'inline-flex';
+        prevBtn.disabled = currentCoursePage === 0;
+        nextBtn.disabled = currentCoursePage === totalPages - 1;
+      }
+
+      slides.forEach((slide, index) => {
+        slide.style.display = index === currentCoursePage ? 'grid' : 'none';
+      });
+      updatePaginationDots();
+    }
+
+
+
+    // Gestos de deslizamiento (móvil)
+    function enableSwipe(){
+      const container = document.querySelector('.course-carousel');
+      if (!container) return;
+      let startX = 0; let deltaX = 0; let touching = false;
+      const threshold = 40;
+      container.addEventListener('touchstart', (e) => {
+        if (!e.touches || e.touches.length !== 1) return;
+        touching = true;
+        startX = e.touches[0].clientX;
+        deltaX = 0;
+      }, { passive: true });
+      container.addEventListener('touchmove', (e) => {
+        if (!touching || !e.touches || e.touches.length !== 1) return;
+        deltaX = e.touches[0].clientX - startX;
+      }, { passive: true });
+      container.addEventListener('touchend', () => {
+        if (!touching) return;
+        touching = false;
+        if (Math.abs(deltaX) > threshold) {
+          const totalPages = Math.ceil((visibleCourses.length || 1) / coursesPerPage);
+          if (deltaX < 0 && currentCoursePage < totalPages - 1) {
+            currentCoursePage++;
+          } else if (deltaX > 0 && currentCoursePage > 0) {
+            currentCoursePage--;
+          }
+          updateCourseNavigation();
+        }
+      });
+    }
+
+    // Dots de paginación (móvil)
+    function buildMobilePagination(){
+      const totalPages = Math.ceil((visibleCourses.length || 1) / coursesPerPage);
+      const container = document.getElementById('course-pagination');
+      const swipeHint = document.getElementById('swipe-hint');
+      
+      if (!container) return;
+      
+      // Verificar si es sede Avellaneda
+      const modalidad = modalityInput?.value || 'online';
+      const sedeVal = (sedeSelect?.value || '').toLowerCase();
+      const isAvellaneda = modalidad === 'presencial' && sedeVal === 'avellaneda';
+      
+      container.innerHTML = '';
+      
+      if (isAvellaneda) {
+        // Ocultar paginación y texto de deslizar para Avellaneda
+        container.style.display = 'none';
+        if (swipeHint) swipeHint.style.display = 'none';
+      } else {
+        // Mostrar paginación normal para otras sedes
+        container.style.display = 'flex';
+        if (swipeHint) swipeHint.style.display = 'flex';
+        
+        for (let i = 0; i < totalPages; i++) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'h-2.5 w-2.5 rounded-full bg-gray-300 transition-all';
+          dot.setAttribute('aria-label', `Ir a página ${i+1}`);
+          dot.addEventListener('click', () => { currentCoursePage = i; updateCourseNavigation(); });
+          container.appendChild(dot);
+        }
+      }
+      
+      updatePaginationDots();
+    }
+
+    function updatePaginationDots(){
+      const container = document.getElementById('course-pagination');
+      if (!container) return;
+      const dots = container.querySelectorAll('button');
+      dots.forEach((d, i) => {
+        if (i === currentCoursePage) {
+          d.classList.remove('bg-gray-300');
+          d.classList.add('bg-primary');
+          d.style.width = '16px';
+        } else {
+          d.classList.remove('bg-primary');
+          d.classList.add('bg-gray-300');
+          d.style.width = '10px';
+        }
+      });
+    }
+
+    // Toggle course selection
+    function selectCourse(title, slug) {
+      // Check if course is already selected
+      const idx = selectedCourses.findIndex(c => c.slug === slug);
+      if (idx === -1) {
+        selectedCourses.push({ title, slug });
+        updateSelectedCoursesDisplay();
+        updateCourseButtons();
+      }
+    }
+
+    function toggleCourse(course) {
+      const idx = selectedCourses.findIndex(c => c.slug === course.slug);
+      if (idx > -1) {
+        selectedCourses.splice(idx, 1);
+      } else {
+        selectedCourses.push(course);
+      }
+      updateSelectedCoursesDisplay();
+      updateCourseButtons();
+    }
+
+    // Update selected courses display
+    function updateSelectedCoursesDisplay() {
+      const display = document.getElementById('selectedCoursesDisplay');
+      if (selectedCourses.length === 0) {
+        // Verificar si es modalidad presencial y no se ha seleccionado sede
+        const modalidad = modalityInput?.value || 'online';
+        const sede = sedeSelect?.value || '';
+        
+        if (modalidad === 'presencial' && !sede) {
+          display.innerHTML = '<p class="text-gray-500 text-center">Aún no seleccionaste una sede</p>';
+        } else {
+          display.innerHTML = '<p class="text-gray-500 text-center">Aún no seleccionaste ningún curso</p>';
+        }
+      } else {
+        const coursesHTML = selectedCourses.map(course => 
+          `<span class="inline-block bg-primary text-white px-3 py-1 rounded-full text-sm mr-2 mb-2">${course.title}</span>`
+        ).join('');
+        display.innerHTML = coursesHTML;
+      }
+    }
+
+    // Update course buttons appearance
+    function updateCourseButtons() {
+      const courseBtns = document.querySelectorAll('.course-btn');
+      courseBtns.forEach(btn => {
+        const course = btn.dataset.course || btn.textContent;
+        if (selectedCourses.some(c => c.title === course)) {
+          btn.classList.add('ring-4','ring-primary');
+        } else {
+          btn.classList.remove('ring-4','ring-primary');
+        }
+      });
+    }
+
+    // Modality selection
+    const modalityBtns = document.querySelectorAll('.modality-btn');
+    const modalityInput = document.getElementById('modalidad');
+    const sedeWrapper = document.getElementById('sedeWrapper');
+    const sedeSelect = document.getElementById('sede');
+
+    modalityBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        modalityBtns.forEach(b => {
+          b.classList.remove('selected', 'border-primary');
+          b.classList.add('border-gray-300');
+        });
+        this.classList.add('selected', 'border-primary');
+        this.classList.remove('border-gray-300');
+        modalityInput.value = this.getAttribute('data-modalidad');
+
+        if (modalityInput.value === 'presencial') {
+          sedeWrapper.classList.remove('hidden');
+        } else {
+          sedeWrapper.classList.add('hidden');
+          if (sedeSelect) sedeSelect.value = '';
+        }
+        rebuildCarousel();
+        updateSelectedCoursesDisplay();
+      });
+    });
+
+    // Cambiar cursos al seleccionar sede
+    sedeSelect?.addEventListener('change', function(){ 
+      rebuildCarousel(); 
+      updateSelectedCoursesDisplay(); 
+    });
+
+    // Detectar preselección por URL (?modalidad=presencial&sede=moron)
+    (function applyPreselectionFromURL(){
+      const urlParams = new URLSearchParams(window.location.search);
+      const modalidadQS = (urlParams.get('modalidad') || '').toLowerCase();
+      const sedeQS = (urlParams.get('sede') || '').toLowerCase();
+      if (modalidadQS === 'presencial') {
+        modalityBtns.forEach(b => { if (b.getAttribute('data-modalidad')==='presencial') b.click(); });
+        if (sedeQS && sedeSelect) sedeSelect.value = sedeQS;
+      }
+      rebuildCarousel();
+    })();
+
+    // Terms and conditions
+    const aceptoBtn = document.getElementById('acepto_terminos_btn');
+    const aceptoInput = document.getElementById('acepto_terminos');
+
+    aceptoBtn.addEventListener('click', function() {
+      const isChecked = this.getAttribute('data-checked') === 'true';
+      const newState = !isChecked;
+      
+      this.setAttribute('data-checked', newState.toString());
+      aceptoInput.value = newState.toString();
+      
+      const icon = this.querySelector('.acepto-icon');
+      icon.textContent = newState ? '☑' : '☐';
+    });
+
+    // Form submission
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      if (selectedCourses.length === 0) {
+        alert('Debes seleccionar al menos un curso.');
+        return;
+      }
+
+      // Obtener token de reCAPTCHA para enviar a la API o páginas de inscripción
+      try {
+        const token = await getRecaptchaToken('lead_form_submit');
+        const tokenField = document.getElementById('recaptcha_token');
+        if (tokenField) tokenField.value = token || '';
+      } catch(_) {}
+
+             const formData = new FormData(this);
+       const nombre    = formData.get('nombre');
+       const rut       = formData.get('rut');
+       const email     = formData.get('email');
+      const telefono  = formData.get('telefono');
+      const provincia = formData.get('provincia');
+      const localidad = formData.get('localidad');
+      const modalidad = formData.get('modalidad');
+      const sede = (formData.get('sede') || '').toString();
+
+             if (!nombre || !rut || !email || !telefono || !provincia || !localidad) {
+         alert('Completa todos los datos obligatorios.');
+         return;
+       }
+
+      if (modalidad === 'presencial') {
+        if (!sede) { alert('Elegí la sede para cursos presenciales.'); return; }
+      }
+
+      // Obtener slug del primer curso seleccionado
+      const firstCourse = selectedCourses[0];
+      let slug = firstCourse.slug;
+      if (!slug) {
+        slug = titleSlugMap[firstCourse.title] ?? '';
+      }
+
+      if (slug) {
+        // Construir query-string con todos los datos
+        const cursosSeleccionados = selectedCourses.map(c => c.title).join(', ');
+                 const qs = new URLSearchParams({
+           nombre: nombre,
+           rut: rut,
+           email: email,
+           telefono: telefono,
+           provincia: provincia,
+           localidad: localidad,
+           modalidad: modalidad,
+           sede: sede,
+           cursos: cursosSeleccionados
+         }).toString();
+
+        // Redirigir según modalidad
+        if (modalidad === 'presencial' && sede) {
+          window.location.href = `/inscripcion/presencial/${sede}/${slug}?${qs}`;
+        } else {
+          window.location.href = `/inscripcion/${slug}?${qs}`;
+        }
+      } else {
+        alert('No se pudo determinar el curso seleccionado.');
+      }
+    });
+
+    // Initialize
+    initializeCourseCarousel();
+    updateCourseNavigation();
+    checkPreSelectedCourse();
+  });
+</script>
+
+<style>
+  /* Ocultar etiqueta de reCAPTCHA */
+  .grecaptcha-badge {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Alternativa: ocultar completamente */
+  .grecaptcha-badge {
+    display: none !important;
+  }
+</style> 

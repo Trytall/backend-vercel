@@ -1,0 +1,238 @@
+{
+  "title": "Curso Virtual de Cuidado de Adultos Mayores",
+  "slug": "curso-de-cuidado-del-adulto-mayor",
+  "description": "Formación integral en cuidado de adultos mayores con enfoque en atención geriátrica y cuidados domiciliarios. 6 clases audiovisuales + 5 manuales de estudio. Modalidad: Online.",
+  "duracion": "6 clases audiovisuales + 5 manuales de estudio",
+  "certificacion": "Cuidador de Adultos Mayores",
+  "modalidad": "Online",
+  "campus": "Online",
+  "objetivo": "Proporcionar formación integral en el cuidado de adultos mayores, incluyendo aspectos físicos, emocionales y sociales, para preparar cuidadores profesionales y familiares.",
+  "caracteristicas_curso": [
+    "6 clases audiovisuales",
+    "5 manuales de estudio",
+    "Modalidad online",
+    "Formación integral en geriatría",
+    "Enfoque en cuidados domiciliarios",
+    "Atención personalizada",
+    "Material multimedia",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "MÓDULO 1: UNIDAD 1",
+      "topics": [
+        "Consejos para el cuidado del adulto mayor",
+        "Alimentación saludable para el adulto mayor",
+        "Beneficios del ejercicio y la actividad sana",
+        "Las vacunas - inmunización",
+        "Consejos para dormir bien",
+        "La sexualidad",
+        "El cuidado de la piel",
+        "El cuidado de los pies",
+        "La audición",
+        "La visión",
+        "La salud bucal",
+        "La memoria",
+        "Consejos útiles para prevenir caídas",
+        "La hipertensión arterial",
+        "La diabetes",
+        "Los problemas de colesterol",
+        "Los medicamentos y su uso responsable",
+        "La prevención del abuso",
+        "Los cuidados de larga duración"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: UNIDAD 1",
+      "topics": [
+        "Qué debemos saber sobre el envejecimiento y discapacidad",
+        "Principales aspectos en el cuidado de las personas dependientes",
+        "El mantenimiento de la higiene",
+        "La garantía de la buena iluminación"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: UNIDAD 1",
+      "topics": [
+        "Cómo enfrentar los problemas especiales",
+        "Evitando trastornos del sueño",
+        "Cómo prevenir las caídas",
+        "El manejo de la incontinencia urinaria",
+        "Qué hacer ante una persona dependiente deprimida",
+        "Cuando la memoria falla",
+        "Cómo debe cuidarse el cuidador"
+      ]
+    },
+    {
+      "title": "MÓDULO 4: UNIDAD 1",
+      "topics": [
+        "Valoración geriátrica integral",
+        "Plan de atención al adulto mayor",
+        "Infraestructura y seguridad"
+      ]
+    },
+    {
+      "title": "MÓDULO 5: UNIDAD 1",
+      "topics": [
+        "Revisión de signos vitales parte 1",
+        "Revisión de signos vitales parte 2",
+        "Suministro de medicamentos"
+      ]
+    },
+    {
+      "title": "MÓDULO 6: UNIDAD 1",
+      "topics": [
+        "Curaciones",
+        "Alimentación asistida y alimentación autónoma",
+        "Qué hacer ante una lesión de fractura",
+        "Integración de contenidos teórico-prácticos"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Fundamentos del cuidado del adulto mayor",
+    "Consejos para el cuidado integral",
+    "Alimentación saludable y nutrición",
+    "Ejercicio y actividad física",
+    "Vacunación e inmunización",
+    "Salud del sueño y descanso",
+    "Salud sexual en la vejez",
+    "Cuidado de la piel y los pies",
+    "Salud sensorial: audición, visión, bucal",
+    "Memoria y estimulación cognitiva",
+    "Prevención de caídas y accidentes",
+    "Manejo de enfermedades crónicas",
+    "Medicamentos y uso responsable",
+    "Prevención del abuso y maltrato",
+    "Cuidados de larga duración",
+    "Envejecimiento y discapacidad",
+    "Cuidado de personas dependientes",
+    "Higiene y mantenimiento",
+    "Problemas especiales del envejecimiento",
+    "Trastornos del sueño",
+    "Incontinencia urinaria",
+    "Depresión en adultos mayores",
+    "Deterioro cognitivo",
+    "Cuidado del cuidador",
+    "Valoración geriátrica integral",
+    "Planificación de cuidados",
+    "Infraestructura y seguridad",
+    "Signos vitales y monitoreo",
+    "Suministro de medicamentos",
+    "Procedimientos prácticos",
+    "Curaciones y primeros auxilios",
+    "Alimentación asistida",
+    "Manejo de fracturas",
+    "Integración teórico-práctica"
+  ],
+  "tecnicas_cuidado": [
+    "Valoración geriátrica",
+    "Planificación de cuidados",
+    "Monitoreo de signos vitales",
+    "Suministro de medicamentos",
+    "Curaciones básicas",
+    "Alimentación asistida",
+    "Prevención de caídas",
+    "Manejo de incontinencia"
+  ],
+  "areas_geriatria": [
+    "Cuidados físicos",
+    "Cuidados emocionales",
+    "Cuidados sociales",
+    "Cuidados nutricionales",
+    "Cuidados de la movilidad",
+    "Cuidados cognitivos",
+    "Cuidados preventivos",
+    "Cuidados paliativos"
+  ],
+  "prevencion_salud": [
+    "Prevención de caídas",
+    "Prevención de infecciones",
+    "Prevención de úlceras",
+    "Prevención de deshidratación",
+    "Prevención de malnutrición",
+    "Prevención de accidentes",
+    "Prevención del abuso",
+    "Prevención de deterioro cognitivo"
+  ],
+  "equipos_apoyo": [
+    "Equipos de movilidad",
+    "Equipos de alimentación",
+    "Equipos de higiene",
+    "Equipos de monitoreo",
+    "Equipos de seguridad",
+    "Equipos de confort",
+    "Equipos de comunicación",
+    "Equipos de emergencia"
+  ],
+  "protocolos_cuidado": [
+    "Protocolos de higiene",
+    "Protocolos de alimentación",
+    "Protocolos de medicación",
+    "Protocolos de movilidad",
+    "Protocolos de emergencia",
+    "Protocolos de prevención",
+    "Protocolos de documentación",
+    "Protocolos de comunicación"
+  ],
+  "practicas_curso": [
+    "Valoración geriátrica",
+    "Monitoreo de signos vitales",
+    "Suministro de medicamentos",
+    "Curaciones básicas",
+    "Alimentación asistida",
+    "Prevención de caídas",
+    "Manejo de emergencias",
+    "Documentación de cuidados"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Proyectos prácticos",
+    "Análisis de casos",
+    "Evaluación final integradora",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas interesadas en el cuidado de adultos mayores",
+    "Familiares de adultos mayores",
+    "Quienes buscan trabajar en geriatría",
+    "Personal de instituciones geriátricas",
+    "Quienes quieren especializarse en cuidados",
+    "Personas que buscan reconversión laboral",
+    "Trabajadores del sector salud",
+    "Quienes quieren emprender en servicios geriátricos"
+  ],
+  "salida_laboral": [
+    "Cuidador/a de adultos mayores",
+    "Auxiliar de geriatría",
+    "Personal de instituciones geriátricas",
+    "Cuidador/a domiciliario",
+    "Acompañante terapéutico",
+    "Técnico en cuidados geriátricos",
+    "Supervisor/a de cuidados",
+    "Emprendedor/a en servicios geriátricos",
+    "Personal de centros de día",
+    "Cuidador/a independiente"
+  ],
+  "metodologia": [
+    "Modalidad online",
+    "6 clases audiovisuales",
+    "5 manuales de estudio",
+    "Material multimedia",
+    "Casos prácticos",
+    "Proyectos integradores",
+    "Evaluación continua",
+    "Aprendizaje autogestionado"
+  ],
+  "requisitos": [
+    "Interés en el cuidado de adultos mayores",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet",
+    "Interés en geriatría",
+    "Disposición para aprender cuidados",
+    "Responsabilidad en el aprendizaje"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Cuidador de Adultos Mayores que te permitirá trabajar profesionalmente en el sector de cuidados geriátricos",
+  "duracion_detalle": "6 clases audiovisuales + 5 manuales de estudio con modalidad online y acceso permanente al contenido"
+}

@@ -1,0 +1,311 @@
+{
+  "title": "Curso Virtual de Electricidad y Electrónica Industrial",
+  "slug": "curso-de-electricidad-y-electronica-industrial",
+  "description": "Formación integral en electricidad y electrónica industrial. Aprendé desde semiconductores hasta PLC, automatismos y motores eléctricos con 18 clases audiovisuales y 16 manuales de estudio.",
+  "duracion": "18 Clases Audiovisuales + 16 Manuales de Estudio",
+  "certificacion": "Certificación en Electricidad y Electrónica Industrial",
+  "modalidad": "100% Online",
+  "objetivo": "Formar técnicos especializados en electricidad y electrónica industrial con conocimientos completos en semiconductores, PLC, automatismos, motores eléctricos y sistemas de control industrial.",
+  "caracteristicas_curso": [
+    "18 Clases Audiovisuales",
+    "16 Manuales de Estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Formación práctica y teórica",
+    "Conocimientos profesionales de electricidad industrial"
+  ],
+  "modulos": [
+    {
+      "title": "🔹 SEMICONDUCTORES, DIODO, TRANSISTOR Y AMPLIFICACIÓN",
+      "topics": [
+        "Práctica herramientas instrumentos de medición tester osciloscopio",
+        "Símbolos transformadores componentes electrónicos soldadura",
+        "Circuitos impresos"
+      ]
+    },
+    {
+      "title": "🔹 SISTEMA DE POLARIZACIÓN Y AMPLIFICADORES",
+      "topics": [
+        "Práctica disipadores térmicos"
+      ]
+    },
+    {
+      "title": "🔹 PARLANTES, MICRÓFONOS Y CIRCUITOS CON TRANSISTORES",
+      "topics": [
+        "Práctico instrumentos de medición identificación de componentes",
+        "Plaquetas experimentales"
+      ]
+    },
+    {
+      "title": "🔹 LECTORES MAGNÉTICO ÓPTICOS Y CIRCUITOS INTEGRADOS",
+      "topics": [
+        "Amplificador diferencial mediciones",
+        "Comprobación de componentes"
+      ]
+    },
+    {
+      "title": "🔹 FUENTES DE ALIMENTACIÓN, RECTIFICADORES Y FILTROS",
+      "topics": [
+        "Reguladores de voltaje",
+        "Práctica Amplificador de audio sistemas de parlantes",
+        "Circuitos integrados CMOS"
+      ]
+    },
+    {
+      "title": "🔹 OSCILADORES Y GENERADORES ANALÓGICOS DIGITALES",
+      "topics": [
+        "Flip flop",
+        "Práctica Armado fuente de poder",
+        "Revisión con multímetro osciloscopio"
+      ]
+    },
+    {
+      "title": "🔹 DISPOSITIVOS DE DISPARO SCR Y TIRISTOR",
+      "topics": [
+        "Triac diodo túnel diodo láser",
+        "Práctica Centrales de alarma instalación"
+      ]
+    },
+    {
+      "title": "🔹 LUMINOTECNIA Y DISPOSITIVOS ÓPTICOS",
+      "topics": [
+        "LDR Dispositivos ópticos fotomagnéticos",
+        "Relé de estado sólido regulador de luz dimmer",
+        "Práctica Circuitos luces rítmicas micrófono electret"
+      ]
+    },
+    {
+      "title": "🔹 SENSORES DE TEMPERATURA Y DISPOSITIVOS SENSIBLES",
+      "topics": [
+        "Pirómetro",
+        "Dispositivos sensibles a las fuerzas",
+        "Relay varistores termistor NTC PTC",
+        "VDR control de disparos controles de encendido y apagados",
+        "Práctica Semiconductores ópticos Acoplamientos",
+        "Aplicaciones prácticas Alarmas ultrasónicas"
+      ]
+    },
+    {
+      "title": "🔹 TÉCNICAS DIGITALES Y CONVERSIONES BINARIAS",
+      "topics": [
+        "Digital compuertas lógicas circuitos integrados digitales",
+        "Códigos decodificadores numéricos familias MOS",
+        "Práctica Fuentes de poder experimentos con circuitos digitales"
+      ]
+    },
+    {
+      "title": "🔹 FLIP FLOP, MICROCOMPUTADOR Y BUS CONTROL",
+      "topics": [
+        "Computacional",
+        "Práctica Multivibrador circuito contador"
+      ]
+    },
+    {
+      "title": "🔹 PLC CONTROLES LÓGICOS PROGRAMABLES",
+      "topics": [
+        "Sistemas automáticos programados estructura temporizadores",
+        "Entradas analógicas",
+        "Práctica Ficha práctica de autómatas programables",
+        "Sistemas y lenguaje de programación aplicaciones prácticas",
+        "Inversores de marcha para motor monofásico portón de corredera",
+        "Programas edición de textos",
+        "Electricidad industrial"
+      ]
+    },
+    {
+      "title": "🔹 INSTALACIONES DE FUERZA MOTRIZ",
+      "topics": [
+        "Monofásica trifásica"
+      ]
+    },
+    {
+      "title": "🔹 AUTOMATISMOS CON CONTACTORES",
+      "topics": [
+        "Protección térmica señalizaciones luminosas",
+        "Marcha permanente marcha intermitente",
+        "Arranque estrella triángulo"
+      ]
+    },
+    {
+      "title": "🔹 LÁMPARAS DE DESCARGA Y MEZCLADORES",
+      "topics": [
+        "Fluorescentes"
+      ]
+    },
+    {
+      "title": "🔹 MOTORES ELÉCTRICOS",
+      "topics": [
+        "Tipos y características de motores eléctricos"
+      ]
+    },
+    {
+      "title": "🔹 ARRANQUE DE MOTOR TRIFÁSICO",
+      "topics": [
+        "Con arrancador suave",
+        "Fichas técnicas de arrancadores"
+      ]
+    },
+    {
+      "title": "🔹 VARIADORES DE VELOCIDAD",
+      "topics": [
+        "Variador de frecuencia",
+        "Manual de Instalaciones operaciones y mantenimiento"
+      ]
+    }
+  ],
+  "videos_practicos": [
+    {
+      "title": "VIDEO 1: HERRAMIENTAS Y MATERIALES",
+      "topics": [
+        "Soldadura",
+        "Armado de plaquetas"
+      ]
+    },
+    {
+      "title": "VIDEO 2: CONFECCIÓN Y ARMADO DE UN GENERADOR",
+      "topics": [
+        "Construcción completa de un generador"
+      ]
+    },
+    {
+      "title": "VIDEO 3: CONEXIONES EXTERNAS",
+      "topics": [
+        "Comprobación con osciloscopio"
+      ]
+    },
+    {
+      "title": "VIDEO 4: MULTÍMETRO O TESTER",
+      "topics": [
+        "Funcionamiento y aplicaciones",
+        "Protoboard"
+      ]
+    },
+    {
+      "title": "VIDEO 5: IDENTIFICACIÓN DE RESISTENCIAS",
+      "topics": [
+        "Código de colores",
+        "Serie paralelo mediciones"
+      ]
+    },
+    {
+      "title": "VIDEO 6: SEMICONDUCTORES",
+      "topics": [
+        "Comprobación con tester"
+      ]
+    },
+    {
+      "title": "VIDEO 7: COMPROBACIONES CON TESTER",
+      "topics": [
+        "Circuitos con semiconductores"
+      ]
+    },
+    {
+      "title": "VIDEO 8: AMPLIFICADOR DE AUDIO",
+      "topics": [
+        "Armado comprobación"
+      ]
+    },
+    {
+      "title": "VIDEO 9: FUENTES DE ALIMENTACIÓN",
+      "topics": [
+        "Funcionamiento",
+        "Comprobación con osciloscopio"
+      ]
+    },
+    {
+      "title": "VIDEO 10: CENTRALES DE ALARMA",
+      "topics": [
+        "Instalación y funcionamiento"
+      ]
+    },
+    {
+      "title": "VIDEO 11: DISPOSITIVOS DE DISPARO",
+      "topics": [
+        "Dimmers Optoelectrónica"
+      ]
+    },
+    {
+      "title": "VIDEO 12: DISPOSITIVOS FOTOELÉCTRICOS",
+      "topics": [
+        "Sensores y aplicaciones"
+      ]
+    },
+    {
+      "title": "VIDEO 13: ELECTRÓNICA DIGITAL",
+      "topics": [
+        "Comprobación de compuertas lógicas",
+        "Punta de prueba lógica"
+      ]
+    },
+    {
+      "title": "VIDEO 14: ANÁLISIS DE CIRCUITOS CONTADORES",
+      "topics": [
+        "Funcionamiento y mediciones"
+      ]
+    },
+    {
+      "title": "VIDEO 15: PLC PROGRAMAS Y APLICACIONES",
+      "topics": [
+        "Controladores lógicos programables"
+      ]
+    },
+    {
+      "title": "VIDEO 16: INSTALACIONES ELÉCTRICAS - CONTROL FOTOELÉCTRICO",
+      "topics": [
+        "Armado de un contactor"
+      ]
+    },
+    {
+      "title": "VIDEO 17: INSTALACIONES ELÉCTRICAS - COMPROBACIÓN DE CONTACTOR",
+      "topics": [
+        "Para motores",
+        "Interpretaciones de diagramas"
+      ]
+    },
+    {
+      "title": "VIDEO 18: INSTALACIONES ELÉCTRICAS - MOTOR TRIFÁSICO",
+      "topics": [
+        "Instalación de motor trifásico"
+      ]
+    }
+  ],
+  "ideal_para": [
+    "Personas que quieren aprender electricidad industrial desde cero",
+    "Estudiantes de electricidad y electrónica",
+    "Técnicos que quieren especializarse en automatización",
+    "Quienes buscan una nueva profesión técnica",
+    "Trabajadores de mantenimiento industrial",
+    "Emprendedores en el sector eléctrico",
+    "Personas interesadas en PLC y automatización"
+  ],
+  "salida_laboral": [
+    "Técnico en electricidad industrial",
+    "Especialista en PLC y automatización",
+    "Técnico en mantenimiento eléctrico",
+    "Instalador de sistemas eléctricos industriales",
+    "Especialista en motores eléctricos",
+    "Técnico en sistemas de control",
+    "Emprendedor en servicios eléctricos",
+    "Instructor de cursos de electricidad"
+  ],
+  "metodologia": [
+    "Formación 100% online",
+    "18 clases audiovisuales",
+    "16 manuales de estudio",
+    "Acceso permanente al contenido",
+    "Estudiás a tu ritmo",
+    "Sin fecha límite",
+    "Contenido práctico y teórico",
+    "Formación integral en electricidad industrial"
+  ],
+  "requisitos": [
+    "Interés en la electricidad y electrónica industrial",
+    "Disposición para el estudio online",
+    "No se requieren conocimientos previos",
+    "Acceso a internet y dispositivo",
+    "Interés en automatización y control industrial"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás una certificación en Electricidad y Electrónica Industrial que te permitirá trabajar profesionalmente en el sector industrial",
+  "duracion_detalle": "18 clases audiovisuales + 16 manuales de estudio con acceso permanente al contenido"
+}

@@ -1,0 +1,242 @@
+{
+  "title": "AUXILIAR DE EMERGENCIAS MÉDICAS",
+  "slug": "curso-de-auxiliar-de-emergencias-medicas-lomas",
+  "description": "Formación integral en emergencias médicas con enfoque en sistema de emergencias, gestión y capital humano. Aprende RCP, manejo de vías aéreas y atención de emergencias cardiovasculares. 24 clases en 6 meses.",
+  "duracion": "6 meses - 24 clases semanales de 2 horas",
+  "certificacion": "Auxiliar de emergencias médicas",
+  "modalidad": "Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Este curso ofrece formación profesional sobre el sistema de emergencias médicas, sus conceptos y componentes; la gestión de emergencias y la función del auxiliar para actuar eficientemente ante diversos tipos de emergencias.",
+  "caracteristicas_curso": [
+    "6 meses de duración",
+    "24 clases en total",
+    "Una clase semanal de 2 horas",
+    "Modalidad presencial",
+    "Formación integral en emergencias",
+    "Enfoque en sistema de emergencias",
+    "Gestión y capital humano",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "🚨 MÓDULO 1: SISTEMA DE EMERGENCIAS",
+      "topics": [
+        "Conceptos de sistema de emergencias",
+        "Gestión y capital humano",
+        "Qué es el sistema de emergencias médicas",
+        "Conceptos y componentes",
+        "Gestión de emergencias",
+        "Sistema de gestión integrada de capital humano"
+      ]
+    },
+    {
+      "title": "⚕️ MÓDULO 2: FUNCIÓN DEL PARAMÉDICO",
+      "topics": [
+        "Función del paramédico",
+        "Procedimientos básicos",
+        "Primeros auxilios",
+        "Signos vitales",
+        "Secuencia de acción",
+        "Activar el servicio de emergencias o urgencias"
+      ]
+    },
+    {
+      "title": "❤️ MÓDULO 3: RCP Y DESFIBRILACIÓN",
+      "topics": [
+        "Resucitación cardiopulmonar básica",
+        "Desfibrilación semiautomática externa",
+        "Reanimación cardiopulmonar (RCP)",
+        "Reanimación cardiorrespiratoria (RCR)",
+        "Soporte vital básico",
+        "Compresiones cardíacas",
+        "Ventilación artificial",
+        "Proceso de desfibrilación",
+        "Tipos de aparatos"
+      ]
+    },
+    {
+      "title": "🫁 MÓDULO 4: MANEJO DE VÍAS AÉREAS",
+      "topics": [
+        "Manejo de la vía aérea",
+        "Anatomía de la vía aérea",
+        "Obstrucción de la vía aérea",
+        "Técnicas básicas para el manejo de la vía aérea",
+        "Técnicas avanzadas para el manejo de la vía aérea",
+        "Oxigenación y ventilación"
+      ]
+    },
+    {
+      "title": "💓 MÓDULO 5: EMERGENCIAS CARDIOVASCULARES",
+      "topics": [
+        "Las emergencias cardiovasculares",
+        "Introducción al soporte vital avanzado",
+        "Enfermedades cardiovasculares: concepto y clasificación",
+        "Tratamiento de las enfermedades cardiovasculares",
+        "Principales factores de riesgo",
+        "Soporte vital"
+      ]
+    },
+    {
+      "title": "🦴 MÓDULO 6: TRAUMA",
+      "topics": [
+        "La víctima del trauma",
+        "Traumatismos",
+        "Traumas a nivel óseo, articular y muscular",
+        "Tipos de fractura",
+        "Primeros auxilios ante una fractura",
+        "Trauma craneoencefálico",
+        "Clasificación del trauma craneoencefálico",
+        "Trauma en la columna vertebral y médula espinal",
+        "Traumatismo abdominal"
+      ]
+    },
+    {
+      "title": "🚑 MÓDULO 7: VÍCTIMAS MÚLTIPLES",
+      "topics": [
+        "Víctimas múltiples",
+        "Demanda masiva y atención de múltiples víctimas",
+        "Método triage principios",
+        "Triage de urgencias y emergencias",
+        "Método rápido de clasificación en catástrofe"
+      ]
+    },
+    {
+      "title": "🏥 MÓDULO 8: EMERGENCIAS MÉDICO-QUIRÚRGICAS",
+      "topics": [
+        "Emergencias médico-quirúrgicas: descripción y tratamiento",
+        "Emergencias metabólicas",
+        "Hipotensión y shock",
+        "Tóxicos",
+        "Asma",
+        "Hipotermia e hipertermia",
+        "Quemaduras"
+      ]
+    },
+    {
+      "title": "👥 MÓDULO 9: ATENCIÓN AL CLIENTE-PACIENTE",
+      "topics": [
+        "Aspectos sobre la atención al cliente-paciente",
+        "Servicio al cliente-paciente",
+        "Ciclo del servicio",
+        "Calidad del servicio de atención",
+        "Fidelización"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Sistema de emergencias médicas",
+    "Gestión y capital humano",
+    "Función del paramédico",
+    "RCP y desfibrilación",
+    "Manejo de vías aéreas",
+    "Emergencias cardiovasculares",
+    "Trauma y traumatismos",
+    "Víctimas múltiples y catástrofes",
+    "Emergencias médico-quirúrgicas",
+    "Atención al cliente-paciente"
+  ],
+  "tecnicas_emergencia": [
+    "RCP básico y avanzado",
+    "Desfibrilación semiautomática",
+    "Manejo de vías aéreas",
+    "Soporte vital básico",
+    "Triage de emergencias",
+    "Manejo de traumatismos",
+    "Atención a múltiples víctimas",
+    "Protocolos de emergencia"
+  ],
+  "equipos_emergencia": [
+    "Desfibriladores semiautomáticos",
+    "Equipos de RCP",
+    "Material de inmovilización",
+    "Equipos de oxigenación",
+    "Material de primeros auxilios",
+    "Equipos de triage",
+    "Material de trauma",
+    "Equipos de comunicación"
+  ],
+  "protocolos_emergencia": [
+    "Protocolos de RCP",
+    "Protocolos de desfibrilación",
+    "Protocolos de manejo de vías aéreas",
+    "Protocolos de trauma",
+    "Protocolos de triage",
+    "Protocolos de catástrofes",
+    "Protocolos de atención al cliente",
+    "Protocolos de soporte vital"
+  ],
+  "situaciones_emergencia": [
+    "Emergencias cardiovasculares",
+    "Emergencias respiratorias",
+    "Traumatismos y fracturas",
+    "Emergencias metabólicas",
+    "Shock y hipotensión",
+    "Quemaduras",
+    "Emergencias por tóxicos",
+    "Emergencias en catástrofes"
+  ],
+  "practicas_curso": [
+    "Simulación de RCP",
+    "Práctica de desfibrilación",
+    "Manejo de vías aéreas",
+    "Técnicas de inmovilización",
+    "Protocolos de triage",
+    "Simulación de catástrofes",
+    "Atención a múltiples víctimas",
+    "Protocolos de emergencia"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Examen final",
+    "Evaluación continua del aprendizaje",
+    "Prácticas de emergencias",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas interesadas en emergencias médicas",
+    "Quienes buscan trabajar en ambulancias",
+    "Personal de seguridad y bomberos",
+    "Trabajadores del sector salud",
+    "Quienes quieren especializarse en emergencias",
+    "Personas que buscan reconversión laboral",
+    "Personal de instituciones de salud",
+    "Quienes quieren emprender en servicios de emergencia"
+  ],
+  "salida_laboral": [
+    "Ambulancieros privados",
+    "Ambulancieros públicos",
+    "Bomberos",
+    "Unidades de traslados",
+    "Hospitales",
+    "Clínicas",
+    "Sanatorios",
+    "Instituciones de salud",
+    "Empresas de seguridad",
+    "Servicios de emergencia",
+    "Cualquier institución que recepcione emergencias"
+  ],
+  "metodologia": [
+    "Modalidad presencial",
+    "24 clases en 6 meses",
+    "Una clase semanal de 2 horas",
+    "Aprendizaje teórico/práctico",
+    "Trabajos prácticos complementarios",
+    "2 exámenes parciales",
+    "Examen final",
+    "Formación integral y práctica"
+  ],
+  "requisitos": [
+    "Interés en emergencias médicas",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en el trabajo de emergencias",
+    "Disposición para aprender técnicas médicas",
+    "Responsabilidad en situaciones críticas"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Auxiliar de Emergencias Médicas que te permitirá trabajar profesionalmente en el sector de emergencias y salud",
+  "duracion_detalle": "6 meses con 24 clases semanales de 2 horas cada una en modalidad presencial"
+}
+
+

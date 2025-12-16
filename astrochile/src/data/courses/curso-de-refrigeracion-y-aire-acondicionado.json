@@ -1,0 +1,81 @@
+{
+  "title": "CURSO DE REFRIGERACIÓN Y AIRE ACONDICIONADO - Morón",
+  "slug": "curso-de-refrigeracion-y-aire-acondicionado",
+  "description": "Formación integral para trabajar en refrigeración y aire acondicionado en equipos familiares, comerciales e industriales. Incluye herramientas, principios de refrigeración, refrigerantes, sistemas, controles, electricidad aplicada y normas de seguridad.",
+  "duracion": "23 clases en video + 16 manuales de estudio",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "/images/curso-cerrajeria.jpg",
+  "syllabus": [
+    {
+      "title": "Módulo 1: Fundamentos del Curso",
+      "topics": [
+        "Introducción al área de especialización",
+        "Conceptos básicos y terminología",
+        "Herramientas y equipos necesarios",
+        "Normativas de seguridad",
+        "Preparación del entorno de trabajo"
+      ]
+    },
+    {
+      "title": "Módulo 2: Técnicas Básicas",
+      "topics": [
+        "Procedimientos fundamentales",
+        "Manejo de herramientas especializadas",
+        "Técnicas de diagnóstico",
+        "Métodos de reparación básicos",
+        "Control de calidad inicial"
+      ]
+    },
+    {
+      "title": "Módulo 3: Técnicas Avanzadas",
+      "topics": [
+        "Procedimientos complejos",
+        "Diagnóstico avanzado",
+        "Reparaciones especializadas",
+        "Optimización de procesos",
+        "Resolución de problemas complejos"
+      ]
+    },
+    {
+      "title": "Módulo 4: Tecnología Moderna",
+      "topics": [
+        "Equipos y herramientas modernas",
+        "Software especializado",
+        "Tecnologías emergentes",
+        "Automatización de procesos",
+        "Mantenimiento predictivo"
+      ]
+    },
+    {
+      "title": "Módulo 5: Gestión y Administración",
+      "topics": [
+        "Gestión de inventarios",
+        "Control de costos",
+        "Atención al cliente",
+        "Documentación técnica",
+        "Planificación de mantenimiento"
+      ]
+    },
+    {
+      "title": "Módulo 6: Práctica Profesional",
+      "topics": [
+        "Prácticas en empresas del sector",
+        "Desarrollo de proyectos reales",
+        "Preparación para el mercado laboral",
+        "Networking profesional",
+        "Certificación final del curso"
+      ]
+    }
+  ],
+  "objetivos_detallados": [
+    "Formarte para trabajar en refrigeración y aire acondicionado en ámbitos familiares, comerciales e industriales",
+    "Dominar instalación, diagnóstico, mantenimiento y reparación de equipos",
+    "Aplicar normas de seguridad y buenas prácticas con gases refrigerantes"
+  ],
+  "salida_laboral": [
+    "Mantenimiento de heladeras, aires acondicionados y cámaras",
+    "Instalación de equipos nuevos",
+    "Reparación y diagnóstico de sistemas de refrigeración"
+  ]
+}

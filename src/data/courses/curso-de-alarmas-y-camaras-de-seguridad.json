@@ -1,0 +1,204 @@
+{
+  "title": "ALARMAS Y CÁMARAS DE SEGURIDAD",
+  "description": "Curso completo de instalación de alarmas y cámaras de seguridad que cubre desde conceptos básicos hasta programación avanzada y monitoreo remoto.",
+  "duracion": "6 meses - 24 clases semanales de 2 horas",
+  "certificacion": "Instalador de alarmas y cámaras de seguridad",
+  "modalidad": "Presencial",
+  "objetivo": "Formar instaladores profesionales capaces de diseñar, instalar y programar sistemas completos de alarmas y cámaras de seguridad para diferentes tipos de propiedades",
+  "modulos": [
+    {
+      "title": "MÓDULO 1: INTRODUCCIÓN AL MUNDO DE LAS ALARMAS Y CÁMARAS DE SEGURIDAD",
+      "topics": [
+        "Conceptos básicos de seguridad con alarmas y cámaras de seguridad",
+        "¿Qué es y para qué sirven?",
+        "¿Cuándo se deben usar?",
+        "Todas las marcas que se usan en el mercado de instalación de alarmas y cámaras de seguridad",
+        "Componentes y agregados internos y externos, alarmas y cámaras de seguridad con cables e inalámbricas",
+        "Factores a tener en cuenta para la correcta instalación de una alarma y cámara de seguridad",
+        "Planificación de una instalación domiciliaria interna y/o externa",
+        "Confección de un plano del lugar con todos los elementos a instalar",
+        "Conexión eléctrica y telefónica vía terrestre, WIFI, fibra óptica, IP",
+        "Clasificación y conexión de alarmas y cámaras de seguridad del mercado",
+        "Descripción de conexión eléctrica 220v de la alarma y cámaras de seguridad",
+        "Ley de ohm, resistencia simple, doble y/o final de línea",
+        "Conexión en serie y en paralelo, uso del multímetro",
+        "Resistencias y modos normal abierto y normal cerrado, zonas dobladas",
+        "Clasificación de sensores cableados e inalámbricos",
+        "Variedad de sensores: proximidad, alerta por gas, anti mascotas, incendios internos, antisísmico, perimetrales internos y externos, inalámbricos, roturas de vidrio, magnéticos, reset sensor de humo",
+        "Clasificación de cámaras de seguridad, variedad y formatos de uso más comunes en el mercado",
+        "Clasificación de los distintos teclados que utilizan las alarmas con cable e inalámbricos",
+        "Clasificación de DVR y NVR más usados en el mercado, con conexión de alarmas",
+        "Clasificación y explicación de las placas base de las alarmas y cámaras de seguridad más usadas en el mercado",
+        "Clasificación y explicación de software de cámaras de seguridad",
+        "Clasificación y explicación del uso del llavero de apertura y cierre de las alarmas",
+        "Clasificación y uso del control remoto en cámaras de seguridad y mandos a distancia"
+      ]
+    },
+    {
+      "title": "MÓDULO 2: CLASIFICACIÓN DE LOS ELEMENTOS DE UNA ALARMA Y CÁMARA DE SEGURIDAD",
+      "topics": [
+        "Clasificación, barreras perimetrales, internas y/o externas, con cable y/o inalámbricas",
+        "Ubicación de las mismas y modo de calibración, distancia mínima y máxima, altura recomendada",
+        "Colores y formas de las mismas, regulador de voltaje, conexión en paralelo de 2 botones",
+        "WIFI, emisor y receptor, frecuencia de disparo, calibrar con tester",
+        "Clasificación de módulos externos que se le agregan a las alarmas y cámaras de seguridad",
+        "Expansores de más zonas, backup, 2 alarmas en una, recomendaciones para lugares grandes o alto riesgo",
+        "Utilización de más entradas para el DVR, tamaños de los discos rígidos",
+        "Clasificación de módulos telefónicos para que la alarma y cámaras de seguridad envíe un alerta de seguridad",
+        "Vía terrestre, WIFI, GPRS, ADSL, GSM, 4g, 5g, módulo universal",
+        "Migrar del cobre a la fibra óptica, modelos análogos y digitales",
+        "Clasificación de las redes informáticas que se pueden utilizar en las alarmas y cámaras de seguridad",
+        "4g, fichas rj45, modem, ip, modo 568ª y 568b",
+        "Control de la alarma y cámaras seguridad desde el celular",
+        "Clasificación y uso de alarmas contra incendios, internas y externas, con cable e inalámbricas",
+        "Donde ubicarlas y cálculo volumétrico, conexión con bomberos locales y policía",
+        "El instalador aprenderá las normas jurídicas en lo que respecta a la seguridad física y normas jurídicas de instalaciones básicas de electricidad, telefonía, redes informáticas, consorcios e incendios",
+        "Clasificación y uso de una alarma vecinal, sus componentes, ubicación de las mismas",
+        "Cantidad y alcance de los controles remotos, las variantes del mercado y los costos de colocación y mantenimiento",
+        "Placa y baterías, conexión inalámbrica y panel solar",
+        "Clasificación y uso de un sistema de monitoreo tanto privado como público",
+        "Receptor, conexión vía WIFI, fibra óptica, botones de pánico",
+        "Detalles de los usuarios en la apertura y cierre de las alarmas",
+        "Utilización del software de monitoreo, seguimiento en vivo con GPS, GPRS",
+        "Cantidad de personas, calor corporal, identificación de rostros, clasificación de tumultos y utilización de inteligencia artificial",
+        "Conocimientos básicos de CIBERSEGURIDAD, bloqueos electrónicos, uso de cortafuegos y antivirus",
+        "Clasificación y uso de tarjetas de ingreso, biométricas, llaveros inalámbricos",
+        "Conexiones internas y externas, sistema domótica",
+        "Conceptos y Utilización de Energías Renovables en el Uso de Alarmas y Cámaras de Seguridad"
+      ]
+    },
+    {
+      "title": "MÓDULO 3: CÓMO PROGRAMAR UNA ALARMA Y CÁMARA DE SEGURIDAD",
+      "topics": [
+        "Cómo se conecta una alarma y cámara de seguridad",
+        "Uso del manual adecuado para el instalador según la marca y el modelo",
+        "Programación básica de fábrica y cambios necesarios según la instalación",
+        "Instalación y conexión de zonas internas y externas, zona del teclado",
+        "Demoras de ingreso y salida, uso de la sirena, test periódicos de zonas",
+        "Teléfono, alimentación, husos horarios y alarmas silenciosas",
+        "Instalación de cámaras de seguridad, según el lugar y la altura apropiada, enfocar y visión nocturna",
+        "Uso y Conexión del sistema PGM de la Placa",
+        "Luz testigo, 2da Sirena, Luz en el porche cuando se dispara una Alarma y Cámara de Seguridad",
+        "Conexión de la línea telefónica, terrestre y/o inalámbrica",
+        "Conexión si es local o residencial, por módulo o ADSL",
+        "Usos y conexión de los relé, en que momento utilizarlos",
+        "Caso sirenas exteriores, módulos agregados, cual modelo y de que voltaje",
+        "Programar y aprender a utilizar los datos hexadecimales y binarios en los teclados",
+        "El instalador aprenderá a utilizar las pruebas de paso",
+        "Verificar el funcionamiento de las alarmas y cámaras de seguridad antes de retirarse",
+        "Probar la sirena, el teclado, las zonas, los módulos y todos los componentes",
+        "Las Fallas vistas en el teclado y/o pantalla son fundamentales a la hora de verificar el funcionamiento",
+        "Aprender a identificarlas y a solucionarlas",
+        "El Instalador Aprenderá las Normas Jurídicas en lo que respecta a la seguridad física y normas jurídicas de instalaciones básicas de Electricidad, Telefonía, Redes Informáticas, Consorcios e Incendios"
+      ]
+    }
+  ],
+  "conceptos_basicos": [
+    "¿Qué es y para qué sirven las alarmas y cámaras?",
+    "¿Cuándo se deben usar?",
+    "Marcas del mercado",
+    "Componentes internos y externos",
+    "Sistemas con cable e inalámbricos"
+  ],
+  "componentes_principales": [
+    "Sensores de proximidad",
+    "Sensores anti mascotas",
+    "Sensores de incendio",
+    "Sensores antisísmicos",
+    "Sensores perimetrales",
+    "Sensores de rotura de vidrio",
+    "Sensores magnéticos",
+    "Sensores de humo"
+  ],
+  "tipos_sensores": [
+    "Cableados",
+    "Inalámbricos",
+    "De proximidad",
+    "Anti mascotas",
+    "De incendio",
+    "Antisísmicos",
+    "Perimetrales internos y externos",
+    "De rotura de vidrio",
+    "Magnéticos",
+    "De humo"
+  ],
+  "sistemas_conexion": [
+    "Vía terrestre",
+    "WIFI",
+    "Fibra óptica",
+    "IP",
+    "GPRS",
+    "ADSL",
+    "GSM",
+    "4G",
+    "5G"
+  ],
+  "herramientas_instalacion": [
+    "Multímetro",
+    "Tester",
+    "Herramientas de calibración",
+    "Herramientas de medición",
+    "Equipos de prueba"
+  ],
+  "normativas_juridicas": [
+    "Seguridad física",
+    "Normas de instalaciones básicas de electricidad",
+    "Normas de telefonía",
+    "Normas de redes informáticas",
+    "Normas de consorcios",
+    "Normas de incendios"
+  ],
+  "sistemas_monitoreo": [
+    "Monitoreo privado",
+    "Monitoreo público",
+    "GPS",
+    "GPRS",
+    "Identificación de rostros",
+    "Clasificación de tumultos",
+    "Inteligencia artificial"
+  ],
+  "tecnologias_avanzadas": [
+    "Biometría",
+    "Tarjetas de ingreso",
+    "Llaveros inalámbricos",
+    "Sistema domótica",
+    "Control remoto desde trabajo",
+    "Energías renovables"
+  ],
+  "ciberseguridad": [
+    "Bloqueos electrónicos",
+    "Cortafuegos",
+    "Antivirus",
+    "Protección de datos",
+    "Seguridad de redes"
+  ],
+  "evaluacion": [
+    "Trabajos prácticos para complementar el aprendizaje",
+    "3 exámenes parciales",
+    "Presentación o examen final"
+  ],
+  "metodologia": [
+    "Formación teórica-práctica",
+    "Instalación de sistemas reales",
+    "Programación de alarmas",
+    "Configuración de cámaras",
+    "Pruebas de funcionamiento",
+    "Normativas y seguridad"
+  ],
+  "requisitos": [
+    "Interés en la seguridad electrónica",
+    "Disposición para el trabajo técnico",
+    "Conocimientos básicos de electricidad (recomendado)",
+    "Responsabilidad en instalaciones de seguridad"
+  ],
+  "salida_laboral": [
+    "Instalador de alarmas y cámaras de seguridad",
+    "Técnico en sistemas de seguridad",
+    "Instalador independiente",
+    "Trabajo en empresas de seguridad",
+    "Mantenimiento de sistemas de seguridad",
+    "Consultor en seguridad electrónica"
+  ],
+  "duracion_detalle": "6 meses con una clase semanal de 2 horas, totalizando 24 clases",
+  "certificacion_detalle": "Instalador de alarmas y cámaras de seguridad con conocimientos completos de instalación, programación y monitoreo"
+}

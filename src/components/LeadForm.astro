@@ -535,6 +535,13 @@
           cursos: cursosSeleccionados
         }).toString();
 
+        // Marcar que se completó la inscripción para evitar que aparezca el popup de promoción
+        try {
+          localStorage.setItem('inscripcion_completada', 'true');
+        } catch (e) {
+          console.warn('No se pudo guardar en localStorage:', e);
+        }
+
         // Redirigir a la página de inscripción
         window.location.href = `/inscripcion/${slug}?${qs}`;
       } else {

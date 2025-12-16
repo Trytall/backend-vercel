@@ -1,0 +1,302 @@
+{
+  "title": "ESCUELAS IADE LOMAS ELECTRICIDAD DOMICILIARIA - Morón",
+  "slug": "curso-de-instalaciones-electricas-y-motores-electricos-lomas",
+  "description": "Formación integral en electricidad domiciliaria con enfoque en instalaciones residenciales y comerciales. Duración: 32 clases en 8 meses. Modalidad: Teórico-práctico. Aprende electricidad domiciliaria completa.",
+  "duracion": "32 clases - 8 meses",
+  "certificacion": "Electricista domiciliario",
+  "modalidad": "Presencial",
+  "campus": "Lomas de Zamora",
+  "objetivo": "Proporcionar formación técnica sólida en electricidad domiciliaria, instalaciones residenciales y comerciales, preparando al alumno para trabajar en el sector eléctrico residencial con seguridad y eficiencia.",
+  "caracteristicas_curso": [
+    "32 clases en total",
+    "8 meses de duración",
+    "Modalidad teórico-práctico",
+    "Formación técnica sólida",
+    "Enfoque en electricidad domiciliaria",
+    "Instalaciones residenciales y comerciales",
+    "Prácticas intensivas en equipos reales",
+    "Certificación oficial"
+  ],
+  "modulos": [
+    {
+      "title": "⚡ MÓDULO 1: FUNDAMENTOS DE ELECTRICIDAD",
+      "topics": [
+        "Conceptos básicos de electricidad",
+        "Voltaje, corriente, resistencia y potencia",
+        "Ley de Ohm y cálculos eléctricos",
+        "Tipos de corriente: continua y alterna",
+        "Corriente monofásica y trifásica",
+        "Cálculos de consumo energético",
+        "Medición de parámetros eléctricos",
+        "Seguridad eléctrica básica"
+      ]
+    },
+    {
+      "title": "🏠 MÓDULO 2: INSTALACIONES DOMICILIARIAS",
+      "topics": [
+        "Tipos de instalaciones residenciales",
+        "Cálculo de cargas eléctricas",
+        "Selección de conductores",
+        "Protecciones eléctricas",
+        "Disyuntores y térmicas",
+        "Puesta a tierra",
+        "Canalización y cableado",
+        "Instalaciones en viviendas"
+      ]
+    },
+    {
+      "title": "🔌 MÓDULO 3: COMPONENTES ELÉCTRICOS",
+      "topics": [
+        "Interruptores y tomacorrientes",
+        "Lámparas y sistemas de iluminación",
+        "Motores monofásicos",
+        "Contactores y relés",
+        "Temporizadores",
+        "Sensores de movimiento",
+        "Sistemas de alarma",
+        "Equipos de protección"
+      ]
+    },
+    {
+      "title": "📊 MÓDULO 4: PLANOS Y ESQUEMAS ELÉCTRICOS",
+      "topics": [
+        "Simbología eléctrica normalizada",
+        "Esquemas unifilares",
+        "Planos de instalaciones",
+        "Interpretación de diagramas",
+        "Diseño de instalaciones",
+        "Cálculo de materiales",
+        "Presupuestos eléctricos",
+        "Documentación técnica"
+      ]
+    },
+    {
+      "title": "🔧 MÓDULO 5: AUTOMATISMOS BÁSICOS",
+      "topics": [
+        "Circuitos de comando y fuerza",
+        "Arranque de motores",
+        "Inversión de giro",
+        "Control de iluminación",
+        "Sistemas de temporización",
+        "Control automático",
+        "Lógica cableada básica",
+        "Aplicaciones prácticas"
+      ]
+    },
+    {
+      "title": "🏭 MÓDULO 6: INSTALACIONES COMERCIALES",
+      "topics": [
+        "Instalaciones en comercios",
+        "Sistemas de iluminación comercial",
+        "Cálculo de cargas comerciales",
+        "Protecciones especiales",
+        "Sistemas de respaldo",
+        "Eficiencia energética",
+        "Normativas comerciales",
+        "Mantenimiento preventivo"
+      ]
+    },
+    {
+      "title": "⚙️ MÓDULO 7: MOTORES ELÉCTRICOS",
+      "topics": [
+        "Tipos de motores",
+        "Motores monofásicos",
+        "Motores trifásicos",
+        "Arranque de motores",
+        "Protección térmica",
+        "Mantenimiento de motores",
+        "Diagnóstico de fallas",
+        "Reparación básica"
+      ]
+    },
+    {
+      "title": "🏁 MÓDULO 8: PROYECTO INTEGRADOR",
+      "topics": [
+        "Diseño de instalación completa",
+        "Cálculo de materiales",
+        "Presupuesto detallado",
+        "Armado de tablero",
+        "Cableado de instalación",
+        "Pruebas de funcionamiento",
+        "Documentación final",
+        "Presentación del proyecto"
+      ]
+    }
+  ],
+  "temas_principales": [
+    "Fundamentos de electricidad",
+    "Voltaje, corriente, resistencia y potencia",
+    "Ley de Ohm y cálculos eléctricos",
+    "Instalaciones domiciliarias",
+    "Cálculo de cargas eléctricas",
+    "Componentes eléctricos",
+    "Planos y esquemas eléctricos",
+    "Automatismos básicos",
+    "Instalaciones comerciales",
+    "Motores eléctricos",
+    "Proyecto integrador completo"
+  ],
+  "tecnicas_electricidad": [
+    "Cálculos eléctricos",
+    "Instalaciones domiciliarias",
+    "Selección de conductores",
+    "Protecciones eléctricas",
+    "Puesta a tierra",
+    "Canalización y cableado",
+    "Interpretación de planos",
+    "Diseño de instalaciones"
+  ],
+  "equipos_domiciliarios": [
+    "Interruptores y tomacorrientes",
+    "Lámparas y sistemas de iluminación",
+    "Motores monofásicos",
+    "Contactores y relés",
+    "Temporizadores",
+    "Sensores de movimiento",
+    "Sistemas de alarma",
+    "Equipos de protección"
+  ],
+  "componentes_electricos": [
+    "Interruptores",
+    "Tomacorrientes",
+    "Lámparas",
+    "Motores",
+    "Contactores",
+    "Relés",
+    "Temporizadores",
+    "Sensores"
+  ],
+  "planos_esquemas": [
+    "Simbología eléctrica",
+    "Esquemas unifilares",
+    "Planos de instalaciones",
+    "Interpretación de diagramas",
+    "Diseño de instalaciones",
+    "Cálculo de materiales",
+    "Presupuestos",
+    "Documentación técnica"
+  ],
+  "practicas_curso": [
+    "Instalaciones domiciliarias",
+    "Armado de tableros",
+    "Cableado de circuitos",
+    "Pruebas de funcionamiento",
+    "Diseño de instalaciones",
+    "Cálculo de materiales",
+    "Proyectos integradores",
+    "Trabajo con equipos reales"
+  ],
+  "evaluacion": [
+    "Evaluación continua del aprendizaje",
+    "Prácticas en equipos reales",
+    "Proyectos de instalaciones",
+    "Evaluación final práctica",
+    "Acreditación del trayecto formativo"
+  ],
+  "ideal_para": [
+    "Personas que desean formación técnica sólida",
+    "Quienes quieren trabajar en electricidad domiciliaria",
+    "Interesados en instalaciones residenciales",
+    "Técnicos que buscan especialización",
+    "Personal de mantenimiento",
+    "Quienes quieren trabajar en comercios",
+    "Personas interesadas en la electricidad",
+    "Técnicos que buscan reconversión laboral"
+  ],
+  "salida_laboral": [
+    "Electricista domiciliario",
+    "Instalador eléctrico residencial",
+    "Técnico en instalaciones comerciales",
+    "Mantenimiento eléctrico",
+    "Supervisor de instalaciones",
+    "Técnico independiente",
+    "Personal de empresas eléctricas",
+    "Técnico en comercios"
+  ],
+  "metodologia": [
+    "Modalidad teórico-práctico",
+    "32 clases en 8 meses",
+    "Prácticas intensivas en equipos reales",
+    "Trabajo con instalaciones domiciliarias",
+    "Proyectos integradores",
+    "Evaluación continua",
+    "Formación técnica sólida",
+    "Preparación para el mundo laboral"
+  ],
+  "requisitos": [
+    "Interés en electricidad domiciliaria",
+    "Disposición para el estudio presencial",
+    "No se requieren conocimientos previos",
+    "Asistencia regular a las clases",
+    "Interés en instalaciones residenciales",
+    "Disposición para aprender técnicas eléctricas",
+    "Responsabilidad en el trabajo eléctrico"
+  ],
+  "certificacion_detalle": "Al finalizar el curso recibirás la certificación oficial como Electricista domiciliario que te permitirá trabajar profesionalmente en el sector de electricidad residencial y comercial",
+  "duracion_detalle": "32 clases distribuidas en 8 meses con modalidad teórico-práctico y enfoque en electricidad domiciliaria e instalaciones residenciales",
+  "modality": "Online y Presencial",
+  "campuses": "Morón, Lomas de Zamora, Avellaneda",
+  "image": "/images/curso-cerrajeria.jpg",
+  "syllabus": [
+    {
+      "title": "Módulo 1: Fundamentos del Curso",
+      "topics": [
+        "Introducción al área de especialización",
+        "Conceptos básicos y terminología",
+        "Herramientas y equipos necesarios",
+        "Normativas de seguridad",
+        "Preparación del entorno de trabajo"
+      ]
+    },
+    {
+      "title": "Módulo 2: Técnicas Básicas",
+      "topics": [
+        "Procedimientos fundamentales",
+        "Manejo de herramientas especializadas",
+        "Técnicas de diagnóstico",
+        "Métodos de reparación básicos",
+        "Control de calidad inicial"
+      ]
+    },
+    {
+      "title": "Módulo 3: Técnicas Avanzadas",
+      "topics": [
+        "Procedimientos complejos",
+        "Diagnóstico avanzado",
+        "Reparaciones especializadas",
+        "Optimización de procesos",
+        "Resolución de problemas complejos"
+      ]
+    },
+    {
+      "title": "Módulo 4: Tecnología Moderna",
+      "topics": [
+        "Equipos y herramientas modernas",
+        "Software especializado",
+        "Tecnologías emergentes",
+        "Automatización de procesos",
+        "Mantenimiento predictivo"
+      ]
+    },
+    {
+      "title": "Módulo 5: Gestión y Administración",
+      "topics": [
+        "Gestión de inventarios",
+        "Control de costos",
+        "Atención al cliente",
+        "Documentación técnica",
+        "Planificación de mantenimiento"
+      ]
+    },
+    {
+      "title": "Módulo 6: Práctica Profesional",
+      "topics": [
+        "Prácticas en empresas del sector",
+        "Desarrollo de proyectos reales",
+        "Preparación para el mercado laboral",
+        "Networking profesional",
+        "Certificación final del curso"
+      ]
+    }
+  ]
+}

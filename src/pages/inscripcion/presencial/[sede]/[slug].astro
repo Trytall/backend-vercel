@@ -1,0 +1,290 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import Header from '../../../../components/Header.astro';
+import Footer from '../../../../components/Footer.astro';
+import WhatsAppButton from '../../../../components/WhatsAppButton.astro';
+import cursos from '../../../../data/cursos.js';
+
+const { sede, slug } = Astro.params;
+
+const sedeMap = {
+  moron: {
+    name: 'Morón',
+    address: 'Alte. Brown 851, Galería Paseo Venecia 2° Piso, Morón',
+    hours: 'Lunes a Viernes 9:00 - 18:00',
+    email: 'info@escuelaiadezonaoeste.com.ar',
+    mapsEmbed: 'https://www.google.com/maps?q=Alte.+Brown+851%2C+Galer%C3%ADa+Paseo+Venecia+2%C2%B0+Piso%2C+Mor%C3%B3n&output=embed'
+  },
+  lomas: {
+    name: 'Lomas de Zamora',
+    address: 'Mariano Boedo 314, Lomas de Zamora, Argentina',
+    hours: 'Lunes a Viernes 9:00 - 18:00',
+    email: 'info@escuelaiadezonaoeste.com.ar',
+    mapsEmbed: 'https://www.google.com/maps?q=Mariano+Boedo+314%2C+Lomas+de+Zamora%2C+Argentina&output=embed'
+  },
+      avellaneda: {
+      name: 'Avellaneda',
+      address: 'Av. Bartolomé Mitre 476, B1870 Avellaneda, Provincia de Buenos Aires',
+    hours: 'Lunes a Viernes 9:00 - 18:00',
+      email: 'escuelaiadeavellaneda@gmail.com',
+      mapsEmbed: 'https://www.google.com/maps?q=Av.+Bartolom%C3%A9+Mitre+476%2C+B1870+Avellaneda%2C+Provincia+de+Buenos+Aires&output=embed'
+    }
+};
+
+export function getStaticPaths() {
+  const moron = new Set([
+    'curso-de-instalaciones-electricas-y-motores-electricos',
+    'curso-de-refrigeracion-y-aire-acondicionado',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-reparacion-de-celulares',
+    'curso-de-alarmas-y-camaras-de-seguridad',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-auxiliar-en-cardiologia'
+  ]);
+  const lomas = new Set([
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-reparacion-de-celulares',
+    'curso-de-instalaciones-electricas-y-motores-electricos',
+    'curso-de-refrigeracion-y-aire-acondicionado',
+    'curso-de-plasma-rico-en-plaquetas',
+    'curso-de-electricidad-y-electronica-industrial'
+  ]);
+  const avellaneda = new Set([
+    'curso-de-asistente-de-enfermeria',
+    'curso-de-auxiliar-de-emergencias-medicas-sanitarias',
+    'curso-de-auxiliar-de-farmacia',
+    'curso-de-extraccionista-y-auxiliar-de-bioquimico-de-laboratorio'
+  ]);
+
+  const valid = [];
+  cursos.forEach((c) => {
+    const s = c.slug;
+    if (moron.has(s)) valid.push({ params: { sede: 'moron', slug: s } });
+    if (lomas.has(s)) valid.push({ params: { sede: 'lomas', slug: s } });
+    if (avellaneda.has(s)) valid.push({ params: { sede: 'avellaneda', slug: s } });
+  });
+  return valid;
+}
+
+const sedeCfg = sedeMap[sede];
+const curso = cursos.find((c) => c.slug === slug);
+if (!sedeCfg || !curso) throw new Error('Sede o curso no válidos');
+---
+
+<Layout title={`Inscripción Presencial | ${curso.titulo} - ${sedeCfg.name}`} description={`Reservá tu vacante presencial en ${sedeCfg.name}.`}>
+  <Header />
+
+  <section id="insc-presencial" data-course-title={curso.titulo} data-sede-name={sedeCfg.name} class="pt-12 pb-6 bg-light-bg text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-2">Inscripción Presencial</h1>
+    <p class="text-gray-700">{curso.titulo} — Sede {sedeCfg.name}</p>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+      <div class="border-2 border-red-600 rounded-xl overflow-hidden shadow-lg bg-white flex flex-col">
+        <div class="p-5 border-b border-red-200">
+          <h2 class="text-xl font-semibold text-center">Información de la sede</h2>
+        </div>
+        <div class="aspect-video bg-gray-100">
+          <iframe src={sedeCfg.mapsEmbed} class="w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="p-6 space-y-3 text-gray-700">
+          <div><span class="font-semibold">📍 Ubicación:</span> {sedeCfg.address}</div>
+          <div><span class="font-semibold">🕒 Horarios:</span> {sedeCfg.hours}</div>
+          {sedeCfg.email && (
+            <div><span class="font-semibold">📧 Email:</span> <a href={`mailto:${sedeCfg.email}`} class="text-primary hover:underline">{sedeCfg.email}</a></div>
+          )}
+          <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-4 rounded-lg w-full" id="contactarAsesorBtn">Contactar por WhatsApp</button>
+        </div>
+      </div>
+
+      <div class="border-2 border-red-600 rounded-xl p-8 shadow-lg flex flex-col bg-red-50">
+        <div class="text-4xl mb-4 text-center">💳</div>
+        <h2 class="text-xl font-semibold mb-2 text-center">Reserva tu vacante</h2>
+        <p id="precioDesde" class="text-primary font-bold text-lg mb-6 text-center">Inscripción: $60.000</p>
+        <p class="text-gray-600 mb-6 text-center">
+          Aboná la matrícula para reservar tu lugar en {sedeCfg.name}. Luego, deberás completar los 6 pagos restantes de $60.000 en la sede.
+        </p>
+        <button class="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 rounded-lg flex items-center justify-center px-4" id="btnReserva">
+          Pagar inscripción ($60.000)
+        </button>
+        <ul class="text-sm text-gray-600 space-y-1 mt-6">
+          <li>✅ Reservás tu vacante en {sedeCfg.name}</li>
+          <li>✅ Coordinamos horarios y fechas luego del pago</li>
+          <li>✅ Material y práctica presencial incluidos</li>
+          <li>✅ Certificado oficial al finalizar</li>
+          <li>✅ Pago seguro con Mercado Pago</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-light-bg">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow p-6 border-2 border-red-600">
+      <h3 class="text-lg font-semibold text-center mb-6">Resumen de tu inscripción</h3>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-gray-700 mb-3">Datos Personales</h4>
+          <div id="resumenDatos" class="text-sm text-gray-600 space-y-2"></div>
+        </div>
+        <div class="bg-gray-50 p-4 rounded-lg">
+          <h4 class="font-semibold text-gray-700 mb-3">Cursos Seleccionados</h4>
+          <div id="resumenCursos" class="text-sm text-gray-600"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+  <WhatsAppButton />
+
+  <script>
+    const SITE_KEY = '6Ld_Uq8rAAAAAA7J5Mfy817Tn__ybWtIYLeihOqq';
+
+    function params() { return Object.fromEntries(new URLSearchParams(location.search)); }
+
+    const data = params();
+    const resumenDatos = document.getElementById('resumenDatos');
+    const resumenCursos = document.getElementById('resumenCursos');
+    const root = document.getElementById('insc-presencial');
+    const cursosTexto = data.cursos || root?.dataset.courseTitle || '';
+    const sedeNombre = root?.dataset.sedeName || '';
+    const modalidadLabel = 'Presencial';
+
+    if (resumenDatos) {
+      resumenDatos.innerHTML = `
+        <div><strong>Nombre:</strong> ${data.nombre || 'No especificado'}</div>
+        <div><strong>DNI:</strong> ${data.dni || 'No especificado'}</div>
+        <div><strong>Email:</strong> ${data.email || 'No especificado'}</div>
+        <div><strong>Teléfono:</strong> ${data.telefono || 'No especificado'}</div>
+        <div><strong>Provincia:</strong> ${data.provincia || 'No especificado'}</div>
+        <div><strong>Localidad:</strong> ${data.localidad || 'No especificado'}</div>
+        <div><strong>Modalidad:</strong> ${modalidadLabel}</div>
+        ${sedeNombre ? `<div><strong>Sede:</strong> ${sedeNombre}</div>` : ''}
+      `;
+    }
+    if (resumenCursos) {
+      resumenCursos.innerHTML = `<div class="bg-primary/10 text-primary px-3 py-2 rounded">${cursosTexto}</div>`;
+    }
+
+    (function persistInicial() {
+      const preliminar = {
+        nombre: data.nombre || '',
+        dni: data.dni || '',
+        email: data.email || '',
+        telefono: data.telefono || '',
+        provincia: data.provincia || '',
+        localidad: data.localidad || '',
+        curso: cursosTexto,
+        sede: sedeNombre
+      };
+      try {
+        const prev = sessionStorage.getItem('datosPago');
+        if (!prev || prev !== JSON.stringify(preliminar)) {
+          sessionStorage.setItem('datosPago', JSON.stringify(preliminar));
+        }
+      } catch {}
+    })();
+
+    (function loadRecaptcha() {
+      if (typeof window === 'undefined') return;
+      if (window.grecaptcha) return;
+      const s = document.createElement('script');
+      s.src = `https://www.google.com/recaptcha/api.js?render=${SITE_KEY}`;
+      s.async = true;
+      document.head.appendChild(s);
+    })();
+
+    function waitForRecaptchaReady(timeoutMs = 6000) {
+      return new Promise((resolve, reject) => {
+        const start = Date.now();
+        (function check(){
+          if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) return resolve();
+          if (Date.now() - start > timeoutMs) return reject(new Error('recaptcha_not_ready'));
+          setTimeout(check, 100);
+        })();
+      });
+    }
+
+    async function fetchRecaptchaToken() {
+      try {
+        const stored = sessionStorage.getItem('recaptcha_token');
+        if (stored) return stored;
+      } catch {}
+      try {
+        await waitForRecaptchaReady();
+        const token = await grecaptcha.execute(SITE_KEY, { action: 'pay_inscripcion' });
+        try { sessionStorage.setItem('recaptcha_token', token); } catch {}
+        return token;
+      } catch {}
+      return '';
+    }
+
+    async function pagar() {
+      const link = 'https://mpago.li/28g7cV6';
+
+      try {
+        sessionStorage.setItem('datosPago', JSON.stringify({
+          nombre: data.nombre || '',
+          dni: data.dni || '',
+          email: data.email || '',
+          telefono: data.telefono || '',
+          provincia: data.provincia || '',
+          localidad: data.localidad || '',
+          curso: cursosTexto,
+          modalidad: modalidadLabel,
+          sede: sedeNombre,
+          monto: 60000,
+          plan: 'inscripcion'
+        }));
+      } catch (e) {
+        console.error('Error guardando datos:', e);
+      }
+
+      window.open(link, '_blank');
+    }
+
+    function contactarAsesor() {
+      const datos = `Nombre: ${data.nombre || ''}\nDNI: ${data.dni || ''}\nEmail: ${data.email || ''}\nTeléfono: ${data.telefono || ''}\nProvincia: ${data.provincia || ''}\nLocalidad: ${data.localidad || ''}`;
+      const sedeLinea = sedeNombre ? `\nSede: ${sedeNombre}` : '';
+      const mensaje = `Hola IADE! Me interesa el curso de ${cursosTexto}.\n\nModalidad: ${modalidadLabel}${sedeLinea}\n\n${datos}\n\n¿Podrían ayudarme a completar la inscripción?`;
+      window.open(`https://wa.me/5491126132091?text=${encodeURIComponent(mensaje)}`, '_blank');
+    }
+
+    document.getElementById('btnReserva')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      pagar();
+    });
+    document.getElementById('contactarAsesorBtn')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      contactarAsesor();
+    });
+  </script>
+  
+  <script>
+    // Verificar eventos de tracking guardados en sessionStorage (desde formulario)
+    document.addEventListener('DOMContentLoaded', function() {
+      try {
+        const storedEvents = sessionStorage.getItem('lead_submit_events');
+        if (storedEvents) {
+          const events = JSON.parse(storedEvents);
+          if (events && events.length > 0) {
+            const lastEvent = events[events.length - 1];
+            console.log('✅ Evento lead_submit detectado desde formulario:', lastEvent);
+            console.log('Para ver todos los eventos guardados, ejecuta: JSON.parse(sessionStorage.getItem("lead_submit_events"))');
+            
+            // Opcionalmente, reenviar a dataLayer en la nueva página
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(lastEvent);
+          }
+        }
+      } catch(e) {
+        // Ignorar errores de sessionStorage
+      }
+    });
+  </script>
+</Layout>

@@ -213,6 +213,69 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Test webhook endpoint - para probar sin acceso a MercadoPago
+app.post('/api/test-webhook', async (req, res) => {
+  try {
+    console.log('🧪 ========== TEST WEBHOOK RECIBIDO ==========');
+    console.log('🧪 Timestamp:', new Date().toISOString());
+    console.log('🧪 Body recibido:', JSON.stringify(req.body, null, 2));
+    
+    // Simular un pago aprobado para probar el envío de email
+    const testPaymentData = {
+      nombre: req.body.nombre || 'Test User',
+      dni: req.body.dni || '12345678',
+      email: req.body.email || 'test@test.com',
+      telefono: req.body.telefono || '1234567890',
+      provincia: req.body.provincia || 'Buenos Aires',
+      localidad: req.body.localidad || 'CABA',
+      modalidad: req.body.modalidad || 'online',
+      cursos: Array.isArray(req.body.cursos) ? req.body.cursos : [req.body.cursos || 'Curso de Prueba'],
+      sede: req.body.sede || '',
+      plan: req.body.plan || 'contado',
+      totalAmount: req.body.totalAmount || 1
+    };
+    
+    const testPaymentInfo = {
+      id: 'TEST_' + Date.now(),
+      status: 'approved',
+      transaction_amount: testPaymentData.totalAmount,
+      date_approved: new Date().toISOString()
+    };
+    
+    console.log('🧪 Simulando pago aprobado...');
+    console.log('🧪 PaymentData:', testPaymentData);
+    
+    // Intentar enviar email
+    const emailResult = await sendPaymentEmailNotification(testPaymentData, testPaymentInfo, 'approved');
+    
+    if (emailResult) {
+      console.log('✅ Email de prueba enviado exitosamente. Message ID:', emailResult.messageId);
+      res.json({
+        success: true,
+        message: 'Test webhook procesado correctamente',
+        email_sent: true,
+        email_message_id: emailResult.messageId,
+        test_data: testPaymentData
+      });
+    } else {
+      console.error('❌ Email de prueba NO se pudo enviar');
+      res.status(500).json({
+        success: false,
+        message: 'Test webhook procesado pero email NO se pudo enviar',
+        email_sent: false,
+        test_data: testPaymentData
+      });
+    }
+  } catch (error) {
+    console.error('❌ Error en test webhook:', error);
+    res.status(500).json({
+      success: false,
+      error: error.message,
+      stack: error.stack
+    });
+  }
+});
+
 // Create Payment Preference
 app.post('/api/create-preference', paymentLimiter, async (req, res) => {
   try {

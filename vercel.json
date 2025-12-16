@@ -1,9 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "api/vercel.js", "use": "@vercel/node" }
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/vercel.js"
+    }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/vercel.js" }
-  ]
+  "functions": {
+    "api/vercel.js": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
 } 

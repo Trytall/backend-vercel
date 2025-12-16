@@ -8,28 +8,10 @@ import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import nodemailer from 'nodemailer';
 
-// Load environment variables (solo para desarrollo local)
-// En Vercel, las variables se inyectan automáticamente en process.env
-// NO usar dotenv en Vercel - las variables vienen de las configuraciones del dashboard
-const isVercel = process.env.VERCEL === '1' || process.env.VERCEL_ENV;
-if (!isVercel && process.env.NODE_ENV !== 'production') {
-  dotenv.config();
-} else {
-  // En Vercel, loguear qué variables están disponibles para debugging
-  console.log('🌐 Running on Vercel - Variables disponibles:', {
-    hasMercadoPago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
-    hasSMTP: !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS),
-    envKeys: Object.keys(process.env).filter(k => 
-      k.includes('MERCADOPAGO') || k.includes('SMTP') || k.includes('EMAIL')
-    )
-  });
-}
+// Load environment variables
+dotenv.config();
 
 const app = express();
-
-// Configurar trust proxy para Vercel (necesario para rate limiting)
-// DEBE estar ANTES de cualquier middleware que use rate limiting
-app.set('trust proxy', true);
 
 // Security Middleware
 app.use(helmet({
@@ -64,28 +46,9 @@ const paymentLimiter = rateLimit({
   message: 'Too many payment attempts from this IP, please try again later.',
 });
 
-// CORS Configuration - Allow specific origins
-const allowedOrigins = [
-  'https://escuelasiade.com.ar',
-  'https://www.escuelasiade.com.ar',
-  'http://localhost:4321',
-  'http://localhost:3000',
-  'http://127.0.0.1:4321',
-  'http://127.0.0.1:3000'
-];
-
+// CORS Configuration - Very permissive for production
 app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
-    
-    if (allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV === 'development') {
-      callback(null, true);
-    } else {
-      callback(null, true); // Allow all for now, but log it
-      console.log('⚠️ CORS: Request from unlisted origin:', origin);
-    }
-  },
+  origin: true, // Allow all origins temporarily
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
@@ -105,111 +68,13 @@ const client = new MercadoPagoConfig({
 // Store for temporary data (in production, use a database)
 const pendingPayments = new Map();
 
-// Root endpoint
-app.get('/', (req, res) => {
-  res.json({
-    message: 'Backend API de Escuelas IADE',
-    version: '1.0.0',
-    endpoints: {
-      health: '/api/health',
-      debug: '/api/debug',
-      createPreference: '/api/create-preference',
-      sendFormNotification: '/api/send-form-notification',
-      webhook: '/api/webhook'
-    }
-  });
-});
-
-// Debug endpoint - muestra todas las variables de entorno (sin valores sensibles)
-app.get('/debug', (req, res) => {
-  const envVars = {
-    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN 
-      ? `${process.env.MERCADOPAGO_ACCESS_TOKEN.substring(0, 10)}...` 
-      : 'NOT SET',
-    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
-    SMTP_PORT: process.env.SMTP_PORT || 'NOT SET',
-    SMTP_USER: process.env.SMTP_USER || 'NOT SET',
-    SMTP_PASS: process.env.SMTP_PASS ? 'SET (hidden)' : 'NOT SET',
-    EMAIL_FROM: process.env.EMAIL_FROM || 'NOT SET',
-    EMAIL_NOTIFICACIONES: process.env.EMAIL_NOTIFICACIONES || 'NOT SET',
-    WEBHOOK_URL: process.env.WEBHOOK_URL || 'NOT SET',
-    NODE_ENV: process.env.NODE_ENV || 'NOT SET',
-    // Verificar todas las variables relacionadas
-    allEnvKeys: Object.keys(process.env).filter(key => 
-      key.includes('MERCADOPAGO') || 
-      key.includes('SMTP') || 
-      key.includes('EMAIL') ||
-      key === 'NODE_ENV' ||
-      key === 'WEBHOOK_URL'
-    )
-  };
-  
-  console.log('🔍 Debug - Variables de entorno:', envVars);
-  
-  res.json({
-    status: 'Debug Info',
-    timestamp: new Date().toISOString(),
-    environment: envVars,
-    checks: {
-      hasMercadoPago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
-      hasSMTP: !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS),
-      hasEmail: !!(process.env.EMAIL_FROM && process.env.EMAIL_NOTIFICACIONES)
-    }
-  });
-});
-
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  // Debug: verificar variables de entorno disponibles
-  const hasMercadoPago = !!process.env.MERCADOPAGO_ACCESS_TOKEN;
-  const hasWhatsApp = !!process.env.WHATSAPP_API_TOKEN;
-  const hasSMTP = !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
-  
-  // Obtener TODAS las claves de process.env para debugging
-  const allEnvKeys = Object.keys(process.env);
-  const relevantEnvKeys = allEnvKeys.filter(key => 
-    key.includes('MERCADOPAGO') || 
-    key.includes('SMTP') || 
-    key.includes('EMAIL') ||
-    key === 'NODE_ENV' ||
-    key === 'WEBHOOK_URL' ||
-    key === 'VERCEL'
-  );
-  
-  // Información de debug para incluir en la respuesta
-  const debugInfo = {
-    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
-    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
-    SMTP_USER: process.env.SMTP_USER ? 'SET' : 'NOT SET',
-    SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
-    EMAIL_FROM: process.env.EMAIL_FROM || 'NOT SET',
-    EMAIL_NOTIFICACIONES: process.env.EMAIL_NOTIFICACIONES || 'NOT SET',
-    WEBHOOK_URL: process.env.WEBHOOK_URL || 'NOT SET',
-    NODE_ENV: process.env.NODE_ENV || 'NOT SET',
-    VERCEL: process.env.VERCEL || 'NOT SET',
-    // Lista de todas las variables de entorno relevantes disponibles
-    availableEnvKeys: relevantEnvKeys,
-    // Total de variables de entorno (para debugging)
-    totalEnvKeys: allEnvKeys.length
-  };
-  
-  // Log para debugging - SIEMPRE loguear en producción para diagnosticar
-  console.log('🔍 Health Check Debug:', {
-    hasMercadoPago,
-    hasSMTP,
-    relevantEnvKeys,
-    MERCADOPAGO_ACCESS_TOKEN: process.env.MERCADOPAGO_ACCESS_TOKEN ? 'SET' : 'NOT SET',
-    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET'
-  });
-  
   res.json({
     status: 'OK',
     timestamp: new Date().toISOString(),
-    mercadopago: hasMercadoPago,
-    whatsapp: hasWhatsApp,
-    email: hasSMTP,
-    nodeEnv: process.env.NODE_ENV || 'not set',
-    debug: debugInfo // Incluir información de debug en la respuesta
+    mercadopago: !!process.env.MERCADOPAGO_ACCESS_TOKEN,
+    whatsapp: !!process.env.WHATSAPP_API_TOKEN
   });
 });
 
@@ -263,9 +128,7 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
       errors.push('Debe seleccionar al menos un curso');
     }
     
-    // Permitir montos de prueba de $1 (mínimo para pruebas)
-    // En producción, cambiar el mínimo a 1000
-    if (!totalAmount || isNaN(totalAmount) || totalAmount < 1) {
+    if (!totalAmount || isNaN(totalAmount) || totalAmount < 1000) {
       errors.push('Monto inválido');
     }
     

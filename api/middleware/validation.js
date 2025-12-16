@@ -33,7 +33,9 @@ export function validatePaymentData(req, res, next) {
     errors.push('Debe seleccionar al menos un curso');
   }
   
-  if (!totalAmount || isNaN(totalAmount) || totalAmount < 1000) {
+  // Permitir montos de prueba de $1 (mínimo para pruebas)
+  // En producción, cambiar el mínimo a 1000
+  if (!totalAmount || isNaN(totalAmount) || totalAmount < 1) {
     errors.push('Monto inválido');
   }
   

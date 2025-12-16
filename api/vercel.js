@@ -340,9 +340,14 @@ app.post('/api/create-preference', paymentLimiter, async (req, res) => {
     }
 
     // Create preference
-    const webhookUrl = process.env.WEBHOOK_URL 
-      ? `${process.env.WEBHOOK_URL}/api/webhook`
-      : `https://escuelasiade.com.ar/api/webhook`;
+    // Construir webhook URL: si WEBHOOK_URL ya incluye /api/webhook, usarlo tal cual; si no, agregarlo
+    let webhookUrl;
+    if (process.env.WEBHOOK_URL) {
+      const baseUrl = process.env.WEBHOOK_URL.replace(/\/api\/webhook\/?$/, ''); // Remover /api/webhook si existe
+      webhookUrl = `${baseUrl}/api/webhook`;
+    } else {
+      webhookUrl = `https://escuelasiade.com.ar/api/webhook`;
+    }
     
     console.log('🔗 Creando preferencia de MercadoPago:');
     console.log('🔗 Webhook URL configurado:', webhookUrl);
